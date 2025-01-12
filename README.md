@@ -24,4 +24,3 @@ npm run dev
 MIT
 <!-- updated: 2026-06-18 -->
 
-

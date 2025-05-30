@@ -123,7 +123,7 @@ export default function CausesPage() {
 
   return (
     <div className="container mx-auto py-8 ">
-      <h1 className="text-2xl font-bold mb-6">Causes</h1>
+      <h1 className="text-2xl font-WFVisualSansRegular  mb-6">Causes</h1>
 
       <div className="mb-6">
         <Tabs
@@ -131,13 +131,13 @@ export default function CausesPage() {
           onValueChange={(value) => setActiveTab(value)}
         >
           <div className="flex items-end gap-4 max-md:flex-col">
-            <TabsList className="!bg-custom-slate">
+            <TabsList className="!bg-custom-slate font-WFVisualSansRegular mb-1">
               <TabsTrigger value="running">Running</TabsTrigger>
               <TabsTrigger value="completed">Completed</TabsTrigger>
               <TabsTrigger value="drafts">Drafts</TabsTrigger>
             </TabsList>
 
-            <div className="flex items-center gap-4 mb-4 max-md:flex-col">
+            <div className="flex items-center gap-4 max-md:flex-col">
               <DateTimePicker date={date} setDate={setDate} />
 
               <div className="relative w-80">

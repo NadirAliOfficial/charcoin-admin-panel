@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/popover";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { CalendarCheckSolid } from "@mynaui/icons-react";
-import { Calendar as CalendarIcon } from "@mynaui/icons-react";
+import { Filter as CalendarIcon } from "@mynaui/icons-react";
 
 export function DateTimePicker({
   date,
@@ -74,12 +74,13 @@ export function DateTimePicker({
           )}
           
         >
-          {position === "left" && <CalendarIcon className={cn("mr-2 h-4 w-4", iconClassName)} />}
+          
           {date ? (
             format(date, "MM/dd/yyyy hh:mm aa")
           ) : (
             <span>MM/DD/YYYY hh:mm aa</span>
           )}
+          {position === "left" && <CalendarIcon className={cn("mr-2 h-4 w-4", iconClassName)} />}
           {position === "right" && <CalendarIcon className={cn("ml-auto h-4 w-4", iconClassName)} />}
 
         </Button>

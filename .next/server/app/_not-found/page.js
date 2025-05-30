@@ -1,0 +1,15 @@
+const CHUNK_PUBLIC_PATH = "server/app/_not-found/page.js";
+const runtime = require("../../chunks/ssr/[turbopack]_runtime.js");
+runtime.loadChunk("server/chunks/ssr/node_modules_next_dist_97f32f._.js");
+runtime.loadChunk("server/chunks/ssr/[root of the server]__592060._.js");
+runtime.loadChunk("server/chunks/ssr/src_app_896cde._.js");
+runtime.loadChunk("server/chunks/ssr/src_app_6688df._.js");
+runtime.loadChunk("server/chunks/ssr/src_app_3b752a._.js");
+runtime.loadChunk("server/chunks/ssr/src_app_7b2e60._.js");
+runtime.loadChunk("server/chunks/ssr/[root of the server]__40a0f7._.js");
+runtime.loadChunk("server/chunks/ssr/[root of the server]__bd3fc1._.css");
+runtime.loadChunk("server/chunks/ssr/src_app_error_tsx_2c8330._.js");
+runtime.loadChunk("server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_8f379d.js");
+runtime.loadChunk("server/chunks/ssr/_fb5ee1._.js");
+runtime.getOrInstantiateRuntimeModule("[project]/.next-internal/server/app/_not-found/page/actions.js [app-rsc] (ecmascript)", CHUNK_PUBLIC_PATH);
+module.exports = runtime.getOrInstantiateRuntimeModule("[project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/_not-found/page { METADATA_0 => \"[project]/src/app/favicon.ico.mjs { IMAGE => \\\"[project]/src/app/favicon.ico [app-rsc] (static)\\\" } [app-rsc] (structured image object, ecmascript, Next.js server component)\", METADATA_1 => \"[project]/src/app/icon0.svg.mjs { IMAGE => \\\"[project]/src/app/icon0.svg [app-rsc] (static)\\\" } [app-rsc] (structured image object, ecmascript, Next.js server component)\", METADATA_2 => \"[project]/src/app/icon1.png.mjs { IMAGE => \\\"[project]/src/app/icon1.png [app-rsc] (static)\\\" } [app-rsc] (structured image object, ecmascript, Next.js server component)\", METADATA_3 => \"[project]/src/app/apple-icon.png.mjs { IMAGE => \\\"[project]/src/app/apple-icon.png [app-rsc] (static)\\\" } [app-rsc] (structured image object, ecmascript, Next.js server component)\", MODULE_4 => \"[project]/src/app/layout.tsx [app-rsc] (ecmascript, Next.js server component)\", MODULE_5 => \"[project]/src/app/error.tsx [app-rsc] (ecmascript, Next.js server component)\", MODULE_6 => \"[project]/src/app/not-found.tsx [app-rsc] (ecmascript, Next.js server component)\", MODULE_7 => \"[project]/src/app/not-found.tsx [app-rsc] (ecmascript, Next.js server component)\" } [app-rsc] (ecmascript)", CHUNK_PUBLIC_PATH).exports;

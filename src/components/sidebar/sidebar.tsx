@@ -30,16 +30,16 @@ export function Sidebar() {
       >
         <Button
           className={cn(
-            "transition-transform ease-in-out duration-300 mb-1",
+            "transition-transform ease-in-out duration-300 justify-start my-5 ml-2",
             !getOpenState() ? "translate-x-1" : "translate-x-0"
           )}
           variant="link"
           asChild
         >
-          <LogoImage className="mt-4" width={120} />
+          <LogoImage className="" width={120} />
         </Button>
-        <hr className="mx-4" />
-        <Menu isOpen={getOpenState()} />
+       
+        <Menu isOpen={getOpenState()}/>
         {isOpen && (
           <div className="flex gap-4 mx-
           4 py-2 mb-4  flex-col">

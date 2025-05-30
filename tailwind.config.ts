@@ -10,6 +10,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        WFVisualSansRegular: ['WFVisualSans-Regular', 'sans-serif'], 
+      },
       screens: {
         xs: "480px",
       },

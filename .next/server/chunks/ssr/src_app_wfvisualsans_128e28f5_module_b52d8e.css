@@ -1,0 +1,147 @@
+/* [project]/src/app/wfvisualsans_128e28f5.module.css [app-client] (css) */
+@font-face {
+  font-family: wfVisualSans;
+  src: url("/_next/static/media/WFVisualSans_Black-s.p.aace4545.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: wfVisualSans;
+  src: url("/_next/static/media/WFVisualSans_BlackItalic-s.p.41ce8b25.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: wfVisualSans;
+  src: url("/_next/static/media/WFVisualSans_Bold-s.p.6073472d.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: wfVisualSans;
+  src: url("/_next/static/media/WFVisualSans_BoldItalic-s.p.1febedc2.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: wfVisualSans;
+  src: url("/_next/static/media/WFVisualSans_SemiBold-s.p.a68e545e.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: wfVisualSans;
+  src: url("/_next/static/media/WFVisualSans_SemiBoldItalic-s.p.9e61243f.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: wfVisualSans;
+  src: url("/_next/static/media/WFVisualSans_Medium-s.p.bcc8dd1a.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: wfVisualSans;
+  src: url("/_next/static/media/WFVisualSans_MediumItalic-s.p.1a6bc94d.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: wfVisualSans;
+  src: url("/_next/static/media/WFVisualSans_Regular-s.p.aa17177c.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: wfVisualSans;
+  src: url("/_next/static/media/WFVisualSans_RegularItalic-s.p.0046630c.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: wfVisualSans;
+  src: url("/_next/static/media/WFVisualSans_Light-s.p.1e16c406.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: wfVisualSans;
+  src: url("/_next/static/media/WFVisualSans_LightItalic-s.p.408e86fe.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: wfVisualSans;
+  src: url("/_next/static/media/WFVisualSans_ExtraLight-s.p.d78b9bd1.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: wfVisualSans;
+  src: url("/_next/static/media/WFVisualSans_ExtraLightItalic-s.p.c5aeefbb.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: wfVisualSans;
+  src: url("/_next/static/media/WFVisualSans_Thin-s.p.7853cc96.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: wfVisualSans;
+  src: url("/_next/static/media/WFVisualSans_ThinItalic-s.p.d8c0c8b7.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: wfVisualSans Fallback;
+  src: local(Arial);
+  ascent-override: 95.93%;
+  descent-override: 24.4%;
+  line-gap-override: 0.0%;
+  size-adjust: 100.47%;
+}
+
+.wfvisualsans_128e28f5-module__kZyHra__className {
+  font-family: wfVisualSans, wfVisualSans Fallback;
+}
+
+.wfvisualsans_128e28f5-module__kZyHra__variable {
+  --font-wfsans: "wfVisualSans", "wfVisualSans Fallback";
+}
+
+/*# sourceMappingURL=src_app_wfvisualsans_128e28f5_module_b52d8e.css.map*/

@@ -68,7 +68,7 @@ export function CollapseMenuButton({
         <Button
           variant={isSubmenuActive ? "secondary" : "ghost"}
           className={
-            cn("w-full  justify-start h-10 hover:bg-slate-500 hover:text-primary", isSubmenuActive && "text-primary bg-primary/10")
+            cn("w-full  justify-start h-10 hover:bg-slate-500 hover:text-primary", isSubmenuActive && "text-primary bg-[#28272d]")
           }
         >
           <div className="w-full items-center flex justify-between">
@@ -78,7 +78,7 @@ export function CollapseMenuButton({
               </span>
               <p
                 className={cn(
-                  "max-w-[150px] truncate",
+                  "max-w-[150px] truncate text-[16px] font-WFVisualSansRegular",
                   isOpen
                     ? "translate-x-0 opacity-100"
                     : "-translate-x-96 opacity-0"
@@ -114,7 +114,7 @@ export function CollapseMenuButton({
             }
             className={
               cn("w-full  flex  justify-start h-10 mb-1 hover:bg-slate-500 hover:text-primary", ((active === undefined && pathname === href) || active)
-                && "!text-primary bg-primary/5")
+                && "!text-primary bg-[#28272d]")
             }
             asChild
           >
@@ -124,7 +124,7 @@ export function CollapseMenuButton({
               </span>
               <p
                 className={cn(
-                  "max-w-[170px] truncate",
+                  "max-w-[170px] truncate text-[16px] font-WFVisualSansRegular",
                   isOpen
                     ? "translate-x-0 opacity-100"
                     : "-translate-x-96 opacity-0"
@@ -156,7 +156,7 @@ export function CollapseMenuButton({
                     </span>
                     <p
                       className={cn(
-                        "max-w-[200px] truncate",
+                        "max-w-[200px] truncate font-WFVisualSansRegular",
                         isOpen === false ? "opacity-0" : "opacity-100"
                       )}
                     >

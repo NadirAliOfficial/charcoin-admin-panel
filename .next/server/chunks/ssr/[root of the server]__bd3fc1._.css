@@ -2473,6 +2473,11 @@ body {
   border-color: rgb(50 49 56 / var(--tw-border-opacity, 1));
 }
 
+.border-\[\#3d3c44\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(61 60 68 / var(--tw-border-opacity, 1));
+}
+
 .border-l-transparent {
   border-left-color: #0000;
 }
@@ -4338,6 +4343,10 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
   .md\:gap-4 {
     gap: 1rem;
   }
@@ -4352,9 +4361,17 @@ body {
     margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
   }
 
+  .md\:border-0 {
+    border-width: 0;
+  }
+
   .md\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .md\:pt-0 {
+    padding-top: 0;
   }
 
   .md\:text-3xl {

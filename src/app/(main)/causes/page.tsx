@@ -114,7 +114,6 @@ export default function CausesPage() {
   const [date, setDate] = useState<Date>(new Date());
   const [activeTab, setActiveTab] = useState("running");
 
-
   // React Query for fetching causes
   const { data = [], isLoading } = useQuery({
     queryKey: ["causes", searchQuery, activeTab],
@@ -130,25 +129,27 @@ export default function CausesPage() {
           defaultValue="running"
           onValueChange={(value) => setActiveTab(value)}
         >
-          <div className="flex items-end gap-4 max-md:flex-col">
-            <TabsList className="!bg-custom-slate font-WFVisualSansRegular mb-1">
-              <TabsTrigger value="running">Running</TabsTrigger>
-              <TabsTrigger value="completed">Completed</TabsTrigger>
-              <TabsTrigger value="drafts">Drafts</TabsTrigger>
-            </TabsList>
+          <div className="flex  gap-4 flex-col md:flex-row mb-4">
+            <div className="flex">
+              <TabsList className="!bg-custom-slate font-WFVisualSansRegular mb-1">
+                <TabsTrigger value="running">Running</TabsTrigger>
+                <TabsTrigger value="completed">Completed</TabsTrigger>
+                <TabsTrigger value="drafts">Drafts</TabsTrigger>
+              </TabsList>
 
-            <div className="flex items-center gap-4 max-md:flex-col">
-              <DateTimePicker date={date} setDate={setDate} />
-
-              <div className="relative w-80">
-                <Input
-                  className="!w-full !bg-[#3D3C44]"
-                  placeholder="Search by username, wallet, or hash"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                />
-                <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <div className="flex items-center gap-4 max-md:flex-col">
+                <DateTimePicker date={date} setDate={setDate} />
               </div>
+            </div>
+
+            <div className="relative w-full border-t border-[#3d3c44] md:border-0 pt-4 md:pt-0 ">
+              <Input
+                className="!w-full !bg-[#3D3C44]"
+                placeholder="Search by username, wallet, or hash"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+              <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             </div>
           </div>
 
@@ -174,9 +175,7 @@ export default function CausesPage() {
             />
           </TabsContent>
         </Tabs>
-
       </div>
-
     </div>
   );
 }

@@ -77,8 +77,8 @@ const TopTiers = () => {
 
   return (
     <HeaderWrapper
-      title="Rewards - Top Tiers"
-      description="Showing the top 10 users with the most volume in the selected period"
+      title="Rewards - Charity Lottery"
+      description="Showing the randomly selected wallets which won the Charity Lottery on the selected period"
     >
       <div className="mb-6 ">
         <div className="flex items-center gap-4 mb-4 max-md:flex-col">

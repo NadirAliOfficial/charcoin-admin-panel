@@ -609,7 +609,7 @@ const HeaderWrapper = ({ children, title, description, actions, size, className,
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("font-semibold", size === "xs" ? "text-sm" : size === "sm" ? "text-lg" : size === "lg" ? "text-3xl" : "text-2xl"),
+                                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])(" font-WFVisualSansRegular", size === "xs" ? "text-sm" : size === "sm" ? "text-lg" : size === "lg" ? "text-3xl" : "text-2xl"),
                                 children: title
                             }, void 0, false, {
                                 fileName: "[project]/src/components/custom/header-wrapper.tsx",

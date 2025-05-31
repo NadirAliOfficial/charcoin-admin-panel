@@ -248,28 +248,36 @@ const columns = [
         accessorKey: "position",
         header: ({ column })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$table$2f$tasks$2d$table$2d$column$2d$header$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DataTableColumnHeader"], {
                 column: column,
-                title: "Position"
+                title: "Position",
+                className: "font-WFVisualSansRegular"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
                 lineNumber: 10,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                className: "px-4 flex font-normal",
+                className: "px-4 flex font-WFVisualSansRegular",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-xl",
+                        className: "text-xl font-WFVisualSansRegular",
                         children: row.getValue("position")
                     }, void 0, false, {
                         fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                        lineNumber: 14,
+                        lineNumber: 18,
                         columnNumber: 9
                     }, this),
-                    (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$helper$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getOrdinalSuffix"])(row.getValue("position"))
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "font-WFVisualSansRegular",
+                        children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$helper$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getOrdinalSuffix"])(row.getValue("position"))
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/columns/top-tier-column.tsx",
+                        lineNumber: 21,
+                        columnNumber: 9
+                    }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 13,
+                lineNumber: 17,
                 columnNumber: 7
             }, this)
     },
@@ -277,33 +285,35 @@ const columns = [
         accessorKey: "username",
         header: ({ column })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$table$2f$tasks$2d$table$2d$column$2d$header$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DataTableColumnHeader"], {
                 column: column,
-                title: "Username / Wallet / Hash"
+                title: "Username / Wallet / Hash",
+                className: "font-WFVisualSansRegular"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 22,
+                lineNumber: 30,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>{
             const { username, wallet, hash } = row.original; // Fetch from original data
             return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                className: "flex flex-col text-sm",
+                className: "flex flex-col text-sm font-WFVisualSansRegular",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "font-WFVisualSansRegular",
                         children: username
                     }, void 0, false, {
                         fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                        lineNumber: 28,
+                        lineNumber: 40,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "text-primary whitespace-nowrap",
+                        className: "text-primary whitespace-nowrap font-WFVisualSansRegular",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("b", {
-                                className: "text-muted-foreground text-[#8c8c8c]",
+                                className: "text-muted-foreground text-[#8c8c8c] font-WFVisualSansRegular",
                                 children: "Wallet:"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                                lineNumber: 30,
+                                lineNumber: 42,
                                 columnNumber: 13
                             }, this),
                             " ",
@@ -311,18 +321,18 @@ const columns = [
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                        lineNumber: 29,
+                        lineNumber: 41,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "text-primary",
+                        className: "text-primary font-WFVisualSansRegular",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("b", {
-                                className: "text-muted-foreground text-[#8c8c8c]",
+                                className: "text-muted-foreground text-[#8c8c8c] font-WFVisualSansRegular",
                                 children: "Hash:"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                                lineNumber: 33,
+                                lineNumber: 48,
                                 columnNumber: 13
                             }, this),
                             " ",
@@ -330,13 +340,13 @@ const columns = [
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                        lineNumber: 32,
+                        lineNumber: 47,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 27,
+                lineNumber: 39,
                 columnNumber: 9
             }, this);
         }
@@ -345,56 +355,62 @@ const columns = [
         accessorKey: "transactions",
         header: ({ column })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$table$2f$tasks$2d$table$2d$column$2d$header$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DataTableColumnHeader"], {
                 column: column,
-                title: "Transactions"
+                title: "Transactions",
+                className: "font-WFVisualSansRegular"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 43,
+                lineNumber: 60,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "font-WFVisualSansRegular",
                 children: row.getValue("transactions")
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 45,
-                columnNumber: 24
+                lineNumber: 67,
+                columnNumber: 7
             }, this)
     },
     {
         accessorKey: "amount",
         header: ({ column })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$table$2f$tasks$2d$table$2d$column$2d$header$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DataTableColumnHeader"], {
                 column: column,
-                title: "Amount ($)"
+                title: "Amount ($)",
+                className: "font-WFVisualSansRegular"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 50,
+                lineNumber: 75,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "font-WFVisualSansRegular",
                 children: [
                     "$",
                     row.getValue("amount")
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 52,
-                columnNumber: 24
+                lineNumber: 82,
+                columnNumber: 7
             }, this)
     },
     {
         accessorKey: "registration",
         header: ({ column })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$table$2f$tasks$2d$table$2d$column$2d$header$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DataTableColumnHeader"], {
                 column: column,
-                title: "Registration Date"
+                title: "Registration Date",
+                className: "font-WFVisualSansRegular"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 57,
+                lineNumber: 90,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "font-WFVisualSansRegular",
                 children: row.getValue("registration").toLocaleDateString()
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 60,
+                lineNumber: 97,
                 columnNumber: 7
             }, this)
     },
@@ -402,17 +418,19 @@ const columns = [
         accessorKey: "lastTransaction",
         header: ({ column })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$table$2f$tasks$2d$table$2d$column$2d$header$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DataTableColumnHeader"], {
                 column: column,
-                title: "Last Transaction"
+                title: "Last Transaction",
+                className: "font-WFVisualSansRegular"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 66,
+                lineNumber: 105,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "font-WFVisualSansRegular",
                 children: row.getValue("lastTransaction").toLocaleDateString()
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 69,
+                lineNumber: 112,
                 columnNumber: 7
             }, this)
     },
@@ -420,20 +438,22 @@ const columns = [
         accessorKey: "awarded",
         header: ({ column })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$table$2f$tasks$2d$table$2d$column$2d$header$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DataTableColumnHeader"], {
                 column: column,
-                title: "Awarded ($)"
+                title: "Awarded ($)",
+                className: "font-WFVisualSansRegular"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 77,
+                lineNumber: 120,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "font-WFVisualSansRegular",
                 children: [
                     "$",
                     row.getValue("awarded").toLocaleString()
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 80,
+                lineNumber: 127,
                 columnNumber: 7
             }, this)
     }
@@ -482,7 +502,7 @@ const HeaderWrapper = ({ children, title, description, actions, size, className,
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("font-semibold", size === "xs" ? "text-sm" : size === "sm" ? "text-lg" : size === "lg" ? "text-3xl" : "text-2xl"),
+                                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])(" font-WFVisualSansRegular", size === "xs" ? "text-sm" : size === "sm" ? "text-lg" : size === "lg" ? "text-3xl" : "text-2xl"),
                                 children: title
                             }, void 0, false, {
                                 fileName: "[project]/src/components/custom/header-wrapper.tsx",
@@ -1972,8 +1992,8 @@ const TopTiers = ()=>{
         }["TopTiers.useQuery"]
     });
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$custom$2f$header$2d$wrapper$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["HeaderWrapper"], {
-        title: "Rewards - Top Tiers",
-        description: "Showing the top 10 users with the most volume in the selected period",
+        title: "Rewards - Charity Lottery",
+        description: "Showing the randomly selected wallets which won the Charity Lottery on the selected period",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "mb-6 ",
             children: [

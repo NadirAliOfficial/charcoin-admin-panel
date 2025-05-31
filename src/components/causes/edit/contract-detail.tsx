@@ -107,6 +107,7 @@ export default function ContactDetailsSection() {
           variant="newly_secondary"
           selectSize="lg"
           placeholder="Select status"
+          className="bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]"
           value={getValues().status}
           onValueChange={(value) => setValue("status", value)}
           options={[

@@ -10,7 +10,7 @@
     "static/chunks/node_modules_@tanstack_table-core_build_lib_index_mjs_dc7bc5._.js",
     "static/chunks/node_modules_date-fns_2e9578._.js",
     "static/chunks/node_modules_react-day-picker_dist_index_esm_9fc304.js",
-    "static/chunks/node_modules_27dc98._.js"
+    "static/chunks/node_modules_d45a28._.js"
   ],
   "source": "dynamic"
 });

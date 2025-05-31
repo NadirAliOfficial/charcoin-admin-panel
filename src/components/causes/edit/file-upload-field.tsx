@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Trash2, Upload } from "lucide-react";
+import { File, Trash2, Upload } from "lucide-react";
 import { useRef } from "react";
 import { useFormContext } from "react-hook-form";
 import FormField from "./form-field";
@@ -41,25 +41,30 @@ export default function FileUploadSection({
         {file ? file.name : "No file selected"}
       </div>
 
-      <div className="flex gap-4 max-sm:flex-col flex-row mt-4">
-        <Button
-          type="button"
-          size={"lg"}
-          className="bg-primary hover:bg-primary/80 text-background flex items-center gap-2"
-          onClick={() => fileInputRef.current?.click()}
-        >
-          <Upload className="h-4 w-4" />
-          Upload a File
-        </Button>
+      <div className="flex gap-4 w-full justify-between max-sm:flex-col flex-row mt-4">
+        <div className="flex gap-2 items-center w-full max-sm:w-auto">
+          <Button
+            type="button"
+            size={"lg"}
+            className="bg-primary hover:bg-primary/80 text-background text-xs flex items-center gap-2"
+            onClick={() => fileInputRef.current?.click()}
+          >
+            Upload a PDF File
+            <File className="h-4 w-4" />
+          </Button>
 
-        <input
-          type="file"
-          ref={fileInputRef}
-          id={`fileInput-${fieldName}`}
-          accept=".pdf"
-          className="hidden"
-          onChange={handleFileChange}
-        />
+          <input
+            type="file"
+            ref={fileInputRef}
+            id={`fileInput-${fieldName}`}
+            accept=".pdf"
+            className="hidden"
+            onChange={handleFileChange}
+          />
+          <div className="text-xs text-gray-400">
+            Final Formal Agreement - Nicaragua.pdf
+          </div>
+        </div>
 
         <Button
           type="button"
@@ -67,8 +72,8 @@ export default function FileUploadSection({
           variant="destructive"
           onClick={handleFileDelete}
           disabled={!file}
-          startIcon={Trash2}
-          className={"!ring-destructive"}
+          endIcon={Trash2}
+          className={"bg-red-300 text-background text-xs flex items-center gap-2"}
         >
           Delete File
         </Button>

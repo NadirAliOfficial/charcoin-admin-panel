@@ -27,10 +27,10 @@ const columns: ColumnDef<TransactionRecord>[] = [
         <span className="flex flex-col text-sm">
           <span>{username}</span>
           <span className="text-primary whitespace-nowrap">
-            <b className="text-muted-foreground">Wallet:</b> {wallet}
+            <b className="text-muted-foreground text-[#8c8c8c]">Wallet:</b> {wallet}
           </span>
           <span className="text-primary">
-            <b className="text-muted-foreground">Hash:</b> {hash}
+            <b className="text-muted-foreground text-[#8c8c8c]">Hash:</b> {hash}
           </span>
         </span>
       );

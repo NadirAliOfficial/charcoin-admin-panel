@@ -87,7 +87,7 @@ const TopTiers = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedDate, setSelectedDate] = useState(new Date());
   // Import the CampaignPeriod type if not already imported
-  
+
   const [selectedCampaign, setSelectedCampaign] = useState<CampaignPeriod | undefined>();
 
   const { data = [], isLoading } = useQuery<TransactionRecord[]>({
@@ -103,16 +103,19 @@ const TopTiers = () => {
       />
       <div className="mb-6 ">
         <div className="flex items-center gap-4 mb-4 max-md:flex-col">
-          <CampaignPeriodSelector
-            selectedCampaign={selectedCampaign}
-            onCampaignChange={setSelectedCampaign}
-            className="your-custom-styles"
-          />
-          <SearchInput
-            placeholder="Search by username, wallet, or hash"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
+          <div className="flex items-center gap-4">
+            <CampaignPeriodSelector
+              selectedCampaign={selectedCampaign}
+              onCampaignChange={setSelectedCampaign}
+              className="your-custom-styles"
+            />
+            <SearchInput
+              placeholder="Search by username, wallet, or hash"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+
         </div>
 
         <TopTierTable

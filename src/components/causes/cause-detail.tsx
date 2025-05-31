@@ -25,42 +25,40 @@ export const CauseDetail = () => {
   const { setCausesOpenEdit } = useDialogStore();
   const [isEdit, setIsEdit] = useState(true);
   return (
-    <div >
+    <div className="font-WFVisualSansRegular bg-[#232226]">
       <Image
         src={"/board.svg"}
         alt="board"
         width={500}
         height={300}
-        className="w-full "
+        className="w-full"
       />
-      <div className="p-6 flex flex-col  gap-6">
+      <div className="p-6 flex flex-col gap-6">
         {/* Header Information */}
         <div>
           <span className="uppercase text-xs leading-5 tracking-[3px]">
             Education
           </span>
-          <h1 className="text-2xl  leading-10">
-            Building 3 schools in the west side of Nicaragua{" "}
+          <h1 className="text-2xl leading-10">
+            Building 3 schools in the west side of Nicaragua
           </h1>
-          <span className="gap-2 text-xs inline ">
+          <span className="gap-2 text-xs inline">
             Organization:{" "}
             <Link href={"/"} className="text-primary hover:underline">
               Schools For the Future
             </Link>{" "}
-            - 30,114 Points from 6,245 benefactors{" "}
+            - 30,114 Points from 6,245 benefactors
           </span>
         </div>
         {/* Stats */}
-        <div className="grid h-max my-auto  grid-cols-[repeat(auto-fit,_minmax(120,+1fr))]  gap-8">
-          <div className="!bg-custom-slate text-center gap-4  p-4 py-8 rounded-xl flex justify-between px-8 max-md:flex-col ">
+        <div className="grid h-max my-auto grid-cols-[repeat(auto-fit,_minmax(120,+1fr))] gap-8">
+          <div className="bg-[#1d1c21] text-center gap-4 p-4 py-8 rounded-xl flex justify-between px-8 max-md:flex-col">
             <span className="space-y-2">
-              {" "}
               <div className="text-3xl">2</div>
               <p className="text-custom-light_text text-xs">Current position</p>
             </span>
             <hr className="min-w-[2px] h-full bg-custom-slate" />
             <span className="space-y-2">
-              {" "}
               <div className="text-3xl flex justify-center items-center">
                 $40,000.00
               </div>
@@ -69,62 +67,55 @@ export const CauseDetail = () => {
               </p>
             </span>
             <hr className="min-w-[2px] h-full bg-custom-slate" />
-
             <span className="space-y-2">
-              {" "}
-              <div className="text-3xl flex whitespace-nowrap  justify-center items-center">
-                $6,000.00{" "}
+              <div className="text-3xl flex whitespace-nowrap items-center">
+                $6,000.00
               </div>
               <p className="text-custom-light_text text-xs">
-                Final potential monthly donation (15% staking profit){" "}
+                Final potential monthly donation (15% staking profit)
               </p>
-              <Button className="bg-custom-purple !ring-custom-purple tracking-wider hover:bg-custom-purple-/90 text-foreground">
+              <Button className="bg-custom-purple h-[30px] text-[10px] !ring-custom-purple tracking-wider hover:bg-custom-purple-/90 text-foreground">
                 Infinite Impact
               </Button>
             </span>
           </div>
         </div>
         {/* Detail Like Country,.... */}
-        <div className="flex flex-wrap gap-x-10  gap-y-5 text-sm">
-          {details?.map((item, key) => {
-            return (
-              <div key={key} className="flex flex-col  text-center">
-                <span className="text-muted-foreground">{item?.value}</span>
-                <span>{item?.label}</span>
-              </div>
-            );
-          })}
+        <div className="flex flex-wrap gap-x-10 gap-y-5 text-sm border-b border-[#323138] pb-5">
+          {details?.map((item, key) => (
+            <div key={key} className="flex flex-col">
+              <span className="tex-xs">{item?.value}</span>
+              <span className="text-xs text-gray-400">{item?.label}</span>
+            </div>
+          ))}
         </div>
-        <hr className="bg-[#323138] " />
+       
         {/* Wallet Information */}
-        <div className="flex justify-between flex-wrap text-sm">
-          <p className="text-primary !break-words line-clamp-1  ">
+        <div className="flex justify-between flex-wrap text-sm border-b border-[#323138] pb-5">
+          <p className="text-primary !break-words line-clamp-1 text-xs">
             0xfd88987b67c265fe57f1bdb3b57d97b717ef567e20bd18ba3c2a780040f15634d6fe
             <br />
-            <span className="text-muted-foreground">
+            <span className="text-muted-foreground text-xs">
               Donation Receiver Wallet
             </span>
           </p>
-          <Button variant={"link"} size={"sm"}>
+          <Button variant={"link"} size={"sm"} className="text-xs">
             <DownloadSolid />
             Download Agreement
           </Button>
         </div>
-        <hr className="bg-[#323138] " />
-
+        
         {/* User Information */}
-        <div className="flex flex-wrap justify-between space-y-5 gap-x-10 text-sm">
-          {personalDetails?.map((item, key) => {
-            return (
-              <div key={key} className="flex flex-col  text-center">
-                <span className="text-muted-foreground">{item?.value}</span>
-                <span>{item?.label}</span>
-              </div>
-            );
-          })}
+        <div className="flex flex-wrap justify-between items-center border-b border-[#323138] pb-4 space-y-5 gap-x-10 text-sm">
+          {personalDetails?.map((item, key) => (
+            <div key={key} className="flex flex-col">
+              <span className="">{item?.value}</span>
+              <span className="text-gray-400">{item?.label}</span>
+            </div>
+          ))}
         </div>
-        <hr className="bg-[#323138] " />
-        {/* Edit Button  */}
+       
+        {/* Edit Button */}
         <Button
           size={"lg"}
           onClick={() => setCausesOpenEdit(true)}
@@ -136,13 +127,23 @@ export const CauseDetail = () => {
         </Button>
 
         <HeaderWrapper
-        size={"sm"}
-        title={<div className="font-normal tracking-wider">Updates - <span className="text-muted-foreground">Professional Media by CharCoin</span></div>}
-        description={<span className="text-xs">Videos uploaded in this section will show up to all benefactors that voted for this project.</span>}
-       
+          size={"sm"}
+          title={
+            <div className="tracking-wider">
+              Updates -{" "}
+              <span className="text-muted-foreground">
+                Professional Media by CharCoin
+              </span>
+            </div>
+          }
+          description={
+            <span className="text-xs">
+              Videos uploaded in this section will show up to all benefactors that
+              voted for this project.
+            </span>
+          }
         />
       </div>
-
     </div>
   );
 };

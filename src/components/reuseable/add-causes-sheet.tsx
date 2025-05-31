@@ -21,7 +21,7 @@ const CustomSheet = ({
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetContent
           className={
-            "[&>button]:left-4   [&>button]:bg-secondary [&>button]:shadow-none  [&>button]:w-6 [&>button]:h-6 [&>button]:flex [&>button]:justify-center [&>button]:items-center [&>button]:focus:ring-2 ring-primary ring-offset-2 !max-w-3xl overflow-auto p-0 !w-full !bg-[hsl(255, 6%, 14%)]"
+            "[&>button]:left-4  [&>button]:bg-secondary [&>button]:shadow-none  [&>button]:w-6 [&>button]:h-6 [&>button]:flex [&>button]:justify-center [&>button]:items-center [&>button]:focus:ring-2 ring-primary ring-offset-2 !max-w-3xl overflow-auto p-0 !w-full !bg-[hsl(255, 6%, 14%)]"
           }
         >
           <VisuallyHidden>

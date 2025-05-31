@@ -18,9 +18,9 @@ export const EditCause = () => {
   return (
     <div>
       {/* Header */}
-      <div className="ml-10 mb-10">
-        <h1 className="text-xl font-medium">Edit running cause details</h1>
-        <p className="text-gray-400 text-sm">
+      <div className="ml-10 mb-10 font-WFVisualSansRegular bg-[#232226]">
+        <h1 className="text-xl font-WFVisualSansRegular ">Edit running cause details</h1>
+        <p className="text-gray-400 text-xs mt-2">
           Warning: You are editing a cause or project that is currently running
         </p>
       </div>

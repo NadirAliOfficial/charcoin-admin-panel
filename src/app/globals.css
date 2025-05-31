@@ -13,8 +13,8 @@ body {
 } */
 @font-face {
   font-family: 'WFVisualSans-Regular';
-  src: url('/src/fonts/wf-visual-sans/WFVisualSans-Regular.woff2') format('woff2'),
-       url('/src/fonts/wf-visual-sans/WFVisualSans-Regular.woff2') format('woff');
+  src: url('/WFVisualSans-Regular.woff2') format('woff2'),
+       
  
 }
 

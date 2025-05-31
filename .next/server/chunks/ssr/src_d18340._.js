@@ -132,7 +132,7 @@ const CustomSheet = ({ isOpen, setIsOpen, children, title, className })=>{
             open: isOpen,
             onOpenChange: setIsOpen,
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$sheet$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SheetContent"], {
-                className: "[&>button]:left-4   [&>button]:bg-secondary [&>button]:shadow-none  [&>button]:w-6 [&>button]:h-6 [&>button]:flex [&>button]:justify-center [&>button]:items-center [&>button]:focus:ring-2 ring-primary ring-offset-2 !max-w-3xl overflow-auto p-0 !w-full !bg-[hsl(255, 6%, 14%)]",
+                className: "[&>button]:left-4  [&>button]:bg-secondary [&>button]:shadow-none  [&>button]:w-6 [&>button]:h-6 [&>button]:flex [&>button]:justify-center [&>button]:items-center [&>button]:focus:ring-2 ring-primary ring-offset-2 !max-w-3xl overflow-auto p-0 !w-full !bg-[hsl(255, 6%, 14%)]",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$visually$2d$hidden$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["VisuallyHidden"], {
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$sheet$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SheetTitle"], {
@@ -913,20 +913,21 @@ const CauseDetail = ()=>{
     const { setCausesOpenEdit } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$stores$2f$dialog$2d$store$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"])();
     const [isEdit, setIsEdit] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "font-WFVisualSansRegular bg-[#232226]",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                 src: "/board.svg",
                 alt: "board",
                 width: 500,
                 height: 300,
-                className: "w-full "
+                className: "w-full"
             }, void 0, false, {
                 fileName: "[project]/src/components/causes/cause-detail.tsx",
                 lineNumber: 29,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "p-6 flex flex-col  gap-6",
+                className: "p-6 flex flex-col gap-6",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: [
@@ -939,18 +940,15 @@ const CauseDetail = ()=>{
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                className: "text-2xl  leading-10",
-                                children: [
-                                    "Building 3 schools in the west side of Nicaragua",
-                                    " "
-                                ]
-                            }, void 0, true, {
+                                className: "text-2xl leading-10",
+                                children: "Building 3 schools in the west side of Nicaragua"
+                            }, void 0, false, {
                                 fileName: "[project]/src/components/causes/cause-detail.tsx",
                                 lineNumber: 42,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "gap-2 text-xs inline ",
+                                className: "gap-2 text-xs inline",
                                 children: [
                                     "Organization:",
                                     " ",
@@ -964,8 +962,7 @@ const CauseDetail = ()=>{
                                         columnNumber: 13
                                     }, this),
                                     " ",
-                                    "- 30,114 Points from 6,245 benefactors",
-                                    " "
+                                    "- 30,114 Points from 6,245 benefactors"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/causes/cause-detail.tsx",
@@ -979,20 +976,19 @@ const CauseDetail = ()=>{
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "grid h-max my-auto  grid-cols-[repeat(auto-fit,_minmax(120,+1fr))]  gap-8",
+                        className: "grid h-max my-auto grid-cols-[repeat(auto-fit,_minmax(120,+1fr))] gap-8",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "!bg-custom-slate text-center gap-4  p-4 py-8 rounded-xl flex justify-between px-8 max-md:flex-col ",
+                            className: "bg-[#1d1c21] text-center gap-4 p-4 py-8 rounded-xl flex justify-between px-8 max-md:flex-col",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "space-y-2",
                                     children: [
-                                        " ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "text-3xl",
                                             children: "2"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                            lineNumber: 58,
+                                            lineNumber: 57,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1000,7 +996,7 @@ const CauseDetail = ()=>{
                                             children: "Current position"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                            lineNumber: 59,
+                                            lineNumber: 58,
                                             columnNumber: 15
                                         }, this)
                                     ]
@@ -1013,19 +1009,18 @@ const CauseDetail = ()=>{
                                     className: "min-w-[2px] h-full bg-custom-slate"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                    lineNumber: 61,
+                                    lineNumber: 60,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "space-y-2",
                                     children: [
-                                        " ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "text-3xl flex justify-center items-center",
                                             children: "$40,000.00"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                            lineNumber: 64,
+                                            lineNumber: 62,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1033,60 +1028,53 @@ const CauseDetail = ()=>{
                                             children: "Potential winning"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                            lineNumber: 67,
+                                            lineNumber: 65,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                    lineNumber: 62,
+                                    lineNumber: 61,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("hr", {
                                     className: "min-w-[2px] h-full bg-custom-slate"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                    lineNumber: 71,
+                                    lineNumber: 69,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "space-y-2",
                                     children: [
-                                        " ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "text-3xl flex whitespace-nowrap  justify-center items-center",
-                                            children: [
-                                                "$6,000.00",
-                                                " "
-                                            ]
-                                        }, void 0, true, {
+                                            className: "text-3xl flex whitespace-nowrap items-center",
+                                            children: "$6,000.00"
+                                        }, void 0, false, {
                                             fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                            lineNumber: 75,
+                                            lineNumber: 71,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "text-custom-light_text text-xs",
-                                            children: [
-                                                "Final potential monthly donation (15% staking profit)",
-                                                " "
-                                            ]
-                                        }, void 0, true, {
+                                            children: "Final potential monthly donation (15% staking profit)"
+                                        }, void 0, false, {
                                             fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                            lineNumber: 78,
+                                            lineNumber: 74,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                            className: "bg-custom-purple !ring-custom-purple tracking-wider hover:bg-custom-purple-/90 text-foreground",
+                                            className: "bg-custom-purple h-[30px] text-[10px] !ring-custom-purple tracking-wider hover:bg-custom-purple-/90 text-foreground",
                                             children: "Infinite Impact"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                            lineNumber: 81,
+                                            lineNumber: 77,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                    lineNumber: 73,
+                                    lineNumber: 70,
                                     columnNumber: 13
                                 }, this)
                             ]
@@ -1101,138 +1089,116 @@ const CauseDetail = ()=>{
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex flex-wrap gap-x-10  gap-y-5 text-sm",
-                        children: details?.map((item, key)=>{
-                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex flex-col  text-center",
+                        className: "flex flex-wrap gap-x-10 gap-y-5 text-sm border-b border-[#323138] pb-5",
+                        children: details?.map((item, key)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex flex-col",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-muted-foreground",
+                                        className: "tex-xs",
                                         children: item?.value
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                        lineNumber: 92,
-                                        columnNumber: 17
+                                        lineNumber: 87,
+                                        columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-xs text-gray-400",
                                         children: item?.label
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                        lineNumber: 93,
-                                        columnNumber: 17
+                                        lineNumber: 88,
+                                        columnNumber: 15
                                     }, this)
                                 ]
                             }, key, true, {
                                 fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                lineNumber: 91,
-                                columnNumber: 15
-                            }, this);
-                        })
+                                lineNumber: 86,
+                                columnNumber: 13
+                            }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/components/causes/cause-detail.tsx",
-                        lineNumber: 88,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("hr", {
-                        className: "bg-[#323138] "
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/causes/cause-detail.tsx",
-                        lineNumber: 98,
+                        lineNumber: 84,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex justify-between flex-wrap text-sm",
+                        className: "flex justify-between flex-wrap text-sm border-b border-[#323138] pb-5",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-primary !break-words line-clamp-1  ",
+                                className: "text-primary !break-words line-clamp-1 text-xs",
                                 children: [
                                     "0xfd88987b67c265fe57f1bdb3b57d97b717ef567e20bd18ba3c2a780040f15634d6fe",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                         fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                        lineNumber: 103,
+                                        lineNumber: 97,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-muted-foreground",
+                                        className: "text-muted-foreground text-xs",
                                         children: "Donation Receiver Wallet"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                        lineNumber: 104,
+                                        lineNumber: 98,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                lineNumber: 101,
+                                lineNumber: 95,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                                 variant: "link",
                                 size: "sm",
+                                className: "text-xs",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2d$solid$2f$DownloadSolid$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__DownloadSolid$3e$__["DownloadSolid"], {}, void 0, false, {
                                         fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                        lineNumber: 109,
+                                        lineNumber: 103,
                                         columnNumber: 13
                                     }, this),
                                     "Download Agreement"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                lineNumber: 108,
+                                lineNumber: 102,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/causes/cause-detail.tsx",
-                        lineNumber: 100,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("hr", {
-                        className: "bg-[#323138] "
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/causes/cause-detail.tsx",
-                        lineNumber: 113,
+                        lineNumber: 94,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex flex-wrap justify-between space-y-5 gap-x-10 text-sm",
-                        children: personalDetails?.map((item, key)=>{
-                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex flex-col  text-center",
+                        className: "flex flex-wrap justify-between items-center border-b border-[#323138] pb-4 space-y-5 gap-x-10 text-sm",
+                        children: personalDetails?.map((item, key)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex flex-col",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-muted-foreground",
+                                        className: "",
                                         children: item?.value
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                        lineNumber: 120,
-                                        columnNumber: 17
+                                        lineNumber: 112,
+                                        columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-gray-400",
                                         children: item?.label
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                        lineNumber: 121,
-                                        columnNumber: 17
+                                        lineNumber: 113,
+                                        columnNumber: 15
                                     }, this)
                                 ]
                             }, key, true, {
                                 fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                lineNumber: 119,
-                                columnNumber: 15
-                            }, this);
-                        })
+                                lineNumber: 111,
+                                columnNumber: 13
+                            }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/components/causes/cause-detail.tsx",
-                        lineNumber: 116,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("hr", {
-                        className: "bg-[#323138] "
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/causes/cause-detail.tsx",
-                        lineNumber: 126,
+                        lineNumber: 109,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1246,46 +1212,47 @@ const CauseDetail = ()=>{
                                 className: "!w-6 !h-6"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                lineNumber: 135,
+                                lineNumber: 126,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/causes/cause-detail.tsx",
-                        lineNumber: 128,
+                        lineNumber: 119,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$custom$2f$header$2d$wrapper$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["HeaderWrapper"], {
                         size: "sm",
                         title: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "font-normal tracking-wider",
+                            className: "tracking-wider",
                             children: [
-                                "Updates - ",
+                                "Updates -",
+                                " ",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "text-muted-foreground",
                                     children: "Professional Media by CharCoin"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/causes/cause-detail.tsx",
-                                    lineNumber: 140,
-                                    columnNumber: 70
+                                    lineNumber: 134,
+                                    columnNumber: 15
                                 }, void 0)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/causes/cause-detail.tsx",
-                            lineNumber: 140,
-                            columnNumber: 16
+                            lineNumber: 132,
+                            columnNumber: 13
                         }, void 0),
                         description: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             className: "text-xs",
                             children: "Videos uploaded in this section will show up to all benefactors that voted for this project."
                         }, void 0, false, {
                             fileName: "[project]/src/components/causes/cause-detail.tsx",
-                            lineNumber: 141,
-                            columnNumber: 22
+                            lineNumber: 140,
+                            columnNumber: 13
                         }, void 0)
                     }, void 0, false, {
                         fileName: "[project]/src/components/causes/cause-detail.tsx",
-                        lineNumber: 138,
+                        lineNumber: 129,
                         columnNumber: 9
                     }, this)
                 ]
@@ -1490,11 +1457,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$l
 ;
 function FormField({ id, label, description, error, children }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "mb-4",
+        className: "mb-4 ",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Label"], {
                 htmlFor: id,
-                className: "block mb-1",
+                className: "block mb-1 mt-7 text-[14px] font-WFVisualSansRegular",
                 children: label
             }, void 0, false, {
                 fileName: "[project]/src/components/causes/edit/form-field.tsx",
@@ -1502,7 +1469,7 @@ function FormField({ id, label, description, error, children }) {
                 columnNumber: 7
             }, this),
             description && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "text-gray-400 text-sm mb-2",
+                className: "text-gray-400 text-xs  mb-5 font-WFVisualSansRegular",
                 children: description
             }, void 0, false, {
                 fileName: "[project]/src/components/causes/edit/form-field.tsx",
@@ -1511,7 +1478,7 @@ function FormField({ id, label, description, error, children }) {
             }, this),
             children,
             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "text-red-500 mt-1 text-sm",
+                className: "text-red-500 mt-1 text-sm font-WFVisualSansRegular",
                 children: error
             }, void 0, false, {
                 fileName: "[project]/src/components/causes/edit/form-field.tsx",
@@ -1540,9 +1507,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$causes$2f$edit$2f$form$2d$field$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/causes/edit/form-field.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/image.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react-hook-form/dist/index.esm.mjs [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_import__("[project]/node_modules/lucide-react/dist/esm/icons/x.js [app-ssr] (ecmascript) <export default as X>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$upload$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Upload$3e$__ = __turbopack_import__("[project]/node_modules/lucide-react/dist/esm/icons/upload.js [app-ssr] (ecmascript) <export default as Upload>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ImageIcon$3e$__ = __turbopack_import__("[project]/node_modules/lucide-react/dist/esm/icons/image.js [app-ssr] (ecmascript) <export default as ImageIcon>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__ = __turbopack_import__("[project]/node_modules/lucide-react/dist/esm/icons/trash-2.js [app-ssr] (ecmascript) <export default as Trash2>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_import__("[project]/node_modules/lucide-react/dist/esm/icons/x.js [app-ssr] (ecmascript) <export default as X>");
 "use client";
 ;
 ;
@@ -1582,103 +1549,101 @@ function ImageUploadSection({ fieldName, label, description }) {
         id: fieldName,
         label: label,
         description: description,
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex flex-wrap gap-2 mt-4",
-                children: imageFiles.map((image, index)=>{
-                    const previewUrl = URL.createObjectURL(image);
-                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "relative",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                width: 128,
-                                height: 80,
-                                src: previewUrl,
-                                alt: `Uploaded Image ${index + 1}`,
-                                className: "h-20 w-32 object-cover rounded-md",
-                                onLoad: ()=>URL.revokeObjectURL(previewUrl)
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/causes/edit/field-upload-section.tsx",
-                                lineNumber: 54,
-                                columnNumber: 15
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                type: "button",
-                                onClick: ()=>handleDeleteImage(index),
-                                className: "absolute top-1 right-1 bg-red-500 rounded-full p-1",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
-                                    className: "h-3 w-3 text-white"
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "flex items-center gap-4 mt-10 max-sm:flex-col",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                    type: "button",
+                    onClick: ()=>fileInputRef.current?.click(),
+                    size: "lg",
+                    endIcon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ImageIcon$3e$__["ImageIcon"],
+                    className: "bg-primary hover:bg-primary/80 text-background flex items-center gap-2",
+                    children: "Upload Images"
+                }, void 0, false, {
+                    fileName: "[project]/src/components/causes/edit/field-upload-section.tsx",
+                    lineNumber: 51,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                    type: "file",
+                    ref: fileInputRef,
+                    accept: "image/png, image/jpeg, image/jpg",
+                    multiple: true,
+                    className: "hidden",
+                    onChange: handleImageUpload
+                }, void 0, false, {
+                    fileName: "[project]/src/components/causes/edit/field-upload-section.tsx",
+                    lineNumber: 61,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                    type: "button",
+                    variant: "destructive",
+                    size: "lg",
+                    onClick: ()=>setImageFiles([]),
+                    disabled: imageFiles.length === 0,
+                    endIcon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"],
+                    className: "bg-red-300 text-black",
+                    children: "Delete All"
+                }, void 0, false, {
+                    fileName: "[project]/src/components/causes/edit/field-upload-section.tsx",
+                    lineNumber: 71,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "flex flex-wrap gap-2 mt-4",
+                    children: imageFiles.map((image, index)=>{
+                        const previewUrl = URL.createObjectURL(image);
+                        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "relative",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    width: 128,
+                                    height: 80,
+                                    src: previewUrl,
+                                    alt: `Uploaded Image ${index + 1}`,
+                                    className: "h-20 w-32 object-cover rounded-md",
+                                    onLoad: ()=>URL.revokeObjectURL(previewUrl)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/causes/edit/field-upload-section.tsx",
-                                    lineNumber: 67,
-                                    columnNumber: 17
+                                    lineNumber: 90,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    type: "button",
+                                    onClick: ()=>handleDeleteImage(index),
+                                    className: "absolute top-1 right-1 bg-red-500 rounded-full p-1",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
+                                        className: "h-3 w-3 text-white"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/causes/edit/field-upload-section.tsx",
+                                        lineNumber: 103,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/causes/edit/field-upload-section.tsx",
+                                    lineNumber: 98,
+                                    columnNumber: 15
                                 }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/causes/edit/field-upload-section.tsx",
-                                lineNumber: 62,
-                                columnNumber: 15
-                            }, this)
-                        ]
-                    }, index, true, {
-                        fileName: "[project]/src/components/causes/edit/field-upload-section.tsx",
-                        lineNumber: 53,
-                        columnNumber: 13
-                    }, this);
-                })
-            }, void 0, false, {
-                fileName: "[project]/src/components/causes/edit/field-upload-section.tsx",
-                lineNumber: 48,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex gap-4 mt-4 max-sm:flex-col",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                        type: "button",
-                        onClick: ()=>fileInputRef.current?.click(),
-                        size: "lg",
-                        startIcon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$upload$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Upload$3e$__["Upload"],
-                        className: "bg-primary hover:bg-primary/80 text-background flex items-center gap-2",
-                        children: "Upload Images"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/causes/edit/field-upload-section.tsx",
-                        lineNumber: 76,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                        type: "file",
-                        ref: fileInputRef,
-                        accept: "image/png, image/jpeg, image/jpg",
-                        multiple: true,
-                        className: "hidden",
-                        onChange: handleImageUpload
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/causes/edit/field-upload-section.tsx",
-                        lineNumber: 86,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                        type: "button",
-                        variant: "destructive",
-                        size: "lg",
-                        onClick: ()=>setImageFiles([]),
-                        disabled: imageFiles.length === 0,
-                        startIcon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"],
-                        className: "!ring-destructive",
-                        children: "Delete All"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/causes/edit/field-upload-section.tsx",
-                        lineNumber: 96,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/components/causes/edit/field-upload-section.tsx",
-                lineNumber: 75,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
+                            ]
+                        }, index, true, {
+                            fileName: "[project]/src/components/causes/edit/field-upload-section.tsx",
+                            lineNumber: 89,
+                            columnNumber: 13
+                        }, this);
+                    })
+                }, void 0, false, {
+                    fileName: "[project]/src/components/causes/edit/field-upload-section.tsx",
+                    lineNumber: 84,
+                    columnNumber: 7
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/causes/edit/field-upload-section.tsx",
+            lineNumber: 50,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
         fileName: "[project]/src/components/causes/edit/field-upload-section.tsx",
         lineNumber: 46,
         columnNumber: 5
@@ -1697,26 +1662,17 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 function FormSectionTitle({ title, ...props }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "col-span-2 mb-4 flex flex-col  ",
+        className: "col-span-2 mb-5 flex flex-col border-b border-[#323138]",
         ...props,
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                className: "!text-lg ",
-                children: title
-            }, void 0, false, {
-                fileName: "[project]/src/components/causes/edit/form-section-title.tsx",
-                lineNumber: 14,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("hr", {
-                className: "col-span-2 border-accent"
-            }, void 0, false, {
-                fileName: "[project]/src/components/causes/edit/form-section-title.tsx",
-                lineNumber: 17,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+            className: "!text-lg font-WFVisualSansRegular py-5",
+            children: title
+        }, void 0, false, {
+            fileName: "[project]/src/components/causes/edit/form-section-title.tsx",
+            lineNumber: 14,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
         fileName: "[project]/src/components/causes/edit/form-section-title.tsx",
         lineNumber: 13,
         columnNumber: 5
@@ -1858,7 +1814,7 @@ function MainDetailsSection() {
                     variant: "newly_secondary",
                     inputSize: "lg",
                     id: "causeTitle",
-                    className: "bg-gray-800 border-gray-700 text-white",
+                    className: "bg-gray-800 border-gray-700 text-[14px] font-WFVisualSansRegular text-gray-400",
                     ...register("causeTitle")
                 }, void 0, false, {
                     fileName: "[project]/src/components/causes/edit/main-detail.tsx",
@@ -1882,7 +1838,7 @@ function MainDetailsSection() {
                             variant: "newly_secondary",
                             inputSize: "lg",
                             id: "organization",
-                            className: "bg-gray-800 border-gray-700 text-white",
+                            className: "bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]",
                             ...register("organization")
                         }, void 0, false, {
                             fileName: "[project]/src/components/causes/edit/main-detail.tsx",
@@ -1903,7 +1859,7 @@ function MainDetailsSection() {
                             variant: "newly_secondary",
                             inputSize: "lg",
                             id: "website",
-                            className: "bg-gray-800 border-gray-700 text-white",
+                            className: "bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]",
                             placeholder: "https://",
                             ...register("website")
                         }, void 0, false, {
@@ -1935,6 +1891,7 @@ function MainDetailsSection() {
                             selectSize: "lg",
                             placeholder: "Select country",
                             value: getValues().country,
+                            className: "bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]",
                             onValueChange: (value)=>setValue("country", value),
                             options: [
                                 {
@@ -1973,6 +1930,7 @@ function MainDetailsSection() {
                             variant: "newly_secondary",
                             selectSize: "lg",
                             placeholder: "Select campaign",
+                            className: "bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]",
                             value: getValues().campaign,
                             onValueChange: (value)=>setValue("campaign", value),
                             options: [
@@ -1991,12 +1949,12 @@ function MainDetailsSection() {
                             ]
                         }, void 0, false, {
                             fileName: "[project]/src/components/causes/edit/main-detail.tsx",
-                            lineNumber: 98,
+                            lineNumber: 99,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/causes/edit/main-detail.tsx",
-                        lineNumber: 92,
+                        lineNumber: 93,
                         columnNumber: 9
                     }, this)
                 ]
@@ -2018,6 +1976,7 @@ function MainDetailsSection() {
                             selectSize: "lg",
                             placeholder: "Select category",
                             value: getValues().category,
+                            className: "bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]",
                             onValueChange: (value)=>setValue("category", value),
                             options: [
                                 {
@@ -2039,12 +1998,12 @@ function MainDetailsSection() {
                             ]
                         }, void 0, false, {
                             fileName: "[project]/src/components/causes/edit/main-detail.tsx",
-                            lineNumber: 129,
+                            lineNumber: 131,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/causes/edit/main-detail.tsx",
-                        lineNumber: 123,
+                        lineNumber: 125,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$causes$2f$edit$2f$form$2d$field$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -2057,6 +2016,7 @@ function MainDetailsSection() {
                             selectSize: "lg",
                             placeholder: "Select type",
                             value: getValues().type,
+                            className: "bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]",
                             onValueChange: (value)=>setValue("type", value),
                             options: [
                                 {
@@ -2074,18 +2034,18 @@ function MainDetailsSection() {
                             ]
                         }, void 0, false, {
                             fileName: "[project]/src/components/causes/edit/main-detail.tsx",
-                            lineNumber: 150,
+                            lineNumber: 153,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/causes/edit/main-detail.tsx",
-                        lineNumber: 144,
+                        lineNumber: 147,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/causes/edit/main-detail.tsx",
-                lineNumber: 122,
+                lineNumber: 124,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$causes$2f$edit$2f$form$2d$field$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -2097,16 +2057,16 @@ function MainDetailsSection() {
                     variant: "newly_secondary",
                     inputSize: "lg",
                     id: "wallet",
-                    className: "bg-gray-800 border-gray-700 text-white",
+                    className: "bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]",
                     ...register("wallet")
                 }, void 0, false, {
                     fileName: "[project]/src/components/causes/edit/main-detail.tsx",
-                    lineNumber: 171,
+                    lineNumber: 175,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/causes/edit/main-detail.tsx",
-                lineNumber: 165,
+                lineNumber: 169,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$causes$2f$edit$2f$field$2d$upload$2d$section$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -2115,7 +2075,7 @@ function MainDetailsSection() {
                 description: "Choose a 1000x600 pixels PNG image, below you will see a preview of the uploaded image"
             }, void 0, false, {
                 fileName: "[project]/src/components/causes/edit/main-detail.tsx",
-                lineNumber: 180,
+                lineNumber: 184,
                 columnNumber: 7
             }, this)
         ]
@@ -2266,17 +2226,18 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hoo
 function ContactDetailsSection() {
     const { register, formState: { errors }, setValue, getValues } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useFormContext"])();
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "mb-8",
+        className: "mb-8 mt-20",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$causes$2f$edit$2f$form$2d$section$2d$title$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                title: "Contact details"
+                title: "Contact details",
+                className: "border-b-2 border-[#3d3c44]"
             }, void 0, false, {
                 fileName: "[project]/src/components/causes/edit/contract-detail.tsx",
                 lineNumber: 28,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "grid grid-cols-1 md:grid-cols-2 gap-4 mb-4",
+                className: "grid grid-cols-1 md:grid-cols-2 gap-4",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$causes$2f$edit$2f$form$2d$field$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         id: "responsibleContact",
@@ -2287,7 +2248,7 @@ function ContactDetailsSection() {
                             variant: "newly_secondary",
                             inputSize: "lg",
                             id: "responsibleContact",
-                            className: "bg-gray-800 border-gray-700 text-white",
+                            className: "bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]",
                             ...register("responsibleContact")
                         }, void 0, false, {
                             fileName: "[project]/src/components/causes/edit/contract-detail.tsx",
@@ -2308,7 +2269,7 @@ function ContactDetailsSection() {
                             variant: "newly_secondary",
                             inputSize: "lg",
                             id: "role",
-                            className: "bg-gray-800 border-gray-700 text-white",
+                            className: "bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]",
                             ...register("role")
                         }, void 0, false, {
                             fileName: "[project]/src/components/causes/edit/contract-detail.tsx",
@@ -2338,7 +2299,7 @@ function ContactDetailsSection() {
                             variant: "newly_secondary",
                             inputSize: "lg",
                             id: "email",
-                            className: "bg-gray-800 border-gray-700 text-white",
+                            className: "bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]",
                             ...register("email")
                         }, void 0, false, {
                             fileName: "[project]/src/components/causes/edit/contract-detail.tsx",
@@ -2359,7 +2320,7 @@ function ContactDetailsSection() {
                             variant: "newly_secondary",
                             inputSize: "lg",
                             id: "phone",
-                            className: "bg-gray-800 border-gray-700 text-white",
+                            className: "bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]",
                             ...register("phone")
                         }, void 0, false, {
                             fileName: "[project]/src/components/causes/edit/contract-detail.tsx",
@@ -2512,10 +2473,10 @@ const EditCause = ()=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "ml-10 mb-10",
+                className: "ml-10 mb-10 font-WFVisualSansRegular bg-[#232226]",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        className: "text-xl font-medium",
+                        className: "text-xl font-WFVisualSansRegular ",
                         children: "Edit running cause details"
                     }, void 0, false, {
                         fileName: "[project]/src/components/causes/edit-cause.tsx",
@@ -2523,7 +2484,7 @@ const EditCause = ()=>{
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-gray-400 text-sm",
+                        className: "text-gray-400 text-xs mt-2",
                         children: "Warning: You are editing a cause or project that is currently running"
                     }, void 0, false, {
                         fileName: "[project]/src/components/causes/edit-cause.tsx",

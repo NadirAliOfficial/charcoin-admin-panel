@@ -29,7 +29,7 @@ export default function MainDetailsSection() {
           variant="newly_secondary"
           inputSize="lg"
           id="causeTitle"
-          className="bg-gray-800 border-gray-700 text-white"
+          className="bg-gray-800 border-gray-700 text-[14px] font-WFVisualSansRegular text-gray-400"
           {...register("causeTitle")}
         />
       </FormField>
@@ -45,7 +45,7 @@ export default function MainDetailsSection() {
             variant="newly_secondary"
             inputSize="lg"
             id="organization"
-            className="bg-gray-800 border-gray-700 text-white"
+            className="bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]"
             {...register("organization")}
           />
         </FormField>
@@ -60,7 +60,7 @@ export default function MainDetailsSection() {
             variant="newly_secondary"
             inputSize="lg"
             id="website"
-            className="bg-gray-800 border-gray-700 text-white"
+            className="bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]"
             placeholder="https://"
             {...register("website")}
           />
@@ -79,6 +79,7 @@ export default function MainDetailsSection() {
             selectSize="lg"
             placeholder="Select country"
             value={getValues().country}
+            className="bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]"
             onValueChange={(value) => setValue("country", value)}
             options={[
               { value: "Nicaragua", label: "Nicaragua" },
@@ -99,6 +100,7 @@ export default function MainDetailsSection() {
             variant="newly_secondary"
             selectSize="lg"
             placeholder="Select campaign"
+            className="bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]"
             value={getValues().campaign}
             onValueChange={(value) => setValue("campaign", value)}
             options={[
@@ -131,6 +133,7 @@ export default function MainDetailsSection() {
             selectSize="lg"
             placeholder="Select category"
             value={getValues().category}
+            className="bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]"
             onValueChange={(value) => setValue("category", value)}
             options={[
               { value: "Education", label: "Education" },
@@ -152,6 +155,7 @@ export default function MainDetailsSection() {
             selectSize="lg"
             placeholder="Select type"
             value={getValues().type}
+            className="bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]"
             onValueChange={(value) => setValue("type", value)}
             options={[
               { value: "One Time Only", label: "One Time Only" },
@@ -172,7 +176,7 @@ export default function MainDetailsSection() {
           variant={"newly_secondary"}
           inputSize={"lg"}
           id="wallet"
-          className="bg-gray-800 border-gray-700 text-white"
+          className="bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]"
           {...register("wallet")}
         />
       </FormField>

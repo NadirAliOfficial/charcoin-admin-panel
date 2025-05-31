@@ -2,6 +2,8 @@ import { ColumnDef } from "@tanstack/react-table";
 import { DataTableColumnHeader } from "../table/tasks-table-column-header";
 import { TransactionRecord } from "@/types/rewards";
 import { getOrdinalSuffix } from "@/lib/helper";
+import { usePathname } from "next/navigation";
+
 
 const columns: ColumnDef<TransactionRecord>[] = [
   {
@@ -35,6 +37,7 @@ const columns: ColumnDef<TransactionRecord>[] = [
     ),
     cell: ({ row }) => {
       const { username, wallet, hash } = row.original; // Fetch from original data
+      const path = usePathname();
       return (
         <span className="flex flex-col text-sm font-WFVisualSansRegular">
           <span className="font-WFVisualSansRegular">{username}</span>
@@ -44,12 +47,12 @@ const columns: ColumnDef<TransactionRecord>[] = [
             </b>{" "}
             {wallet}
           </span>
-          <span className="text-primary font-WFVisualSansRegular">
+          {path !=="/rewards/top-tiers" && <span className="text-primary font-WFVisualSansRegular">
             <b className="text-muted-foreground text-[#8c8c8c] font-WFVisualSansRegular">
               Hash:
             </b>{" "}
             {hash}
-          </span>
+          </span>}
         </span>
       );
     },

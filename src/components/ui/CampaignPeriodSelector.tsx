@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/popover";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { ChevronDown, Calendar } from "@mynaui/icons-react";
-import { Trophy } from "lucide-react";
+import { AlignLeft, Trophy } from "lucide-react";
 
 export interface CampaignPeriod {
   id: string;
@@ -80,7 +80,7 @@ export function CampaignPeriodSelector({
               <span>{placeholder}</span>
             )}
           </div>
-          <ChevronDown className={cn("ml-auto h-4 w-4", iconClassName)} />
+          <AlignLeft className={cn("ml-auto h-4 w-4", iconClassName)} />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-80 p-0" align="start">

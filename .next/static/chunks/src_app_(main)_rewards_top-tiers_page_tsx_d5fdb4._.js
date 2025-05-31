@@ -6,7 +6,7 @@
   "path": "static/chunks/src_app_(main)_rewards_top-tiers_page_tsx_d5fdb4._.js",
   "chunks": [
     "static/chunks/src_f21616._.js",
-    "static/chunks/node_modules_6aed23._.js"
+    "static/chunks/node_modules_07d029._.js"
   ],
   "source": "dynamic"
 });

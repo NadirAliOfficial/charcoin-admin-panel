@@ -794,7 +794,7 @@ var _s = __turbopack_refresh__.signature();
 ;
 ;
 ;
-function TopTierTable({ columns, data, fetching }) {
+function TopTierTable({ columns, data, fetching, hideHash = false }) {
     _s();
     const [rowSelection, setRowSelection] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.useState({});
     const [columnVisibility, setColumnVisibility] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.useState({});
@@ -837,18 +837,18 @@ function TopTierTable({ columns, data, fetching }) {
                                             children: header.isPlaceholder ? null : (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$table$2f$build$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["flexRender"])(header.column.columnDef.header, header.getContext())
                                         }, header.id, false, {
                                             fileName: "[project]/src/components/rewards/top-tier-table.tsx",
-                                            lineNumber: 81,
+                                            lineNumber: 83,
                                             columnNumber: 21
                                         }, this);
                                     })
                                 }, headerGroup.id, false, {
                                     fileName: "[project]/src/components/rewards/top-tier-table.tsx",
-                                    lineNumber: 78,
+                                    lineNumber: 80,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/components/rewards/top-tier-table.tsx",
-                            lineNumber: 76,
+                            lineNumber: 78,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TableBody"], {
@@ -862,12 +862,12 @@ function TopTierTable({ columns, data, fetching }) {
                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$table$2f$build$2f$lib$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["flexRender"])(cell.column.columnDef.cell, cell.getContext())
                                         }, cell.id, false, {
                                             fileName: "[project]/src/components/rewards/top-tier-table.tsx",
-                                            lineNumber: 106,
+                                            lineNumber: 108,
                                             columnNumber: 21
                                         }, this))
                                 }, row.id, false, {
                                     fileName: "[project]/src/components/rewards/top-tier-table.tsx",
-                                    lineNumber: 97,
+                                    lineNumber: 99,
                                     columnNumber: 17
                                 }, this)) : fetching ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TableRow"], {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -875,17 +875,17 @@ function TopTierTable({ columns, data, fetching }) {
                                     className: "h-24 text-center",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$reuseable$2f$fetching$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fetching"], {}, void 0, false, {
                                         fileName: "[project]/src/components/rewards/top-tier-table.tsx",
-                                        lineNumber: 121,
+                                        lineNumber: 123,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/rewards/top-tier-table.tsx",
-                                    lineNumber: 117,
+                                    lineNumber: 119,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/rewards/top-tier-table.tsx",
-                                lineNumber: 116,
+                                lineNumber: 118,
                                 columnNumber: 15
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TableRow"], {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -894,28 +894,28 @@ function TopTierTable({ columns, data, fetching }) {
                                     children: "No results."
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/rewards/top-tier-table.tsx",
-                                    lineNumber: 126,
+                                    lineNumber: 128,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/rewards/top-tier-table.tsx",
-                                lineNumber: 125,
+                                lineNumber: 127,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/rewards/top-tier-table.tsx",
-                            lineNumber: 94,
+                            lineNumber: 96,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/rewards/top-tier-table.tsx",
-                    lineNumber: 75,
+                    lineNumber: 77,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/rewards/top-tier-table.tsx",
-                lineNumber: 73,
+                lineNumber: 75,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -924,18 +924,18 @@ function TopTierTable({ columns, data, fetching }) {
                     table: table
                 }, void 0, false, {
                     fileName: "[project]/src/components/rewards/top-tier-table.tsx",
-                    lineNumber: 139,
+                    lineNumber: 141,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/rewards/top-tier-table.tsx",
-                lineNumber: 138,
+                lineNumber: 140,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/rewards/top-tier-table.tsx",
-        lineNumber: 71,
+        lineNumber: 73,
         columnNumber: 5
     }, this);
 }
@@ -1191,6 +1191,9 @@ __turbopack_esm__({
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$table$2f$tasks$2d$table$2d$column$2d$header$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/table/tasks-table-column-header.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$helper$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/lib/helper.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
+;
+var _s = __turbopack_refresh__.signature();
 ;
 ;
 ;
@@ -1203,7 +1206,7 @@ const columns = [
                 className: "font-WFVisualSansRegular"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 10,
+                lineNumber: 12,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1214,7 +1217,7 @@ const columns = [
                         children: row.getValue("position")
                     }, void 0, false, {
                         fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                        lineNumber: 18,
+                        lineNumber: 20,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1222,13 +1225,13 @@ const columns = [
                         children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$helper$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getOrdinalSuffix"])(row.getValue("position"))
                     }, void 0, false, {
                         fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                        lineNumber: 21,
+                        lineNumber: 23,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 17,
+                lineNumber: 19,
                 columnNumber: 7
             }, this)
     },
@@ -1240,11 +1243,13 @@ const columns = [
                 className: "font-WFVisualSansRegular"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 30,
+                lineNumber: 32,
                 columnNumber: 7
             }, this),
-        cell: ({ row })=>{
+        cell: _s(({ row })=>{
+            _s();
             const { username, wallet, hash } = row.original; // Fetch from original data
+            const path = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"])();
             return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                 className: "flex flex-col text-sm font-WFVisualSansRegular",
                 children: [
@@ -1253,7 +1258,7 @@ const columns = [
                         children: username
                     }, void 0, false, {
                         fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                        lineNumber: 40,
+                        lineNumber: 43,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1264,7 +1269,7 @@ const columns = [
                                 children: "Wallet:"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                                lineNumber: 42,
+                                lineNumber: 45,
                                 columnNumber: 13
                             }, this),
                             " ",
@@ -1272,10 +1277,10 @@ const columns = [
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                        lineNumber: 41,
+                        lineNumber: 44,
                         columnNumber: 11
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                    path !== "/rewards/top-tiers" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         className: "text-primary font-WFVisualSansRegular",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("b", {
@@ -1283,7 +1288,7 @@ const columns = [
                                 children: "Hash:"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                                lineNumber: 48,
+                                lineNumber: 51,
                                 columnNumber: 13
                             }, this),
                             " ",
@@ -1291,16 +1296,20 @@ const columns = [
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                        lineNumber: 47,
-                        columnNumber: 11
+                        lineNumber: 50,
+                        columnNumber: 44
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 39,
+                lineNumber: 42,
                 columnNumber: 9
             }, this);
-        }
+        }, "kx72sda92+XlSh1QiZvq/YVQxpY=", false, function() {
+            return [
+                __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"]
+            ];
+        })
     },
     {
         accessorKey: "transactions",
@@ -1310,7 +1319,7 @@ const columns = [
                 className: "font-WFVisualSansRegular"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 60,
+                lineNumber: 63,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1318,7 +1327,7 @@ const columns = [
                 children: row.getValue("transactions")
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 67,
+                lineNumber: 70,
                 columnNumber: 7
             }, this)
     },
@@ -1330,7 +1339,7 @@ const columns = [
                 className: "font-WFVisualSansRegular"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 75,
+                lineNumber: 78,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1341,7 +1350,7 @@ const columns = [
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 82,
+                lineNumber: 85,
                 columnNumber: 7
             }, this)
     },
@@ -1353,7 +1362,7 @@ const columns = [
                 className: "font-WFVisualSansRegular"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 90,
+                lineNumber: 93,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1361,7 +1370,7 @@ const columns = [
                 children: row.getValue("registration").toLocaleDateString()
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 97,
+                lineNumber: 100,
                 columnNumber: 7
             }, this)
     },
@@ -1373,7 +1382,7 @@ const columns = [
                 className: "font-WFVisualSansRegular"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 105,
+                lineNumber: 108,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1381,7 +1390,7 @@ const columns = [
                 children: row.getValue("lastTransaction").toLocaleDateString()
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 112,
+                lineNumber: 115,
                 columnNumber: 7
             }, this)
     },
@@ -1393,7 +1402,7 @@ const columns = [
                 className: "font-WFVisualSansRegular"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 120,
+                lineNumber: 123,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1404,7 +1413,7 @@ const columns = [
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 127,
+                lineNumber: 130,
                 columnNumber: 7
             }, this)
     }
@@ -1601,7 +1610,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/ui/button.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$popover$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/ui/popover.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$scroll$2d$area$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/ui/scroll-area.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$ChevronDown$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__ = __turbopack_import__("[project]/node_modules/@mynaui/icons-react/dist/esm/icons/ChevronDown.js [app-client] (ecmascript) <export default as ChevronDown>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$align$2d$left$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__AlignLeft$3e$__ = __turbopack_import__("[project]/node_modules/lucide-react/dist/esm/icons/align-left.js [app-client] (ecmascript) <export default as AlignLeft>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$Calendar$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Calendar$3e$__ = __turbopack_import__("[project]/node_modules/@mynaui/icons-react/dist/esm/icons/Calendar.js [app-client] (ecmascript) <export default as Calendar>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trophy$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Trophy$3e$__ = __turbopack_import__("[project]/node_modules/lucide-react/dist/esm/icons/trophy.js [app-client] (ecmascript) <export default as Trophy>");
 ;
@@ -1704,7 +1713,7 @@ function CampaignPeriodSelector({ selectedCampaign, onCampaignChange, campaigns 
                             lineNumber: 73,
                             columnNumber: 11
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$ChevronDown$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$align$2d$left$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__AlignLeft$3e$__["AlignLeft"], {
                             className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("ml-auto h-4 w-4", iconClassName)
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/CampaignPeriodSelector.tsx",
@@ -1907,13 +1916,12 @@ var _s = __turbopack_refresh__.signature();
 ;
 ;
 ;
-// Mock transaction data
+// Update mock data without hash
 const transactionRecords = [
     {
         position: 1,
         username: "SmartCircus",
         wallet: "9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv",
-        hash: "qE2z1B5VjKshp3Q9fH7XWqE2z18Y7TcdP6pB5VjKshp3Qn",
         transactions: 241,
         amount: 124125.2,
         registration: new Date(2024, 8, 20),
@@ -1924,7 +1932,6 @@ const transactionRecords = [
         position: 2,
         username: "BoosterCoast",
         wallet: "2aH8KWrTqE9B5VjKshp7Qn3Y7TcdP6ZMoJFkxuAWhqKv",
-        hash: "rTqE9B5VjKshp3Q8H7XWqE2z1Y7TcdP6pB5VjKshp3Qn",
         transactions: 220,
         amount: 121178.98,
         registration: new Date(2024, 8, 17),
@@ -1932,12 +1939,12 @@ const transactionRecords = [
         awarded: 2008.1
     }
 ];
-// Function to filter transactions based on search and date
+// Update search filter logic
 const fetchTransactions = async (query = "", selectedDate)=>{
     return new Promise((resolve)=>{
         setTimeout(()=>{
             const filtered = transactionRecords.filter((record)=>{
-                const matchesSearch = record.username.toLowerCase().includes(query.toLowerCase()) || record.wallet.toLowerCase().includes(query.toLowerCase()) || record.hash.toLowerCase().includes(query.toLowerCase());
+                const matchesSearch = record.username.toLowerCase().includes(query.toLowerCase()) || record.wallet.toLowerCase().includes(query.toLowerCase());
                 // Check if the record falls in the range
                 const startDate = new Date(1999, 0, 1);
                 const isWithinRange = record.registration >= startDate && record.registration <= selectedDate && record.lastTransaction >= startDate && record.lastTransaction <= selectedDate;
@@ -1970,65 +1977,88 @@ const TopTiers = ()=>{
                 description: "Showing the top 10 users with the most volume in the selected period"
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/rewards/top-tiers/page.tsx",
-                lineNumber: 100,
+                lineNumber: 96,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "mb-6 ",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex items-center gap-4 mb-4 max-md:flex-col",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex items-center gap-4",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$CampaignPeriodSelector$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CampaignPeriodSelector"], {
-                                    selectedCampaign: selectedCampaign,
-                                    onCampaignChange: setSelectedCampaign,
-                                    className: "your-custom-styles"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/(main)/rewards/top-tiers/page.tsx",
-                                    lineNumber: 107,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$reuseable$2f$search$2d$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SearchInput"], {
-                                    placeholder: "Search by username, wallet, or hash",
-                                    value: searchQuery,
-                                    onChange: (e)=>setSearchQuery(e.target.value)
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/(main)/rewards/top-tiers/page.tsx",
-                                    lineNumber: 112,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/app/(main)/rewards/top-tiers/page.tsx",
-                            lineNumber: 106,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
+                        className: "flex items-center justify-between gap-4 mb-4 max-md:flex-col",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex items-center gap-4",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$CampaignPeriodSelector$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CampaignPeriodSelector"], {
+                                        selectedCampaign: selectedCampaign,
+                                        onCampaignChange: setSelectedCampaign,
+                                        className: "text-xs"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/(main)/rewards/top-tiers/page.tsx",
+                                        lineNumber: 103,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$reuseable$2f$search$2d$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SearchInput"], {
+                                        placeholder: "Search by username, wallet, or hash",
+                                        value: searchQuery,
+                                        className: "text-xs",
+                                        onChange: (e)=>setSearchQuery(e.target.value)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/(main)/rewards/top-tiers/page.tsx",
+                                        lineNumber: 108,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/(main)/rewards/top-tiers/page.tsx",
+                                lineNumber: 102,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex text-xs gap-1 text-[#eda406]",
+                                children: [
+                                    "The data below changes every 10 minutes based on latest query to the blockchain and is not final.",
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        className: "text-primary",
+                                        onClick: ()=>window.location.reload(),
+                                        children: "Refresh page."
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/(main)/rewards/top-tiers/page.tsx",
+                                        lineNumber: 117,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/(main)/rewards/top-tiers/page.tsx",
+                                lineNumber: 115,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/src/app/(main)/rewards/top-tiers/page.tsx",
-                        lineNumber: 105,
+                        lineNumber: 101,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$rewards$2f$top$2d$tier$2d$table$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TopTierTable"], {
                         data: data,
+                        hideHash: true,
                         columns: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$columns$2f$top$2d$tier$2d$column$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TopTierColumn"],
                         fetching: isLoading
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/rewards/top-tiers/page.tsx",
-                        lineNumber: 121,
+                        lineNumber: 124,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(main)/rewards/top-tiers/page.tsx",
-                lineNumber: 104,
+                lineNumber: 100,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(main)/rewards/top-tiers/page.tsx",
-        lineNumber: 99,
+        lineNumber: 95,
         columnNumber: 5
     }, this);
 };

@@ -12,6 +12,8 @@ import { TopTierTable } from "@/components/rewards/top-tier-table";
 import { TopTierColumn } from "@/components/columns/top-tier-column";
 import InputWithText from "@/components/ui/input-with-text";
 import { SearchInput } from "@/components/reuseable/search-input";
+import { CampaignPeriodSelector } from "@/components/ui/CampaignPeriodSelector";
+import type { CampaignPeriod } from "@/components/ui/CampaignPeriodSelector";
 
 // Define a type for transactions
 type TransactionRecord = {
@@ -84,6 +86,9 @@ const fetchTransactions = async (
 const TopTiers = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedDate, setSelectedDate] = useState(new Date());
+  // Import the CampaignPeriod type if not already imported
+  
+  const [selectedCampaign, setSelectedCampaign] = useState<CampaignPeriod | undefined>();
 
   const { data = [], isLoading } = useQuery<TransactionRecord[]>({
     queryKey: ["transactions", searchQuery, selectedDate],
@@ -91,16 +96,23 @@ const TopTiers = () => {
   });
 
   return (
-    <div >
-       <HeaderWrapper
-      title="Rewards - Top Tiers"
-      description="Showing the top 10 users with the most volume in the selected period"
-    />
+    <div>
+      <HeaderWrapper
+        title="Rewards - Top Tiers"
+        description="Showing the top 10 users with the most volume in the selected period"
+      />
       <div className="mb-6 ">
         <div className="flex items-center gap-4 mb-4 max-md:flex-col">
-          <DateTimePicker date={selectedDate} setDate={setSelectedDate} />
-          <SearchInput placeholder="Search by username, wallet, or hash" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
-         
+          <CampaignPeriodSelector
+            selectedCampaign={selectedCampaign}
+            onCampaignChange={setSelectedCampaign}
+            className="your-custom-styles"
+          />
+          <SearchInput
+            placeholder="Search by username, wallet, or hash"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
         </div>
 
         <TopTierTable
@@ -109,7 +121,7 @@ const TopTiers = () => {
           fetching={isLoading}
         />
       </div>
-   </div>
+    </div>
   );
 };
 

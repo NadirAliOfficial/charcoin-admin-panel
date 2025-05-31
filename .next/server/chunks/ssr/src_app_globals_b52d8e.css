@@ -783,10 +783,6 @@ body {
   margin-top: auto;
 }
 
-.mb-0 {
-  margin-bottom: 0;
-}
-
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -864,10 +860,6 @@ body {
 
 .\!h-6 {
   height: 1.5rem !important;
-}
-
-.\!h-full {
-  height: 100% !important;
 }
 
 .h-1 {
@@ -992,10 +984,6 @@ body {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-fit {
-  height: fit-content;
 }
 
 .max-h-\[--radix-select-content-available-height\] {
@@ -1505,10 +1493,6 @@ body {
   align-items: flex-start;
 }
 
-.items-end {
-  align-items: flex-end;
-}
-
 .items-center {
   align-items: center;
 }
@@ -1797,6 +1781,16 @@ body {
   border-color: rgb(0 255 204 / var(--tw-border-opacity, 1));
 }
 
+.border-\[\#323138\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(50 49 56 / var(--tw-border-opacity, 1));
+}
+
+.border-\[\#3d3c44\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(61 60 68 / var(--tw-border-opacity, 1));
+}
+
 .border-accent {
   border-color: hsl(var(--accent));
 }
@@ -1838,21 +1832,6 @@ body {
 
 .border-transparent {
   border-color: #0000;
-}
-
-.border-red-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity, 1));
-}
-
-.border-\[\#323138\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(50 49 56 / var(--tw-border-opacity, 1));
-}
-
-.border-\[\#3d3c44\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(61 60 68 / var(--tw-border-opacity, 1));
 }
 
 .border-l-transparent {
@@ -2064,10 +2043,6 @@ body {
 
 .bg-secondary\/10 {
   background-color: hsl(var(--secondary) / .1);
-}
-
-.bg-slate\/60 {
-  background-color: hsl(var(--slate) / .6);
 }
 
 .bg-teal-500 {
@@ -2386,10 +2361,6 @@ body {
 
 .text-\[0\.8rem\] {
   font-size: .8rem;
-}
-
-.text-\[12px\] {
-  font-size: 12px;
 }
 
 .text-\[16px\] {
@@ -2920,7 +2891,7 @@ body {
 
 @font-face {
   font-family: WFVisualSans-Regular;
-  src: url("/fonts/WFVisualSans-Regular.woff2") format("woff2"), url("/fonts/WFVisualSans-Regular.woff") format("woff");
+  src: url("/src/fonts/wf-visual-sans/WFVisualSans-Regular.woff2") format("woff2"), url("/src/fonts/wf-visual-sans/WFVisualSans-Regular.woff2") format("woff");
 }
 
 ::-webkit-scrollbar {
@@ -3537,21 +3508,12 @@ body {
 }
 
 @media not all and (width >= 768px) {
-  .max-md\:mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .max-md\:hidden {
     display: none;
   }
 
   .max-md\:h-10 {
     height: 2.5rem;
-  }
-
-  .max-md\:w-max {
-    width: max-content;
   }
 
   .max-md\:\!grid-cols-1 {
@@ -3724,27 +3686,8 @@ body {
     flex-direction: row;
   }
 
-  .md\:gap-4 {
-    gap: 1rem;
-  }
-
-  .md\:gap-8 {
-    gap: 2rem;
-  }
-
-  .md\:space-y-6 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-  }
-
   .md\:border-0 {
     border-width: 0;
-  }
-
-  .md\:py-8 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
   }
 
   .md\:pt-0 {
@@ -4025,10 +3968,6 @@ body {
 
 .\[\&_tr\:last-child\]\:border-0 tr:last-child {
   border-width: 0;
-}
-
-.\[\&_tr\]\:border-b tr {
-  border-bottom-width: 1px;
 }
 
 .\[\&_tr\]\:border-b-2 tr {

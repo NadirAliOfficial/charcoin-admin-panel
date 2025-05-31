@@ -4637,5 +4637,9 @@ body {
   border-bottom-width: 1px;
 }
 
+.\[\&_tr\]\:border-b-2 tr {
+  border-bottom-width: 2px;
+}
+
 
 /*# sourceMappingURL=%5Broot%20of%20the%20server%5D__bd3fc1._.css.map*/

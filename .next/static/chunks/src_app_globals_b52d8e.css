@@ -4014,4 +4014,8 @@ body {
   border-bottom-width: 1px;
 }
 
+.\[\&_tr\]\:border-b-2 tr {
+  border-bottom-width: 2px;
+}
+
 /*# sourceMappingURL=src_app_globals_b52d8e.css.map*/

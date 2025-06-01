@@ -13,6 +13,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Filter as MenuIcon } from "@mynaui/icons-react";
 import { Check, Circle, CheckCircle } from "@mynaui/icons-react";
 import { AlertCircle } from "lucide-react";
+import { NewsStatus } from "@/types/news";
 
 // Status Options Interface
 interface StatusOption {
@@ -45,6 +46,12 @@ const defaultStatusOptions: StatusOption[] = [
     icon: <AlertCircle className="h-4 w-4" />,
     color: "text-red-500"
   }
+];
+
+export const statusOptions: NewsStatusOption[] = [
+  { label: "All", value: NewsStatus.All },
+  { label: "Published", value: NewsStatus.Published },
+  { label: "Unpublished", value: NewsStatus.Unpublished }
 ];
 
 // Status Selector Component

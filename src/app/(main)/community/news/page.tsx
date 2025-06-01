@@ -89,7 +89,7 @@ const newsExample: NewsData = {
 const fetchTransactions = async (
   query = "",
   month = new Date(),
-  status?: StatusOption
+  status?: NewsStatusOption
 ): Promise<NewsArticle[]> => {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -106,7 +106,7 @@ const fetchTransactions = async (
       }
 
       // Filter by status
-      if (status) {
+      if (status && status.value !== NewsStatus.All) {
         filtered = filtered.filter((record) => record.status === status.value);
       }
 
@@ -119,12 +119,17 @@ const News = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [date, setDate] = useState<Date>(new Date());
   const { openDialog, setCommunityNewsAdd } = useDialogStore();
-  const [selectedStatus, setSelectedStatus] = useState<StatusOption | undefined>();
+  // Set initial state to "All"
+  const [selectedStatus, setSelectedStatus] = useState<NewsStatusOption>({
+    label: "All",
+    value: NewsStatus.All,
+  });
 
-  // Update the useQuery to include selectedStatus in queryKey and queryFn
   const { data = [], isLoading } = useQuery<NewsArticle[]>({
-    queryKey: ["news", searchQuery, date, selectedStatus?.value],
+    queryKey: ["news", searchQuery, date, selectedStatus.value],
     queryFn: () => fetchTransactions(searchQuery, date, selectedStatus),
+    // Add staleTime to prevent unnecessary refetches
+    staleTime: 5000,
   });
 
   return (
@@ -135,16 +140,14 @@ const News = () => {
       actions={
         <Button
           size={"lg"}
-          className="max-md:px-4 max-md:h-10 ml-4 "
-          onClick={() => {
-            setCommunityNewsAdd(true);
-          }}
+          className="max-md:px-4 max-md:h-10 ml-4"
+          onClick={() => setCommunityNewsAdd(true)}
         >
           Add new →
         </Button>
       }
     >
-      <div className="mb-6 ">
+      <div className="mb-6">
         <div className="flex md:items-center gap-4 mb-4 max-md:flex-col">
           <NewsStatusSelector
             selectedStatus={selectedStatus}
@@ -152,11 +155,11 @@ const News = () => {
             className="min-w-[140px]"
           />
 
-          <div className="relative  md:w-80 ">
+          <div className="relative md:w-80">
             <Input
-              className="!w-full !bg-[#3D3C44] "
+              className="!w-full !bg-[#3D3C44]"
               variant={"newly_secondary"}
-              placeholder="Search by username, wallet, or hash"
+              placeholder="Search by title, category or description"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -164,11 +167,7 @@ const News = () => {
           </div>
         </div>
 
-        <NewsTable
-          data={data} // ✅ Now `data` is always a TransactionRecord[]
-          columns={NewsColumn}
-          fetching={isLoading}
-        />
+        <NewsTable data={data} columns={NewsColumn} fetching={isLoading} />
       </div>
       <CustomSheet
         isOpen={openDialog == "community_news_add"}

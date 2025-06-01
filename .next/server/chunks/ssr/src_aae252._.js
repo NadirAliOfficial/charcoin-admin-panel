@@ -9,8 +9,9 @@ __turbopack_esm__({
     "NewsStatus": (()=>NewsStatus)
 });
 var NewsStatus = /*#__PURE__*/ function(NewsStatus) {
-    NewsStatus["Published"] = "Published";
-    NewsStatus["Unpublished"] = "Unpublished";
+    NewsStatus["All"] = "all";
+    NewsStatus["Published"] = "published";
+    NewsStatus["Unpublished"] = "unpublished";
     return NewsStatus;
 }({});
 }}),
@@ -2228,7 +2229,8 @@ PopoverContent.displayName = __TURBOPACK__imported__module__$5b$project$5d2f$nod
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: __turbopack_require_stub__ } = __turbopack_context__;
 {
 __turbopack_esm__({
-    "NewsStatusSelector": (()=>NewsStatusSelector)
+    "NewsStatusSelector": (()=>NewsStatusSelector),
+    "statusOptions": (()=>statusOptions)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
@@ -2236,12 +2238,14 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/ui/button.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$popover$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/ui/popover.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$scroll$2d$area$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/ui/scroll-area.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$news$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/types/news.ts [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$Circle$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Circle$3e$__ = __turbopack_import__("[project]/node_modules/@mynaui/icons-react/dist/esm/icons/Circle.js [app-ssr] (ecmascript) <export default as Circle>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$CheckCircle$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle$3e$__ = __turbopack_import__("[project]/node_modules/@mynaui/icons-react/dist/esm/icons/CheckCircle.js [app-ssr] (ecmascript) <export default as CheckCircle>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$alert$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__AlertCircle$3e$__ = __turbopack_import__("[project]/node_modules/lucide-react/dist/esm/icons/circle-alert.js [app-ssr] (ecmascript) <export default as AlertCircle>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$Filter$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Filter$3e$__ = __turbopack_import__("[project]/node_modules/@mynaui/icons-react/dist/esm/icons/Filter.js [app-ssr] (ecmascript) <export default as Filter>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$Check$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Check$3e$__ = __turbopack_import__("[project]/node_modules/@mynaui/icons-react/dist/esm/icons/Check.js [app-ssr] (ecmascript) <export default as Check>");
 "use client";
+;
 ;
 ;
 ;
@@ -2260,7 +2264,7 @@ const defaultStatusOptions = [
             className: "h-4 w-4"
         }, void 0, false, {
             fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-            lineNumber: 31,
+            lineNumber: 32,
             columnNumber: 11
         }, this),
         color: "text-gray-400"
@@ -2273,7 +2277,7 @@ const defaultStatusOptions = [
             className: "h-4 w-4"
         }, void 0, false, {
             fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-            lineNumber: 38,
+            lineNumber: 39,
             columnNumber: 11
         }, this),
         color: "text-green-500"
@@ -2286,10 +2290,24 @@ const defaultStatusOptions = [
             className: "h-4 w-4"
         }, void 0, false, {
             fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-            lineNumber: 45,
+            lineNumber: 46,
             columnNumber: 11
         }, this),
         color: "text-red-500"
+    }
+];
+const statusOptions = [
+    {
+        label: "All",
+        value: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$news$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["NewsStatus"].All
+    },
+    {
+        label: "Published",
+        value: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$news$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["NewsStatus"].Published
+    },
+    {
+        label: "Unpublished",
+        value: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$news$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["NewsStatus"].Unpublished
     }
 ];
 function NewsStatusSelector({ selectedStatus, onStatusChange, statuses = defaultStatusOptions, size = "default", className, iconClassName = "" }) {
@@ -2316,25 +2334,25 @@ function NewsStatusSelector({ selectedStatus, onStatusChange, statuses = default
                             children: selected?.label || "All status"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                            lineNumber: 89,
+                            lineNumber: 96,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$Filter$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Filter$3e$__["Filter"], {
                             className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("ml-auto h-4 w-4 text-gray-400", iconClassName)
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                            lineNumber: 92,
+                            lineNumber: 99,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                    lineNumber: 80,
+                    lineNumber: 87,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                lineNumber: 79,
+                lineNumber: 86,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$popover$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["PopoverContent"], {
@@ -2349,7 +2367,7 @@ function NewsStatusSelector({ selectedStatus, onStatusChange, statuses = default
                                 children: "Filter by Status"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                                lineNumber: 97,
+                                lineNumber: 104,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2357,13 +2375,13 @@ function NewsStatusSelector({ selectedStatus, onStatusChange, statuses = default
                                 children: "Select status to filter news articles"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                                lineNumber: 98,
+                                lineNumber: 105,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                        lineNumber: 96,
+                        lineNumber: 103,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$scroll$2d$area$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ScrollArea"], {
@@ -2383,7 +2401,7 @@ function NewsStatusSelector({ selectedStatus, onStatusChange, statuses = default
                                                     children: status.icon
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                                                    lineNumber: 112,
+                                                    lineNumber: 119,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2393,12 +2411,12 @@ function NewsStatusSelector({ selectedStatus, onStatusChange, statuses = default
                                                         children: status.label
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                                                        lineNumber: 116,
+                                                        lineNumber: 123,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                                                    lineNumber: 115,
+                                                    lineNumber: 122,
                                                     columnNumber: 19
                                                 }, this),
                                                 status.count && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2406,36 +2424,36 @@ function NewsStatusSelector({ selectedStatus, onStatusChange, statuses = default
                                                     children: status.count.toLocaleString()
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                                                    lineNumber: 119,
+                                                    lineNumber: 126,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                                            lineNumber: 111,
+                                            lineNumber: 118,
                                             columnNumber: 17
                                         }, this),
                                         selected?.id === status.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$Check$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Check$3e$__["Check"], {
                                             className: "h-4 w-4 text-primary ml-2"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                                            lineNumber: 125,
+                                            lineNumber: 132,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, status.id, true, {
                                     fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                                    lineNumber: 105,
+                                    lineNumber: 112,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                            lineNumber: 103,
+                            lineNumber: 110,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                        lineNumber: 102,
+                        lineNumber: 109,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2448,24 +2466,24 @@ function NewsStatusSelector({ selectedStatus, onStatusChange, statuses = default
                             children: "Reset to All Status"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                            lineNumber: 132,
+                            lineNumber: 139,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                        lineNumber: 131,
+                        lineNumber: 138,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                lineNumber: 95,
+                lineNumber: 102,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-        lineNumber: 78,
+        lineNumber: 85,
         columnNumber: 5
     }, this);
 }
@@ -2574,7 +2592,7 @@ const fetchTransactions = async (query = "", month = new Date(), status)=>{
                 filtered = filtered.filter((record)=>record.title.toLowerCase().includes(query.toLowerCase()) || record.category.toLowerCase().includes(query.toLowerCase()) || record.short_description.toLowerCase().includes(query.toLowerCase()));
             }
             // Filter by status
-            if (status) {
+            if (status && status.value !== __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$news$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["NewsStatus"].All) {
                 filtered = filtered.filter((record)=>record.status === status.value);
             }
             resolve(filtered);
@@ -2585,16 +2603,21 @@ const News = ()=>{
     const [searchQuery, setSearchQuery] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const [date, setDate] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(new Date());
     const { openDialog, setCommunityNewsAdd } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$stores$2f$dialog$2d$store$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"])();
-    const [selectedStatus, setSelectedStatus] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])();
-    // Update the useQuery to include selectedStatus in queryKey and queryFn
+    // Set initial state to "All"
+    const [selectedStatus, setSelectedStatus] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({
+        label: "All",
+        value: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$news$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["NewsStatus"].All
+    });
     const { data = [], isLoading } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useQuery"])({
         queryKey: [
             "news",
             searchQuery,
             date,
-            selectedStatus?.value
+            selectedStatus.value
         ],
-        queryFn: ()=>fetchTransactions(searchQuery, date, selectedStatus)
+        queryFn: ()=>fetchTransactions(searchQuery, date, selectedStatus),
+        // Add staleTime to prevent unnecessary refetches
+        staleTime: 5000
     });
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$custom$2f$header$2d$wrapper$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["HeaderWrapper"], {
         title: "News",
@@ -2602,19 +2625,17 @@ const News = ()=>{
         description: "Public news about the progress of each donation and the CharCoin impact",
         actions: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
             size: "lg",
-            className: "max-md:px-4 max-md:h-10 ml-4 ",
-            onClick: ()=>{
-                setCommunityNewsAdd(true);
-            },
+            className: "max-md:px-4 max-md:h-10 ml-4",
+            onClick: ()=>setCommunityNewsAdd(true),
             children: "Add new →"
         }, void 0, false, {
             fileName: "[project]/src/app/(main)/community/news/page.tsx",
-            lineNumber: 136,
+            lineNumber: 141,
             columnNumber: 9
         }, void 0),
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "mb-6 ",
+                className: "mb-6",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex md:items-center gap-4 mb-4 max-md:flex-col",
@@ -2625,40 +2646,40 @@ const News = ()=>{
                                 className: "min-w-[140px]"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/community/news/page.tsx",
-                                lineNumber: 149,
+                                lineNumber: 152,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "relative  md:w-80 ",
+                                className: "relative md:w-80",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
-                                        className: "!w-full !bg-[#3D3C44] ",
+                                        className: "!w-full !bg-[#3D3C44]",
                                         variant: "newly_secondary",
-                                        placeholder: "Search by username, wallet, or hash",
+                                        placeholder: "Search by title, category or description",
                                         value: searchQuery,
                                         onChange: (e)=>setSearchQuery(e.target.value)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(main)/community/news/page.tsx",
-                                        lineNumber: 156,
+                                        lineNumber: 159,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
                                         className: "absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(main)/community/news/page.tsx",
-                                        lineNumber: 163,
+                                        lineNumber: 166,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(main)/community/news/page.tsx",
-                                lineNumber: 155,
+                                lineNumber: 158,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(main)/community/news/page.tsx",
-                        lineNumber: 148,
+                        lineNumber: 151,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$community$2f$news$2d$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["NewsTable"], {
@@ -2667,13 +2688,13 @@ const News = ()=>{
                         fetching: isLoading
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/community/news/page.tsx",
-                        lineNumber: 167,
+                        lineNumber: 170,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(main)/community/news/page.tsx",
-                lineNumber: 147,
+                lineNumber: 150,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$reuseable$2f$add$2d$causes$2d$sheet$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CustomSheet"], {
@@ -2683,18 +2704,18 @@ const News = ()=>{
                 className: "pt-2 px-4",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$community$2f$add$2d$new$2d$news$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/(main)/community/news/page.tsx",
-                    lineNumber: 179,
+                    lineNumber: 178,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/community/news/page.tsx",
-                lineNumber: 173,
+                lineNumber: 172,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(main)/community/news/page.tsx",
-        lineNumber: 131,
+        lineNumber: 136,
         columnNumber: 5
     }, this);
 };

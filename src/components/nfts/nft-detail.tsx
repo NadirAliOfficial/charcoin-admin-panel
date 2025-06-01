@@ -1,5 +1,5 @@
 import { NFTSRecord } from "@/types/rewards";
-import {  Trash } from "lucide-react";
+import {  ArrowRight, Image, ImageIcon, Trash } from "lucide-react";
 import { useState, useRef } from "react";
 
 interface NftDetailProps {
@@ -77,8 +77,8 @@ export function NftDetail({ nft }: NftDetailProps) {
           <div className="border-b pb-10 border-[#2A2931] rounded-md">
             <label className="block text-sm mb-1 text-[#A1A1AA]">NFT image</label>
             <p className="text-xs text-[#A1A1AA] mb-4">Choose a 1000x600 pixels PNG image, below you will see a preview of the uploaded image</p>
-            <div className="flex items-center gap-4">
-              <div className="space-x-2">
+            <div className="flex items-center  w-full gap-4">
+              <div className="space-x-2 flex">
                 <input
                   type="file"
                   ref={fileInputRef}
@@ -89,13 +89,14 @@ export function NftDetail({ nft }: NftDetailProps) {
                 />
                 <button 
                   onClick={() => fileInputRef.current?.click()}
-                  className="bg-[#3CFEC3] text-black px-4 py-2 rounded-md text-sm font-medium hover:opacity-90"
+                  className="bg-[#3CFEC3] flex gap-2 items-center text-black px-4 py-2 rounded-md text-sm font-medium hover:opacity-90"
                 >
                   Upload an image
+                  <ImageIcon className="w-4 h-4" />
                 </button>
                 <button 
                   onClick={handleDeleteImage}
-                  className="bg-[#3CFEC3] text-black px-4 py-2 rounded-md text-sm font-medium hover:opacity-90"
+                  className="bg-[#3CFEC3] flex gap-2 items-center text-black px-4 py-2 rounded-md text-sm font-medium hover:opacity-90"
                 >
                   Delete Image
                   <Trash className="w-4 h-4" />
@@ -139,9 +140,10 @@ export function NftDetail({ nft }: NftDetailProps) {
               href={nft.preview} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-block bg-[#3CFEC3] text-black font-semibold px-6 py-3 rounded-lg text-sm hover:opacity-90"
+              className=" flex w-fit gap-2 items-center  bg-[#3CFEC3] text-black font-semibold px-6 py-3 rounded-lg text-sm hover:opacity-90"
             >
-              View in Solanart
+              Mint NFT in Solanart 
+              <ArrowRight className="w-4 h-4" />
             </a>
           </div>
         </div>

@@ -25,6 +25,10 @@ import {
 // import { DataTableToolbar } from "../table/tasks-table-toolbar";
 import { Fetching } from "../reuseable/fetching";
 import { DataTablePagination } from "../table/tasks-table-pagination";
+import { CustomSheet } from "../reuseable/add-causes-sheet";
+import { NewsDetail } from "./news-detail";
+import useDialogStore from "@/stores/dialog-store";
+import { NewsArticle } from "@/types/news";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -37,6 +41,8 @@ export function NewsTable<TData, TValue>({
   data,
   fetching,
 }: DataTableProps<TData, TValue>) {
+  const { openDialog, setNewsDetail } = useDialogStore();
+  const [selectedNews, setSelectedNews] = React.useState<NewsArticle | null>(null);
   const [rowSelection, setRowSelection] = React.useState({});
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({});
@@ -67,6 +73,11 @@ export function NewsTable<TData, TValue>({
     getFacetedUniqueValues: getFacetedUniqueValues(),
   });
 
+  const handleRowClick = (news: NewsArticle) => {
+    setSelectedNews(news);
+    setNewsDetail(true);
+  };
+
   return (
     <div className="space-y-4 bg-background pb-5 rounded-xl">
       {/* <DataTableToolbar table={table} /> */}
@@ -95,12 +106,10 @@ export function NewsTable<TData, TValue>({
             {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
                 <TableRow
-                  onClick={() => {
-                    console.log("Clicked");
-                  }}
-                  // row.original?._id! ??
+                  onClick={() => handleRowClick(row.original as NewsArticle)}
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
+                  className="cursor-pointer hover:bg-[#2A2931]"
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell className="py-4 px-4" key={cell.id}>
@@ -138,6 +147,14 @@ export function NewsTable<TData, TValue>({
       <div className="px-5">
         <DataTablePagination table={table} />
       </div>
+      <CustomSheet
+        isOpen={openDialog === "news_detail"}
+        setIsOpen={setNewsDetail}
+        title="News Details"
+        className="!p-0"
+      >
+        {selectedNews && <NewsDetail news={selectedNews} />}
+      </CustomSheet>
     </div>
   );
 }

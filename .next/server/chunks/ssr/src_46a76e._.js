@@ -549,8 +549,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$table$2
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/ui/button.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/lib/utils.ts [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$helper$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/lib/helper.ts [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2d$solid$2f$LockOpenSolid$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__LockOpenSolid$3e$__ = __turbopack_import__("[project]/node_modules/@mynaui/icons-react/dist/esm/icons-solid/LockOpenSolid.js [app-ssr] (ecmascript) <export default as LockOpenSolid>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2d$solid$2f$LockSolid$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__LockSolid$3e$__ = __turbopack_import__("[project]/node_modules/@mynaui/icons-react/dist/esm/icons-solid/LockSolid.js [app-ssr] (ecmascript) <export default as LockSolid>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$lock$2d$open$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__LockOpenIcon$3e$__ = __turbopack_import__("[project]/node_modules/lucide-react/dist/esm/icons/lock-open.js [app-ssr] (ecmascript) <export default as LockOpenIcon>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$icons$2f$dist$2f$react$2d$icons$2e$esm$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/@radix-ui/react-icons/dist/react-icons.esm.js [app-ssr] (ecmascript)");
+;
 ;
 ;
 ;
@@ -565,14 +566,14 @@ const columns = [
                 title: "ID"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/user-wallet-column.tsx",
-                lineNumber: 13,
+                lineNumber: 15,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                 children: row.getValue("id")
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/user-wallet-column.tsx",
-                lineNumber: 15,
+                lineNumber: 17,
                 columnNumber: 24
             }, this)
     },
@@ -583,7 +584,7 @@ const columns = [
                 title: "Username / Wallet"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/user-wallet-column.tsx",
-                lineNumber: 20,
+                lineNumber: 22,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>{
@@ -595,23 +596,23 @@ const columns = [
                         children: row.getValue("username")
                     }, void 0, false, {
                         fileName: "[project]/src/components/columns/user-wallet-column.tsx",
-                        lineNumber: 26,
+                        lineNumber: 28,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                         fileName: "[project]/src/components/columns/user-wallet-column.tsx",
-                        lineNumber: 27,
+                        lineNumber: 29,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "text-xs text-primary whitespace-nowrap",
+                        className: "text-xs flex gap-2 text-primary whitespace-nowrap",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-muted-foreground",
+                                className: " text-[#999999]",
                                 children: "Wallet:"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/columns/user-wallet-column.tsx",
-                                lineNumber: 29,
+                                lineNumber: 31,
                                 columnNumber: 13
                             }, this),
                             " ",
@@ -619,13 +620,13 @@ const columns = [
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/columns/user-wallet-column.tsx",
-                        lineNumber: 28,
+                        lineNumber: 30,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/columns/user-wallet-column.tsx",
-                lineNumber: 25,
+                lineNumber: 27,
                 columnNumber: 9
             }, this);
         }
@@ -637,14 +638,14 @@ const columns = [
                 title: "Transactions"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/user-wallet-column.tsx",
-                lineNumber: 38,
+                lineNumber: 40,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                 children: row.getValue("transactions")
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/user-wallet-column.tsx",
-                lineNumber: 40,
+                lineNumber: 42,
                 columnNumber: 24
             }, this)
     },
@@ -655,7 +656,7 @@ const columns = [
                 title: "Balance"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/user-wallet-column.tsx",
-                lineNumber: 45,
+                lineNumber: 47,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>{
@@ -667,21 +668,21 @@ const columns = [
                     row.getValue("balance").toLocaleString(),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                         fileName: "[project]/src/components/columns/user-wallet-column.tsx",
-                        lineNumber: 52,
+                        lineNumber: 54,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "text-muted-foreground",
+                        className: " text-[#999999]",
                         children: tokens
                     }, void 0, false, {
                         fileName: "[project]/src/components/columns/user-wallet-column.tsx",
-                        lineNumber: 53,
+                        lineNumber: 55,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/columns/user-wallet-column.tsx",
-                lineNumber: 50,
+                lineNumber: 52,
                 columnNumber: 9
             }, this);
         }
@@ -693,14 +694,14 @@ const columns = [
                 title: "Registration"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/user-wallet-column.tsx",
-                lineNumber: 61,
+                lineNumber: 63,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                 children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$helper$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["formatDate"])(new Date(row.getValue("registration")))
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/user-wallet-column.tsx",
-                lineNumber: 64,
+                lineNumber: 66,
                 columnNumber: 7
             }, this)
     },
@@ -711,14 +712,14 @@ const columns = [
                 title: "Last Transaction"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/user-wallet-column.tsx",
-                lineNumber: 70,
+                lineNumber: 72,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                 children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$helper$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["formatDate"])(new Date(row.getValue("lastTransaction")))
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/user-wallet-column.tsx",
-                lineNumber: 73,
+                lineNumber: 75,
                 columnNumber: 7
             }, this)
     },
@@ -729,41 +730,41 @@ const columns = [
                 title: "Status"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/user-wallet-column.tsx",
-                lineNumber: 80,
+                lineNumber: 82,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>{
             const isBlocked = row.getValue("status") === "Blocked";
             return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                className: `flex items-center gap-4 font-semibold ${isBlocked ? "text-red-600" : "text-green-600"}`,
+                className: `flex items-center gap-4 font-semibold ${isBlocked ? "text-red-600" : ""}`,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                         variant: "newly_secondary",
-                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])(isBlocked ? "text-red-600" : "text-green-600"),
+                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])(isBlocked ? "text-red-600" : ""),
                         size: "icon",
-                        children: isBlocked ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2d$solid$2f$LockSolid$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__LockSolid$3e$__["LockSolid"], {
-                            className: "mr-1 !w-5 !h-5"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/columns/user-wallet-column.tsx",
-                            lineNumber: 96,
-                            columnNumber: 15
-                        }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2d$solid$2f$LockOpenSolid$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__LockOpenSolid$3e$__["LockOpenSolid"], {
+                        children: isBlocked ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$icons$2f$dist$2f$react$2d$icons$2e$esm$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LockClosedIcon"], {
                             className: "mr-1 !w-5 !h-5"
                         }, void 0, false, {
                             fileName: "[project]/src/components/columns/user-wallet-column.tsx",
                             lineNumber: 98,
                             columnNumber: 15
+                        }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$lock$2d$open$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__LockOpenIcon$3e$__["LockOpenIcon"], {
+                            className: "mr-1 !w-5 !h-5"
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/columns/user-wallet-column.tsx",
+                            lineNumber: 100,
+                            columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/columns/user-wallet-column.tsx",
-                        lineNumber: 90,
+                        lineNumber: 92,
                         columnNumber: 11
                     }, this),
                     row.getValue("status")
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/columns/user-wallet-column.tsx",
-                lineNumber: 85,
+                lineNumber: 87,
                 columnNumber: 9
             }, this);
         }
@@ -1578,50 +1579,73 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$e
 ;
 const useDialogStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$react$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["create"])((set)=>({
         openDialog: null,
-        setOpenDialog: (dialog)=>set({
-                openDialog: dialog
+        // Open functions
+        openDetail: ()=>set({
+                openDialog: "causes_detail"
             }),
-        setCausesAdd: (open)=>set({
-                openDialog: open ? "causes_add" : null
+        openEdit: ()=>set({
+                openDialog: "causes_edit"
             }),
-        setCausesEdit: (open)=>set({
-                openDialog: open ? "causes_edit" : null
+        openAdd: ()=>set({
+                openDialog: "causes_add"
             }),
-        setCausesDetail: (open)=>set({
-                openDialog: open ? "causes_detail" : null
+        closeDialog: ()=>set({
+                openDialog: null
             }),
-        setCommunityNewsAdd: (open)=>set({
-                openDialog: open ? "community_news_add" : null
+        // Setter functions
+        setCausesOpenDetail: (isOpen)=>set({
+                openDialog: isOpen ? "causes_detail" : null
             }),
-        setCommunityNewsEdit: (open)=>set({
-                openDialog: open ? "community_news_edit" : null
+        setCausesOpenEdit: (isOpen)=>set({
+                openDialog: isOpen ? "causes_edit" : null
             }),
-        setCommunityNewsDetail: (open)=>set({
-                openDialog: open ? "community_news_detail" : null
+        setCausesOpenAdd: (isOpen)=>set({
+                openDialog: isOpen ? "causes_add" : null
             }),
-        setAdministrationAdd: (open)=>set({
-                openDialog: open ? "administration_add" : null
+        setCommunityNewsAdd: (isOpen)=>set({
+                openDialog: isOpen ? "community_news_add" : null
             }),
-        setAdministrationEdit: (open)=>set({
-                openDialog: open ? "administration_edit" : null
+        setCommunityUserWalletAdd: (isOpen)=>set({
+                openDialog: isOpen ? "community_user_wallet_add" : null
             }),
-        setAdministrationDetail: (open)=>set({
-                openDialog: open ? "administration_detail" : null
+        setCommunityAdministrationAdd: (isOpen)=>set({
+                openDialog: isOpen ? "community_administration_add" : null
             }),
-        setWalletSettingsAdd: (open)=>set({
-                openDialog: open ? "wallet_settings_add" : null
+        setNtfsAdd: (isOpen)=>set({
+                openDialog: isOpen ? "nfts_add" : null
             }),
-        setWalletSettingsEdit: (open)=>set({
-                openDialog: open ? "wallet_settings_edit" : null
+        setNftsDetail: (isOpen)=>set({
+                openDialog: isOpen ? "nfts_detail" : null
             }),
-        setWalletSettingsDetail: (open)=>set({
-                openDialog: open ? "wallet_settings_detail" : null
+        // Adminstrator
+        setAddAdministrator: (isOpen)=>set({
+                openDialog: isOpen ? "add_administrator" : null
             }),
-        setNftsDetail: (open)=>set({
-                openDialog: open ? "nfts_detail" : null
+        setEditAdministrator: (isOpen)=>set({
+                openDialog: isOpen ? "edit_administrator" : null
             }),
-        setNftsEdit: (open)=>set({
-                openDialog: open ? "nfts_edit" : null
+        // Settings
+        setAddCategory: (isOpen)=>set({
+                openDialog: isOpen ? "add_category" : null
+            }),
+        setEditCategory: (isOpen)=>set({
+                openDialog: isOpen ? "edit_category" : null
+            }),
+        setAddCampaign: (isOpen)=>set({
+                openDialog: isOpen ? "add_campaign" : null
+            }),
+        setEditCampaign: (isOpen)=>set({
+                openDialog: isOpen ? "edit_campaign" : null
+            }),
+        // Wallet Setting
+        setWalletSettingOpenExisting: (isOpen)=>set({
+                openDialog: isOpen ? "wallet_setting_open_existing" : null
+            }),
+        setWalletSettingAddNew: (isOpen)=>set({
+                openDialog: isOpen ? "wallet_setting_add_new" : null
+            }),
+        setNewsDetail: (value)=>set({
+                openDialog: value ? "news_detail" : null
             })
     }));
 const __TURBOPACK__default__export__ = useDialogStore;

@@ -2172,6 +2172,11 @@ body {
   background-color: rgb(60 254 195 / var(--tw-bg-opacity, 1));
 }
 
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity, 1));
+}
+
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -2802,6 +2807,11 @@ body {
 .text-\[\#A1A1AA\] {
   --tw-text-opacity: 1;
   color: rgb(161 161 170 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(57 57 57 / var(--tw-text-opacity, 1));
 }
 
 .no-underline {

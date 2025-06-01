@@ -1,6 +1,6 @@
 import { NewsArticle } from "@/types/news";
 import { format } from "date-fns";
-import { ArrowRight, ImageIcon, VideoIcon } from "lucide-react";
+import { ArrowRight, ImageIcon, Trash, VideoIcon } from "lucide-react";
 import { useState, useRef } from "react";
 
 interface NewsDetailProps {
@@ -112,7 +112,15 @@ export function NewsDetail({ news }: NewsDetailProps) {
                   Upload a video
                   <ImageIcon className="w-4 h-4" />
                 </button>
-                
+                {selectedVideo && (
+                  <button 
+                    onClick={handleDeleteVideo}
+                    className="bg-red-300 flex gap-2 items-center text-black px-4 py-2 rounded-md text-sm font-medium hover:opacity-90"
+                  >
+                    Delete Video
+                    <VideoIcon className="w-4 h-4" />
+                  </button>
+                )}
               </div>
               {selectedVideo && (
                 <div className="flex-shrink-0">
@@ -145,12 +153,16 @@ export function NewsDetail({ news }: NewsDetailProps) {
 
          
 
-          <div className="pt-4">
+          <div className="pt-4 flex justify-between">
             <button 
               className="flex w-fit gap-2 items-center bg-[#3CFEC3] text-black font-semibold px-6 py-3 rounded-lg text-sm hover:opacity-90"
             >
-              Publish news
+              Update
               <ArrowRight className="w-4 h-4" />
+            </button>
+            <button className="flex w-fit gap-2 items-center bg-red-300 text-black font-semibold px-6 py-3 rounded-lg text-sm hover:opacity-90">
+                Delete
+                <Trash className="w-4 h-4" />
             </button>
           </div>
         </div>

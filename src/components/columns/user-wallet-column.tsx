@@ -5,6 +5,8 @@ import { Lock, LockOpen, LockOpenSolid, LockSolid } from "@mynaui/icons-react";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
 import { formatDate } from "@/lib/helper";
+import { LockClosedIcon } from "@radix-ui/react-icons";
+import { LockOpenIcon } from "lucide-react";
 
 const columns: ColumnDef<UserWallet>[] = [
   {
@@ -25,8 +27,8 @@ const columns: ColumnDef<UserWallet>[] = [
         <div>
           <span className="font-semibold">{row.getValue("username")}</span>
           <br />
-          <span className="text-xs text-primary whitespace-nowrap">
-            <p className="text-muted-foreground">Wallet:</p> {wallet}
+          <span className="text-xs flex gap-2 text-primary whitespace-nowrap">
+            <p className=" text-[#999999]">Wallet:</p> {wallet}
           </span>
         </div>
       );
@@ -50,7 +52,7 @@ const columns: ColumnDef<UserWallet>[] = [
         <span className="font-semibold">
           ${(row.getValue("balance") as number).toLocaleString()}
           <br />
-          <span className="text-muted-foreground">{tokens}</span>
+          <span className=" text-[#999999]">{tokens}</span>
         </span>
       );
     },
@@ -84,18 +86,18 @@ const columns: ColumnDef<UserWallet>[] = [
       return (
         <span
           className={`flex items-center gap-4 font-semibold ${
-            isBlocked ? "text-red-600" : "text-green-600"
+            isBlocked ? "text-red-600" : ""
           }`}
         >
           <Button
             variant="newly_secondary"
-            className={cn(isBlocked ? "text-red-600" : "text-green-600")}
+            className={cn(isBlocked ? "text-red-600" : "")}
             size={"icon"}
           >
             {isBlocked ? (
-              <LockSolid className="mr-1 !w-5 !h-5" />
+              <LockClosedIcon className="mr-1 !w-5 !h-5" />
             ) : (
-              <LockOpenSolid className="mr-1 !w-5 !h-5" />
+              <LockOpenIcon className="mr-1 !w-5 !h-5" />
             )}
           </Button>
           {row.getValue("status")}

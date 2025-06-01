@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 import { DateTimePicker } from "@/components/ui/date-time-picker";
 import { Input } from "@/components/ui/input";
 import useDialogStore from "@/stores/dialog-store";
-import { NewsArticle, NewsData, NewsStatus } from "@/types/news";
+import { NewsArticle, NewsData, NewsStatus, NewsStatusOption } from "@/types/news";
 import { StatusOption, StatusSelector } from "@/components/ui/StatusSelector";
 import { NewsStatusSelector } from "@/components/ui/newsStatusSelector";
 

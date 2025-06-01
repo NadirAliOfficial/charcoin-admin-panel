@@ -1697,67 +1697,50 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$e
 ;
 const useDialogStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["create"])((set)=>({
         openDialog: null,
-        // Open functions
-        openDetail: ()=>set({
-                openDialog: "causes_detail"
+        setOpenDialog: (dialog)=>set({
+                openDialog: dialog
             }),
-        openEdit: ()=>set({
-                openDialog: "causes_edit"
+        setCausesAdd: (open)=>set({
+                openDialog: open ? "causes_add" : null
             }),
-        openAdd: ()=>set({
-                openDialog: "causes_add"
+        setCausesEdit: (open)=>set({
+                openDialog: open ? "causes_edit" : null
             }),
-        closeDialog: ()=>set({
-                openDialog: null
+        setCausesDetail: (open)=>set({
+                openDialog: open ? "causes_detail" : null
             }),
-        // Setter functions
-        setCausesOpenDetail: (isOpen)=>set({
-                openDialog: isOpen ? "causes_detail" : null
+        setCommunityNewsAdd: (open)=>set({
+                openDialog: open ? "community_news_add" : null
             }),
-        setCausesOpenEdit: (isOpen)=>set({
-                openDialog: isOpen ? "causes_edit" : null
+        setCommunityNewsEdit: (open)=>set({
+                openDialog: open ? "community_news_edit" : null
             }),
-        setCausesOpenAdd: (isOpen)=>set({
-                openDialog: isOpen ? "causes_add" : null
+        setCommunityNewsDetail: (open)=>set({
+                openDialog: open ? "community_news_detail" : null
             }),
-        setCommunityNewsAdd: (isOpen)=>set({
-                openDialog: isOpen ? "community_news_add" : null
+        setAdministrationAdd: (open)=>set({
+                openDialog: open ? "administration_add" : null
             }),
-        setCommunityUserWalletAdd: (isOpen)=>set({
-                openDialog: isOpen ? "community_user_wallet_add" : null
+        setAdministrationEdit: (open)=>set({
+                openDialog: open ? "administration_edit" : null
             }),
-        setCommunityAdministrationAdd: (isOpen)=>set({
-                openDialog: isOpen ? "community_administration_add" : null
+        setAdministrationDetail: (open)=>set({
+                openDialog: open ? "administration_detail" : null
             }),
-        setNtfsAdd: (isOpen)=>set({
-                openDialog: isOpen ? "nfts_add" : null
+        setWalletSettingsAdd: (open)=>set({
+                openDialog: open ? "wallet_settings_add" : null
             }),
-        // Adminstrator
-        setAddAdministrator: (isOpen)=>set({
-                openDialog: isOpen ? "add_administrator" : null
+        setWalletSettingsEdit: (open)=>set({
+                openDialog: open ? "wallet_settings_edit" : null
             }),
-        setEditAdministrator: (isOpen)=>set({
-                openDialog: isOpen ? "edit_administrator" : null
+        setWalletSettingsDetail: (open)=>set({
+                openDialog: open ? "wallet_settings_detail" : null
             }),
-        // Settings
-        setAddCategory: (isOpen)=>set({
-                openDialog: isOpen ? "add_category" : null
+        setNftsDetail: (open)=>set({
+                openDialog: open ? "nfts_detail" : null
             }),
-        setEditCategory: (isOpen)=>set({
-                openDialog: isOpen ? "edit_category" : null
-            }),
-        setAddCampaign: (isOpen)=>set({
-                openDialog: isOpen ? "add_campaign" : null
-            }),
-        setEditCampaign: (isOpen)=>set({
-                openDialog: isOpen ? "edit_campaign" : null
-            }),
-        // Wallet Setting
-        setWalletSettingOpenExisting: (isOpen)=>set({
-                openDialog: isOpen ? "wallet_setting_open_existing" : null
-            }),
-        setWalletSettingAddNew: (isOpen)=>set({
-                openDialog: isOpen ? "wallet_setting_add_new" : null
+        setNftsEdit: (open)=>set({
+                openDialog: open ? "nfts_edit" : null
             })
     }));
 const __TURBOPACK__default__export__ = useDialogStore;

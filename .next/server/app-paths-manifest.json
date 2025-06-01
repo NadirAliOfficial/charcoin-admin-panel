@@ -1,12 +1,13 @@
 {
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/(main)/causes/page": "app/(main)/causes/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js",
   "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
-  "/(main)/rewards/top-tiers/page": "app/(main)/rewards/top-tiers/page.js",
+  "/(main)/dashboard/page": "app/(main)/dashboard/page.js",
   "/(main)/community/news/page": "app/(main)/community/news/page.js",
+  "/(main)/community/user-and-wallets/page": "app/(main)/community/user-and-wallets/page.js",
   "/(main)/rewards/charity-lottery/page": "app/(main)/rewards/charity-lottery/page.js",
   "/(main)/rewards/nfts/page": "app/(main)/rewards/nfts/page.js",
   "/(main)/rewards/staking/page": "app/(main)/rewards/staking/page.js",
-  "/(main)/community/user-and-wallets/page": "app/(main)/community/user-and-wallets/page.js"
+  "/(main)/causes/page": "app/(main)/causes/page.js",
+  "/(main)/rewards/top-tiers/page": "app/(main)/rewards/top-tiers/page.js",
+  "/_not-found/page": "app/_not-found/page.js"
 }

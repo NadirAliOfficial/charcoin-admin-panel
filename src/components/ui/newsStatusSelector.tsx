@@ -13,7 +13,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Filter as MenuIcon } from "@mynaui/icons-react";
 import { Check, Circle, CheckCircle } from "@mynaui/icons-react";
 import { AlertCircle } from "lucide-react";
-import { NewsStatus } from "@/types/news";
+import { NewsStatus, NewsStatusOption } from "@/types/news";
 
 // Status Options Interface
 interface StatusOption {
@@ -58,24 +58,24 @@ export const statusOptions: NewsStatusOption[] = [
 export function NewsStatusSelector({
   selectedStatus,
   onStatusChange,
-  statuses = defaultStatusOptions,
+  statuses = statusOptions,
   size = "default",
   className,
   iconClassName = ""
 }: {
-  selectedStatus?: StatusOption;
-  onStatusChange?: (status: StatusOption) => void;
-  statuses?: StatusOption[];
+  selectedStatus?: NewsStatusOption;
+  onStatusChange?: (status: NewsStatusOption) => void;
+  statuses?: NewsStatusOption[];
   size?: "lg" | "sm" | "default" | "icon" | "main_btn";
   className?: string;
   iconClassName?: string;
 }) {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [selected, setSelected] = React.useState<StatusOption | undefined>(
-    selectedStatus || statuses.find(s => s.id === "all")
+  const [selected, setSelected] = React.useState<NewsStatusOption | undefined>(
+    selectedStatus || statuses.find(s => s.value === NewsStatus.All)
   );
 
-  const handleStatusSelect = (status: StatusOption) => {
+  const handleStatusSelect = (status: NewsStatusOption) => {
     setSelected(status);
     onStatusChange?.(status);
     setIsOpen(false);
@@ -110,25 +110,17 @@ export function NewsStatusSelector({
           <div className="p-2">
             {statuses.map((status) => (
               <Button
-                key={status.id}
+                key={status.value}
                 variant="ghost"
                 className="w-full justify-between h-auto p-3 mb-1 hover:bg-gray-100/10"
                 onClick={() => handleStatusSelect(status)}
               >
                 <div className="flex items-center space-x-3">
-                  <div className={cn("flex-shrink-0", status.color)}>
-                    {status.icon}
-                  </div>
                   <div className="flex-1 text-left">
                     <div className="font-medium text-sm">{status.label}</div>
                   </div>
-                  {status.count && (
-                    <div className="text-xs text-muted-foreground">
-                      {status.count.toLocaleString()}
-                    </div>
-                  )}
                 </div>
-                {selected?.id === status.id && (
+                {selected?.value === status.value && (
                   <Check className="h-4 w-4 text-primary ml-2" />
                 )}
               </Button>
@@ -140,7 +132,7 @@ export function NewsStatusSelector({
             variant="outline" 
             size="sm" 
             className="w-full"
-            onClick={() => handleStatusSelect(statuses.find(s => s.id === "all") || statuses[0])}
+            onClick={() => handleStatusSelect(statuses.find(s => s.value === NewsStatus.All) || statuses[0])}
           >
             Reset to All Status
           </Button>

@@ -801,6 +801,9 @@ const useDialogStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_
         setNtfsAdd: (isOpen)=>set({
                 openDialog: isOpen ? "nfts_add" : null
             }),
+        setNftsDetail: (isOpen)=>set({
+                openDialog: isOpen ? "nfts_detail" : null
+            }),
         // Adminstrator
         setAddAdministrator: (isOpen)=>set({
                 openDialog: isOpen ? "add_administrator" : null

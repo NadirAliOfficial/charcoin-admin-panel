@@ -2318,6 +2318,9 @@ const useDialogStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_
         setNtfsAdd: (isOpen)=>set({
                 openDialog: isOpen ? "nfts_add" : null
             }),
+        setNftsDetail: (isOpen)=>set({
+                openDialog: isOpen ? "nfts_detail" : null
+            }),
         // Adminstrator
         setAddAdministrator: (isOpen)=>set({
                 openDialog: isOpen ? "add_administrator" : null
@@ -2489,11 +2492,11 @@ const statusOptions = [
         value: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$news$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["NewsStatus"].Unpublished
     }
 ];
-function NewsStatusSelector({ selectedStatus, onStatusChange, statuses = defaultStatusOptions, size = "default", className, iconClassName = "" }) {
+function NewsStatusSelector({ selectedStatus, onStatusChange, statuses = statusOptions, size = "default", className, iconClassName = "" }) {
     _s();
     const [isOpen, setIsOpen] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.useState(false);
     const [selected, setSelected] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.useState(selectedStatus || statuses.find({
-        "NewsStatusSelector.useState": (s)=>s.id === "all"
+        "NewsStatusSelector.useState": (s)=>s.value === __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$news$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["NewsStatus"].All
     }["NewsStatusSelector.useState"]));
     const handleStatusSelect = (status)=>{
         setSelected(status);
@@ -2577,53 +2580,35 @@ function NewsStatusSelector({ selectedStatus, onStatusChange, statuses = default
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "flex items-center space-x-3",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("flex-shrink-0", status.color),
-                                                    children: status.icon
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex-1 text-left",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "font-medium text-sm",
+                                                    children: status.label
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                                                    lineNumber: 119,
-                                                    columnNumber: 19
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "flex-1 text-left",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "font-medium text-sm",
-                                                        children: status.label
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                                                        lineNumber: 123,
-                                                        columnNumber: 21
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                                                    lineNumber: 122,
-                                                    columnNumber: 19
-                                                }, this),
-                                                status.count && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "text-xs text-muted-foreground",
-                                                    children: status.count.toLocaleString()
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                                                    lineNumber: 126,
+                                                    lineNumber: 120,
                                                     columnNumber: 21
                                                 }, this)
-                                            ]
-                                        }, void 0, true, {
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
+                                                lineNumber: 119,
+                                                columnNumber: 19
+                                            }, this)
+                                        }, void 0, false, {
                                             fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
                                             lineNumber: 118,
                                             columnNumber: 17
                                         }, this),
-                                        selected?.id === status.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$Check$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Check$3e$__["Check"], {
+                                        selected?.value === status.value && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$Check$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Check$3e$__["Check"], {
                                             className: "h-4 w-4 text-primary ml-2"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                                            lineNumber: 132,
+                                            lineNumber: 124,
                                             columnNumber: 19
                                         }, this)
                                     ]
-                                }, status.id, true, {
+                                }, status.value, true, {
                                     fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
                                     lineNumber: 112,
                                     columnNumber: 15
@@ -2644,16 +2629,16 @@ function NewsStatusSelector({ selectedStatus, onStatusChange, statuses = default
                             variant: "outline",
                             size: "sm",
                             className: "w-full",
-                            onClick: ()=>handleStatusSelect(statuses.find((s)=>s.id === "all") || statuses[0]),
+                            onClick: ()=>handleStatusSelect(statuses.find((s)=>s.value === __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$news$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["NewsStatus"].All) || statuses[0]),
                             children: "Reset to All Status"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                            lineNumber: 139,
+                            lineNumber: 131,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/newsStatusSelector.tsx",
-                        lineNumber: 138,
+                        lineNumber: 130,
                         columnNumber: 9
                     }, this)
                 ]
@@ -2669,7 +2654,7 @@ function NewsStatusSelector({ selectedStatus, onStatusChange, statuses = default
         columnNumber: 5
     }, this);
 }
-_s(NewsStatusSelector, "WkxoTmphaJnkoEM8l0tfNybKWFE=");
+_s(NewsStatusSelector, "GF9VW52e8sAd9emsIUQUbHwnwh8=");
 _c = NewsStatusSelector;
 var _c;
 __turbopack_refresh__.register(_c, "NewsStatusSelector");
@@ -2912,7 +2897,7 @@ const News = ()=>{
         columnNumber: 5
     }, this);
 };
-_s(News, "ULTRBWdDcEzlppwytLKU5jrgqJQ=", false, function() {
+_s(News, "hm90XEUyJQkNiq/4oeEP1r2qYWU=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$stores$2f$dialog$2d$store$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"]

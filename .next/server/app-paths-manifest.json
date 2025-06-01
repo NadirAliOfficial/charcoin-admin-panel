@@ -9,5 +9,7 @@
   "/(main)/rewards/staking/page": "app/(main)/rewards/staking/page.js",
   "/(main)/causes/page": "app/(main)/causes/page.js",
   "/(main)/rewards/top-tiers/page": "app/(main)/rewards/top-tiers/page.js",
-  "/_not-found/page": "app/_not-found/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/(main)/community/administration/page": "app/(main)/community/administration/page.js",
+  "/(main)/settings/causes/page": "app/(main)/settings/causes/page.js"
 }

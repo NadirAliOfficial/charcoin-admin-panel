@@ -41,7 +41,7 @@ const HeaderWrapper = ({
         <div>
           <h1
             className={cn(
-              " font-WFVisualSansRegular",
+              " font-WFVisualSansRegular ",
               size === "xs"
                 ? "text-sm"
                 : size === "sm"

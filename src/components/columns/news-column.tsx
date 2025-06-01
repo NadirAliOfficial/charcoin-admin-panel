@@ -45,7 +45,7 @@ const columns: ColumnDef<NewsArticle>[] = [
       <DataTableColumnHeader column={column} title="Short Description" />
     ),
     cell: ({ row }) => (
-      <span className="text-sm block w-72 text-gray-600">
+      <span className="text-sm block w-72 text-gray-200">
         {row.getValue("short_description")}
       </span>
     ),

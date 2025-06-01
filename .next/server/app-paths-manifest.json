@@ -7,5 +7,6 @@
   "/(main)/community/news/page": "app/(main)/community/news/page.js",
   "/(main)/rewards/charity-lottery/page": "app/(main)/rewards/charity-lottery/page.js",
   "/(main)/rewards/nfts/page": "app/(main)/rewards/nfts/page.js",
-  "/(main)/rewards/staking/page": "app/(main)/rewards/staking/page.js"
+  "/(main)/rewards/staking/page": "app/(main)/rewards/staking/page.js",
+  "/(main)/community/user-and-wallets/page": "app/(main)/community/user-and-wallets/page.js"
 }

@@ -14,6 +14,7 @@ import { DateTimePicker } from "@/components/ui/date-time-picker";
 import { Input } from "@/components/ui/input";
 import useDialogStore from "@/stores/dialog-store";
 import { NewsArticle, NewsData, NewsStatus } from "@/types/news";
+import { StatusOption, StatusSelector } from "@/components/ui/StatusSelector";
 
 const newsExample: NewsData = {
   news_summary: {
@@ -103,9 +104,9 @@ const fetchTransactions = async (
 
 const News = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [date, setDate] = useState<Date>(new Date()); 
+  const [date, setDate] = useState<Date>(new Date());
   const { openDialog, setCommunityNewsAdd } = useDialogStore();
-
+const [selectedStatus, setSelectedStatus] = useState<StatusOption | undefined>();
   const { data = [], isLoading } = useQuery<NewsArticle[]>({
     queryKey: ["news", searchQuery, date],
     queryFn: () => fetchTransactions(searchQuery, date),
@@ -129,8 +130,12 @@ const News = () => {
     >
       <div className="mb-6 ">
         <div className="flex items-center gap-4 mb-4 max-md:flex-col">
-          <DateTimePicker date={date  } setDate={setDate} />
-         
+          <StatusSelector
+            selectedStatus={selectedStatus}
+            onStatusChange={setSelectedStatus}
+            className="min-w-[140px]"
+          />
+
           <div className="relative  w-80 ">
             <Input
               className="!w-full !bg-[#3D3C44] "

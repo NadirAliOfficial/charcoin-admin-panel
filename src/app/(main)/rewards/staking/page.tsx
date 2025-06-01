@@ -10,6 +10,9 @@ import { StakingTable } from "@/components/rewards/staking-table";
 import { Card } from "@/components/ui/card";
 import { DateTimePicker } from "@/components/ui/date-time-picker";
 import { StakingData, StakingEntry } from "@/types/staking";
+import { DisplayDatePicker } from "@/components/ui/DisplayDatePicker";
+import { StatusSelector } from "@/components/ui/StatusSelector";
+import type { StatusOption } from "@/components/ui/StatusSelector";
 
 // Example Data
 const stakingExample: StakingData = {
@@ -122,6 +125,9 @@ const fetchTransactions = async (
 const TopTiers = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [date, setDate] = useState<Date>(new Date());
+  const [displayDate, setDisplayDate] = useState<Date | undefined>(new Date());
+
+  const [selectedStatus, setSelectedStatus] = useState<StatusOption | undefined>();
 
   const { data = [], isLoading } = useQuery<StakingEntry[]>({
     queryKey: ["staking", searchQuery, date],
@@ -130,7 +136,7 @@ const TopTiers = () => {
 
   return (
     <HeaderWrapper
-    mainClassName="!justify-start items-start gap-4 max-md:flex-col" 
+      mainClassName="!justify-start items-start gap-4 max-md:flex-col"
       title="Staking"
       description="List of users staking the CharCoin Token"
       actions={
@@ -149,13 +155,24 @@ const TopTiers = () => {
     >
       <div className="mb-6 ">
         <div className="flex items-center gap-4 mb-4 max-md:flex-col">
-          <DateTimePicker date={date} setDate={setDate} />
+          <DisplayDatePicker
+            date={displayDate}
+            setDate={setDisplayDate}
+            displayLabel="Display data:"
+            className="your-custom-styles"
+          />
+          <StatusSelector
+            selectedStatus={selectedStatus}
+            onStatusChange={setSelectedStatus}
+            className="min-w-[140px]"
+          />
 
           <SearchInput
             placeholder="Search by username, wallet, or hash"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
+          <div className="text-gray-400">7,457 records</div>
         </div>
 
         <StakingTable

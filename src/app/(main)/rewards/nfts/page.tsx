@@ -16,6 +16,7 @@ import { NFTSRecord } from "@/types/rewards";
 import { Arrow } from "@radix-ui/react-dropdown-menu";
 import { ArrowRight, ArrowRightCircleSolid } from "@mynaui/icons-react";
 import { ArrowRightIcon } from "lucide-react";
+import { TypeSelector, TypeOption } from "@/components/ui/TypeSelector";
 
 const transactionRecords: NFTSRecord[] = [
   {
@@ -96,6 +97,9 @@ const TopTiers = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [date, setDate] = useState<Date>(new Date());
   const { openDialog, setNtfsAdd } = useDialogStore();
+  // Import TypeOption from the correct location if not already imported
+  // import type { TypeOption } from "@/components/ui/TypeSelector";
+  const [selectedType, setSelectedType] = useState<TypeOption | undefined>(undefined);
 
   const { data = [], isLoading } = useQuery<NFTSRecord[]>({
     queryKey: ["ntfs", searchQuery, date],
@@ -108,13 +112,17 @@ const TopTiers = () => {
       description="NFT collections and distribution control"
       actions={
         <Button size={"lg"} onClick={() => setNtfsAdd(true)} endIcon={ArrowRightIcon}>
-          Add new 
+          Add new
         </Button>
       }
     >
       <div className="mb-6 ">
         <div className="flex items-center gap-4 mb-4 max-md:flex-col">
-          <DateTimePicker date={date} setDate={setDate} />
+          <TypeSelector
+            selectedType={selectedType}
+            onTypeChange={setSelectedType}
+            className="your-custom-styles"
+          />
           <SearchInput
             placeholder="Search by username, wallet, or hash"
             value={searchQuery}

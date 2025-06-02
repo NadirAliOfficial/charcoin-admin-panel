@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 import { DownloadSolid, X } from "@mynaui/icons-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { CircleArrowUp, Trash } from "lucide-react";
+import { ArrowRight, CircleArrowRight, CircleArrowUp, Trash } from "lucide-react";
 
 interface CompletedCauseDrawerProps {
   isOpen: boolean;
@@ -145,37 +145,47 @@ export function CompletedCauseDrawer({ isOpen, setIsOpen, cause }: CompletedCaus
                 <div key={idx} className=" w-full flex gap-4 justify-between  rounded-lg p-2  items-center">
 
                   <div className="flex items-center gap-5">
-                  <Image src={"/feature-image.png"} alt="video" width={180} height={30} className="rounded-md  mb-2" />
-                  <div >
-                    <div className="text-xs text-muted-foreground mb-1">Uploaded by: {media.uploadedBy}</div>
-                    <div className="text-xs text-muted-foreground mb-2">Uploaded on {media.date}</div>
+                    <Image src={"/feature-image.png"} alt="video" width={180} height={30} className="rounded-md  mb-2" />
+                    <div >
+                      <div className="text-xs text-muted-foreground mb-1">Uploaded by: {media.uploadedBy}</div>
+                      <div className="text-xs text-muted-foreground mb-2">Uploaded on {media.date}</div>
+                    </div>
                   </div>
-                  </div>
-                  
 
 
-                  <Button variant="destructive" size="sm" className="w-fit text-black bg-red-300 px-10">Delete <Trash size={20}/></Button>
+
+                  <Button variant="destructive" size="sm" className="w-fit text-black bg-red-300 px-10">Delete <Trash size={20} /></Button>
                 </div>
               ))}
             </div>
             {/* Organization uploads */}
             <div className="border-b border-gray-700 pb-5 mb-10">
-            <h2 className="text-lg font-semibold mb-2">Updates - <span className="text-gray-400">Uploaded by Organization</span></h2>
-            <p className="text-xs text-gray-400">Videos uploaded in this section will show up to all benefactors that voted for this project only after approval.</p>
+              <h2 className="text-lg font-semibold mb-2">Updates - <span className="text-gray-400">Uploaded by Organization</span></h2>
+              <p className="text-xs text-gray-400">Videos uploaded in this section will show up to all benefactors that voted for this project only after approval.</p>
             </div>
-            
+
             <div className="flex flex-col w-full gap-4 mb-4">
               {orgMedia.map((media, idx) => (
-                <div key={idx} className=" rounded-lg p-2 flex w-full justify-between items-center">
-                  <Image src={media.url} alt="video" width={180} height={100} className="rounded-md mb-2" />
-                  <div className="text-xs text-muted-foreground mb-1">Uploaded by: {media.uploadedBy}</div>
-                  <div className="text-xs text-muted-foreground mb-2">Uploaded on {media.date}</div>
-                  <div className="flex gap-2 w-full">
-                    <Button variant="destructive" size="sm" className="">Delete</Button>
+                <div key={idx} className=" p-2 flex w-full  items-center justify-between">
+
+                  <div className="flex h-full items-center gap-4">
+                    <Image src={"/feature-image.png"} alt="video" width={180} height={100} className="rounded-md mb-2" />
+
+                    <div>
+                      <div className="text-xs text-muted-foreground mb-1">Uploaded by: {media.uploadedBy}</div>
+                      <div className="text-xs text-muted-foreground mb-2">Uploaded on {media.date}</div>
+                    </div>
+                  </div>
+
+
+
+
+                  <div className="flex gap-2 justify-between">
+                    {idx !== 1 && <Button variant="destructive" size="sm" className="bg-red-300 text-black px-5">Delete <Trash size={20} /></Button>}
                     {idx === 1 ? (
                       <>
-                        <Button variant="default" size="sm" className="flex-1 bg-custom-purple">Approve ✓</Button>
-                        <Button variant="outline" size="sm" className="flex-1 border-red-500 text-red-500">Reject ✗</Button>
+                        <Button variant="default" size="sm" className=" bg-primary">Approve ✓</Button>
+                        <Button variant="outline" size="sm" className=" bg-red-300 text-black">Reject ✗</Button>
                       </>
                     ) : null}
                   </div>
@@ -185,22 +195,50 @@ export function CompletedCauseDrawer({ isOpen, setIsOpen, cause }: CompletedCaus
           </div>
           {/* Payouts Section */}
           <div className="mt-6">
-            <h2 className="text-lg font-semibold mb-2">Payouts</h2>
-            <div className="bg-[#1d1c21] rounded-lg p-4">
-              <div className="mb-2 text-xs text-muted-foreground">Review the payouts history and place a new wallet transfer request.</div>
-              <div className="flex items-center gap-4 mb-4">
-                <div className="flex-1">
-                  <div className="text-xs mb-1">New transfer payout request</div>
-                  <div className="w-full h-2 bg-[#323138] rounded-full mb-2">
-                    <div className="h-2 bg-custom-purple rounded-full" style={{ width: '4%' }}></div>
+            <div className="border-b-2 border-gray-500 mb-10 pb-5">
+              <h2 className="text-lg font-semibold mb-2">Payouts</h2>
+              <p className="text-muted-foreground text-xs">Review the payouts history and place a new wallet transfer request.</p>
+            </div>
+
+            <div className=" rounded-lg">
+
+              <div className="gap-4 mb-4 bg-[#393939] p-5 rounded-2xl">
+                <div className="mb-2 ">New transfer payout request</div>
+                <div className="flex  gap-5">
+                  <div className="flex-1">
+                    <div className="w-full justify-between flex">
+                      <div className="text-xs text-muted-foreground mb-1">$235.00 USDT (SOL)</div>
+                      <div className="text-xs text-muted-foreground">Maximum for this transaction: $6,000 USDT (SOL)</div>
+                    </div>
+
+
+
+                    <div className="w-full h-1 bg-[#323138] rounded-full mt-2 mb-2">
+                      <div className="h-1 bg-primary rounded-full flex items-center relative" style={{ width: '40%' }}><div className="w-4 h-4 absolute right-0 rounded-full bg-white"></div></div>
+                    </div>
+
                   </div>
-                  <div className="text-xs text-muted-foreground">Maximum for this transaction: $6,000 USDT (SOL)</div>
+                  <Button className="bg-primary text-xs px-4 py-2">Release Payout <CircleArrowRight size={20} /></Button>
                 </div>
-                <Button className="bg-custom-purple text-xs px-4 py-2">Release Payout</Button>
               </div>
-              <div className="text-right text-xl font-bold mb-2 text-white">$17,000.00</div>
-              <div className="text-xs text-muted-foreground mb-2">Donated so far</div>
-              <div className="border-t border-[#323138] pt-2 mt-2">
+
+
+              <div className="flex w-full justify-between">
+                <div className="">
+                  Transfers & Payouts History
+                </div>
+                <div className="text-right text-xl font-bold mb-2 text-white">$17,000.00</div>
+              </div>
+
+              <div className="flex w-full justify-between">
+                <div className="text-xs text-muted-foreground mb-2">
+                  Below you can find all the transactions in favor of the Organization (3 payouts)
+                </div>
+                <div className="text-xs text-muted-foreground mb-2">Donated so far</div>
+              </div>
+
+
+              <div className=" pt-2 mt-2 space-y-10 pl-5 ml-5 border-l-[12px] border-gray-700">
                 {payouts.map((p, i) => (
                   <div key={i} className="mb-2">
                     <div className="text-sm text-white">{p.amount}</div>

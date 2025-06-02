@@ -222,27 +222,27 @@ export default function EcosystemWallets() {
 
             <div className="space-y-6">
               <WalletItem
-                title="Crisis Wallet"
-                description="Used for the Wallet that will be used for 'Crisis Situations' (Emergencies and urgent situations). The donations are made on a case-by-case basis and require the approval of the community."
+                title="Ch'ai Wallet"
+                description="Enter the Wallet that will be used for Ch’ai donations focused on “Emergencies and urgent donations” (SOLANA Network). This donations will remain out of public governance and donations will be performed at any moment by the directive team’s authorization"
                 address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
-                onViewHistory={() => openHistory("Crisis Wallet")}
-                onMakePayout={() => openPayout("Crisis Wallet")}
+                onViewHistory={() => openHistory("Ch'ai Wallet")}
+                onMakePayout={() => openPayout("Ch'ai Wallet")}
               />
             </div>
           </section>
 
-          <div className="border-t border-primary my-8"></div>
+          <div className="border-t-4 border-primary my-8"></div>
 
           <section>
             <div className="mb-4">
               <h2 className="text-lg font-bold">Staking Rewards (15%)</h2>
-              <p className="text-sm text-gray-400">Allocated for the global ecosystem</p>
+              <p className="text-sm text-gray-400">Based on the 1% global collection</p>
             </div>
 
             <div className="space-y-6">
               <WalletItem
                 title="Staking Main Wallet"
-                description="Used for staking rewards (100% total Revenue)"
+                description="Enter the main wallet related to staking operations (SOLANA Network)"
                 address="9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
                 onViewHistory={() => openHistory("Staking Main Wallet")}
                 showPayoutButton={false}

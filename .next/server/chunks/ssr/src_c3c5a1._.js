@@ -1877,11 +1877,11 @@ function EcosystemWallets() {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "space-y-6",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
-                                            title: "Crisis Wallet",
-                                            description: "Used for the Wallet that will be used for 'Crisis Situations' (Emergencies and urgent situations). The donations are made on a case-by-case basis and require the approval of the community.",
+                                            title: "Ch'ai Wallet",
+                                            description: "Enter the Wallet that will be used for Ch’ai donations focused on “Emergencies and urgent donations” (SOLANA Network). This donations will remain out of public governance and donations will be performed at any moment by the directive team’s authorization",
                                             address: "pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv",
-                                            onViewHistory: ()=>openHistory("Crisis Wallet"),
-                                            onMakePayout: ()=>openPayout("Crisis Wallet")
+                                            onViewHistory: ()=>openHistory("Ch'ai Wallet"),
+                                            onMakePayout: ()=>openPayout("Ch'ai Wallet")
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
                                             lineNumber: 224,
@@ -1899,7 +1899,7 @@ function EcosystemWallets() {
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "border-t border-primary my-8"
+                                className: "border-t-4 border-primary my-8"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
                                 lineNumber: 234,
@@ -1920,7 +1920,7 @@ function EcosystemWallets() {
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-sm text-gray-400",
-                                                children: "Allocated for the global ecosystem"
+                                                children: "Based on the 1% global collection"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
                                                 lineNumber: 239,
@@ -1936,7 +1936,7 @@ function EcosystemWallets() {
                                         className: "space-y-6",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
                                             title: "Staking Main Wallet",
-                                            description: "Used for staking rewards (100% total Revenue)",
+                                            description: "Enter the main wallet related to staking operations (SOLANA Network)",
                                             address: "9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv",
                                             onViewHistory: ()=>openHistory("Staking Main Wallet"),
                                             showPayoutButton: false

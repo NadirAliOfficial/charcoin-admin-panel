@@ -2447,6 +2447,22 @@ body {
   border-top-width: 4px;
 }
 
+.border-l-\[10px\] {
+  border-left-width: 10px;
+}
+
+.border-l-\[12px\] {
+  border-left-width: 12px;
+}
+
+.border-l-\[15px\] {
+  border-left-width: 15px;
+}
+
+.border-l-\[20px\] {
+  border-left-width: 20px;
+}
+
 .border-dashed {
   border-style: dashed;
 }

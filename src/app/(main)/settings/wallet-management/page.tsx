@@ -10,7 +10,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Eye, Plus } from "lucide-react"
+import { CircleArrowRight, Eye, File, Plus } from "lucide-react"
 import { HeaderWrapper } from "@/components/custom/header-wrapper"
 import { ArrowRight } from "@mynaui/icons-react"
 import useDialogStore from "@/stores/dialog-store"
@@ -42,9 +42,9 @@ export default function EcosystemWallets() {
   return (
  <div className="flex flex-col gap-4">
    <HeaderWrapper
-    title={"Dapp Global Settings - Governance"}
+    title={"Dapp Global Settings - Wallets Management"}
     description={
-      "Manage settings related to the governance of the CharCoin ecosystem"
+      "Manage settings related to important wallets in the ecosystem, you will require 3 administrator level access signatures to perform any update or action"
     }
     actions={
       <Button>
@@ -63,12 +63,13 @@ export default function EcosystemWallets() {
         <div className="border-t-4 border-primary my-8"></div>
 
         <section className="mb-12">
-          <div className="mb-4">
+          
+
+          <div className="space-y-6 border-l-[20px] border-secondary pl-4">
+          <div className="mb-4 ml-4">
             <h2 className="text-lg font-bold">Buyback, deflationary system & marketing (10%)</h2>
             <p className="text-sm text-gray-400">Allocated for the global marketing operations</p>
           </div>
-
-          <div className="space-y-6 border-l-4 border-secondary pl-4">
             <WalletItem
               title="Marketing Main Wallet"
               address="9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
@@ -96,7 +97,7 @@ export default function EcosystemWallets() {
 
         <div className="border-t border-primary my-8"></div>
 
-        <section className="mb-12">
+        <section className="mb-12 border-l-[20px] border-secondary pl-4">
           <div className="mb-4">
             <h2 className="text-lg font-bold">Charity Donation & Rewards Ecosystem (27%)</h2>
             <p className="text-sm text-gray-400">Allocated for the global ecosystem</p>
@@ -302,17 +303,17 @@ function WalletItem({
           <Button
             onClick={onMakePayout}
           >
-            <Plus className="h-4 w-4 mr-1" />
             Make a new payout
+            <CircleArrowRight className="-rotate-45 h-4 w-4 mr-1" />
           </Button>
         )}
         <Button
           onClick={onViewHistory}
           variant="outline"
-          className="border-primary text-primary hover:bg-[#00ffcc20] text-xs rounded-md"
+          className="border-primary text-black bg-primary hover:bg-[#00ffcc20] text-xs rounded-md"
         >
-          <Eye className="h-4 w-4 mr-1" />
           View History
+          <File className="h-4 w-4 mr-1" />
         </Button>
       </div>
     </div>

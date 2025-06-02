@@ -2162,6 +2162,15 @@ body {
   background-color: rgb(39 39 42 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#2A2A2E\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(42 42 46 / var(--tw-bg-opacity, 1));
+}
+
+.bg-green-500\/20 {
+  background-color: #22c55e33;
+}
+
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }

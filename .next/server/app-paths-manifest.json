@@ -3,5 +3,6 @@
   "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
   "/(main)/dashboard/page": "app/(main)/dashboard/page.js",
   "/(main)/settings/wallet-management/page": "app/(main)/settings/wallet-management/page.js",
-  "/(main)/causes/page": "app/(main)/causes/page.js"
+  "/(main)/causes/page": "app/(main)/causes/page.js",
+  "/(main)/rewards/top-tiers/page": "app/(main)/rewards/top-tiers/page.js"
 }

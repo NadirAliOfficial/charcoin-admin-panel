@@ -2355,7 +2355,7 @@ function ContactDetailsSection() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "border-b-2 border-secondary pb-4",
+                className: "border-b-2 border-secondary pb-2",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$causes$2f$edit$2f$file$2d$upload$2d$field$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                     description: "Choose the PDF file containing the agreement between the parties",
                     fieldName: "contractFile",
@@ -2363,48 +2363,55 @@ function ContactDetailsSection() {
                 }, void 0, false, {
                     fileName: "[project]/src/components/causes/edit/contract-detail.tsx",
                     lineNumber: 95,
-                    columnNumber: 1
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/src/components/causes/edit/contract-detail.tsx",
-                lineNumber: 94,
-                columnNumber: 1
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$causes$2f$edit$2f$form$2d$field$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                id: "status",
-                label: "Status",
-                description: "The publish status of the cause / project",
-                error: errors.status?.message,
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$causes$2f$edit$2f$form$2d$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectField"], {
-                    variant: "newly_secondary",
-                    selectSize: "lg",
-                    placeholder: "Select status",
-                    className: "bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]",
-                    value: getValues().status,
-                    onValueChange: (value)=>setValue("status", value),
-                    options: [
-                        {
-                            value: "Draft",
-                            label: "Draft"
-                        },
-                        {
-                            value: "Published",
-                            label: "Published"
-                        },
-                        {
-                            value: "Archived",
-                            label: "Archived"
-                        }
-                    ]
-                }, void 0, false, {
-                    fileName: "[project]/src/components/causes/edit/contract-detail.tsx",
-                    lineNumber: 109,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/causes/edit/contract-detail.tsx",
-                lineNumber: 103,
+                lineNumber: 94,
                 columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "border-b-2 border-secondary pb-2 mt-4",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$causes$2f$edit$2f$form$2d$field$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                    id: "status",
+                    label: "Status",
+                    description: "The publish status of the cause / project",
+                    error: errors.status?.message,
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$causes$2f$edit$2f$form$2d$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectField"], {
+                        variant: "newly_secondary",
+                        selectSize: "lg",
+                        placeholder: "Select status",
+                        className: "bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]",
+                        value: getValues().status,
+                        onValueChange: (value)=>setValue("status", value),
+                        options: [
+                            {
+                                value: "Draft",
+                                label: "Draft"
+                            },
+                            {
+                                value: "Published",
+                                label: "Published"
+                            },
+                            {
+                                value: "Archived",
+                                label: "Archived"
+                            }
+                        ]
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/causes/edit/contract-detail.tsx",
+                        lineNumber: 109,
+                        columnNumber: 9
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/src/components/causes/edit/contract-detail.tsx",
+                    lineNumber: 103,
+                    columnNumber: 2
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/components/causes/edit/contract-detail.tsx",
+                lineNumber: 102,
+                columnNumber: 1
             }, this)
         ]
     }, void 0, true, {

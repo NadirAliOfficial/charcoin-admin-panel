@@ -25,7 +25,7 @@ export default function ContactDetailsSection() {
 
   return (
     <div className="mb-8 mt-20">
-      <FormSectionTitle title="Contact details" className="border-b-2 border-[#3d3c44]"/>
+      <FormSectionTitle title="Contact details" className="border-b-2 border-[#3d3c44]" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <FormField
@@ -91,16 +91,16 @@ export default function ContactDetailsSection() {
         </FormField>
       </div>
 
-<div className="border-b-2 border-secondary pb-4">
-<FileUploadSection
-        description="Choose the PDF file containing the agreement between the parties"
-        fieldName="contractFile"
-        label="Contract"
-      />
-</div>
-      
+      <div className="border-b-2 border-secondary pb-2">
+        <FileUploadSection
+          description="Choose the PDF file containing the agreement between the parties"
+          fieldName="contractFile"
+          label="Contract"
+        />
+      </div>
 
-      <FormField
+<div className="border-b-2 border-secondary pb-2 mt-4">
+ <FormField
         id="status"
         label="Status"
         description="The publish status of the cause / project"
@@ -120,6 +120,8 @@ export default function ContactDetailsSection() {
           ]}
         />
       </FormField>
+</div>
+     
     </div>
   );
 }

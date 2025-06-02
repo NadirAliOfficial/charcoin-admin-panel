@@ -212,29 +212,35 @@ export default function EcosystemWallets() {
                   />
                 </div>
               </div>
+
+
+              <div className="pl-4 border-l-[20px] border-secondary mb-28">
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold">Crisis Classification (10%)</h4>
+                  <p className="text-xs text-gray-400">Of the 80% of the Donation System</p>
+                </div>
+
+                <div className="space-y-6">
+                  <WalletItem
+                    title="Ch'ai Wallet"
+                    description="Enter the Wallet that will be used for Ch’ai donations focused on “Emergencies and urgent donations” (SOLANA Network). This donations will remain out of public governance and donations will be performed at any moment by the directive team’s authorization"
+                    address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
+                    onViewHistory={() => openHistory("Ch'ai Wallet")}
+                    onMakePayout={() => openPayout("Ch'ai Wallet")}
+                  />
+                </div>
+              </div>
+
             </div>
 
 
-            <div className="mb-4">
-              <h4 className="text-sm font-semibold">Crisis Classification (10%)</h4>
-              <p className="text-xs text-gray-400">Of the 80% of the Donation System</p>
-            </div>
 
-            <div className="space-y-6">
-              <WalletItem
-                title="Ch'ai Wallet"
-                description="Enter the Wallet that will be used for Ch’ai donations focused on “Emergencies and urgent donations” (SOLANA Network). This donations will remain out of public governance and donations will be performed at any moment by the directive team’s authorization"
-                address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
-                onViewHistory={() => openHistory("Ch'ai Wallet")}
-                onMakePayout={() => openPayout("Ch'ai Wallet")}
-              />
-            </div>
           </section>
 
           <div className="border-t-4 border-primary my-8"></div>
 
-          <section>
-            <div className="mb-4">
+          <section className="pl-4 border-l-[20px] border-secondary mb-28">
+            <div className="mb-4 border-b border-[#323138] pb-5">
               <h2 className="text-lg font-bold">Staking Rewards (15%)</h2>
               <p className="text-sm text-gray-400">Based on the 1% global collection</p>
             </div>

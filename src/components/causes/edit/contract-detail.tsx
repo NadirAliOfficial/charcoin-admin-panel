@@ -91,11 +91,14 @@ export default function ContactDetailsSection() {
         </FormField>
       </div>
 
-      <FileUploadSection
+<div className="border-b-2 border-secondary pb-4">
+<FileUploadSection
         description="Choose the PDF file containing the agreement between the parties"
         fieldName="contractFile"
         label="Contract"
       />
+</div>
+      
 
       <FormField
         id="status"

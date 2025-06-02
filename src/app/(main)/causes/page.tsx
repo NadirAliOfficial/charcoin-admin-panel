@@ -50,7 +50,7 @@ const causes: Cause[] = [
       count: 30114,
       label: "Points",
     },
-    type: "Cause",
+    type: "One time",
     image: "/placeholder.svg?height=80&width=80",
   },
   {
@@ -122,7 +122,7 @@ export default function CausesPage() {
 
   return (
     <div className="container mx-auto py-8 ">
-      <h1 className="text-2xl font-WFVisualSansRegular  mb-6">Causes</h1>
+      <h1 className="text-2xl  mb-6">Causes</h1>
 
       <div className="mb-6">
         <Tabs
@@ -131,7 +131,7 @@ export default function CausesPage() {
         >
           <div className="flex  gap-4 flex-col md:flex-row mb-4">
             <div className="flex">
-              <TabsList className="!bg-custom-slate font-WFVisualSansRegular mb-1">
+              <TabsList className="!bg-custom-slate mb-1">
                 <TabsTrigger value="running">Running</TabsTrigger>
                 <TabsTrigger value="completed">Completed</TabsTrigger>
                 <TabsTrigger value="drafts">Drafts</TabsTrigger>

@@ -26,7 +26,6 @@ import {
 import { CustomSheet } from "../reuseable/add-causes-sheet";
 import { Fetching } from "../reuseable/fetching";
 import { DataTablePagination } from "../table/tasks-table-pagination";
-import { AddCauseForm } from "./add-cause";
 import { CauseDetail } from "./cause-detail";
 import useDialogStore from "@/stores/dialog-store";
 import { EditCause } from "./edit-cause";

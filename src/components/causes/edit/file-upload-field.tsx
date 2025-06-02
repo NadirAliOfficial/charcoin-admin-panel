@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { File, Trash2, Upload } from "lucide-react";
+import { File, Trash2 } from "lucide-react";
 import { useRef } from "react";
 import { useFormContext } from "react-hook-form";
 import FormField from "./form-field";
@@ -17,29 +17,26 @@ export default function FileUploadSection({
   label,
   description,
 }: FileUploadSectionProps) {
-  const { setValue, getValues } = useFormContext();
+  const { setValue, getValues, watch } = useFormContext();
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const file = getValues()[fieldName] as File | undefined;
+  const file = watch(fieldName) as File | undefined;
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log("Called");
     if (event.target.files?.length) {
-      setValue(fieldName, event.target.files[0]); // Store the File object
+      setValue(fieldName, event.target.files[0], { shouldValidate: true });
     }
   };
 
   const handleFileDelete = () => {
-    setValue(fieldName, undefined);
+    setValue(fieldName, undefined, { shouldValidate: true });
     if (fileInputRef.current) {
-      fileInputRef.current.value = ""; // Clear the input field
+      fileInputRef.current.value = "";
     }
   };
 
   return (
     <FormField id={fieldName} label={label} description={description}>
-      <div className="flex items-center gap-2 mt-2 text-gray-400">
-        {file ? file.name : "No file selected"}
-      </div>
+      
 
       <div className="flex gap-4 w-full justify-between max-sm:flex-col flex-row mt-4">
         <div className="flex gap-2 items-center w-full max-sm:w-auto">
@@ -62,7 +59,7 @@ export default function FileUploadSection({
             onChange={handleFileChange}
           />
           <div className="text-xs text-gray-400">
-            Final Formal Agreement - Nicaragua.pdf
+            {file ? file.name : "No file selected"}
           </div>
         </div>
 

@@ -2,5 +2,6 @@
   "/page": "app/page.js",
   "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
   "/(main)/dashboard/page": "app/(main)/dashboard/page.js",
-  "/(main)/settings/wallet-management/page": "app/(main)/settings/wallet-management/page.js"
+  "/(main)/settings/wallet-management/page": "app/(main)/settings/wallet-management/page.js",
+  "/(main)/causes/page": "app/(main)/causes/page.js"
 }

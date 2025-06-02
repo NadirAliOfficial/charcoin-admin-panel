@@ -57,7 +57,7 @@ export default function EcosystemWallets() {
         <div className="max-w-6xl mx-auto">
           <h1 className="text-xl font-bold mb-1">Global Ecosystem Wallets</h1>
           <p className="text-sm text-gray-400 mb-20 border-b border-[#323138] pb-5">
-            Manage the Global Ecosystem Wallets for the CharCoin ecosystem on the TG Blockchain
+            Manage the main logic setup for the operational wallets (based on the 1% collection)
           </p>
 
           <div className="border-t-4 border-primary my-8"></div>
@@ -66,12 +66,13 @@ export default function EcosystemWallets() {
 
 
             <div className="space-y-6 border-l-[20px] border-secondary pl-4">
-              <div className="mb-4 ml-4">
+              <div className="mb-5 ml-4 border-b border-[#323138] pb-5">
                 <h2 className="text-lg font-bold">Buyback, deflationary system & marketing (10%)</h2>
-                <p className="text-sm text-gray-400">Allocated for the global marketing operations</p>
+                <p className="text-sm text-gray-400">Based on the 1% global collection</p>
               </div>
               <WalletItem
                 title="Marketing Main Wallet"
+                description="Enter the main wallet related to marketing operations (SOLANA Network)"
                 address="9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
                 onViewHistory={() => openHistory("Marketing Main Wallet")}
                 onMakePayout={() => openPayout("Marketing Main Wallet")}
@@ -80,16 +81,16 @@ export default function EcosystemWallets() {
               <WalletItem
                 title="Marketing Secondary Wallet"
                 address="9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
-                description="Used for secondary wallet related to marketing operations (50% total Revenue)"
+                description="Enter the secondary wallet related to marketing operations (SOLANA Network)"
                 onViewHistory={() => openHistory("Marketing Secondary Wallet")}
                 onMakePayout={() => openPayout("Marketing Secondary Wallet")}
               />
 
               <WalletItem
-                title="Buyback Wallet"
+                title="Death Wallet"
                 address="9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
-                description="Used for the deflationary logic (50% total Revenue)"
-                onViewHistory={() => openHistory("Buyback Wallet")}
+                description="Enter the death wallet related to the deflacionary logic (SOLANA Network)"
+                onViewHistory={() => openHistory("death wallet")}
                 showPayoutButton={false}
               />
             </div>
@@ -98,26 +99,26 @@ export default function EcosystemWallets() {
           <section className="mb-12 border-l-[20px] border-secondary pl-5">
 
             <div className="mb-4">
-              <h2 className="text-lg font-bold">Charity Donation & Rewards Ecosystem (27%)</h2>
-              <p className="text-sm text-gray-400">Allocated for the global ecosystem</p>
+              <h2 className="text-lg font-bold">Charity Donation & Rewards Ecosystem (75%)</h2>
+              <p className="text-sm text-gray-400">Based on the 1% global collection</p>
             </div>
 
             <div className="mb-12 border-l-[20px] border-secondary pl-5">
               <div className="mb-6">
                 <h3 className="text-md font-semibold mb-2">Rewards System (20%)</h3>
-                <p className="text-xs text-gray-400">Allocated for the 10% of the Charity Donation & Rewards Ecosystem</p>
+                <p className="text-xs text-gray-400">Based on the 75% of the Charity Donation & Rewards Ecosystem</p>
               </div>
 
               <div className="pl-4 border-l-[20px] border-secondary mb-8">
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold">Monthly Rewards Classification (60%)</h4>
+                  <h4 className="text-sm font-semibold">Monthly Rewards Classification (50%)</h4>
                   <p className="text-xs text-gray-400">Of the 20% of the Rewards System</p>
                 </div>
 
                 <div className="space-y-6 mb-8">
                   <WalletItem
                     title="Top Tier Wallet"
-                    description="Used for the Wallet that will be used for monthly rewards (50% total Revenue)"
+                    description="Enter the Top Tier Wallet that will be used for monthly rewards (SOLANA Network)"
                     address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
                     onViewHistory={() => openHistory("Top Tier Wallet")}
                     showPayoutButton={false}
@@ -125,22 +126,22 @@ export default function EcosystemWallets() {
 
                   <WalletItem
                     title="Charity Lottery Wallet"
-                    description="Used for the Charity Lottery Wallet that will be used for monthly rewards (50% total Revenue)"
+                    description="Enter the Charity Lottery Wallet that will be used for monthly rewards (SOLANA Network)"
                     address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
                     onViewHistory={() => openHistory("Charity Lottery Wallet")}
                     showPayoutButton={false}
                   />
                 </div>
 
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold">Annual Rewards Classification (20%)</h4>
+                <div className="mb-4 px-4">
+                  <h4 className="text-sm font-semibold">Annual Rewards Classification (50%)</h4>
                   <p className="text-xs text-gray-400">Of the 20% of the Rewards System</p>
                 </div>
 
                 <div className="space-y-6">
                   <WalletItem
                     title="Top Tier Wallet"
-                    description="Used for the Wallet that will be used for annual rewards (50% total Revenue)"
+                    description="Enter the Top Tier Wallet that will be used for annual rewards (SOLANA Network)"
                     address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
                     onViewHistory={() => openHistory("Annual Top Tier Wallet")}
                     showPayoutButton={false}
@@ -148,7 +149,7 @@ export default function EcosystemWallets() {
 
                   <WalletItem
                     title="Charity Lottery Wallet"
-                    description="Used for the Charity Lottery Wallet that will be used for annual rewards (50% total Revenue)"
+                    description="Enter the Charity Lottery Wallet that will be used for annual rewards (SOLANA Network)"
                     address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
                     onViewHistory={() => openHistory("Annual Charity Lottery Wallet")}
                     showPayoutButton={false}
@@ -161,7 +162,7 @@ export default function EcosystemWallets() {
             <div className="mb-12 border-l-[20px] border-secondary pl-5">
               <div className="mb-6 border-b border-[#323138] pb-5">
                 <h3 className="text-md font-semibold mb-2">Donation System (80%)</h3>
-                <p className="text-xs text-gray-400">Allocated for the 90% of the Charity Donation & Rewards Ecosystem</p>
+                <p className="text-xs text-gray-400">Based on the 75% of the Charity Donation & Rewards Ecosystem</p>
               </div>
 
               <div className="pl-4 border-l-[20px] border-secondary mb-8">
@@ -173,7 +174,7 @@ export default function EcosystemWallets() {
                 <div className="space-y-6 mb-8">
                   <WalletItem
                     title="One Time Causes/Projects Wallet"
-                    description="Used for the Wallet that will be used for monthly donations based on 'One Time Causes/Projects' (50% total Revenue)"
+                    description="Enter the Wallet that will be used for monthly donations focused on “One Time Causes/Projects” (SOLANA Network)"
                     address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
                     onViewHistory={() => openHistory("One Time Causes/Projects Wallet")}
                     showPayoutButton={false}
@@ -181,7 +182,7 @@ export default function EcosystemWallets() {
 
                   <WalletItem
                     title="Infinite Impact Causes/Projects Wallet"
-                    description="Used for the Wallet that will be used for monthly donations based on 'Infinite Impact Causes/Projects' (50% total Revenue). The Wallet should receive a new donation automatically, and donations will be sent to the causes in the Infinite Impact category."
+                    description="Enter the Wallet that will be used for monthly donations focused on “Infinite Impact Causes/Projects” (SOLANA Network). This Wallet should always stake all tokens received automatically and donations will be sent to organizations from the profits of the staked tokens only"
                     address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
                     onViewHistory={() => openHistory("Infinite Impact Causes/Projects Wallet")}
                     showPayoutButton={false}
@@ -196,7 +197,7 @@ export default function EcosystemWallets() {
                 <div className="space-y-6 mb-8">
                   <WalletItem
                     title="One Time Causes/Projects Wallet"
-                    description="Used for the Wallet that will be used for annual donations based on 'One Time Causes/Projects' (50% total Revenue)"
+                    description="Enter the Wallet that will be used for annual donations focused on “One Time Causes/Projects” (SOLANA Network)"
                     address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
                     onViewHistory={() => openHistory("Annual One Time Causes/Projects Wallet")}
                     showPayoutButton={false}
@@ -204,7 +205,7 @@ export default function EcosystemWallets() {
 
                   <WalletItem
                     title="Infinite Impact Causes/Projects Wallet"
-                    description="Used for the Wallet that will be used for annual donations based on 'Infinite Impact Causes/Projects' (50% total Revenue). The Wallet should receive a new donation automatically, and donations will be sent to the causes in the Infinite Impact category."
+                    description="Enter the Wallet that will be used for annual donations focused on “Infinite Impact Causes/Projects” (SOLANA Network). This Wallet should always stake all tokens received automatically and donations will be sent to organizations from the profits of the staked tokens only"
                     address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
                     onViewHistory={() => openHistory("Annual Infinite Impact Causes/Projects Wallet")}
                     showPayoutButton={false}

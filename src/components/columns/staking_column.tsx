@@ -44,7 +44,9 @@ export const stakingColumns: ColumnDef<StakingEntry>[] = [
           <span className="text-primary whitespace-nowrap">
             <b className="text-muted-foreground">Wallet:</b> {wallet}
           </span>
-          <span className="text-primary">
+          <span className={clsx("text-primary", {
+            "text-red-500": row.original.status === "Stopped"
+          })}>
             <b className="text-muted-foreground">Staking ID:</b> {staking_id}
           </span>
         </div>

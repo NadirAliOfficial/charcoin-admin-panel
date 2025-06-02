@@ -93,7 +93,7 @@ const stakingExample: StakingData = {
     {
       username: "SmartCircus",
       wallet: "0H7hXwqZtB3VjKhgSa8nY7tCdPGzMoJFlxkuAWNqKv",
-      staking_id: "37298478983",
+      staking_id: " 372898478983 (Penalized with 2,234 burned tokens)",
       staked_amount: 7895,
       start_date: new Date("Mar 28, 2025"),
       expiration_date: new Date("Aug 22, 2025"),

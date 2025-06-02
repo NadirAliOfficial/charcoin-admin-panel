@@ -538,14 +538,16 @@ const stakingColumns = [
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "text-primary",
+                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("text-primary", {
+                            "text-red-500": row.original.status === "Stopped"
+                        }),
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("b", {
                                 className: "text-muted-foreground",
                                 children: "Staking ID:"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/columns/staking_column.tsx",
-                                lineNumber: 48,
+                                lineNumber: 50,
                                 columnNumber: 13
                             }, this),
                             " ",
@@ -571,7 +573,7 @@ const stakingColumns = [
                 title: "Staked Amount"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/staking_column.tsx",
-                lineNumber: 56,
+                lineNumber: 58,
                 columnNumber: 29
             }, this),
         cell: ({ row })=>`${row.getValue("staked_amount").toLocaleString()} tokens`
@@ -583,7 +585,7 @@ const stakingColumns = [
                 title: "Start Date"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/staking_column.tsx",
-                lineNumber: 61,
+                lineNumber: 63,
                 columnNumber: 29
             }, this),
         cell: ({ row })=>new Date(row.getValue("start_date")).toLocaleDateString()
@@ -595,7 +597,7 @@ const stakingColumns = [
                 title: "Expiration Date"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/staking_column.tsx",
-                lineNumber: 66,
+                lineNumber: 68,
                 columnNumber: 29
             }, this),
         cell: ({ row })=>new Date(row.getValue("expiration_date")).toLocaleDateString()
@@ -607,7 +609,7 @@ const stakingColumns = [
                 title: "Staking Duration"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/staking_column.tsx",
-                lineNumber: 71,
+                lineNumber: 73,
                 columnNumber: 29
             }, this),
         cell: ({ row })=>`${row.getValue("staking_duration")} days`
@@ -619,7 +621,7 @@ const stakingColumns = [
                 title: "Voting Power"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/staking_column.tsx",
-                lineNumber: 76,
+                lineNumber: 78,
                 columnNumber: 29
             }, this),
         cell: ({ row })=>`${row.getValue("voting_power")} votes per staked token`
@@ -631,14 +633,14 @@ const stakingColumns = [
                 title: "Status"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/staking_column.tsx",
-                lineNumber: 81,
+                lineNumber: 83,
                 columnNumber: 29
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatusCell, {
                 row: row
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/staking_column.tsx",
-                lineNumber: 82,
+                lineNumber: 84,
                 columnNumber: 24
             }, this)
     }
@@ -887,7 +889,7 @@ const Table = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node
         className: "relative w-full overflow-auto",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
             ref: ref,
-            className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-full  caption-bottom text-[16px] font-WFVisualSansRegular shadow-xl", className),
+            className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-full  caption-bottom text-[16px] shadow-xl", className),
             ...props
         }, void 0, false, {
             fileName: "[project]/src/components/ui/table.tsx",
@@ -903,7 +905,7 @@ _c1 = Table;
 Table.displayName = "Table";
 const TableHeader = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.forwardRef(_c2 = ({ className, ...props }, ref)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("thead", {
         ref: ref,
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("[&_tr]:border-b-2 text-[16px] font-WFVisualSansRegular border-[#323138]", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("[&_tr]:border-b-2 text-[16px] border-[#323138]", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/src/components/ui/table.tsx",
@@ -914,7 +916,7 @@ _c3 = TableHeader;
 TableHeader.displayName = "TableHeader";
 const TableBody = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.forwardRef(_c4 = ({ className, ...props }, ref)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
         ref: ref,
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("[&_tr:last-child]:border-0 font-WFVisualSansRegular", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("[&_tr:last-child]:border-0", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/src/components/ui/table.tsx",
@@ -925,7 +927,7 @@ _c5 = TableBody;
 TableBody.displayName = "TableBody";
 const TableFooter = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.forwardRef(_c6 = ({ className, ...props }, ref)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tfoot", {
         ref: ref,
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("border-t bg-muted/50 font-medium font-WFVisualSansRegular [&>tr]:last:border-b-0", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("border-t bg-muted/50 font-medium [&>tr]:last:border-b-0", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/src/components/ui/table.tsx",
@@ -936,7 +938,7 @@ _c7 = TableFooter;
 TableFooter.displayName = "TableFooter";
 const TableRow = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.forwardRef(_c8 = ({ className, ...props }, ref)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
         ref: ref,
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("border-b text-[16px] font-WFVisualSansRegular transition-colors hover:!bg-custom-slate data-[state=selected]:!bg-custom-slate", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("border-b text-[16px] transition-colors hover:!bg-custom-slate data-[state=selected]:!bg-custom-slate", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/src/components/ui/table.tsx",
@@ -947,7 +949,7 @@ _c9 = TableRow;
 TableRow.displayName = "TableRow";
 const TableHead = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.forwardRef(_c10 = ({ className, ...props }, ref)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
         ref: ref,
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("h-10 px-2 py-2 text-[16px] text-left font-WFVisualSansRegular align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("h-10 px-2 py-2 text-[16px] text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/src/components/ui/table.tsx",
@@ -958,7 +960,7 @@ _c11 = TableHead;
 TableHead.displayName = "TableHead";
 const TableCell = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.forwardRef(_c12 = ({ className, ...props }, ref)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
         ref: ref,
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("p-2 align-middle text-[16px] font-WFVisualSansRegular [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("p-2 align-middle text-[16px] [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/src/components/ui/table.tsx",
@@ -969,7 +971,7 @@ _c13 = TableCell;
 TableCell.displayName = "TableCell";
 const TableCaption = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__.forwardRef(_c14 = ({ className, ...props }, ref)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("caption", {
         ref: ref,
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("mt-4 text-[16px] font-WFVisualSansRegular text-muted-foreground", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("mt-4 text-[16px] text-muted-foreground", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/src/components/ui/table.tsx",
@@ -2319,7 +2321,7 @@ const stakingExample = {
         {
             username: "SmartCircus",
             wallet: "0H7hXwqZtB3VjKhgSa8nY7tCdPGzMoJFlxkuAWNqKv",
-            staking_id: "37298478983",
+            staking_id: " 372898478983 (Penalized with 2,234 burned tokens)",
             staked_amount: 7895,
             start_date: new Date("Mar 28, 2025"),
             expiration_date: new Date("Aug 22, 2025"),

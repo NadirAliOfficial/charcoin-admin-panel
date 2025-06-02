@@ -60,7 +60,7 @@ const columns: ColumnDef<NewsArticle>[] = [
       return (
         <span
           className={`px-2 py-1 rounded-md ${
-            status === NewsStatus.Published ? "text-green-600" : "text-red-600"
+            status === NewsStatus.Published ? "text-green-600" : "text-gray-400"
           }`}
         >
           {status}

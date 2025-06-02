@@ -29,17 +29,20 @@ import { DataTablePagination } from "../table/tasks-table-pagination";
 import { CauseDetail } from "./cause-detail";
 import useDialogStore from "@/stores/dialog-store";
 import { EditCause } from "./edit-cause";
+import { CompletedCauseDrawer } from "./completed-cause-drawer";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
   fetching: boolean;
+  activeTab?: string;
 }
 
 export function AddCauseTable<TData, TValue>({
   columns,
   data,
   fetching,
+  activeTab = "running",
 }: DataTableProps<TData, TValue>) {
   const [isAddCauseOpen, setIsAddCauseOpen] = React.useState(false);
   const {
@@ -56,6 +59,7 @@ export function AddCauseTable<TData, TValue>({
     []
   );
   const [sorting, setSorting] = React.useState<SortingState>([]);
+  const [selectedCause, setSelectedCause] = React.useState<TData | null>(null);
 
   const table = useReactTable({
     data,
@@ -108,10 +112,12 @@ export function AddCauseTable<TData, TValue>({
               table.getRowModel().rows.map((row) => (
                 <TableRow
                   onClick={() => {
-                    console.log("Clicked");
-                    setCausesOpenDetail(true);
+                    if (activeTab === "completed") {
+                      setSelectedCause(row.original);
+                    } else {
+                      setCausesOpenDetail(true);
+                    }
                   }}
-                  // row.original?._id! ??
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
                 >
@@ -151,33 +157,45 @@ export function AddCauseTable<TData, TValue>({
       <div className="px-2">
         <DataTablePagination table={table} />
       </div>
-      <CustomSheet
-        isOpen={openDialog === "causes_add"}
-        setIsOpen={(isOpen) => {
-          setCausesOpenAdd(isOpen);
-        }}
-        title="Add Cause form"
-        className="!p-0"
-      >
-        Add Form
-      </CustomSheet>
-      <CustomSheet
-        isOpen={openDialog === "causes_detail"}
-        setIsOpen={setCausesOpenDetail}
-        title="See the Cause Detail"
-        className="!p-0"
-      >
-        <CauseDetail />
-      </CustomSheet>
-
-      <CustomSheet
-        isOpen={openDialog == "causes_edit"}
-        setIsOpen={setCausesOpenEdit}
-        title="Edit Cause form"
-        className="pt-2 px-4"
-      >
-        <EditCause />
-      </CustomSheet>
+      {/* Existing sheets for running/drafts */}
+      {activeTab !== "completed" && (
+        <>
+          <CustomSheet
+            isOpen={openDialog === "causes_add"}
+            setIsOpen={(isOpen) => {
+              setCausesOpenAdd(isOpen);
+            }}
+            title="Add Cause form"
+            className="!p-0"
+          >
+            Add Form
+          </CustomSheet>
+          <CustomSheet
+            isOpen={openDialog === "causes_detail"}
+            setIsOpen={setCausesOpenDetail}
+            title="See the Cause Detail"
+            className="!p-0"
+          >
+            <CauseDetail />
+          </CustomSheet>
+          <CustomSheet
+            isOpen={openDialog == "causes_edit"}
+            setIsOpen={setCausesOpenEdit}
+            title="Edit Cause form"
+            className="pt-2 px-4"
+          >
+            <EditCause />
+          </CustomSheet>
+        </>
+      )}
+      {/* Completed tab drawer */}
+      {activeTab === "completed" && selectedCause && (
+        <CompletedCauseDrawer
+          isOpen={!!selectedCause}
+          setIsOpen={() => setSelectedCause(null)}
+          cause={selectedCause}
+        />
+      )}
     </div>
   );
 }

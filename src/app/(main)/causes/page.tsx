@@ -50,7 +50,7 @@ const causes: Cause[] = [
       count: 30114,
       label: "Points",
     },
-    type: "One time",
+    type: "Cause",
     image: "/placeholder.svg?height=80&width=80",
   },
   {
@@ -158,6 +158,7 @@ export default function CausesPage() {
               data={data}
               columns={runningCauseColumns}
               fetching={isLoading}
+              activeTab={activeTab}
             />
           </TabsContent>
           <TabsContent value="completed">
@@ -165,6 +166,7 @@ export default function CausesPage() {
               data={data}
               columns={runningCauseColumns}
               fetching={isLoading}
+              activeTab={activeTab}
             />
           </TabsContent>
           <TabsContent value="drafts">
@@ -172,6 +174,7 @@ export default function CausesPage() {
               data={data}
               columns={runningCauseColumns}
               fetching={isLoading}
+              activeTab={activeTab}
             />
           </TabsContent>
         </Tabs>

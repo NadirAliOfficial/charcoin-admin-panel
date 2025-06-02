@@ -37,240 +37,245 @@ export default function EcosystemWallets() {
   }
 
 
-  
+
 
   return (
- <div className="flex flex-col gap-4">
-   <HeaderWrapper
-    title={"Dapp Global Settings - Wallets Management"}
-    description={
-      "Manage settings related to important wallets in the ecosystem, you will require 3 administrator level access signatures to perform any update or action"
-    }
-    actions={
-      <Button>
-        Save Settings
-        <ArrowRight className="w-5 h-5" />
-      </Button>
-    }
-  />
-    <div className="min-h-screen bg-background rounded-xl text-white p-4">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-xl font-bold mb-1">Global Ecosystem Wallets</h1>
-        <p className="text-sm text-gray-400 mb-6">
-          Manage the Global Ecosystem Wallets for the CharCoin ecosystem on the TG Blockchain
-        </p>
+    <div className="flex flex-col gap-4">
+      <HeaderWrapper
+        title={"Dapp Global Settings - Wallets Management"}
+        description={
+          "Manage settings related to important wallets in the ecosystem, you will require 3 administrator level access signatures to perform any update or action"
+        }
+        actions={
+          <Button>
+            Save Settings
+            <ArrowRight className="w-5 h-5" />
+          </Button>
+        }
+      />
+      <div className="min-h-screen bg-background rounded-xl text-white p-4">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-xl font-bold mb-1">Global Ecosystem Wallets</h1>
+          <p className="text-sm text-gray-400 mb-20 border-b border-[#323138] pb-5">
+            Manage the Global Ecosystem Wallets for the CharCoin ecosystem on the TG Blockchain
+          </p>
 
-        <div className="border-t-4 border-primary my-8"></div>
+          <div className="border-t-4 border-primary my-8"></div>
 
-        <section className="mb-12">
-          
+          <section className="mb-5 border-b-4 border-primary pb-24">
 
-          <div className="space-y-6 border-l-[20px] border-secondary pl-4">
-          <div className="mb-4 ml-4">
-            <h2 className="text-lg font-bold">Buyback, deflationary system & marketing (10%)</h2>
-            <p className="text-sm text-gray-400">Allocated for the global marketing operations</p>
-          </div>
-            <WalletItem
-              title="Marketing Main Wallet"
-              address="9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
-              onViewHistory={() => openHistory("Marketing Main Wallet")}
-              onMakePayout={() => openPayout("Marketing Main Wallet")}
-            />
 
-            <WalletItem
-              title="Marketing Secondary Wallet"
-              address="9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
-              description="Used for secondary wallet related to marketing operations (50% total Revenue)"
-              onViewHistory={() => openHistory("Marketing Secondary Wallet")}
-              onMakePayout={() => openPayout("Marketing Secondary Wallet")}
-            />
-
-            <WalletItem
-              title="Buyback Wallet"
-              address="9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
-              description="Used for the deflationary logic (50% total Revenue)"
-              onViewHistory={() => openHistory("Buyback Wallet")}
-              showPayoutButton={false}
-            />
-          </div>
-        </section>
-
-        <div className="border-t border-primary my-8"></div>
-
-        <section className="mb-12 border-l-[20px] border-secondary pl-4">
-          <div className="mb-4">
-            <h2 className="text-lg font-bold">Charity Donation & Rewards Ecosystem (27%)</h2>
-            <p className="text-sm text-gray-400">Allocated for the global ecosystem</p>
-          </div>
-
-          <div className="mb-6">
-            <h3 className="text-md font-semibold mb-2">Rewards System (20%)</h3>
-            <p className="text-xs text-gray-400">Allocated for the 10% of the Charity Donation & Rewards Ecosystem</p>
-          </div>
-
-          <div className="pl-4 border-l-2 border-gray-800 mb-8">
-            <div className="mb-4">
-              <h4 className="text-sm font-semibold">Monthly Rewards Classification (60%)</h4>
-              <p className="text-xs text-gray-400">Of the 20% of the Rewards System</p>
-            </div>
-
-            <div className="space-y-6 mb-8">
+            <div className="space-y-6 border-l-[20px] border-secondary pl-4">
+              <div className="mb-4 ml-4">
+                <h2 className="text-lg font-bold">Buyback, deflationary system & marketing (10%)</h2>
+                <p className="text-sm text-gray-400">Allocated for the global marketing operations</p>
+              </div>
               <WalletItem
-                title="Top Tier Wallet"
-                description="Used for the Wallet that will be used for monthly rewards (50% total Revenue)"
-                address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
-                onViewHistory={() => openHistory("Top Tier Wallet")}
-                showPayoutButton={false}
+                title="Marketing Main Wallet"
+                address="9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
+                onViewHistory={() => openHistory("Marketing Main Wallet")}
+                onMakePayout={() => openPayout("Marketing Main Wallet")}
               />
 
               <WalletItem
-                title="Charity Lottery Wallet"
-                description="Used for the Charity Lottery Wallet that will be used for monthly rewards (50% total Revenue)"
-                address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
-                onViewHistory={() => openHistory("Charity Lottery Wallet")}
+                title="Marketing Secondary Wallet"
+                address="9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
+                description="Used for secondary wallet related to marketing operations (50% total Revenue)"
+                onViewHistory={() => openHistory("Marketing Secondary Wallet")}
+                onMakePayout={() => openPayout("Marketing Secondary Wallet")}
+              />
+
+              <WalletItem
+                title="Buyback Wallet"
+                address="9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
+                description="Used for the deflationary logic (50% total Revenue)"
+                onViewHistory={() => openHistory("Buyback Wallet")}
                 showPayoutButton={false}
               />
             </div>
+          </section>
+
+          <section className="mb-12 border-l-[20px] border-secondary pl-5">
 
             <div className="mb-4">
-              <h4 className="text-sm font-semibold">Annual Rewards Classification (20%)</h4>
-              <p className="text-xs text-gray-400">Of the 20% of the Rewards System</p>
+              <h2 className="text-lg font-bold">Charity Donation & Rewards Ecosystem (27%)</h2>
+              <p className="text-sm text-gray-400">Allocated for the global ecosystem</p>
+            </div>
+
+            <div className="mb-12 border-l-[20px] border-secondary pl-5">
+              <div className="mb-6">
+                <h3 className="text-md font-semibold mb-2">Rewards System (20%)</h3>
+                <p className="text-xs text-gray-400">Allocated for the 10% of the Charity Donation & Rewards Ecosystem</p>
+              </div>
+
+              <div className="pl-4 border-l-[20px] border-secondary mb-8">
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold">Monthly Rewards Classification (60%)</h4>
+                  <p className="text-xs text-gray-400">Of the 20% of the Rewards System</p>
+                </div>
+
+                <div className="space-y-6 mb-8">
+                  <WalletItem
+                    title="Top Tier Wallet"
+                    description="Used for the Wallet that will be used for monthly rewards (50% total Revenue)"
+                    address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
+                    onViewHistory={() => openHistory("Top Tier Wallet")}
+                    showPayoutButton={false}
+                  />
+
+                  <WalletItem
+                    title="Charity Lottery Wallet"
+                    description="Used for the Charity Lottery Wallet that will be used for monthly rewards (50% total Revenue)"
+                    address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
+                    onViewHistory={() => openHistory("Charity Lottery Wallet")}
+                    showPayoutButton={false}
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold">Annual Rewards Classification (20%)</h4>
+                  <p className="text-xs text-gray-400">Of the 20% of the Rewards System</p>
+                </div>
+
+                <div className="space-y-6">
+                  <WalletItem
+                    title="Top Tier Wallet"
+                    description="Used for the Wallet that will be used for annual rewards (50% total Revenue)"
+                    address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
+                    onViewHistory={() => openHistory("Annual Top Tier Wallet")}
+                    showPayoutButton={false}
+                  />
+
+                  <WalletItem
+                    title="Charity Lottery Wallet"
+                    description="Used for the Charity Lottery Wallet that will be used for annual rewards (50% total Revenue)"
+                    address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
+                    onViewHistory={() => openHistory("Annual Charity Lottery Wallet")}
+                    showPayoutButton={false}
+                  />
+                </div>
+              </div>
+            </div>
+
+
+            <div className="mb-12 border-l-[20px] border-secondary pl-5">
+              <div className="mb-6 border-b border-[#323138] pb-5">
+                <h3 className="text-md font-semibold mb-2">Donation System (80%)</h3>
+                <p className="text-xs text-gray-400">Allocated for the 90% of the Charity Donation & Rewards Ecosystem</p>
+              </div>
+
+              <div className="pl-4 border-l-[20px] border-secondary mb-8">
+                <div className="mb-6 border-b border-[#323138] pb-5">
+                  <h4 className="text-sm font-semibold">Monthly Donation Fund (80%)</h4>
+                  <p className="text-xs text-gray-400">Of the 80% of the Donation System</p>
+                </div>
+
+                <div className="space-y-6 mb-8">
+                  <WalletItem
+                    title="One Time Causes/Projects Wallet"
+                    description="Used for the Wallet that will be used for monthly donations based on 'One Time Causes/Projects' (50% total Revenue)"
+                    address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
+                    onViewHistory={() => openHistory("One Time Causes/Projects Wallet")}
+                    showPayoutButton={false}
+                  />
+
+                  <WalletItem
+                    title="Infinite Impact Causes/Projects Wallet"
+                    description="Used for the Wallet that will be used for monthly donations based on 'Infinite Impact Causes/Projects' (50% total Revenue). The Wallet should receive a new donation automatically, and donations will be sent to the causes in the Infinite Impact category."
+                    address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
+                    onViewHistory={() => openHistory("Infinite Impact Causes/Projects Wallet")}
+                    showPayoutButton={false}
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold">Annual Donation Fund (10%)</h4>
+                  <p className="text-xs text-gray-400">Of the 80% of the Donation System</p>
+                </div>
+
+                <div className="space-y-6 mb-8">
+                  <WalletItem
+                    title="One Time Causes/Projects Wallet"
+                    description="Used for the Wallet that will be used for annual donations based on 'One Time Causes/Projects' (50% total Revenue)"
+                    address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
+                    onViewHistory={() => openHistory("Annual One Time Causes/Projects Wallet")}
+                    showPayoutButton={false}
+                  />
+
+                  <WalletItem
+                    title="Infinite Impact Causes/Projects Wallet"
+                    description="Used for the Wallet that will be used for annual donations based on 'Infinite Impact Causes/Projects' (50% total Revenue). The Wallet should receive a new donation automatically, and donations will be sent to the causes in the Infinite Impact category."
+                    address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
+                    onViewHistory={() => openHistory("Annual Infinite Impact Causes/Projects Wallet")}
+                    showPayoutButton={false}
+                  />
+                </div>
+              </div>
+            </div>
+
+
+            <div className="mb-4">
+              <h4 className="text-sm font-semibold">Crisis Classification (10%)</h4>
+              <p className="text-xs text-gray-400">Of the 80% of the Donation System</p>
             </div>
 
             <div className="space-y-6">
               <WalletItem
-                title="Top Tier Wallet"
-                description="Used for the Wallet that will be used for annual rewards (50% total Revenue)"
+                title="Crisis Wallet"
+                description="Used for the Wallet that will be used for 'Crisis Situations' (Emergencies and urgent situations). The donations are made on a case-by-case basis and require the approval of the community."
                 address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
-                onViewHistory={() => openHistory("Annual Top Tier Wallet")}
-                showPayoutButton={false}
-              />
-
-              <WalletItem
-                title="Charity Lottery Wallet"
-                description="Used for the Charity Lottery Wallet that will be used for annual rewards (50% total Revenue)"
-                address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
-                onViewHistory={() => openHistory("Annual Charity Lottery Wallet")}
-                showPayoutButton={false}
+                onViewHistory={() => openHistory("Crisis Wallet")}
+                onMakePayout={() => openPayout("Crisis Wallet")}
               />
             </div>
-          </div>
+          </section>
 
-          <div className="mb-6">
-            <h3 className="text-md font-semibold mb-2">Donation System (80%)</h3>
-            <p className="text-xs text-gray-400">Allocated for the 90% of the Charity Donation & Rewards Ecosystem</p>
-          </div>
+          <div className="border-t border-primary my-8"></div>
 
-          <div className="pl-4 border-l-2 border-gray-800 mb-8">
+          <section>
             <div className="mb-4">
-              <h4 className="text-sm font-semibold">Monthly Donation Fund (80%)</h4>
-              <p className="text-xs text-gray-400">Of the 80% of the Donation System</p>
+              <h2 className="text-lg font-bold">Staking Rewards (15%)</h2>
+              <p className="text-sm text-gray-400">Allocated for the global ecosystem</p>
             </div>
 
-            <div className="space-y-6 mb-8">
+            <div className="space-y-6">
               <WalletItem
-                title="One Time Causes/Projects Wallet"
-                description="Used for the Wallet that will be used for monthly donations based on 'One Time Causes/Projects' (50% total Revenue)"
-                address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
-                onViewHistory={() => openHistory("One Time Causes/Projects Wallet")}
-                showPayoutButton={false}
-              />
-
-              <WalletItem
-                title="Infinite Impact Causes/Projects Wallet"
-                description="Used for the Wallet that will be used for monthly donations based on 'Infinite Impact Causes/Projects' (50% total Revenue). The Wallet should receive a new donation automatically, and donations will be sent to the causes in the Infinite Impact category."
-                address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
-                onViewHistory={() => openHistory("Infinite Impact Causes/Projects Wallet")}
+                title="Staking Main Wallet"
+                description="Used for staking rewards (100% total Revenue)"
+                address="9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
+                onViewHistory={() => openHistory("Staking Main Wallet")}
                 showPayoutButton={false}
               />
             </div>
+          </section>
+        </div>
 
-            <div className="mb-4">
-              <h4 className="text-sm font-semibold">Annual Donation Fund (10%)</h4>
-              <p className="text-xs text-gray-400">Of the 80% of the Donation System</p>
-            </div>
-
-            <div className="space-y-6 mb-8">
-              <WalletItem
-                title="One Time Causes/Projects Wallet"
-                description="Used for the Wallet that will be used for annual donations based on 'One Time Causes/Projects' (50% total Revenue)"
-                address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
-                onViewHistory={() => openHistory("Annual One Time Causes/Projects Wallet")}
-                showPayoutButton={false}
-              />
-
-              <WalletItem
-                title="Infinite Impact Causes/Projects Wallet"
-                description="Used for the Wallet that will be used for annual donations based on 'Infinite Impact Causes/Projects' (50% total Revenue). The Wallet should receive a new donation automatically, and donations will be sent to the causes in the Infinite Impact category."
-                address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
-                onViewHistory={() => openHistory("Annual Infinite Impact Causes/Projects Wallet")}
-                showPayoutButton={false}
-              />
-            </div>
-          </div>
-
-          <div className="mb-4">
-            <h4 className="text-sm font-semibold">Crisis Classification (10%)</h4>
-            <p className="text-xs text-gray-400">Of the 80% of the Donation System</p>
-          </div>
-
-          <div className="space-y-6">
-            <WalletItem
-              title="Crisis Wallet"
-              description="Used for the Wallet that will be used for 'Crisis Situations' (Emergencies and urgent situations). The donations are made on a case-by-case basis and require the approval of the community."
-              address="pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
-              onViewHistory={() => openHistory("Crisis Wallet")}
-              onMakePayout={() => openPayout("Crisis Wallet")}
-            />
-          </div>
-        </section>
-
-        <div className="border-t border-primary my-8"></div>
-
-        <section>
-          <div className="mb-4">
-            <h2 className="text-lg font-bold">Staking Rewards (15%)</h2>
-            <p className="text-sm text-gray-400">Allocated for the global ecosystem</p>
-          </div>
-
-          <div className="space-y-6">
-            <WalletItem
-              title="Staking Main Wallet"
-              description="Used for staking rewards (100% total Revenue)"
-              address="9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv"
-              onViewHistory={() => openHistory("Staking Main Wallet")}
-              showPayoutButton={false}
-            />
-          </div>
-        </section>
-      </div>
-
-      {/* {selectedWallet && (
+        {/* {selectedWallet && (
         <>
           <WalletHistoryDialog open={historyOpen} onOpenChange={setHistoryOpen} walletName={selectedWallet} />
           <NewPayoutDialog open={payoutOpen} onOpenChange={setPayoutOpen} walletName={selectedWallet} />
         </>
       )} */}
 
-       <CustomSheet
-              isOpen={openDialog == "wallet_setting_open_existing"}
-              setIsOpen={setWalletSettingOpenExisting}
-              title="Open Existing Wallet"
-              className="pt-2 px-4"
-            >
-              <WalletHistoryDialog walletName={selectedWallet as string} />
-            </CustomSheet>
-            <CustomSheet
-              isOpen={openDialog == "wallet_setting_add_new"}
-              setIsOpen={setWalletSettingAddNew}
-              title="Add New Wallet"
-              className="pt-2 px-4"
-            >
-              <NewPayoutDialog walletName={selectedWallet as string} />
-            </CustomSheet>
-           
+        <CustomSheet
+          isOpen={openDialog == "wallet_setting_open_existing"}
+          setIsOpen={setWalletSettingOpenExisting}
+          title="Open Existing Wallet"
+          className="pt-2 px-4"
+        >
+          <WalletHistoryDialog walletName={selectedWallet as string} />
+        </CustomSheet>
+        <CustomSheet
+          isOpen={openDialog == "wallet_setting_add_new"}
+          setIsOpen={setWalletSettingAddNew}
+          title="Add New Wallet"
+          className="pt-2 px-4"
+        >
+          <NewPayoutDialog walletName={selectedWallet as string} />
+        </CustomSheet>
+
+      </div>
     </div>
- </div>  
   )
 }
 
@@ -295,8 +300,8 @@ function WalletItem({
     <div className=" rounded-md p-4">
       <h3 className="font-medium mb-1">{title}</h3>
       {description && <p className="text-xs text-gray-400 mb-2">{description}</p>}
-      <div className=" rounded p-2 mb-3">
-        <Input value={address} readOnly className="bg-transparent border-none text-gray-400 bg-custom-slate text-xs" />
+      <div className=" rounded py-2 mb-3">
+        <Input value={address} readOnly className="bg-[#3d3c44] border-none text-gray-400  text-xs" />
       </div>
       <div className="flex gap-2">
         {showPayoutButton && onMakePayout && (

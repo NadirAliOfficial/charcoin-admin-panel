@@ -1395,18 +1395,18 @@ function EcosystemWallets() {
                         }, void 0, false, {
                             fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
                             lineNumber: 52,
-                            columnNumber: 9
+                            columnNumber: 13
                         }, void 0)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
                     lineNumber: 50,
-                    columnNumber: 7
+                    columnNumber: 11
                 }, void 0)
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
                 lineNumber: 44,
-                columnNumber: 4
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "min-h-screen bg-background rounded-xl text-white p-4",
@@ -1420,25 +1420,25 @@ function EcosystemWallets() {
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
                                 lineNumber: 58,
-                                columnNumber: 9
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-sm text-gray-400 mb-6",
+                                className: "text-sm text-gray-400 mb-20 border-b border-[#323138] pb-5",
                                 children: "Manage the Global Ecosystem Wallets for the CharCoin ecosystem on the TG Blockchain"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
                                 lineNumber: 59,
-                                columnNumber: 9
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "border-t-4 border-primary my-8"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
                                 lineNumber: 63,
-                                columnNumber: 9
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                                className: "mb-12",
+                                className: "mb-5 border-b-4 border-primary pb-24",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "space-y-6 border-l-[20px] border-secondary pl-4",
                                     children: [
@@ -1451,7 +1451,7 @@ function EcosystemWallets() {
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
                                                     lineNumber: 70,
-                                                    columnNumber: 13
+                                                    columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     className: "text-sm text-gray-400",
@@ -1459,13 +1459,13 @@ function EcosystemWallets() {
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
                                                     lineNumber: 71,
-                                                    columnNumber: 13
+                                                    columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
                                             lineNumber: 69,
-                                            columnNumber: 11
+                                            columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
                                             title: "Marketing Main Wallet",
@@ -1475,7 +1475,7 @@ function EcosystemWallets() {
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
                                             lineNumber: 73,
-                                            columnNumber: 13
+                                            columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
                                             title: "Marketing Secondary Wallet",
@@ -1486,7 +1486,7 @@ function EcosystemWallets() {
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
                                             lineNumber: 80,
-                                            columnNumber: 13
+                                            columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
                                             title: "Buyback Wallet",
@@ -1497,28 +1497,21 @@ function EcosystemWallets() {
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
                                             lineNumber: 88,
-                                            columnNumber: 13
+                                            columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
                                     lineNumber: 68,
-                                    columnNumber: 11
+                                    columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
                                 lineNumber: 65,
-                                columnNumber: 9
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "border-t border-primary my-8"
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                lineNumber: 98,
-                                columnNumber: 9
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                                className: "mb-12 border-l-[20px] border-secondary pl-4",
+                                className: "mb-12 border-l-[20px] border-secondary pl-5",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "mb-4",
@@ -1528,314 +1521,332 @@ function EcosystemWallets() {
                                                 children: "Charity Donation & Rewards Ecosystem (27%)"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 102,
-                                                columnNumber: 13
+                                                lineNumber: 101,
+                                                columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-sm text-gray-400",
                                                 children: "Allocated for the global ecosystem"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 103,
-                                                columnNumber: 13
+                                                lineNumber: 102,
+                                                columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                        lineNumber: 101,
-                                        columnNumber: 11
+                                        lineNumber: 100,
+                                        columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "mb-6",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                className: "text-md font-semibold mb-2",
-                                                children: "Rewards System (20%)"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 107,
-                                                columnNumber: 13
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-xs text-gray-400",
-                                                children: "Allocated for the 10% of the Charity Donation & Rewards Ecosystem"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 108,
-                                                columnNumber: 13
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                        lineNumber: 106,
-                                        columnNumber: 11
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "pl-4 border-l-2 border-gray-800 mb-8",
+                                        className: "mb-12 border-l-[20px] border-secondary pl-5",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "mb-4",
+                                                className: "mb-6",
                                                 children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                        className: "text-sm font-semibold",
-                                                        children: "Monthly Rewards Classification (60%)"
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                        className: "text-md font-semibold mb-2",
+                                                        children: "Rewards System (20%)"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 113,
-                                                        columnNumber: 15
+                                                        lineNumber: 107,
+                                                        columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         className: "text-xs text-gray-400",
-                                                        children: "Of the 20% of the Rewards System"
+                                                        children: "Allocated for the 10% of the Charity Donation & Rewards Ecosystem"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 114,
-                                                        columnNumber: 15
+                                                        lineNumber: 108,
+                                                        columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 112,
-                                                columnNumber: 13
+                                                lineNumber: 106,
+                                                columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "space-y-6 mb-8",
+                                                className: "pl-4 border-l-[20px] border-secondary mb-8",
                                                 children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
-                                                        title: "Top Tier Wallet",
-                                                        description: "Used for the Wallet that will be used for monthly rewards (50% total Revenue)",
-                                                        address: "pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv",
-                                                        onViewHistory: ()=>openHistory("Top Tier Wallet"),
-                                                        showPayoutButton: false
-                                                    }, void 0, false, {
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "mb-4",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                                                className: "text-sm font-semibold",
+                                                                children: "Monthly Rewards Classification (60%)"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                                lineNumber: 113,
+                                                                columnNumber: 19
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                className: "text-xs text-gray-400",
+                                                                children: "Of the 20% of the Rewards System"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                                lineNumber: 114,
+                                                                columnNumber: 19
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
                                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 118,
-                                                        columnNumber: 15
+                                                        lineNumber: 112,
+                                                        columnNumber: 17
                                                     }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
-                                                        title: "Charity Lottery Wallet",
-                                                        description: "Used for the Charity Lottery Wallet that will be used for monthly rewards (50% total Revenue)",
-                                                        address: "pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv",
-                                                        onViewHistory: ()=>openHistory("Charity Lottery Wallet"),
-                                                        showPayoutButton: false
-                                                    }, void 0, false, {
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "space-y-6 mb-8",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
+                                                                title: "Top Tier Wallet",
+                                                                description: "Used for the Wallet that will be used for monthly rewards (50% total Revenue)",
+                                                                address: "pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv",
+                                                                onViewHistory: ()=>openHistory("Top Tier Wallet"),
+                                                                showPayoutButton: false
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                                lineNumber: 118,
+                                                                columnNumber: 19
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
+                                                                title: "Charity Lottery Wallet",
+                                                                description: "Used for the Charity Lottery Wallet that will be used for monthly rewards (50% total Revenue)",
+                                                                address: "pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv",
+                                                                onViewHistory: ()=>openHistory("Charity Lottery Wallet"),
+                                                                showPayoutButton: false
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                                lineNumber: 126,
+                                                                columnNumber: 19
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
                                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 126,
-                                                        columnNumber: 15
+                                                        lineNumber: 117,
+                                                        columnNumber: 17
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "mb-4",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                                                className: "text-sm font-semibold",
+                                                                children: "Annual Rewards Classification (20%)"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                                lineNumber: 136,
+                                                                columnNumber: 19
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                className: "text-xs text-gray-400",
+                                                                children: "Of the 20% of the Rewards System"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                                lineNumber: 137,
+                                                                columnNumber: 19
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                        lineNumber: 135,
+                                                        columnNumber: 17
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "space-y-6",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
+                                                                title: "Top Tier Wallet",
+                                                                description: "Used for the Wallet that will be used for annual rewards (50% total Revenue)",
+                                                                address: "pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv",
+                                                                onViewHistory: ()=>openHistory("Annual Top Tier Wallet"),
+                                                                showPayoutButton: false
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                                lineNumber: 141,
+                                                                columnNumber: 19
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
+                                                                title: "Charity Lottery Wallet",
+                                                                description: "Used for the Charity Lottery Wallet that will be used for annual rewards (50% total Revenue)",
+                                                                address: "pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv",
+                                                                onViewHistory: ()=>openHistory("Annual Charity Lottery Wallet"),
+                                                                showPayoutButton: false
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                                lineNumber: 149,
+                                                                columnNumber: 19
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                        lineNumber: 140,
+                                                        columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 117,
-                                                columnNumber: 13
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "mb-4",
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                        className: "text-sm font-semibold",
-                                                        children: "Annual Rewards Classification (20%)"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 136,
-                                                        columnNumber: 15
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "text-xs text-gray-400",
-                                                        children: "Of the 20% of the Rewards System"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 137,
-                                                        columnNumber: 15
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 135,
-                                                columnNumber: 13
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "space-y-6",
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
-                                                        title: "Top Tier Wallet",
-                                                        description: "Used for the Wallet that will be used for annual rewards (50% total Revenue)",
-                                                        address: "pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv",
-                                                        onViewHistory: ()=>openHistory("Annual Top Tier Wallet"),
-                                                        showPayoutButton: false
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 141,
-                                                        columnNumber: 15
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
-                                                        title: "Charity Lottery Wallet",
-                                                        description: "Used for the Charity Lottery Wallet that will be used for annual rewards (50% total Revenue)",
-                                                        address: "pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv",
-                                                        onViewHistory: ()=>openHistory("Annual Charity Lottery Wallet"),
-                                                        showPayoutButton: false
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 149,
-                                                        columnNumber: 15
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 140,
-                                                columnNumber: 13
+                                                lineNumber: 111,
+                                                columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                        lineNumber: 111,
-                                        columnNumber: 11
+                                        lineNumber: 105,
+                                        columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "mb-6",
+                                        className: "mb-12 border-l-[20px] border-secondary pl-5",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                className: "text-md font-semibold mb-2",
-                                                children: "Donation System (80%)"
-                                            }, void 0, false, {
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "mb-6 border-b border-[#323138] pb-5",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                        className: "text-md font-semibold mb-2",
+                                                        children: "Donation System (80%)"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                        lineNumber: 163,
+                                                        columnNumber: 17
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                        className: "text-xs text-gray-400",
+                                                        children: "Allocated for the 90% of the Charity Donation & Rewards Ecosystem"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                        lineNumber: 164,
+                                                        columnNumber: 17
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 160,
-                                                columnNumber: 13
+                                                lineNumber: 162,
+                                                columnNumber: 15
                                             }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-xs text-gray-400",
-                                                children: "Allocated for the 90% of the Charity Donation & Rewards Ecosystem"
-                                            }, void 0, false, {
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "pl-4 border-l-[20px] border-secondary mb-8",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "mb-6 border-b border-[#323138] pb-5",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                                                className: "text-sm font-semibold",
+                                                                children: "Monthly Donation Fund (80%)"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                                lineNumber: 169,
+                                                                columnNumber: 19
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                className: "text-xs text-gray-400",
+                                                                children: "Of the 80% of the Donation System"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                                lineNumber: 170,
+                                                                columnNumber: 19
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                        lineNumber: 168,
+                                                        columnNumber: 17
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "space-y-6 mb-8",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
+                                                                title: "One Time Causes/Projects Wallet",
+                                                                description: "Used for the Wallet that will be used for monthly donations based on 'One Time Causes/Projects' (50% total Revenue)",
+                                                                address: "pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv",
+                                                                onViewHistory: ()=>openHistory("One Time Causes/Projects Wallet"),
+                                                                showPayoutButton: false
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                                lineNumber: 174,
+                                                                columnNumber: 19
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
+                                                                title: "Infinite Impact Causes/Projects Wallet",
+                                                                description: "Used for the Wallet that will be used for monthly donations based on 'Infinite Impact Causes/Projects' (50% total Revenue). The Wallet should receive a new donation automatically, and donations will be sent to the causes in the Infinite Impact category.",
+                                                                address: "pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv",
+                                                                onViewHistory: ()=>openHistory("Infinite Impact Causes/Projects Wallet"),
+                                                                showPayoutButton: false
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                                lineNumber: 182,
+                                                                columnNumber: 19
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                        lineNumber: 173,
+                                                        columnNumber: 17
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "mb-4",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                                                className: "text-sm font-semibold",
+                                                                children: "Annual Donation Fund (10%)"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                                lineNumber: 192,
+                                                                columnNumber: 19
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                className: "text-xs text-gray-400",
+                                                                children: "Of the 80% of the Donation System"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                                lineNumber: 193,
+                                                                columnNumber: 19
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                        lineNumber: 191,
+                                                        columnNumber: 17
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "space-y-6 mb-8",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
+                                                                title: "One Time Causes/Projects Wallet",
+                                                                description: "Used for the Wallet that will be used for annual donations based on 'One Time Causes/Projects' (50% total Revenue)",
+                                                                address: "pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv",
+                                                                onViewHistory: ()=>openHistory("Annual One Time Causes/Projects Wallet"),
+                                                                showPayoutButton: false
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                                lineNumber: 197,
+                                                                columnNumber: 19
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
+                                                                title: "Infinite Impact Causes/Projects Wallet",
+                                                                description: "Used for the Wallet that will be used for annual donations based on 'Infinite Impact Causes/Projects' (50% total Revenue). The Wallet should receive a new donation automatically, and donations will be sent to the causes in the Infinite Impact category.",
+                                                                address: "pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv",
+                                                                onViewHistory: ()=>openHistory("Annual Infinite Impact Causes/Projects Wallet"),
+                                                                showPayoutButton: false
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                                lineNumber: 205,
+                                                                columnNumber: 19
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                                        lineNumber: 196,
+                                                        columnNumber: 17
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 161,
-                                                columnNumber: 13
+                                                lineNumber: 167,
+                                                columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                        lineNumber: 159,
-                                        columnNumber: 11
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "pl-4 border-l-2 border-gray-800 mb-8",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "mb-4",
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                        className: "text-sm font-semibold",
-                                                        children: "Monthly Donation Fund (80%)"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 166,
-                                                        columnNumber: 15
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "text-xs text-gray-400",
-                                                        children: "Of the 80% of the Donation System"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 167,
-                                                        columnNumber: 15
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 165,
-                                                columnNumber: 13
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "space-y-6 mb-8",
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
-                                                        title: "One Time Causes/Projects Wallet",
-                                                        description: "Used for the Wallet that will be used for monthly donations based on 'One Time Causes/Projects' (50% total Revenue)",
-                                                        address: "pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv",
-                                                        onViewHistory: ()=>openHistory("One Time Causes/Projects Wallet"),
-                                                        showPayoutButton: false
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 171,
-                                                        columnNumber: 15
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
-                                                        title: "Infinite Impact Causes/Projects Wallet",
-                                                        description: "Used for the Wallet that will be used for monthly donations based on 'Infinite Impact Causes/Projects' (50% total Revenue). The Wallet should receive a new donation automatically, and donations will be sent to the causes in the Infinite Impact category.",
-                                                        address: "pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv",
-                                                        onViewHistory: ()=>openHistory("Infinite Impact Causes/Projects Wallet"),
-                                                        showPayoutButton: false
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 179,
-                                                        columnNumber: 15
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 170,
-                                                columnNumber: 13
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "mb-4",
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                        className: "text-sm font-semibold",
-                                                        children: "Annual Donation Fund (10%)"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 189,
-                                                        columnNumber: 15
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "text-xs text-gray-400",
-                                                        children: "Of the 80% of the Donation System"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 190,
-                                                        columnNumber: 15
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 188,
-                                                columnNumber: 13
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "space-y-6 mb-8",
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
-                                                        title: "One Time Causes/Projects Wallet",
-                                                        description: "Used for the Wallet that will be used for annual donations based on 'One Time Causes/Projects' (50% total Revenue)",
-                                                        address: "pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv",
-                                                        onViewHistory: ()=>openHistory("Annual One Time Causes/Projects Wallet"),
-                                                        showPayoutButton: false
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 194,
-                                                        columnNumber: 15
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
-                                                        title: "Infinite Impact Causes/Projects Wallet",
-                                                        description: "Used for the Wallet that will be used for annual donations based on 'Infinite Impact Causes/Projects' (50% total Revenue). The Wallet should receive a new donation automatically, and donations will be sent to the causes in the Infinite Impact category.",
-                                                        address: "pubkey9fH7XWqE2z1B5VjKshp3Qn8Y7TcdP6ZMoJFkxuAWhqKv",
-                                                        onViewHistory: ()=>openHistory("Annual Infinite Impact Causes/Projects Wallet"),
-                                                        showPayoutButton: false
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 202,
-                                                        columnNumber: 15
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 193,
-                                                columnNumber: 13
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                        lineNumber: 164,
-                                        columnNumber: 11
+                                        lineNumber: 161,
+                                        columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "mb-4",
@@ -1845,22 +1856,22 @@ function EcosystemWallets() {
                                                 children: "Crisis Classification (10%)"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 213,
-                                                columnNumber: 13
+                                                lineNumber: 218,
+                                                columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-xs text-gray-400",
                                                 children: "Of the 80% of the Donation System"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 214,
-                                                columnNumber: 13
+                                                lineNumber: 219,
+                                                columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                        lineNumber: 212,
-                                        columnNumber: 11
+                                        lineNumber: 217,
+                                        columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "space-y-6",
@@ -1872,26 +1883,26 @@ function EcosystemWallets() {
                                             onMakePayout: ()=>openPayout("Crisis Wallet")
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                            lineNumber: 218,
-                                            columnNumber: 13
+                                            lineNumber: 223,
+                                            columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                        lineNumber: 217,
-                                        columnNumber: 11
+                                        lineNumber: 222,
+                                        columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                lineNumber: 100,
-                                columnNumber: 9
+                                lineNumber: 98,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "border-t border-primary my-8"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                lineNumber: 228,
-                                columnNumber: 9
+                                lineNumber: 233,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                                 children: [
@@ -1903,22 +1914,22 @@ function EcosystemWallets() {
                                                 children: "Staking Rewards (15%)"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 232,
-                                                columnNumber: 13
+                                                lineNumber: 237,
+                                                columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-sm text-gray-400",
                                                 children: "Allocated for the global ecosystem"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 233,
-                                                columnNumber: 13
+                                                lineNumber: 238,
+                                                columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                        lineNumber: 231,
-                                        columnNumber: 11
+                                        lineNumber: 236,
+                                        columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "space-y-6",
@@ -1930,25 +1941,25 @@ function EcosystemWallets() {
                                             showPayoutButton: false
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                            lineNumber: 237,
-                                            columnNumber: 13
+                                            lineNumber: 242,
+                                            columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                        lineNumber: 236,
-                                        columnNumber: 11
+                                        lineNumber: 241,
+                                        columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                lineNumber: 230,
-                                columnNumber: 9
+                                lineNumber: 235,
+                                columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
                         lineNumber: 57,
-                        columnNumber: 7
+                        columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$reuseable$2f$add$2d$causes$2d$sheet$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CustomSheet"], {
                         isOpen: openDialog == "wallet_setting_open_existing",
@@ -1959,13 +1970,13 @@ function EcosystemWallets() {
                             walletName: selectedWallet
                         }, void 0, false, {
                             fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                            lineNumber: 261,
-                            columnNumber: 15
+                            lineNumber: 266,
+                            columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                        lineNumber: 255,
-                        columnNumber: 8
+                        lineNumber: 260,
+                        columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$reuseable$2f$add$2d$causes$2d$sheet$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CustomSheet"], {
                         isOpen: openDialog == "wallet_setting_add_new",
@@ -1976,25 +1987,25 @@ function EcosystemWallets() {
                             walletName: selectedWallet
                         }, void 0, false, {
                             fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                            lineNumber: 269,
-                            columnNumber: 15
+                            lineNumber: 274,
+                            columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                        lineNumber: 263,
-                        columnNumber: 13
+                        lineNumber: 268,
+                        columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
                 lineNumber: 56,
-                columnNumber: 5
+                columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
         lineNumber: 43,
-        columnNumber: 2
+        columnNumber: 5
     }, this);
 }
 function WalletItem({ title, address, description, onViewHistory, onMakePayout, showPayoutButton = true }) {
@@ -2006,7 +2017,7 @@ function WalletItem({ title, address, description, onViewHistory, onMakePayout, 
                 children: title
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                lineNumber: 296,
+                lineNumber: 301,
                 columnNumber: 7
             }, this),
             description && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2014,23 +2025,23 @@ function WalletItem({ title, address, description, onViewHistory, onMakePayout, 
                 children: description
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                lineNumber: 297,
+                lineNumber: 302,
                 columnNumber: 23
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: " rounded p-2 mb-3",
+                className: " rounded py-2 mb-3",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
                     value: address,
                     readOnly: true,
-                    className: "bg-transparent border-none text-gray-400 bg-custom-slate text-xs"
+                    className: "bg-[#3d3c44] border-none text-gray-400  text-xs"
                 }, void 0, false, {
                     fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                    lineNumber: 299,
+                    lineNumber: 304,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                lineNumber: 298,
+                lineNumber: 303,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2044,13 +2055,13 @@ function WalletItem({ title, address, description, onViewHistory, onMakePayout, 
                                 className: "-rotate-45 h-4 w-4 mr-1"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                lineNumber: 307,
+                                lineNumber: 312,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                        lineNumber: 303,
+                        lineNumber: 308,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -2063,25 +2074,25 @@ function WalletItem({ title, address, description, onViewHistory, onMakePayout, 
                                 className: "h-4 w-4 mr-1"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                lineNumber: 316,
+                                lineNumber: 321,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                        lineNumber: 310,
+                        lineNumber: 315,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                lineNumber: 301,
+                lineNumber: 306,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-        lineNumber: 295,
+        lineNumber: 300,
         columnNumber: 5
     }, this);
 }

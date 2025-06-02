@@ -4,5 +4,6 @@
   "/(main)/dashboard/page": "app/(main)/dashboard/page.js",
   "/(main)/settings/wallet-management/page": "app/(main)/settings/wallet-management/page.js",
   "/(main)/causes/page": "app/(main)/causes/page.js",
-  "/(main)/rewards/top-tiers/page": "app/(main)/rewards/top-tiers/page.js"
+  "/(main)/rewards/top-tiers/page": "app/(main)/rewards/top-tiers/page.js",
+  "/_not-found/page": "app/_not-found/page.js"
 }

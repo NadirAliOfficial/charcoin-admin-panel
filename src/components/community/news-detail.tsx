@@ -2,6 +2,7 @@ import { NewsArticle } from "@/types/news";
 import { format } from "date-fns";
 import { ArrowRight, ImageIcon, Trash, VideoIcon } from "lucide-react";
 import { useState, useRef } from "react";
+import Image from "next/image";
 
 interface NewsDetailProps {
   news: NewsArticle;
@@ -124,9 +125,11 @@ export function NewsDetail({ news }: NewsDetailProps) {
               </div>
               {selectedVideo && (
                 <div className="flex-shrink-0">
-                  <img 
+                  <Image 
                     src={selectedVideo} 
                     alt="Video Thumbnail" 
+                    width={128}
+                    height={128}
                     className="w-32 h-32 rounded-lg object-cover bg-[#2A2931]"
                   />
                 </div>

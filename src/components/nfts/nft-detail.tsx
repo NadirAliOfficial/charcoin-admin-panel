@@ -1,6 +1,7 @@
 import { NFTSRecord } from "@/types/rewards";
-import {  ArrowRight, Image, ImageIcon, Trash } from "lucide-react";
+import { ArrowRight, ImageIcon, Trash } from "lucide-react";
 import { useState, useRef } from "react";
+import Image from "next/image";
 
 interface NftDetailProps {
   nft: NFTSRecord;
@@ -104,9 +105,11 @@ export function NftDetail({ nft }: NftDetailProps) {
               </div>
               {selectedImage && (
                 <div className="flex-shrink-0">
-                  <img 
+                  <Image 
                     src={selectedImage} 
                     alt="NFT Preview" 
+                    width={128}
+                    height={128}
                     className="w-32 h-32 rounded-lg object-cover bg-[#2A2931]"
                   />
                 </div>
@@ -132,7 +135,7 @@ export function NftDetail({ nft }: NftDetailProps) {
           </div>
 
        <div className="text-xs text-[#A1A1AA] mb-4 pt-10">
-       A new NFT will be minted within the OpenSea ecosystem as part of the official CharCoin collection. This NFT will remain under CharCoin’s ownership until it is transferred to the randomly selected winner of the month. Each NFT carries a 10% intellectual property royalty on every transaction, supporting the CharCoin community. The NFT will be awarded as a gift to a CharCoin ecosystem user who has completed at least one transaction during the campaign month. The winner will be announced and credited on the 25th of the campaign month.
+       A new NFT will be minted within the OpenSea ecosystem as part of the official CharCoin collection. This NFT will remain under CharCoin&apos;s ownership until it is transferred to the randomly selected winner of the month. Each NFT carries a 10% intellectual property royalty on every transaction, supporting the CharCoin community. The NFT will be awarded as a gift to a CharCoin ecosystem user who has completed at least one transaction during the campaign month. The winner will be announced and credited on the 25th of the campaign month.
        </div>
 
           <div className="pt-4">

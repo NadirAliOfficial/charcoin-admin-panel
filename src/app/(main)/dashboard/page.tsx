@@ -71,7 +71,7 @@ const Dashboard = () => {
               <div className="bg-background  text-center gap-4  p-4 py-8 rounded-xl grid grid-cols-[1fr_,2px,_1fr,_2px,_1fr] ">
                 <span className="space-y-2">
                   {" "}
-                  <div className="text-lg md:text-3xl font-WFVisualSansRegular">
+                  <div className="text-lg md:text-2xl font-WFVisualSansRegular">
                     0.0006587
                   </div>
                   <p className="text-custom-light_text text-xs font-WFVisualSansRegular">
@@ -97,7 +97,7 @@ const Dashboard = () => {
 
                 <span className="space-y-2">
                   {" "}
-                  <div className="text-lg md:text-3xl flex font-WFVisualSansRegular text-primary justify-center whitespace-nowrap items-center">
+                  <div className="text-md md:text-2xl flex font-WFVisualSansRegular text-primary justify-center whitespace-nowrap items-center">
                     $ 260,000.00
                   </div>
                   <p className="text-custom-light_text font-WFVisualSansRegular text-xs">
@@ -112,7 +112,7 @@ const Dashboard = () => {
               <div className="bg-background text-center gap-4  p-4 py-8 rounded-xl grid grid-cols-[1fr_,2px,_1fr,_2px,_1fr]">
                 <span className="space-y-2">
                   {" "}
-                  <div className="text-lg md:text-3xl font-WFVisualSansRegular">
+                  <div className="text-lg md:text-2xl font-WFVisualSansRegular">
                     5
                   </div>
                   <p className="text-custom-light_text text-xs font-WFVisualSansRegular">
@@ -122,7 +122,7 @@ const Dashboard = () => {
                 <hr className="min-w-[2px] h-full bg-[#323138]" />
                 <span className="space-y-2">
                   {" "}
-                  <div className="text-lg md:text-3xl flex justify-center items-center font-WFVisualSansRegular">
+                  <div className="text-lg md:text-2xl flex justify-center items-center font-WFVisualSansRegular">
                     78,458
                   </div>
                   <p className="text-custom-light_text text-xs font-WFVisualSansRegular">
@@ -133,7 +133,7 @@ const Dashboard = () => {
 
                 <span className="space-y-2">
                   {" "}
-                  <div className="text-lg md:text-3xl flex font-WFVisualSansRegular text-primary justify-center whitespace-nowrap items-center">
+                  <div className="text-lg md:text-2xl flex font-WFVisualSansRegular text-primary justify-center whitespace-nowrap items-center">
                     10,145
                   </div>
                   <p className="text-custom-light_text font-WFVisualSansRegular text-xs">
@@ -158,7 +158,7 @@ const Dashboard = () => {
           <div className="text-center gap-4  p-4 py-8 rounded-xl grid grid-cols-[1fr_,2px,_1fr,_2px,_1fr]">
             <span className="space-y-2">
               {" "}
-              <div className="text-lg md:text-3xl font-WFVisualSansRegular">
+              <div className="text-lg md:text-2xl font-WFVisualSansRegular">
                 50,125,429
               </div>
               <p className="text-custom-light_text text-xs font-WFVisualSansRegular">
@@ -168,7 +168,7 @@ const Dashboard = () => {
             <hr className="min-w-[2px] h-full bg-[#323138]" />
             <span className="space-y-2">
               {" "}
-              <div className="text-lg md:text-3xl flex justify-center items-center font-WFVisualSansRegular">
+              <div className="text-lg md:text-2xl flex justify-center items-center font-WFVisualSansRegular">
                 <ArrowRight className="-rotate-45 text-primary" size={32} /> 26%
               </div>
               <p className="text-custom-light_text text-xs font-WFVisualSansRegular">
@@ -178,7 +178,7 @@ const Dashboard = () => {
             <hr className="min-w-[2px] h-full bg-[#323138]" />
             <span className="space-y-2">
               {" "}
-              <div className="text-lg md:text-3xl flex whitespace-nowrap text-primary justify-center items-center font-WFVisualSansRegular">
+              <div className="text-lg md:text-2xl flex whitespace-nowrap text-primary justify-center items-center font-WFVisualSansRegular">
                 $345,214.47
               </div>
               <p className="text-custom-light_text text-xs font-WFVisualSansRegular">
@@ -203,7 +203,7 @@ const Dashboard = () => {
           <div className="text-center gap-4  p-4 py-8 rounded-xl grid grid-cols-[1fr_,2px,_1fr,_2px,_1fr]">
             <span className="space-y-2">
               {" "}
-              <div className="text-lg md:text-3xl font-WFVisualSansRegular">
+              <div className="text-lg md:text-2xl font-WFVisualSansRegular">
                 0.0006587
               </div>
               <p className="text-custom-light_text text-xs font-WFVisualSansRegular">
@@ -213,7 +213,7 @@ const Dashboard = () => {
             <hr className="min-w-[2px] h-full bg-[#323138]" />
             <span className="space-y-2">
               {" "}
-              <div className="text-lg md:text-3xl flex justify-center items-center font-WFVisualSansRegular">
+              <div className="text-lg md:text-2xl flex justify-center items-center font-WFVisualSansRegular">
                 <ArrowDown className="-rotate-45 text-red-500" size={32} /> 2%
               </div>
               <p className="text-custom-light_text text-xs font-WFVisualSansRegular">
@@ -223,7 +223,7 @@ const Dashboard = () => {
             <hr className="min-w-[2px] h-full bg-[#323138]" />
             <span className="space-y-2">
               {" "}
-              <div className="text-lg md:text-3xl flex whitespace-nowrap text-primary justify-center items-center font-WFVisualSansRegular">
+              <div className="text-lg md:text-2xl flex whitespace-nowrap text-primary justify-center items-center font-WFVisualSansRegular">
                 $84,156.33
               </div>
               <p className="text-custom-light_text text-xs font-WFVisualSansRegular">

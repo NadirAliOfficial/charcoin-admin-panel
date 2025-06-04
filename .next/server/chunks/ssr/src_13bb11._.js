@@ -730,7 +730,7 @@ const Dashboard = ()=>{
                                                 children: [
                                                     " ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "text-lg md:text-3xl font-WFVisualSansRegular",
+                                                        className: "text-lg md:text-2xl font-WFVisualSansRegular",
                                                         children: "0.0006587"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(main)/dashboard/page.tsx",
@@ -808,7 +808,7 @@ const Dashboard = ()=>{
                                                 children: [
                                                     " ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "text-lg md:text-3xl flex font-WFVisualSansRegular text-primary justify-center whitespace-nowrap items-center",
+                                                        className: "text-md md:text-2xl flex font-WFVisualSansRegular text-primary justify-center whitespace-nowrap items-center",
                                                         children: "$ 260,000.00"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(main)/dashboard/page.tsx",
@@ -857,7 +857,7 @@ const Dashboard = ()=>{
                                                 children: [
                                                     " ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "text-lg md:text-3xl font-WFVisualSansRegular",
+                                                        className: "text-lg md:text-2xl font-WFVisualSansRegular",
                                                         children: "5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(main)/dashboard/page.tsx",
@@ -890,7 +890,7 @@ const Dashboard = ()=>{
                                                 children: [
                                                     " ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "text-lg md:text-3xl flex justify-center items-center font-WFVisualSansRegular",
+                                                        className: "text-lg md:text-2xl flex justify-center items-center font-WFVisualSansRegular",
                                                         children: "78,458"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(main)/dashboard/page.tsx",
@@ -923,7 +923,7 @@ const Dashboard = ()=>{
                                                 children: [
                                                     " ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "text-lg md:text-3xl flex font-WFVisualSansRegular text-primary justify-center whitespace-nowrap items-center",
+                                                        className: "text-lg md:text-2xl flex font-WFVisualSansRegular text-primary justify-center whitespace-nowrap items-center",
                                                         children: "10,145"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(main)/dashboard/page.tsx",
@@ -1012,7 +1012,7 @@ const Dashboard = ()=>{
                                     children: [
                                         " ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "text-lg md:text-3xl font-WFVisualSansRegular",
+                                            className: "text-lg md:text-2xl font-WFVisualSansRegular",
                                             children: "50,125,429"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(main)/dashboard/page.tsx",
@@ -1045,7 +1045,7 @@ const Dashboard = ()=>{
                                     children: [
                                         " ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "text-lg md:text-3xl flex justify-center items-center font-WFVisualSansRegular",
+                                            className: "text-lg md:text-2xl flex justify-center items-center font-WFVisualSansRegular",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
                                                     className: "-rotate-45 text-primary",
@@ -1098,7 +1098,7 @@ const Dashboard = ()=>{
                                     children: [
                                         " ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "text-lg md:text-3xl flex whitespace-nowrap text-primary justify-center items-center font-WFVisualSansRegular",
+                                            className: "text-lg md:text-2xl flex whitespace-nowrap text-primary justify-center items-center font-WFVisualSansRegular",
                                             children: "$345,214.47"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(main)/dashboard/page.tsx",
@@ -1176,7 +1176,7 @@ const Dashboard = ()=>{
                                     children: [
                                         " ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "text-lg md:text-3xl font-WFVisualSansRegular",
+                                            className: "text-lg md:text-2xl font-WFVisualSansRegular",
                                             children: "0.0006587"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(main)/dashboard/page.tsx",
@@ -1209,7 +1209,7 @@ const Dashboard = ()=>{
                                     children: [
                                         " ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "text-lg md:text-3xl flex justify-center items-center font-WFVisualSansRegular",
+                                            className: "text-lg md:text-2xl flex justify-center items-center font-WFVisualSansRegular",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowDown$3e$__["ArrowDown"], {
                                                     className: "-rotate-45 text-red-500",
@@ -1263,7 +1263,7 @@ const Dashboard = ()=>{
                                     children: [
                                         " ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "text-lg md:text-3xl flex whitespace-nowrap text-primary justify-center items-center font-WFVisualSansRegular",
+                                            className: "text-lg md:text-2xl flex whitespace-nowrap text-primary justify-center items-center font-WFVisualSansRegular",
                                             children: "$84,156.33"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(main)/dashboard/page.tsx",

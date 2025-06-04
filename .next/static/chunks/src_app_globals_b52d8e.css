@@ -1238,6 +1238,10 @@ body {
   width: 100vw;
 }
 
+.w-\[95\%\] {
+  width: 95%;
+}
+
 .min-w-64 {
   min-width: 16rem;
 }
@@ -3942,6 +3946,11 @@ body {
   .md\:text-sm {
     font-size: .875rem;
     line-height: 1.25rem;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 

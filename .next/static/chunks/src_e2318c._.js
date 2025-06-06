@@ -5132,8 +5132,8 @@ var _s = __turbopack_refresh__.signature();
 ;
 ;
 ;
-// Create dummy data
-const causes = [
+// Create dummy data for different tabs
+const runningCauses = [
     {
         id: 124,
         name: "Clean water in Guatemala's most affected community",
@@ -5171,7 +5171,9 @@ const causes = [
         },
         type: "Cause",
         image: "/placeholder.svg?height=80&width=80"
-    },
+    }
+];
+const completedCauses = [
     {
         id: 178,
         name: "Attacking the hunger in the east side of Haiti",
@@ -5179,10 +5181,10 @@ const causes = [
         organization: "Eradication Hunger Association",
         currentlyWinning: {
             amount: "$30,000.00",
-            position: 3
+            position: 1
         },
-        startedOn: "Feb 1, 2023",
-        endsOn: "Feb 20, 2025",
+        startedOn: "Jan 1, 2023",
+        endsOn: "Jan 20, 2024",
         benefactors: 4124,
         points: {
             count: 27478,
@@ -5198,10 +5200,10 @@ const causes = [
         organization: "TheShelter.Log",
         currentlyWinning: {
             amount: "$10,000.00",
-            position: 4
+            position: 2
         },
-        startedOn: "Feb 1, 2023",
-        endsOn: "Feb 20, 2025",
+        startedOn: "Dec 1, 2022",
+        endsOn: "Dec 20, 2023",
         benefactors: 2105,
         points: {
             count: 12877,
@@ -5211,11 +5213,65 @@ const causes = [
         image: "/placeholder.svg?height=80&width=80"
     }
 ];
+const draftCauses = [
+    {
+        id: 201,
+        name: "Medical supplies for rural clinics in Kenya",
+        category: "Healthcare",
+        organization: "Global Health Initiative",
+        currentlyWinning: {
+            amount: "$0.00",
+            position: 0
+        },
+        startedOn: "Not Started",
+        endsOn: "Not Set",
+        benefactors: 0,
+        points: {
+            count: 0,
+            label: "Points"
+        },
+        type: "Draft",
+        image: "/placeholder.svg?height=80&width=80"
+    },
+    {
+        id: 202,
+        name: "Solar power installation in rural India",
+        category: "Renewable Energy",
+        organization: "Green Energy Foundation",
+        currentlyWinning: {
+            amount: "$0.00",
+            position: 0
+        },
+        startedOn: "Not Started",
+        endsOn: "Not Set",
+        benefactors: 0,
+        points: {
+            count: 0,
+            label: "Points"
+        },
+        type: "Draft",
+        image: "/placeholder.svg?height=80&width=80"
+    }
+];
 const fetchCauses = async (query = "", tab = "running")=>{
     return new Promise((resolve)=>{
         setTimeout(()=>{
-            // Filter the dummy data based on the search query
-            const filteredCauses = causes.filter((cause)=>cause.name.toLowerCase().includes(query.toLowerCase()) || cause.organization.toLowerCase().includes(query.toLowerCase()));
+            let dataToFilter;
+            switch(tab){
+                case "running":
+                    dataToFilter = runningCauses;
+                    break;
+                case "completed":
+                    dataToFilter = completedCauses;
+                    break;
+                case "drafts":
+                    dataToFilter = draftCauses;
+                    break;
+                default:
+                    dataToFilter = runningCauses;
+            }
+            // Filter the data based on the search query
+            const filteredCauses = dataToFilter.filter((cause)=>cause.name.toLowerCase().includes(query.toLowerCase()) || cause.organization.toLowerCase().includes(query.toLowerCase()));
             console.log(`Fetching data for tab: ${tab} with query: ${query}`);
             resolve(filteredCauses);
         }, 500);
@@ -5245,7 +5301,7 @@ function CausesPage() {
                 children: "Causes"
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/causes/page.tsx",
-                lineNumber: 132,
+                lineNumber: 191,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5268,7 +5324,7 @@ function CausesPage() {
                                                     children: "Running"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(main)/causes/page.tsx",
-                                                    lineNumber: 142,
+                                                    lineNumber: 201,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsTrigger"], {
@@ -5276,7 +5332,7 @@ function CausesPage() {
                                                     children: "Completed"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(main)/causes/page.tsx",
-                                                    lineNumber: 143,
+                                                    lineNumber: 202,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsTrigger"], {
@@ -5284,13 +5340,13 @@ function CausesPage() {
                                                     children: "Drafts"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(main)/causes/page.tsx",
-                                                    lineNumber: 144,
+                                                    lineNumber: 203,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/(main)/causes/page.tsx",
-                                            lineNumber: 141,
+                                            lineNumber: 200,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5300,18 +5356,18 @@ function CausesPage() {
                                                 setDate: setDate
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(main)/causes/page.tsx",
-                                                lineNumber: 148,
+                                                lineNumber: 207,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(main)/causes/page.tsx",
-                                            lineNumber: 147,
+                                            lineNumber: 206,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/(main)/causes/page.tsx",
-                                    lineNumber: 140,
+                                    lineNumber: 199,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5324,26 +5380,26 @@ function CausesPage() {
                                             onChange: (e)=>setSearchQuery(e.target.value)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(main)/causes/page.tsx",
-                                            lineNumber: 153,
+                                            lineNumber: 212,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
                                             className: "absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(main)/causes/page.tsx",
-                                            lineNumber: 159,
+                                            lineNumber: 218,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/(main)/causes/page.tsx",
-                                    lineNumber: 152,
+                                    lineNumber: 211,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/(main)/causes/page.tsx",
-                            lineNumber: 139,
+                            lineNumber: 198,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -5355,12 +5411,12 @@ function CausesPage() {
                                 activeTab: activeTab
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/causes/page.tsx",
-                                lineNumber: 164,
+                                lineNumber: 223,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/(main)/causes/page.tsx",
-                            lineNumber: 163,
+                            lineNumber: 222,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -5372,12 +5428,12 @@ function CausesPage() {
                                 activeTab: activeTab
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/causes/page.tsx",
-                                lineNumber: 172,
+                                lineNumber: 231,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/(main)/causes/page.tsx",
-                            lineNumber: 171,
+                            lineNumber: 230,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -5389,29 +5445,29 @@ function CausesPage() {
                                 activeTab: activeTab
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/causes/page.tsx",
-                                lineNumber: 180,
+                                lineNumber: 239,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/(main)/causes/page.tsx",
-                            lineNumber: 179,
+                            lineNumber: 238,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/(main)/causes/page.tsx",
-                    lineNumber: 135,
+                    lineNumber: 194,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/causes/page.tsx",
-                lineNumber: 134,
+                lineNumber: 193,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(main)/causes/page.tsx",
-        lineNumber: 131,
+        lineNumber: 190,
         columnNumber: 5
     }, this);
 }

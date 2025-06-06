@@ -20,8 +20,8 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 
-// Create dummy data
-const causes: Cause[] = [
+// Create dummy data for different tabs
+const runningCauses: Cause[] = [
   {
     id: 124,
     name: "Clean water in Guatemala's most affected community",
@@ -59,7 +59,10 @@ const causes: Cause[] = [
     },
     type: "Cause",
     image: "/placeholder.svg?height=80&width=80",
-  },
+  }
+];
+
+const completedCauses: Cause[] = [
   {
     id: 178,
     name: "Attacking the hunger in the east side of Haiti",
@@ -67,10 +70,10 @@ const causes: Cause[] = [
     organization: "Eradication Hunger Association",
     currentlyWinning: {
       amount: "$30,000.00",
-      position: 3,
+      position: 1,
     },
-    startedOn: "Feb 1, 2023",
-    endsOn: "Feb 20, 2025",
+    startedOn: "Jan 1, 2023",
+    endsOn: "Jan 20, 2024",
     benefactors: 4124,
     points: {
       count: 27478,
@@ -86,10 +89,10 @@ const causes: Cause[] = [
     organization: "TheShelter.Log",
     currentlyWinning: {
       amount: "$10,000.00",
-      position: 4,
+      position: 2,
     },
-    startedOn: "Feb 1, 2023",
-    endsOn: "Feb 20, 2025",
+    startedOn: "Dec 1, 2022",
+    endsOn: "Dec 20, 2023",
     benefactors: 2105,
     points: {
       count: 12877,
@@ -97,14 +100,70 @@ const causes: Cause[] = [
     },
     type: "Infinite Impact",
     image: "/placeholder.svg?height=80&width=80",
+  }
+];
+
+const draftCauses: Cause[] = [
+  {
+    id: 201,
+    name: "Medical supplies for rural clinics in Kenya",
+    category: "Healthcare",
+    organization: "Global Health Initiative",
+    currentlyWinning: {
+      amount: "$0.00",
+      position: 0,
+    },
+    startedOn: "Not Started",
+    endsOn: "Not Set",
+    benefactors: 0,
+    points: {
+      count: 0,
+      label: "Points",
+    },
+    type: "Draft",
+    image: "/placeholder.svg?height=80&width=80",
   },
+  {
+    id: 202,
+    name: "Solar power installation in rural India",
+    category: "Renewable Energy",
+    organization: "Green Energy Foundation",
+    currentlyWinning: {
+      amount: "$0.00",
+      position: 0,
+    },
+    startedOn: "Not Started",
+    endsOn: "Not Set",
+    benefactors: 0,
+    points: {
+      count: 0,
+      label: "Points",
+    },
+    type: "Draft",
+    image: "/placeholder.svg?height=80&width=80",
+  }
 ];
 
 const fetchCauses = async (query = "", tab = "running") => {
   return new Promise<Cause[]>((resolve) => {
     setTimeout(() => {
-      // Filter the dummy data based on the search query
-      const filteredCauses = causes.filter(
+      let dataToFilter;
+      switch (tab) {
+        case "running":
+          dataToFilter = runningCauses;
+          break;
+        case "completed":
+          dataToFilter = completedCauses;
+          break;
+        case "drafts":
+          dataToFilter = draftCauses;
+          break;
+        default:
+          dataToFilter = runningCauses;
+      }
+
+      // Filter the data based on the search query
+      const filteredCauses = dataToFilter.filter(
         (cause) =>
           cause.name.toLowerCase().includes(query.toLowerCase()) ||
           cause.organization.toLowerCase().includes(query.toLowerCase())

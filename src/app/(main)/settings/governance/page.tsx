@@ -127,8 +127,8 @@ const SettingsGovernance = () => {
                 </b>
               </p>
 
-              <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 mt-4 mb-12">
-                {[2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
+              <div className="flex flex-wrap gap-4 mt-4 mb-12">
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
                   <InputWithText
                     key={num}
                     label={`${num} participants`}
@@ -166,7 +166,7 @@ const SettingsGovernance = () => {
                 </SortableContext>
               </DndContext>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 mt-12">
+              <div className="flex flex-wrap md:flex-nowrap h-full justify-between gap-4 mb-4 mt-12">
                 <FormField
                   id="tokens"
                   label="Minimum Staking Requirement for Governance Participation"
@@ -197,7 +197,7 @@ const SettingsGovernance = () => {
                 </FormField>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div className="flex flex-wrap md:flex-nowrap justify-between gap-4 mb-4">
                 <FormField
                   id="percentageOfToken"
                   label="Penalty for Early Staking Withdrawal"

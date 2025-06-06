@@ -1730,7 +1730,7 @@ const useDialogStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_
         setCommunityAdministrationAdd: (isOpen)=>set({
                 openDialog: isOpen ? "community_administration_add" : null
             }),
-        setNtfsAdd: (isOpen)=>set({
+        setNftsAdd: (isOpen)=>set({
                 openDialog: isOpen ? "nfts_add" : null
             }),
         setNftsDetail: (isOpen)=>set({
@@ -1805,7 +1805,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$communi
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$community$2f$user$2d$wallet$2d$table$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/community/user-wallet-table.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$custom$2f$header$2d$wrapper$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/custom/header-wrapper.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$reuseable$2f$add$2d$causes$2d$sheet$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/reuseable/add-causes-sheet.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/ui/button.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/ui/input.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$stores$2f$dialog$2d$store$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/stores/dialog-store.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$types$2f$user$2d$and$2d$wallet$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/types/user-and-wallet.ts [app-client] (ecmascript)");
@@ -1815,7 +1814,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 ;
 var _s = __turbopack_refresh__.signature();
 "use client";
-;
 ;
 ;
 ;
@@ -1895,18 +1893,6 @@ const News = ()=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$custom$2f$header$2d$wrapper$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["HeaderWrapper"], {
         title: "Users & Wallets",
         description: "Listing all the users/wallets in the CharCoin ecosystem",
-        actions: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-            size: "lg",
-            className: "max-md:px-4 max-md:h-10 ml-4",
-            onClick: ()=>{
-                setCommunityUserWalletAdd(true);
-            },
-            children: "Add new →"
-        }, void 0, false, {
-            fileName: "[project]/src/app/(main)/community/user-and-wallets/page.tsx",
-            lineNumber: 93,
-            columnNumber: 9
-        }, void 0),
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "mb-6 ",
@@ -1922,7 +1908,7 @@ const News = ()=>{
                                     className: "h-6 w-6"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(main)/community/user-and-wallets/page.tsx",
-                                    lineNumber: 110,
+                                    lineNumber: 100,
                                     columnNumber: 26
                                 }, void 0),
                                 value: status || "all",
@@ -1943,7 +1929,7 @@ const News = ()=>{
                                 ]
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/community/user-and-wallets/page.tsx",
-                                lineNumber: 106,
+                                lineNumber: 96,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1957,26 +1943,26 @@ const News = ()=>{
                                         onChange: (e)=>setSearchQuery(e.target.value)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(main)/community/user-and-wallets/page.tsx",
-                                        lineNumber: 122,
+                                        lineNumber: 112,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
                                         className: "absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(main)/community/user-and-wallets/page.tsx",
-                                        lineNumber: 129,
+                                        lineNumber: 119,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(main)/community/user-and-wallets/page.tsx",
-                                lineNumber: 121,
+                                lineNumber: 111,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(main)/community/user-and-wallets/page.tsx",
-                        lineNumber: 105,
+                        lineNumber: 95,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$community$2f$user$2d$wallet$2d$table$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["UserWalletTable"], {
@@ -1985,13 +1971,13 @@ const News = ()=>{
                         fetching: isLoading
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/community/user-and-wallets/page.tsx",
-                        lineNumber: 133,
+                        lineNumber: 123,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(main)/community/user-and-wallets/page.tsx",
-                lineNumber: 104,
+                lineNumber: 94,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$reuseable$2f$add$2d$causes$2d$sheet$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CustomSheet"], {
@@ -2001,12 +1987,12 @@ const News = ()=>{
                 className: "pt-2 px-4",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$community$2f$add$2d$user$2d$wallet$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AddUserWallet"], {}, void 0, false, {
                     fileName: "[project]/src/app/(main)/community/user-and-wallets/page.tsx",
-                    lineNumber: 145,
+                    lineNumber: 135,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/community/user-and-wallets/page.tsx",
-                lineNumber: 139,
+                lineNumber: 129,
                 columnNumber: 7
             }, this)
         ]

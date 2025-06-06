@@ -16,7 +16,7 @@ const Rewards = () => {
           size={"sm"}
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-          <div className=" p-4 rounded-lg">
+          <div className=" p-4 rounded-lg flex flex-col justify-between h-full">
             <h3 className="text-md ">
               Number of Wallets to Reward in the “Top Tier” Program{" "}
             </h3>
@@ -35,7 +35,7 @@ const Rewards = () => {
             </div>
           </div>
 
-          <div className=" p-4 rounded-lg">
+          <div className=" p-4 rounded-lg flex flex-col justify-between h-full">
             <h3 className="text-md ">
               Number of Wallets to Reward in the “Charity Lottery” Program{" "}
             </h3>

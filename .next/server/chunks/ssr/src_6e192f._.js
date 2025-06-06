@@ -729,7 +729,7 @@ const useDialogStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_
         setCommunityAdministrationAdd: (isOpen)=>set({
                 openDialog: isOpen ? "community_administration_add" : null
             }),
-        setNtfsAdd: (isOpen)=>set({
+        setNftsAdd: (isOpen)=>set({
                 openDialog: isOpen ? "nfts_add" : null
             }),
         setNftsDetail: (isOpen)=>set({

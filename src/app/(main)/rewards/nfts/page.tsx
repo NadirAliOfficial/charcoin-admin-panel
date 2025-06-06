@@ -112,13 +112,13 @@ const fetchTransactions = async (
 const TopTiers = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [date, setDate] = useState<Date>(new Date());
-  const { openDialog, setNtfsAdd } = useDialogStore();
+  const { openDialog, setNftsAdd } = useDialogStore();
   // Import TypeOption from the correct location if not already imported
   // import type { TypeOption } from "@/components/ui/TypeSelector";
   const [selectedType, setSelectedType] = useState<TypeOption | undefined>(undefined);
 
   const { data = [], isLoading } = useQuery<NFTSRecord[]>({
-    queryKey: ["ntfs", searchQuery, date],
+    queryKey: ["nfts", searchQuery, date],
     queryFn: () => fetchTransactions(searchQuery, date),
   });
 
@@ -127,7 +127,7 @@ const TopTiers = () => {
       title="Rewards - NFTs"
       description="NFT collections and distribution control"
       actions={
-        <Button size={"lg"} onClick={() => setNtfsAdd(true)} endIcon={ArrowRightIcon}>
+        <Button size={"lg"} onClick={() => setNftsAdd(true)} endIcon={ArrowRightIcon}>
           Add new
         </Button>
       }
@@ -153,7 +153,7 @@ const TopTiers = () => {
         />
         <CustomSheet
           isOpen={openDialog == "nfts_add"}
-          setIsOpen={setNtfsAdd}
+          setIsOpen={setNftsAdd}
           title="Add NFT"
           className="pt-2 px-4"
         >

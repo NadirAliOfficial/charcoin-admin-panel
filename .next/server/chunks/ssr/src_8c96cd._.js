@@ -2166,7 +2166,7 @@ const useDialogStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_
         setCommunityAdministrationAdd: (isOpen)=>set({
                 openDialog: isOpen ? "community_administration_add" : null
             }),
-        setNtfsAdd: (isOpen)=>set({
+        setNftsAdd: (isOpen)=>set({
                 openDialog: isOpen ? "nfts_add" : null
             }),
         // Adminstrator
@@ -2300,11 +2300,11 @@ const fetchTransactions = async (query = "", month = new Date())=>{
 const TopTiers = ()=>{
     const [searchQuery, setSearchQuery] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const [date, setDate] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(new Date());
-    const { openDialog, setNtfsAdd } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$stores$2f$dialog$2d$store$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"])();
+    const { openDialog, setNftsAdd } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$stores$2f$dialog$2d$store$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"])();
     const [selectedType, setSelectedType] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])();
     const { data = [], isLoading } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useQuery"])({
         queryKey: [
-            "ntfs",
+            "nfts",
             searchQuery,
             date
         ],
@@ -2315,7 +2315,7 @@ const TopTiers = ()=>{
         description: "NFT collections and distribution control",
         actions: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
             size: "lg",
-            onClick: ()=>setNtfsAdd(true),
+            onClick: ()=>setNftsAdd(true),
             endIcon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRightIcon$3e$__["ArrowRightIcon"],
             children: "Add new"
         }, void 0, false, {
@@ -2364,7 +2364,7 @@ const TopTiers = ()=>{
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$reuseable$2f$add$2d$causes$2d$sheet$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CustomSheet"], {
                     isOpen: openDialog == "nfts_add",
-                    setIsOpen: setNtfsAdd,
+                    setIsOpen: setNftsAdd,
                     title: "Edit Cause form",
                     className: "pt-2 px-4",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$nfts$2f$create$2d$nfts$2d$02$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CreateNftsTwo"], {}, void 0, false, {

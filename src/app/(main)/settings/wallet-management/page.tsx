@@ -96,20 +96,23 @@ export default function EcosystemWallets() {
             </div>
           </section>
 
-          <section className="mb-12 border-l-[20px] border-secondary pl-5">
+          <section className="mb-12  relative px-10">
+            <div className="w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
 
             <div className="mb-4">
               <h2 className="text-lg font-bold">Charity Donation & Rewards Ecosystem (75%)</h2>
               <p className="text-sm text-gray-400">Based on the 1% global collection</p>
             </div>
 
-            <div className="mb-12 border-l-[20px] border-secondary pl-5">
+            <div className="mb-12  relative px-10">
+            <div className="w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
               <div className="mb-6">
                 <h3 className="text-md font-semibold mb-2">Rewards System (20%)</h3>
                 <p className="text-xs text-gray-400">Based on the 75% of the Charity Donation & Rewards Ecosystem</p>
               </div>
 
-              <div className="pl-4 border-l-[20px] border-secondary mb-8">
+              <div className="mb-12  relative px-10">
+              <div className="w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold">Monthly Rewards Classification (50%)</h4>
                   <p className="text-xs text-gray-400">Of the 20% of the Rewards System</p>
@@ -159,13 +162,15 @@ export default function EcosystemWallets() {
             </div>
 
 
-            <div className="mb-12 border-l-[20px] border-secondary pl-5">
+            <div className="mb-12  relative px-10">
+            <div className="w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
               <div className="mb-6 border-b border-[#323138] pb-5">
                 <h3 className="text-md font-semibold mb-2">Donation System (80%)</h3>
                 <p className="text-xs text-gray-400">Based on the 75% of the Charity Donation & Rewards Ecosystem</p>
               </div>
 
-              <div className="pl-4 border-l-[20px] border-secondary mb-8">
+              <div className="mb-12  relative px-10">
+              <div className="w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
                 <div className="mb-6 border-b border-[#323138] pb-5">
                   <h4 className="text-sm font-semibold">Monthly Donation Fund (80%)</h4>
                   <p className="text-xs text-gray-400">Of the 80% of the Donation System</p>
@@ -214,7 +219,8 @@ export default function EcosystemWallets() {
               </div>
 
 
-              <div className="pl-4 border-l-[20px] border-secondary mb-28">
+              <div className="mb-12  relative px-10">
+              <div className="w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold">Crisis Classification (10%)</h4>
                   <p className="text-xs text-gray-400">Of the 80% of the Donation System</p>
@@ -239,7 +245,8 @@ export default function EcosystemWallets() {
 
           <div className="border-t-4 border-primary my-8"></div>
 
-          <section className="pl-4 border-l-[20px] border-secondary mb-28">
+          <section className="mb-12  relative px-10">
+          <div className="w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
             <div className="mb-4 border-b border-[#323138] pb-5">
               <h2 className="text-lg font-bold">Staking Rewards (15%)</h2>
               <p className="text-sm text-gray-400">Based on the 1% global collection</p>

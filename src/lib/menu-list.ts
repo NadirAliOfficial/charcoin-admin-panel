@@ -60,7 +60,7 @@ export function getMenuList(): Group[] {
             },
             {
               href: "/rewards/nfts",
-              label: "NTFs",
+              label: "NFTs",
               icon: Hash,
             },
             {

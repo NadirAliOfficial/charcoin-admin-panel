@@ -30,6 +30,7 @@ import { CauseDetail } from "./cause-detail";
 import useDialogStore from "@/stores/dialog-store";
 import { EditCause } from "./edit-cause";
 import { CompletedCauseDrawer } from "./completed-cause-drawer";
+import { Cause } from "@/types/causes";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -59,7 +60,8 @@ export function AddCauseTable<TData, TValue>({
     []
   );
   const [sorting, setSorting] = React.useState<SortingState>([]);
-  const [selectedCause, setSelectedCause] = React.useState<TData | null>(null);
+  const [selectedCompletedCause, setSelectedCompletedCause] = React.useState<TData | null>(null);
+  const [selectedCauseData, setSelectedCauseData] = React.useState<Cause | null>(null);
 
   const table = useReactTable({
     data,
@@ -112,8 +114,11 @@ export function AddCauseTable<TData, TValue>({
               table.getRowModel().rows.map((row) => (
                 <TableRow
                   onClick={() => {
+                    setSelectedCauseData(row.original as Cause);
                     if (activeTab === "completed") {
-                      setSelectedCause(row.original);
+                      setSelectedCompletedCause(row.original);
+                    } else if (activeTab === "drafts") {
+                      setCausesOpenEdit(true);
                     } else {
                       setCausesOpenDetail(true);
                     }
@@ -176,7 +181,7 @@ export function AddCauseTable<TData, TValue>({
             title="See the Cause Detail"
             className="!p-0"
           >
-            <CauseDetail />
+            <CauseDetail initialData={selectedCauseData} />
           </CustomSheet>
           <CustomSheet
             isOpen={openDialog == "causes_edit"}
@@ -184,16 +189,16 @@ export function AddCauseTable<TData, TValue>({
             title="Edit Cause form"
             className="pt-2 px-4"
           >
-            <EditCause />
+            <EditCause initialData={selectedCauseData} />
           </CustomSheet>
         </>
       )}
       {/* Completed tab drawer */}
-      {activeTab === "completed" && selectedCause && (
+      {activeTab === "completed" && selectedCompletedCause && (
         <CompletedCauseDrawer
-          isOpen={!!selectedCause}
-          setIsOpen={() => setSelectedCause(null)}
-          cause={selectedCause}
+          isOpen={!!selectedCompletedCause}
+          setIsOpen={() => setSelectedCompletedCause(null)}
+          cause={selectedCompletedCause}
         />
       )}
     </div>

@@ -12,6 +12,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Cause } from "@/types/causes";
 import useDialogStore from "@/stores/dialog-store";
 import { CustomSheet } from "@/components/reuseable/add-causes-sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+} from "@/components/ui/sheet";
 
 // Create dummy data
 const causes: Cause[] = [

@@ -469,12 +469,20 @@ body {
   right: 2rem !important;
 }
 
+.-right-2 {
+  right: -.5rem;
+}
+
 .-right-\[12px\] {
   right: -12px;
 }
 
 .-top-1 {
   top: -.25rem;
+}
+
+.-top-2 {
+  top: -.5rem;
 }
 
 .bottom-0 {
@@ -1238,10 +1246,6 @@ body {
   width: 100vw;
 }
 
-.w-\[95\%\] {
-  width: 95%;
-}
-
 .min-w-64 {
   min-width: 16rem;
 }
@@ -1487,6 +1491,10 @@ body {
 
 .resize-none {
   resize: none;
+}
+
+.appearance-none {
+  appearance: none;
 }
 
 .grid-cols-1 {
@@ -2056,6 +2064,11 @@ body {
   background-color: hsl(41 99% 51% / var(--tw-bg-opacity, 1));
 }
 
+.bg-cyan-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(6 182 212 / var(--tw-bg-opacity, 1));
+}
+
 .bg-destructive {
   background-color: hsl(var(--destructive));
 }
@@ -2094,6 +2107,11 @@ body {
 .bg-gray-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
 }
 
 .bg-green-500\/10 {
@@ -2831,6 +2849,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.placeholder-gray-400::placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-placeholder-opacity, 1));
+}
+
 .opacity-0 {
   opacity: 0;
 }
@@ -3226,6 +3249,11 @@ body {
   background-color: rgb(35 34 38 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-cyan-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(8 145 178 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:bg-destructive:hover {
   background-color: hsl(var(--destructive));
 }
@@ -3246,6 +3274,11 @@ body {
   background-color: #4b556380;
 }
 
+.hover\:bg-gray-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:bg-primary:hover {
   background-color: hsl(var(--primary));
 }
@@ -3256,6 +3289,11 @@ body {
 
 .hover\:bg-primary\/90:hover {
   background-color: hsl(var(--primary) / .9);
+}
+
+.hover\:bg-red-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-secondary\/80:hover {
@@ -3313,6 +3351,11 @@ body {
 .focus\:border-\[\#00ffcc\]:focus {
   --tw-border-opacity: 1;
   border-color: rgb(0 255 204 / var(--tw-border-opacity, 1));
+}
+
+.focus\:border-cyan-500:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(6 182 212 / var(--tw-border-opacity, 1));
 }
 
 .focus\:bg-accent:focus {
@@ -3928,6 +3971,11 @@ body {
     padding-top: 0;
   }
 
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -3946,11 +3994,6 @@ body {
   .md\:text-sm {
     font-size: .875rem;
     line-height: 1.25rem;
-  }
-
-  .md\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 }
 

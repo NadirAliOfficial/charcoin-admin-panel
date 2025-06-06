@@ -6,51 +6,61 @@ import { Button } from "../ui/button";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { HeaderWrapper } from "../custom/header-wrapper";
+import { Cause } from "@/types/causes";
 
-const details = [
-  { label: "Country", value: "Nicaragua" },
-  { label: "Start Date", value: new Date().getUTCDate() },
-  { label: "End Date", value: new Date().getUTCDate() },
-  { label: "Month / Year Campaign", value: new Date().getUTCDate() },
-];
+interface CauseDetailProps {
+  initialData: Cause | null;
+}
 
-const personalDetails = [
-  { label: "Contact / Responsible", value: "Mr. Josué Eliseo Méndez" },
-  { label: "Email", value: "josue.mendez@foundation.org" },
-  { label: "Phone", value: "+505-9856-98745" },
-  { label: "Position", value: "Finance Director" },
-];
-
-export const CauseDetail = () => {
+export const CauseDetail = ({ initialData }: CauseDetailProps) => {
   const { setCausesOpenEdit } = useDialogStore();
   const [isEdit, setIsEdit] = useState(true);
+
+  const cause = initialData;
+
+  if (!cause) {
+    return <div>Select a cause to see details.</div>;
+  }
+
+  const details = [
+    { label: "Country", value: "Nicaragua" },
+    { label: "Start Date", value: cause.startedOn },
+    { label: "End Date", value: cause.endsOn },
+    { label: "Month / Year Campaign", value: cause.endsOn },
+  ];
+
+  const personalDetails = [
+    { label: "Contact / Responsible", value: "Mr. Josué Eliseo Méndez" },
+    { label: "Email", value: "josue.mendez@foundation.org" },
+    { label: "Phone", value: "+505-9856-98745" },
+    { label: "Position", value: "Finance Director" },
+  ];
+
   return (
     <div className="font-WFVisualSansRegular bg-[#232226]">
       <Image
-        src={"/board.svg"}
-        alt="board"
+        src={cause.image || "/placeholder.svg"}
+        alt={cause.name || "Cause image"}
         width={500}
         height={300}
         className="w-full"
       />
       <div className="p-6 flex flex-col gap-6">
-        {/* Header Information */}
         <div>
           <span className="uppercase text-xs leading-5 tracking-[3px]">
-            Education
+            {cause.category}
           </span>
           <h1 className="text-2xl leading-10">
-            Building 3 schools in the west side of Nicaragua
+            {cause.name}
           </h1>
           <span className="gap-2 text-xs inline">
             Organization:{" "}
             <Link href={"/"} className="text-primary hover:underline">
-              Schools For the Future
+              {cause.organization}
             </Link>{" "}
-            - 30,114 Points from 6,245 benefactors
+            - {cause.points?.count} {cause.points?.label} from {cause.benefactors} benefactors
           </span>
         </div>
-        {/* Stats */}
         <div className="grid h-max my-auto grid-cols-[repeat(auto-fit,_minmax(120,+1fr))] gap-8">
           <div className="bg-[#1d1c21] text-center gap-4 p-4 py-8 rounded-xl flex justify-between px-8 max-md:flex-col">
             <span className="space-y-2">
@@ -75,12 +85,11 @@ export const CauseDetail = () => {
                 Final potential monthly donation (15% staking profit)
               </p>
               <Button className="bg-custom-purple h-[30px] text-[10px] !ring-custom-purple tracking-wider hover:bg-custom-purple-/90 text-foreground">
-                Infinite Impact
+                {cause.type}
               </Button>
             </span>
           </div>
         </div>
-        {/* Detail Like Country,.... */}
         <div className="flex flex-wrap gap-x-10 gap-y-5 text-sm border-b border-[#323138] pb-5">
           {details?.map((item, key) => (
             <div key={key} className="flex flex-col">
@@ -90,7 +99,6 @@ export const CauseDetail = () => {
           ))}
         </div>
        
-        {/* Wallet Information */}
         <div className="flex justify-between flex-wrap text-sm border-b border-[#323138] pb-5">
           <p className="text-primary !break-words line-clamp-1 text-xs">
             0xfd88987b67c265fe57f1bdb3b57d97b717ef567e20bd18ba3c2a780040f15634d6fe
@@ -105,7 +113,6 @@ export const CauseDetail = () => {
           </Button>
         </div>
         
-        {/* User Information */}
         <div className="flex flex-wrap justify-between items-center border-b border-[#323138] pb-4 space-y-5 gap-x-10 text-sm">
           {personalDetails?.map((item, key) => (
             <div key={key} className="flex flex-col">
@@ -115,7 +122,6 @@ export const CauseDetail = () => {
           ))}
         </div>
        
-        {/* Edit Button */}
         <Button
           size={"lg"}
           onClick={() => setCausesOpenEdit(true)}

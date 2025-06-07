@@ -3782,12 +3782,13 @@ function AddCauseTable({ columns, data, fetching, activeTab = "running" }) {
                                         }
                                     },
                                     "data-state": row.getIsSelected() && "selected",
+                                    className: "cursor-pointer",
                                     children: row.getVisibleCells().map((cell)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
                                             className: "py-4 px-4",
                                             children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$table$2f$build$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["flexRender"])(cell.column.columnDef.cell, cell.getContext())
                                         }, cell.id, false, {
                                             fileName: "[project]/src/components/causes/add-cause-table.tsx",
-                                            lineNumber: 130,
+                                            lineNumber: 131,
                                             columnNumber: 21
                                         }, this))
                                 }, row.id, false, {
@@ -3800,17 +3801,17 @@ function AddCauseTable({ columns, data, fetching, activeTab = "running" }) {
                                     className: "h-24 text-center",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$reuseable$2f$fetching$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fetching"], {}, void 0, false, {
                                         fileName: "[project]/src/components/causes/add-cause-table.tsx",
-                                        lineNumber: 145,
+                                        lineNumber: 146,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/causes/add-cause-table.tsx",
-                                    lineNumber: 141,
+                                    lineNumber: 142,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/causes/add-cause-table.tsx",
-                                lineNumber: 140,
+                                lineNumber: 141,
                                 columnNumber: 15
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableRow"], {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -3819,12 +3820,12 @@ function AddCauseTable({ columns, data, fetching, activeTab = "running" }) {
                                     children: "No results."
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/causes/add-cause-table.tsx",
-                                    lineNumber: 150,
+                                    lineNumber: 151,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/causes/add-cause-table.tsx",
-                                lineNumber: 149,
+                                lineNumber: 150,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
@@ -3849,12 +3850,12 @@ function AddCauseTable({ columns, data, fetching, activeTab = "running" }) {
                     table: table
                 }, void 0, false, {
                     fileName: "[project]/src/components/causes/add-cause-table.tsx",
-                    lineNumber: 163,
+                    lineNumber: 164,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/causes/add-cause-table.tsx",
-                lineNumber: 162,
+                lineNumber: 163,
                 columnNumber: 7
             }, this),
             activeTab !== "completed" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -3869,7 +3870,7 @@ function AddCauseTable({ columns, data, fetching, activeTab = "running" }) {
                         children: "Add Form"
                     }, void 0, false, {
                         fileName: "[project]/src/components/causes/add-cause-table.tsx",
-                        lineNumber: 168,
+                        lineNumber: 169,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$reuseable$2f$add$2d$causes$2d$sheet$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CustomSheet"], {
@@ -3881,12 +3882,12 @@ function AddCauseTable({ columns, data, fetching, activeTab = "running" }) {
                             initialData: selectedCauseData
                         }, void 0, false, {
                             fileName: "[project]/src/components/causes/add-cause-table.tsx",
-                            lineNumber: 184,
+                            lineNumber: 185,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/causes/add-cause-table.tsx",
-                        lineNumber: 178,
+                        lineNumber: 179,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$reuseable$2f$add$2d$causes$2d$sheet$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CustomSheet"], {
@@ -3898,12 +3899,12 @@ function AddCauseTable({ columns, data, fetching, activeTab = "running" }) {
                             initialData: selectedCauseData
                         }, void 0, false, {
                             fileName: "[project]/src/components/causes/add-cause-table.tsx",
-                            lineNumber: 192,
+                            lineNumber: 193,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/causes/add-cause-table.tsx",
-                        lineNumber: 186,
+                        lineNumber: 187,
                         columnNumber: 11
                     }, this)
                 ]
@@ -3914,7 +3915,7 @@ function AddCauseTable({ columns, data, fetching, activeTab = "running" }) {
                 cause: selectedCompletedCause
             }, void 0, false, {
                 fileName: "[project]/src/components/causes/add-cause-table.tsx",
-                lineNumber: 198,
+                lineNumber: 199,
                 columnNumber: 9
             }, this)
         ]

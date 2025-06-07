@@ -125,6 +125,7 @@ export function AddCauseTable<TData, TValue>({
                   }}
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
+                  className="cursor-pointer"
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell className="py-4 px-4" key={cell.id}>

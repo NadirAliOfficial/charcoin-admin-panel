@@ -187,7 +187,11 @@ const badgeVariants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_m
             "one-time": "bg-custom-yellow text-white",
             purple: "bg-custom-purple text-white",
             pink: "bg-[#db65b9] text-white",
-            green: "bg-custom-green text-white"
+            green: "bg-custom-green text-white",
+            published: "bg-green-700 text-white",
+            unpublished: "bg-gray-700 text-white",
+            completed: "bg-blue-600 text-white",
+            draft: "bg-gray-700 text-white"
         },
         size: {
             default: "h-5 text-xs",
@@ -209,7 +213,7 @@ function Badge({ className, variant, size, ...props }) {
         ...props
     }, void 0, false, {
         fileName: "[project]/src/components/ui/badge.tsx",
-        lineNumber: 43,
+        lineNumber: 47,
         columnNumber: 5
     }, this);
 }

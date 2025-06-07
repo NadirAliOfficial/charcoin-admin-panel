@@ -1,36 +1,48 @@
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { X, ArrowRight } from 'lucide-react';
 
 interface PayoutInterfaceProps {
   walletName: string;
 }
 
+interface AuthState {
+  username: string;
+  password: string;
+  pin: string;
+  otp: string;
+}
+
 export default function PayoutInterface({ walletName }: PayoutInterfaceProps) {
-  const [amount, setAmount] = useState('');
-  const [description, setDescription] = useState('');
-  const [receiverWallet, setReceiverWallet] = useState('');
-  const [confirmWallet, setConfirmWallet] = useState('');
+  const [amount, setAmount] = useState<string>('');
+  const [description, setDescription] = useState<string>('');
+  const [receiverWallet, setReceiverWallet] = useState<string>('');
+  const [confirmWallet, setConfirmWallet] = useState<string>('');
   
-  const [auth1, setAuth1] = useState({
+  const [auth1, setAuth1] = useState<AuthState>({
     username: '',
     password: '',
     pin: '',
     otp: ''
   });
   
-  const [auth2, setAuth2] = useState({
+  const [auth2, setAuth2] = useState<AuthState>({
     username: '',
     password: '',
     pin: '',
     otp: ''
   });
   
-  const [auth3, setAuth3] = useState({
+  const [auth3, setAuth3] = useState<AuthState>({
     username: '',
     password: '',
     pin: '',
     otp: ''
   });
+
+  const handleSubmit = (e: FormEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    // Add your submit logic here
+  };
 
   return (
     <div className="min-h-screen text-white p-6">
@@ -72,7 +84,7 @@ export default function PayoutInterface({ walletName }: PayoutInterfaceProps) {
                 type="text"
                 placeholder="Enter an amount in USDT (SOLANA)"
                 value={amount}
-                onChange={(e) => setAmount(e.target.value)}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => setAmount(e.target.value)}
                 className="w-full bg-[#3d3c44] border border-gray-700 rounded-lg px-4 py-3 text-white  focus:border-cyan-400 focus:outline-none"
               />
             </div>
@@ -83,19 +95,19 @@ export default function PayoutInterface({ walletName }: PayoutInterfaceProps) {
               <textarea
                 placeholder="Enter details describing the reason for this transaction"
                 value={description}
-                onChange={(e) => setDescription(e.target.value)}
+                onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setDescription(e.target.value)}
                 className="w-full bg-[#3d3c44] border border-gray-700 rounded-lg px-4 py-3 text-white  focus:border-cyan-400 focus:outline-none h-24 resize-none"
               />
             </div>
 
             <div>
               <label className="block text-sm font-medium mb-2">Receiver Wallet</label>
-              <p className="text-gray-400 text-sm mb-3">Enter the recipient's Solana wallet address where the USDT will be sent</p>
+              <p className="text-gray-400 text-sm mb-3">Enter the recipient&apos;s Solana wallet address where the USDT will be sent</p>
               <input
                 type="text"
                 placeholder="Enter a USDT (SOLANA) Wallet Address"
                 value={receiverWallet}
-                onChange={(e) => setReceiverWallet(e.target.value)}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => setReceiverWallet(e.target.value)}
                 className="w-full bg-[#3d3c44] border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-cyan-400 focus:outline-none"
               />
             </div>
@@ -107,7 +119,7 @@ export default function PayoutInterface({ walletName }: PayoutInterfaceProps) {
                 type="text"
                 placeholder="Confirm Wallet Address"
                 value={confirmWallet}
-                onChange={(e) => setConfirmWallet(e.target.value)}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => setConfirmWallet(e.target.value)}
                 className="w-full bg-[#3d3c44] border border-gray-700 rounded-lg px-4 py-3 text-white  focus:border-cyan-400 focus:outline-none"
               />
             </div>
@@ -121,42 +133,42 @@ export default function PayoutInterface({ walletName }: PayoutInterfaceProps) {
 
           {/* Authorization 1 */}
           <div className=" relative rounded-lg p-6 mb-4">
-            <div className=' absolute left-0 h-full top-0 w-[15px] rounded-3xl bg-secondary'></div>
+            <div className=" absolute left-0 h-full top-0 w-[15px] rounded-3xl bg-secondary"></div>
             <h4 className="text-lg font-semibold mb-2">Authorization #1</h4>
-            <p className="text-gray-400 text-sm mb-6">Complete the fields below with an administrator's details to proceed</p>
+            <p className="text-gray-400 text-sm mb-6">Complete the fields below with an administrator&apos;s details to proceed</p>
             
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-              <div className='h-full flex flex-col justify-between'>
+              <div className="h-full flex flex-col justify-between">
                 <label className="block text-sm font-medium mb-2">Administrator Username</label>
                 <input
                   type="text"
                   placeholder="Enter a username"
                   value={auth1.username}
-                  onChange={(e) => setAuth1({...auth1, username: e.target.value})}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => setAuth1({...auth1, username: e.target.value})}
                   className="w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white focus:border-cyan-400 focus:outline-none"
                 />
               </div>
-              <div className='h-full flex flex-col justify-between'>
+              <div className="h-full flex flex-col justify-between">
                 <label className="block text-sm font-medium mb-2">Password</label>
                 <input
                   type="password"
                   placeholder="••••••••••••"
                   value={auth1.password}
-                  onChange={(e) => setAuth1({...auth1, password: e.target.value})}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => setAuth1({...auth1, password: e.target.value})}
                   className="w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white  focus:border-cyan-400 focus:outline-none"
                 />
               </div>
-              <div className='h-full flex flex-col justify-between'>
+              <div className="h-full flex flex-col justify-between">
                 <label className="block text-sm font-medium mb-2">PIN</label>
                 <input
                   type="password"
                   placeholder="• • • • • •"
                   value={auth1.pin}
-                  onChange={(e) => setAuth1({...auth1, pin: e.target.value})}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => setAuth1({...auth1, pin: e.target.value})}
                   className="w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white  focus:border-cyan-400 focus:outline-none"
                 />
               </div>
-              <div className='h-full flex flex-col justify-between'>
+              <div className="h-full flex flex-col justify-between">
                 <label className="block text-sm font-medium mb-2">
                   OTP Code / <span className="text-cyan-400 cursor-pointer">Request via email</span>
                 </label>
@@ -164,7 +176,7 @@ export default function PayoutInterface({ walletName }: PayoutInterfaceProps) {
                   type="text"
                   placeholder="• • • • • •"
                   value={auth1.otp}
-                  onChange={(e) => setAuth1({...auth1, otp: e.target.value})}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => setAuth1({...auth1, otp: e.target.value})}
                   className="w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white  focus:border-cyan-400 focus:outline-none"
                 />
               </div>
@@ -173,42 +185,42 @@ export default function PayoutInterface({ walletName }: PayoutInterfaceProps) {
 
           {/* Authorization 2 */}
           <div className=" relative rounded-lg p-6 mb-4">
-          <div className=' absolute left-0 h-full top-0 w-[15px] rounded-3xl bg-secondary'></div>
+            <div className=" absolute left-0 h-full top-0 w-[15px] rounded-3xl bg-secondary"></div>
             <h4 className="text-lg font-semibold mb-2">Authorization #2</h4>
-            <p className="text-gray-400 text-sm mb-6">Complete the fields below with an administrator's details to proceed</p>
+            <p className="text-gray-400 text-sm mb-6">Complete the fields below with an administrator&apos;s details to proceed</p>
             
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-              <div className='h-full flex flex-col justify-between'>
+              <div className="h-full flex flex-col justify-between">
                 <label className="block text-sm font-medium mb-2">Administrator Username</label>
                 <input
                   type="text"
                   placeholder="Enter a username"
                   value={auth2.username}
-                  onChange={(e) => setAuth2({...auth2, username: e.target.value})}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => setAuth2({...auth2, username: e.target.value})}
                   className="w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white  focus:border-cyan-400 focus:outline-none"
                 />
               </div>
-              <div className='h-full flex flex-col justify-between'>
+              <div className="h-full flex flex-col justify-between">
                 <label className="block text-sm font-medium mb-2">Password</label>
                 <input
                   type="password"
                   placeholder="••••••••••••"
                   value={auth2.password}
-                  onChange={(e) => setAuth2({...auth2, password: e.target.value})}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => setAuth2({...auth2, password: e.target.value})}
                   className="w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white  focus:border-cyan-400 focus:outline-none"
                 />
               </div>
-              <div className='h-full flex flex-col justify-between'>
+              <div className="h-full flex flex-col justify-between">
                 <label className="block text-sm font-medium mb-2">PIN</label>
                 <input
                   type="password"
                   placeholder="• • • • • •"
                   value={auth2.pin}
-                  onChange={(e) => setAuth2({...auth2, pin: e.target.value})}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => setAuth2({...auth2, pin: e.target.value})}
                   className="w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white  focus:border-cyan-400 focus:outline-none"
                 />
               </div>
-              <div className='h-full flex flex-col justify-between'>
+              <div className="h-full flex flex-col justify-between">
                 <label className="block text-sm font-medium mb-2">
                   OTP Code / <span className="text-cyan-400 cursor-pointer">Request via email</span>
                 </label>
@@ -216,7 +228,7 @@ export default function PayoutInterface({ walletName }: PayoutInterfaceProps) {
                   type="text"
                   placeholder="• • • • • •"
                   value={auth2.otp}
-                  onChange={(e) => setAuth2({...auth2, otp: e.target.value})}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => setAuth2({...auth2, otp: e.target.value})}
                   className="w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white  focus:border-cyan-400 focus:outline-none"
                 />
               </div>
@@ -225,42 +237,42 @@ export default function PayoutInterface({ walletName }: PayoutInterfaceProps) {
 
           {/* Authorization 3 */}
           <div className=" relative rounded-lg p-6 mb-8">
-          <div className=' absolute left-0 h-full top-0 w-[15px] rounded-3xl bg-secondary'></div>
+            <div className=" absolute left-0 h-full top-0 w-[15px] rounded-3xl bg-secondary"></div>
             <h4 className="text-lg font-semibold mb-2">Authorization #3</h4>
-            <p className="text-gray-400 text-sm mb-6">Complete the fields below with an administrator's details to proceed</p>
+            <p className="text-gray-400 text-sm mb-6">Complete the fields below with an administrator&apos;s details to proceed</p>
             
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-              <div className='h-full flex flex-col justify-between'>
+              <div className="h-full flex flex-col justify-between">
                 <label className="block text-sm font-medium mb-2">Administrator Username</label>
                 <input
                   type="text"
                   placeholder="Enter a username"
                   value={auth3.username}
-                  onChange={(e) => setAuth3({...auth3, username: e.target.value})}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => setAuth3({...auth3, username: e.target.value})}
                   className="w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white  focus:border-cyan-400 focus:outline-none"
                 />
               </div>
-              <div className='h-full flex flex-col justify-between'>
+              <div className="h-full flex flex-col justify-between">
                 <label className="block text-sm font-medium mb-2">Password</label>
                 <input
                   type="password"
                   placeholder="••••••••••••"
                   value={auth3.password}
-                  onChange={(e) => setAuth3({...auth3, password: e.target.value})}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => setAuth3({...auth3, password: e.target.value})}
                   className="w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white  focus:border-cyan-400 focus:outline-none"
                 />
               </div>
-              <div className='h-full flex flex-col justify-between'>
+              <div className="h-full flex flex-col justify-between">
                 <label className="block text-sm font-medium mb-2">PIN</label>
                 <input
                   type="password"
                   placeholder="• • • • • •"
                   value={auth3.pin}
-                  onChange={(e) => setAuth3({...auth3, pin: e.target.value})}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => setAuth3({...auth3, pin: e.target.value})}
                   className="w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white  focus:border-cyan-400 focus:outline-none"
                 />
               </div>
-              <div className='h-full flex flex-col justify-between'>
+              <div className="h-full flex flex-col justify-between">
                 <label className="block text-sm font-medium mb-2">
                   OTP Code / <span className="text-cyan-400 cursor-pointer">Request via email</span>
                 </label>
@@ -268,7 +280,7 @@ export default function PayoutInterface({ walletName }: PayoutInterfaceProps) {
                   type="text"
                   placeholder="• • • • • •"
                   value={auth3.otp}
-                  onChange={(e) => setAuth3({...auth3, otp: e.target.value})}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => setAuth3({...auth3, otp: e.target.value})}
                   className="w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white  focus:border-cyan-400 focus:outline-none"
                 />
               </div>
@@ -277,7 +289,10 @@ export default function PayoutInterface({ walletName }: PayoutInterfaceProps) {
         </div>
 
         {/* Send Transfer Button */}
-        <button className="w-fit bg-primary hover:bg-cyan-500 text-black font-semibold py-2 px-10 rounded-lg flex items-center justify-center gap-2 transition-colors">
+        <button 
+          onClick={handleSubmit}
+          className="w-fit bg-primary hover:bg-cyan-500 text-black font-semibold py-2 px-10 rounded-lg flex items-center justify-center gap-2 transition-colors"
+        >
           Send Transfer
           <ArrowRight size={20} />
         </button>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, Upload, Trash2, FileText, ChevronDown } from 'lucide-react';
 import { Cause } from "@/types/causes"; // Import the Cause type
+import Image from "next/image";
 
 interface EditCauseFormData {
   title: string;
@@ -252,7 +253,7 @@ export default function EditCauseForm({ initialData, onClose }: EditCauseFormPro
             <div className="flex gap-4">
               {uploadedImages.map((image, index) => (
                 <div key={index} className="relative">
-                  <img
+                  <Image
                     src={image}
                     alt={`Preview ${index + 1}`}
                     className="w-32 h-24 object-cover rounded-lg border border-gray-700"

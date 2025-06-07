@@ -14,6 +14,13 @@ export type Cause = {
     count: number;
     label: string;
   };
-  type: "Infinite Impact" | "Cause" | "Draft";
+  updates: number;
+  impact: {
+    amount: string;
+    payouts: number;
+    status?: string;
+  };
+  type: "Infinite Impact" | "Cause" | "Draft" | "One time";
   image: string;
+  status: string;
 };

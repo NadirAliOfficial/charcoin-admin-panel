@@ -54,6 +54,7 @@ export default function EcosystemWallets() {
         }
       />
       <div className="min-h-screen bg-background rounded-xl text-white p-4">
+
         <div className="max-w-6xl mx-auto">
           <h1 className="text-xl font-bold mb-1">Global Ecosystem Wallets</h1>
           <p className="text-sm text-gray-400 mb-20 border-b border-[#323138] pb-5">
@@ -65,7 +66,10 @@ export default function EcosystemWallets() {
           <section className="mb-5 border-b-4 border-primary pb-24">
 
 
-            <div className="space-y-6 border-l-[20px] border-secondary pl-4">
+            <div className="mb-12  relative px-10">
+
+            <div className="w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
+
               <div className="mb-5 ml-4 border-b border-[#323138] pb-5">
                 <h2 className="text-lg font-bold">Buyback, deflationary system & marketing (10%)</h2>
                 <p className="text-sm text-gray-400">Based on the 1% global collection</p>

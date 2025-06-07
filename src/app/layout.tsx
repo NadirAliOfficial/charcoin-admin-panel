@@ -101,11 +101,13 @@ const wfVisualSans = localFont({
 });
 
 const poppins = Poppins({
-  variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
+  variable: "--font-poppins",
+  preload: true,
+  fallback: ["system-ui", "arial"],
 });
 
 const geistMono = Geist_Mono({

@@ -6,6 +6,8 @@ import { useState } from "react";
 
 import { AddCauseTable } from "@/components/causes/add-cause-table";
 import { runningCauseColumns } from "@/components/columns/running_cause_column";
+import { draftCauseColumns } from "@/components/columns/draft_cause_column";
+import { completedCauseColumns } from "@/components/columns/completed_cause_column";
 import { DateTimePicker } from "@/components/ui/date-time-picker";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -38,8 +40,11 @@ const runningCauses: Cause[] = [
       count: 58457,
       label: "Points",
     },
+    updates: 0,
+    impact: { amount: "$0.00", payouts: 0 },
     type: "Infinite Impact",
     image: "/placeholder.svg?height=80&width=80",
+    status: "Published",
   },
   {
     id: 133,
@@ -57,49 +62,115 @@ const runningCauses: Cause[] = [
       count: 30114,
       label: "Points",
     },
+    updates: 0,
+    impact: { amount: "$0.00", payouts: 0 },
     type: "Cause",
     image: "/placeholder.svg?height=80&width=80",
+    status: "Unpublished",
   }
 ];
 
 const completedCauses: Cause[] = [
   {
-    id: 178,
-    name: "Attacking the hunger in the east side of Haiti",
-    category: "Nourishing & Hunger",
-    organization: "Eradication Hunger Association",
+    id: 89,
+    name: "Providing clean and water sources to remote villages in Sub-Saharan Africa",
+    category: "Clean Water",
+    organization: "Global Water Relief Foundation",
     currentlyWinning: {
-      amount: "$30,000.00",
+      amount: "$70,000.00",
       position: 1,
     },
     startedOn: "Jan 1, 2023",
-    endsOn: "Jan 20, 2024",
-    benefactors: 4124,
+    endsOn: "Jan 20, 2025",
+    benefactors: 8475,
     points: {
-      count: 27478,
+      count: 58457,
       label: "Points",
+    },
+    updates: 2,
+    impact: {
+      amount: "$7,145.00",
+      payouts: 3,
     },
     type: "Infinite Impact",
     image: "/placeholder.svg?height=80&width=80",
+    status: "Published",
   },
   {
-    id: 112,
-    name: "Building houses for the homeless in Guadalajara, Mexico",
+    id: 78,
+    name: "Constructing emergency shelters for families affected by natural disasters",
     category: "Shelter & Food",
-    organization: "TheShelter.Log",
+    organization: "Humanity Rebuilds",
     currentlyWinning: {
-      amount: "$10,000.00",
+      amount: "$40,000.00",
       position: 2,
     },
-    startedOn: "Dec 1, 2022",
-    endsOn: "Dec 20, 2023",
-    benefactors: 2105,
+    startedOn: "Jan 1, 2023",
+    endsOn: "Jan 20, 2025",
+    benefactors: 6245,
+    points: {
+      count: 30114,
+      label: "Points",
+    },
+    updates: 4,
+    impact: {
+      amount: "$40,000.00",
+      payouts: 2,
+      status: "Closed",
+    },
+    type: "One time",
+    image: "/placeholder.svg?height=80&width=80",
+    status: "Completed",
+  },
+  {
+    id: 69,
+    name: "Providing nutritious meals to malnourished children in impoverished regions",
+    category: "Malnutrition & Hunger",
+    organization: "Feeding Hope Initiative",
+    currentlyWinning: {
+      amount: "$30,000.00",
+      position: 3,
+    },
+    startedOn: "Jan 1, 2023",
+    endsOn: "Jan 20, 2025",
+    benefactors: 4124,
+    points: {
+      count: 22478,
+      label: "Points",
+    },
+    updates: 1,
+    impact: {
+      amount: "$1,250.00",
+      payouts: 3,
+    },
+    type: "Infinite Impact",
+    image: "/placeholder.svg?height=80&width=80",
+    status: "Published",
+  },
+  {
+    id: 71,
+    name: "Delivering essential medical aid and free surgeries to underserved communities",
+    category: "Healthcare",
+    organization: "Global Medical Outreach",
+    currentlyWinning: {
+      amount: "$10,000.00",
+      position: 4,
+    },
+    startedOn: "Jan 1, 2023",
+    endsOn: "Jan 20, 2025",
+    benefactors: 2125,
     points: {
       count: 12877,
       label: "Points",
     },
+    updates: 2,
+    impact: {
+      amount: "$920.00",
+      payouts: 3,
+    },
     type: "Infinite Impact",
     image: "/placeholder.svg?height=80&width=80",
+    status: "Published",
   }
 ];
 
@@ -120,8 +191,11 @@ const draftCauses: Cause[] = [
       count: 0,
       label: "Points",
     },
+    updates: 0,
+    impact: { amount: "$0.00", payouts: 0 },
     type: "Draft",
     image: "/placeholder.svg?height=80&width=80",
+    status: "Unpublished",
   },
   {
     id: 202,
@@ -139,8 +213,11 @@ const draftCauses: Cause[] = [
       count: 0,
       label: "Points",
     },
+    updates: 0,
+    impact: { amount: "$0.00", payouts: 0 },
     type: "Draft",
     image: "/placeholder.svg?height=80&width=80",
+    status: "Unpublished",
   }
 ];
 
@@ -230,7 +307,7 @@ export default function CausesPage() {
           <TabsContent value="completed">
             <AddCauseTable
               data={data}
-              columns={runningCauseColumns}
+              columns={completedCauseColumns}
               fetching={isLoading}
               activeTab={activeTab}
             />
@@ -238,7 +315,7 @@ export default function CausesPage() {
           <TabsContent value="drafts">
             <AddCauseTable
               data={data}
-              columns={runningCauseColumns}
+              columns={draftCauseColumns}
               fetching={isLoading}
               activeTab={activeTab}
             />

@@ -713,8 +713,12 @@ function PayoutInterface({ walletName }) {
         pin: '',
         otp: ''
     });
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+    // Add your submit logic here
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "min-h-screen text-white p-6",
+        className: "min-h-screen text-white md:p-6",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "max-w-2xl mx-auto",
             children: [
@@ -729,7 +733,7 @@ function PayoutInterface({ walletName }) {
                                     children: "Make a new payout"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                    lineNumber: 43,
+                                    lineNumber: 55,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -737,29 +741,29 @@ function PayoutInterface({ walletName }) {
                                     children: "Place a new transaction, multi-signature from 3 random administrators is needed to proceed"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                    lineNumber: 44,
+                                    lineNumber: 56,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                            lineNumber: 42,
+                            lineNumber: 54,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                        lineNumber: 40,
+                        lineNumber: 52,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                    lineNumber: 39,
+                    lineNumber: 51,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: " rounded-lg mb-10 border-b border-secondary pb-5",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex justify-between items-center",
+                        className: "flex flex-col md:flex-row justify-between items-center",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
@@ -768,7 +772,7 @@ function PayoutInterface({ walletName }) {
                                         children: walletName
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                        lineNumber: 53,
+                                        lineNumber: 65,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -776,13 +780,13 @@ function PayoutInterface({ walletName }) {
                                         children: "9JH7XWqE221B5VjKshp3Gn8Y7TCqP6ZMoJFkxuAWhqKv"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                        lineNumber: 54,
+                                        lineNumber: 66,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                lineNumber: 52,
+                                lineNumber: 64,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -793,7 +797,7 @@ function PayoutInterface({ walletName }) {
                                         children: "$847,214.00"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                        lineNumber: 57,
+                                        lineNumber: 69,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -801,24 +805,24 @@ function PayoutInterface({ walletName }) {
                                         children: "Current Balance"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                        lineNumber: 58,
+                                        lineNumber: 70,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                lineNumber: 56,
+                                lineNumber: 68,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                        lineNumber: 51,
+                        lineNumber: 63,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                    lineNumber: 50,
+                    lineNumber: 62,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -829,7 +833,7 @@ function PayoutInterface({ walletName }) {
                             children: "Transaction details"
                         }, void 0, false, {
                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                            lineNumber: 65,
+                            lineNumber: 77,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -842,7 +846,7 @@ function PayoutInterface({ walletName }) {
                                             children: "Amount"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 69,
+                                            lineNumber: 81,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -850,7 +854,7 @@ function PayoutInterface({ walletName }) {
                                             children: "Enter the total amount to be sent in USDT on the Solana network. Ensure the value is within the allowed limits"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 70,
+                                            lineNumber: 82,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -859,40 +863,6 @@ function PayoutInterface({ walletName }) {
                                             value: amount,
                                             onChange: (e)=>setAmount(e.target.value),
                                             className: "w-full bg-[#3d3c44] border border-gray-700 rounded-lg px-4 py-3 text-white  focus:border-cyan-400 focus:outline-none"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 71,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                    lineNumber: 68,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                            className: "block text-sm font-medium mb-2",
-                                            children: "Description / Notes"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 81,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-gray-400 text-sm mb-3",
-                                            children: "Provide a brief note or reason for the transaction. This helps track payments and justifications"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 82,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
-                                            placeholder: "Enter details describing the reason for this transaction",
-                                            value: description,
-                                            onChange: (e)=>setDescription(e.target.value),
-                                            className: "w-full bg-[#3d3c44] border border-gray-700 rounded-lg px-4 py-3 text-white  focus:border-cyan-400 focus:outline-none h-24 resize-none"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
                                             lineNumber: 83,
@@ -908,10 +878,44 @@ function PayoutInterface({ walletName }) {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                             className: "block text-sm font-medium mb-2",
+                                            children: "Description / Notes"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/reuseable/new-payout.tsx",
+                                            lineNumber: 93,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-gray-400 text-sm mb-3",
+                                            children: "Provide a brief note or reason for the transaction. This helps track payments and justifications"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/reuseable/new-payout.tsx",
+                                            lineNumber: 94,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
+                                            placeholder: "Enter details describing the reason for this transaction",
+                                            value: description,
+                                            onChange: (e)=>setDescription(e.target.value),
+                                            className: "w-full bg-[#3d3c44] border border-gray-700 rounded-lg px-4 py-3 text-white  focus:border-cyan-400 focus:outline-none h-24 resize-none"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/reuseable/new-payout.tsx",
+                                            lineNumber: 95,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/components/reuseable/new-payout.tsx",
+                                    lineNumber: 92,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                            className: "block text-sm font-medium mb-2",
                                             children: "Receiver Wallet"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 92,
+                                            lineNumber: 104,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -919,7 +923,7 @@ function PayoutInterface({ walletName }) {
                                             children: "Enter the recipient's Solana wallet address where the USDT will be sent"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 93,
+                                            lineNumber: 105,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -930,13 +934,13 @@ function PayoutInterface({ walletName }) {
                                             className: "w-full bg-[#3d3c44] border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-cyan-400 focus:outline-none"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 94,
+                                            lineNumber: 106,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                    lineNumber: 91,
+                                    lineNumber: 103,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -946,7 +950,7 @@ function PayoutInterface({ walletName }) {
                                             children: "Confirm Receiver Wallet"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 104,
+                                            lineNumber: 116,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -954,7 +958,7 @@ function PayoutInterface({ walletName }) {
                                             children: "Double-check the receiver wallet for accuracy"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 105,
+                                            lineNumber: 117,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -965,25 +969,25 @@ function PayoutInterface({ walletName }) {
                                             className: "w-full bg-[#3d3c44] border border-gray-700 rounded-lg px-4 py-3 text-white  focus:border-cyan-400 focus:outline-none"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 106,
+                                            lineNumber: 118,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                    lineNumber: 103,
+                                    lineNumber: 115,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                            lineNumber: 67,
+                            lineNumber: 79,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                    lineNumber: 64,
+                    lineNumber: 76,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -994,7 +998,7 @@ function PayoutInterface({ walletName }) {
                             children: "Authorizations"
                         }, void 0, false, {
                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                            lineNumber: 119,
+                            lineNumber: 131,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1002,17 +1006,17 @@ function PayoutInterface({ walletName }) {
                             children: "Approval required from authorized administrators before the transaction is processed"
                         }, void 0, false, {
                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                            lineNumber: 120,
+                            lineNumber: 132,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: " relative rounded-lg p-6 mb-4",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: " absolute left-0 h-full top-0 w-[15px] rounded-3xl bg-secondary"
+                                    className: " absolute left-0 h-full top-0 w-[8px] md:w-[15px] rounded-3xl bg-secondary"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                    lineNumber: 124,
+                                    lineNumber: 136,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -1020,7 +1024,7 @@ function PayoutInterface({ walletName }) {
                                     children: "Authorization #1"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                    lineNumber: 125,
+                                    lineNumber: 137,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1028,7 +1032,7 @@ function PayoutInterface({ walletName }) {
                                     children: "Complete the fields below with an administrator's details to proceed"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                    lineNumber: 126,
+                                    lineNumber: 138,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1042,7 +1046,7 @@ function PayoutInterface({ walletName }) {
                                                     children: "Administrator Username"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 130,
+                                                    lineNumber: 142,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1056,13 +1060,13 @@ function PayoutInterface({ walletName }) {
                                                     className: "w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white focus:border-cyan-400 focus:outline-none"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 131,
+                                                    lineNumber: 143,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 129,
+                                            lineNumber: 141,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1073,7 +1077,7 @@ function PayoutInterface({ walletName }) {
                                                     children: "Password"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 140,
+                                                    lineNumber: 152,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1087,13 +1091,13 @@ function PayoutInterface({ walletName }) {
                                                     className: "w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white  focus:border-cyan-400 focus:outline-none"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 141,
+                                                    lineNumber: 153,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 139,
+                                            lineNumber: 151,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1104,7 +1108,7 @@ function PayoutInterface({ walletName }) {
                                                     children: "PIN"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 150,
+                                                    lineNumber: 162,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1118,13 +1122,13 @@ function PayoutInterface({ walletName }) {
                                                     className: "w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white  focus:border-cyan-400 focus:outline-none"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 151,
+                                                    lineNumber: 163,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 149,
+                                            lineNumber: 161,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1139,13 +1143,13 @@ function PayoutInterface({ walletName }) {
                                                             children: "Request via email"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                            lineNumber: 161,
+                                                            lineNumber: 173,
                                                             columnNumber: 30
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 160,
+                                                    lineNumber: 172,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1159,43 +1163,43 @@ function PayoutInterface({ walletName }) {
                                                     className: "w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white  focus:border-cyan-400 focus:outline-none"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 163,
+                                                    lineNumber: 175,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 159,
+                                            lineNumber: 171,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                    lineNumber: 128,
+                                    lineNumber: 140,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                            lineNumber: 123,
+                            lineNumber: 135,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: " relative rounded-lg p-6 mb-4",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: " absolute left-0 h-full top-0 w-[15px] rounded-3xl bg-secondary"
+                                    className: " absolute left-0 h-full top-0 w-[8px] md:w-[15px] rounded-3xl bg-secondary"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                    lineNumber: 176,
-                                    columnNumber: 11
+                                    lineNumber: 188,
+                                    columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                     className: "text-lg font-semibold mb-2",
                                     children: "Authorization #2"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                    lineNumber: 177,
+                                    lineNumber: 189,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1203,7 +1207,7 @@ function PayoutInterface({ walletName }) {
                                     children: "Complete the fields below with an administrator's details to proceed"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                    lineNumber: 178,
+                                    lineNumber: 190,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1217,7 +1221,7 @@ function PayoutInterface({ walletName }) {
                                                     children: "Administrator Username"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 182,
+                                                    lineNumber: 194,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1231,13 +1235,13 @@ function PayoutInterface({ walletName }) {
                                                     className: "w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white  focus:border-cyan-400 focus:outline-none"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 183,
+                                                    lineNumber: 195,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 181,
+                                            lineNumber: 193,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1248,7 +1252,7 @@ function PayoutInterface({ walletName }) {
                                                     children: "Password"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 192,
+                                                    lineNumber: 204,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1262,13 +1266,13 @@ function PayoutInterface({ walletName }) {
                                                     className: "w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white  focus:border-cyan-400 focus:outline-none"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 193,
+                                                    lineNumber: 205,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 191,
+                                            lineNumber: 203,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1279,7 +1283,7 @@ function PayoutInterface({ walletName }) {
                                                     children: "PIN"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 202,
+                                                    lineNumber: 214,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1293,13 +1297,13 @@ function PayoutInterface({ walletName }) {
                                                     className: "w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white  focus:border-cyan-400 focus:outline-none"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 203,
+                                                    lineNumber: 215,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 201,
+                                            lineNumber: 213,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1314,13 +1318,13 @@ function PayoutInterface({ walletName }) {
                                                             children: "Request via email"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                            lineNumber: 213,
+                                                            lineNumber: 225,
                                                             columnNumber: 30
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 212,
+                                                    lineNumber: 224,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1334,43 +1338,43 @@ function PayoutInterface({ walletName }) {
                                                     className: "w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white  focus:border-cyan-400 focus:outline-none"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 215,
+                                                    lineNumber: 227,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 211,
+                                            lineNumber: 223,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                    lineNumber: 180,
+                                    lineNumber: 192,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                            lineNumber: 175,
+                            lineNumber: 187,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: " relative rounded-lg p-6 mb-8",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: " absolute left-0 h-full top-0 w-[15px] rounded-3xl bg-secondary"
+                                    className: " absolute left-0 h-full top-0 w-[8px] md:w-[15px] rounded-3xl bg-secondary"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                    lineNumber: 228,
-                                    columnNumber: 11
+                                    lineNumber: 240,
+                                    columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                     className: "text-lg font-semibold mb-2",
                                     children: "Authorization #3"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                    lineNumber: 229,
+                                    lineNumber: 241,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1378,7 +1382,7 @@ function PayoutInterface({ walletName }) {
                                     children: "Complete the fields below with an administrator's details to proceed"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                    lineNumber: 230,
+                                    lineNumber: 242,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1392,7 +1396,7 @@ function PayoutInterface({ walletName }) {
                                                     children: "Administrator Username"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 234,
+                                                    lineNumber: 246,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1406,13 +1410,13 @@ function PayoutInterface({ walletName }) {
                                                     className: "w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white  focus:border-cyan-400 focus:outline-none"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 235,
+                                                    lineNumber: 247,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 233,
+                                            lineNumber: 245,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1423,7 +1427,7 @@ function PayoutInterface({ walletName }) {
                                                     children: "Password"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 244,
+                                                    lineNumber: 256,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1437,13 +1441,13 @@ function PayoutInterface({ walletName }) {
                                                     className: "w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white  focus:border-cyan-400 focus:outline-none"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 245,
+                                                    lineNumber: 257,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 243,
+                                            lineNumber: 255,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1454,7 +1458,7 @@ function PayoutInterface({ walletName }) {
                                                     children: "PIN"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 254,
+                                                    lineNumber: 266,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1468,13 +1472,13 @@ function PayoutInterface({ walletName }) {
                                                     className: "w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white  focus:border-cyan-400 focus:outline-none"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 255,
+                                                    lineNumber: 267,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 253,
+                                            lineNumber: 265,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1489,13 +1493,13 @@ function PayoutInterface({ walletName }) {
                                                             children: "Request via email"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                            lineNumber: 265,
+                                                            lineNumber: 277,
                                                             columnNumber: 30
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 264,
+                                                    lineNumber: 276,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1509,34 +1513,35 @@ function PayoutInterface({ walletName }) {
                                                     className: "w-full bg-[#3d3c44] border border-gray-600 rounded-lg px-3 py-2 text-white  focus:border-cyan-400 focus:outline-none"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                                    lineNumber: 267,
+                                                    lineNumber: 279,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                            lineNumber: 263,
+                                            lineNumber: 275,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                                    lineNumber: 232,
+                                    lineNumber: 244,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                            lineNumber: 227,
+                            lineNumber: 239,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                    lineNumber: 118,
+                    lineNumber: 130,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    onClick: handleSubmit,
                     className: "w-fit bg-primary hover:bg-cyan-500 text-black font-semibold py-2 px-10 rounded-lg flex items-center justify-center gap-2 transition-colors",
                     children: [
                         "Send Transfer",
@@ -1544,24 +1549,24 @@ function PayoutInterface({ walletName }) {
                             size: 20
                         }, void 0, false, {
                             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                            lineNumber: 282,
+                            lineNumber: 297,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/reuseable/new-payout.tsx",
-                    lineNumber: 280,
+                    lineNumber: 292,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/reuseable/new-payout.tsx",
-            lineNumber: 37,
+            lineNumber: 49,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/reuseable/new-payout.tsx",
-        lineNumber: 36,
+        lineNumber: 48,
         columnNumber: 5
     }, this);
 }
@@ -1620,22 +1625,37 @@ function EcosystemWallets() {
         className: "flex flex-col gap-4",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$custom$2f$header$2d$wrapper$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["HeaderWrapper"], {
-                title: "Dapp Global Settings - Wallets Management",
-                description: "Manage settings related to important wallets in the ecosystem, you will require 3 administrator level access signatures to perform any update or action",
+                title: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                    className: "text-lg md:text-xl lg:text-2xl",
+                    children: "Dapp Global Settings - Wallets Management"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                    lineNumber: 46,
+                    columnNumber: 11
+                }, void 0),
+                description: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "text-sm md:text-base",
+                    children: "Manage settings related to important wallets in the ecosystem, you will require 3 administrator level access signatures to perform any update or action"
+                }, void 0, false, {
+                    fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                    lineNumber: 51,
+                    columnNumber: 11
+                }, void 0),
                 actions: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                    className: "text-xs md:text-sm",
                     children: [
                         "Save Settings",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$ArrowRight$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
-                            className: "w-5 h-5"
+                            className: "w-4 h-4 md:w-5 md:h-5 ml-2"
                         }, void 0, false, {
                             fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                            lineNumber: 52,
+                            lineNumber: 58,
                             columnNumber: 13
                         }, void 0)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                    lineNumber: 50,
+                    lineNumber: 56,
                     columnNumber: 11
                 }, void 0)
             }, void 0, false, {
@@ -1644,48 +1664,55 @@ function EcosystemWallets() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "min-h-screen bg-background rounded-xl text-white p-4",
+                className: "min-h-screen bg-background rounded-xl text-white p-2 md:p-4 lg:p-6",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "max-w-6xl mx-auto",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                className: "text-xl font-bold mb-1",
+                                className: "text-lg md:text-xl font-bold mb-1",
                                 children: "Global Ecosystem Wallets"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                lineNumber: 58,
+                                lineNumber: 65,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-sm text-gray-400 mb-20 border-b border-[#323138] pb-5",
+                                className: "text-xs md:text-sm text-gray-400 mb-10 md:mb-20 border-b border-[#323138] pb-5",
                                 children: "Manage the main logic setup for the operational wallets (based on the 1% collection)"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                lineNumber: 59,
+                                lineNumber: 66,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "border-t-4 border-primary my-8"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                lineNumber: 63,
+                                lineNumber: 70,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                                className: "mb-5 border-b-4 border-primary pb-24",
+                                className: "mb-5 relative px-4 md:px-10",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "space-y-6 border-l-[20px] border-secondary pl-4",
+                                    className: "mb-12  relative px-4 md:px-10",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "mb-5 ml-4 border-b border-[#323138] pb-5",
+                                            className: "w-[8px] md:w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
+                                            lineNumber: 78,
+                                            columnNumber: 13
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "mb-5 md:ml-4 border-b border-[#323138] pb-5",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                                     className: "text-lg font-bold",
                                                     children: "Buyback, deflationary system & marketing (10%)"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                    lineNumber: 70,
+                                                    lineNumber: 81,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1693,13 +1720,13 @@ function EcosystemWallets() {
                                                     children: "Based on the 1% global collection"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                    lineNumber: 71,
+                                                    lineNumber: 82,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                            lineNumber: 69,
+                                            lineNumber: 80,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
@@ -1710,7 +1737,7 @@ function EcosystemWallets() {
                                             onMakePayout: ()=>openPayout("Marketing Main Wallet")
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                            lineNumber: 73,
+                                            lineNumber: 84,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
@@ -1721,7 +1748,7 @@ function EcosystemWallets() {
                                             onMakePayout: ()=>openPayout("Marketing Secondary Wallet")
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                            lineNumber: 81,
+                                            lineNumber: 92,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
@@ -1732,28 +1759,28 @@ function EcosystemWallets() {
                                             showPayoutButton: false
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                            lineNumber: 89,
+                                            lineNumber: 100,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                    lineNumber: 68,
+                                    lineNumber: 76,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                lineNumber: 65,
+                                lineNumber: 73,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                                className: "mb-12  relative px-10",
+                                className: "mb-12  relative px-4 md:px-10",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"
+                                        className: "w-[8px] md:w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                        lineNumber: 100,
+                                        lineNumber: 111,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1764,7 +1791,7 @@ function EcosystemWallets() {
                                                 children: "Charity Donation & Rewards Ecosystem (75%)"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 103,
+                                                lineNumber: 114,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1772,23 +1799,23 @@ function EcosystemWallets() {
                                                 children: "Based on the 1% global collection"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 104,
+                                                lineNumber: 115,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                        lineNumber: 102,
+                                        lineNumber: 113,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "mb-12  relative px-10",
+                                        className: "mb-12  relative px-4 md:px-10",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"
+                                                className: "w-[8px] md:w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 108,
+                                                lineNumber: 119,
                                                 columnNumber: 13
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1799,7 +1826,7 @@ function EcosystemWallets() {
                                                         children: "Rewards System (20%)"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 110,
+                                                        lineNumber: 121,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1807,34 +1834,34 @@ function EcosystemWallets() {
                                                         children: "Based on the 75% of the Charity Donation & Rewards Ecosystem"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 111,
+                                                        lineNumber: 122,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 109,
+                                                lineNumber: 120,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "mb-12  relative px-10",
+                                                className: "mb-12 w-full relative px-4 md:px-10",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"
+                                                        className: "w-[8px] md:w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 115,
+                                                        lineNumber: 126,
                                                         columnNumber: 15
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "mb-4",
+                                                        className: "mb-4 w-full",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                                className: "text-sm font-semibold",
+                                                                className: "text-sm font-semibold w-full",
                                                                 children: "Monthly Rewards Classification (50%)"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                                lineNumber: 117,
+                                                                lineNumber: 128,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1842,13 +1869,13 @@ function EcosystemWallets() {
                                                                 children: "Of the 20% of the Rewards System"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                                lineNumber: 118,
+                                                                lineNumber: 129,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 116,
+                                                        lineNumber: 127,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1862,7 +1889,7 @@ function EcosystemWallets() {
                                                                 showPayoutButton: false
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                                lineNumber: 122,
+                                                                lineNumber: 133,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
@@ -1873,24 +1900,24 @@ function EcosystemWallets() {
                                                                 showPayoutButton: false
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                                lineNumber: 130,
+                                                                lineNumber: 141,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 121,
+                                                        lineNumber: 132,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "mb-4 px-4",
+                                                        className: "mb-4 md:px-4",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                                                 className: "text-sm font-semibold",
                                                                 children: "Annual Rewards Classification (50%)"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                                lineNumber: 140,
+                                                                lineNumber: 151,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1898,13 +1925,13 @@ function EcosystemWallets() {
                                                                 children: "Of the 20% of the Rewards System"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                                lineNumber: 141,
+                                                                lineNumber: 152,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 139,
+                                                        lineNumber: 150,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1918,7 +1945,7 @@ function EcosystemWallets() {
                                                                 showPayoutButton: false
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                                lineNumber: 145,
+                                                                lineNumber: 156,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
@@ -1929,35 +1956,35 @@ function EcosystemWallets() {
                                                                 showPayoutButton: false
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                                lineNumber: 153,
+                                                                lineNumber: 164,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 144,
+                                                        lineNumber: 155,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 114,
+                                                lineNumber: 125,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                        lineNumber: 107,
+                                        lineNumber: 118,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "mb-12  relative px-10",
+                                        className: "mb-12  relative px-4 md:px-10",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"
+                                                className: "w-[8px] md:w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 166,
+                                                lineNumber: 177,
                                                 columnNumber: 13
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1968,7 +1995,7 @@ function EcosystemWallets() {
                                                         children: "Donation System (80%)"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 168,
+                                                        lineNumber: 179,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1976,23 +2003,23 @@ function EcosystemWallets() {
                                                         children: "Based on the 75% of the Charity Donation & Rewards Ecosystem"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 169,
+                                                        lineNumber: 180,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 167,
+                                                lineNumber: 178,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "mb-12  relative px-10",
+                                                className: "mb-12  relative px-4 md:px-10",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"
+                                                        className: "w-[8px] md:w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 173,
+                                                        lineNumber: 184,
                                                         columnNumber: 15
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2003,7 +2030,7 @@ function EcosystemWallets() {
                                                                 children: "Monthly Donation Fund (80%)"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                                lineNumber: 175,
+                                                                lineNumber: 186,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2011,13 +2038,13 @@ function EcosystemWallets() {
                                                                 children: "Of the 80% of the Donation System"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                                lineNumber: 176,
+                                                                lineNumber: 187,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 174,
+                                                        lineNumber: 185,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2031,7 +2058,7 @@ function EcosystemWallets() {
                                                                 showPayoutButton: false
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                                lineNumber: 180,
+                                                                lineNumber: 191,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
@@ -2042,13 +2069,13 @@ function EcosystemWallets() {
                                                                 showPayoutButton: false
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                                lineNumber: 188,
+                                                                lineNumber: 199,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 179,
+                                                        lineNumber: 190,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2059,7 +2086,7 @@ function EcosystemWallets() {
                                                                 children: "Annual Donation Fund (10%)"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                                lineNumber: 198,
+                                                                lineNumber: 209,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2067,13 +2094,13 @@ function EcosystemWallets() {
                                                                 children: "Of the 80% of the Donation System"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                                lineNumber: 199,
+                                                                lineNumber: 210,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 197,
+                                                        lineNumber: 208,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2087,7 +2114,7 @@ function EcosystemWallets() {
                                                                 showPayoutButton: false
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                                lineNumber: 203,
+                                                                lineNumber: 214,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WalletItem, {
@@ -2098,29 +2125,29 @@ function EcosystemWallets() {
                                                                 showPayoutButton: false
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                                lineNumber: 211,
+                                                                lineNumber: 222,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 202,
+                                                        lineNumber: 213,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 172,
+                                                lineNumber: 183,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "mb-12  relative px-10",
+                                                className: "mb-12  relative px-4 md:px-10",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"
+                                                        className: "w-[8px] md:w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 223,
+                                                        lineNumber: 234,
                                                         columnNumber: 15
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2131,7 +2158,7 @@ function EcosystemWallets() {
                                                                 children: "Crisis Classification (10%)"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                                lineNumber: 225,
+                                                                lineNumber: 236,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2139,13 +2166,13 @@ function EcosystemWallets() {
                                                                 children: "Of the 80% of the Donation System"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                                lineNumber: 226,
+                                                                lineNumber: 237,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 224,
+                                                        lineNumber: 235,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2158,47 +2185,47 @@ function EcosystemWallets() {
                                                             onMakePayout: ()=>openPayout("Ch'ai Wallet")
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                            lineNumber: 230,
+                                                            lineNumber: 241,
                                                             columnNumber: 19
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                        lineNumber: 229,
+                                                        lineNumber: 240,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 222,
+                                                lineNumber: 233,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                        lineNumber: 165,
+                                        lineNumber: 176,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                lineNumber: 99,
+                                lineNumber: 110,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "border-t-4 border-primary my-8"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                lineNumber: 246,
+                                lineNumber: 257,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                                className: "mb-12  relative px-10",
+                                className: "mb-12  relative px-4 md:px-10",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"
+                                        className: "w-[8px] md:w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                        lineNumber: 249,
+                                        lineNumber: 260,
                                         columnNumber: 11
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2209,7 +2236,7 @@ function EcosystemWallets() {
                                                 children: "Staking Rewards (15%)"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 251,
+                                                lineNumber: 262,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2217,13 +2244,13 @@ function EcosystemWallets() {
                                                 children: "Based on the 1% global collection"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                                lineNumber: 252,
+                                                lineNumber: 263,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                        lineNumber: 250,
+                                        lineNumber: 261,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2236,24 +2263,24 @@ function EcosystemWallets() {
                                             showPayoutButton: false
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                            lineNumber: 256,
+                                            lineNumber: 267,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                        lineNumber: 255,
+                                        lineNumber: 266,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                lineNumber: 248,
+                                lineNumber: 259,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                        lineNumber: 57,
+                        lineNumber: 64,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$reuseable$2f$add$2d$causes$2d$sheet$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CustomSheet"], {
@@ -2265,12 +2292,12 @@ function EcosystemWallets() {
                             walletName: selectedWallet
                         }, void 0, false, {
                             fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                            lineNumber: 280,
+                            lineNumber: 291,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                        lineNumber: 274,
+                        lineNumber: 285,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$reuseable$2f$add$2d$causes$2d$sheet$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CustomSheet"], {
@@ -2282,18 +2309,18 @@ function EcosystemWallets() {
                             walletName: selectedWallet
                         }, void 0, false, {
                             fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                            lineNumber: 288,
+                            lineNumber: 299,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                        lineNumber: 282,
+                        lineNumber: 293,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                lineNumber: 56,
+                lineNumber: 62,
                 columnNumber: 7
             }, this)
         ]
@@ -2303,91 +2330,93 @@ function EcosystemWallets() {
         columnNumber: 5
     }, this);
 }
+// Update the WalletItem component's responsive styling
 function WalletItem({ title, address, description, onViewHistory, onMakePayout, showPayoutButton = true }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: " rounded-md p-4",
+        className: "rounded-md w-full md:p-4",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                className: "font-medium mb-1",
+                className: "font-medium mb-1 text-sm md:text-base",
                 children: title
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                lineNumber: 315,
+                lineNumber: 327,
                 columnNumber: 7
             }, this),
             description && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "text-xs text-gray-400 mb-2",
+                className: "text-xs text-gray-400 mb-2 md:text-sm",
                 children: description
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                lineNumber: 316,
-                columnNumber: 23
+                lineNumber: 329,
+                columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: " rounded py-2 mb-3",
+                className: "rounded py-2 mb-3",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
                     value: address,
                     readOnly: true,
-                    className: "bg-[#3d3c44] border-none text-gray-400  text-xs"
+                    className: "bg-[#3d3c44] border-none text-gray-400 text-xs md:text-sm"
                 }, void 0, false, {
                     fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                    lineNumber: 318,
+                    lineNumber: 332,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                lineNumber: 317,
+                lineNumber: 331,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex gap-2",
+                className: "flex flex-col sm:flex-row gap-2",
                 children: [
                     showPayoutButton && onMakePayout && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                         onClick: onMakePayout,
+                        className: "text-xs md:text-sm w-full sm:w-auto",
                         children: [
                             "Make a new payout",
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CircleArrowRight$3e$__["CircleArrowRight"], {
-                                className: "-rotate-45 h-4 w-4 mr-1"
+                                className: "-rotate-45 h-4 w-4 ml-2"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                lineNumber: 326,
+                                lineNumber: 345,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                        lineNumber: 322,
+                        lineNumber: 340,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                         onClick: onViewHistory,
                         variant: "outline",
-                        className: "border-primary text-black bg-primary hover:bg-[#00ffcc20] text-xs rounded-md",
+                        className: "border-primary text-black bg-primary hover:bg-[#00ffcc20] text-xs md:text-sm w-full sm:w-auto",
                         children: [
                             "View History",
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__File$3e$__["File"], {
-                                className: "h-4 w-4 mr-1"
+                                className: "h-4 w-4 ml-2"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                                lineNumber: 335,
+                                lineNumber: 354,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                        lineNumber: 329,
+                        lineNumber: 348,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-                lineNumber: 320,
+                lineNumber: 338,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(main)/settings/wallet-management/page.tsx",
-        lineNumber: 314,
+        lineNumber: 326,
         columnNumber: 5
     }, this);
 }

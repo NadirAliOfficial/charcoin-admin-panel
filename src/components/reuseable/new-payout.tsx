@@ -45,7 +45,7 @@ export default function PayoutInterface({ walletName }: PayoutInterfaceProps) {
   };
 
   return (
-    <div className="min-h-screen text-white p-6">
+    <div className="min-h-screen text-white md:p-6">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-10">
@@ -60,7 +60,7 @@ export default function PayoutInterface({ walletName }: PayoutInterfaceProps) {
 
         {/* Wallet Info */}
         <div className=" rounded-lg mb-10 border-b border-secondary pb-5">
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-between items-center">
             <div>
               <h2 className="text-lg font-semibold mb-2">{walletName}</h2>
               <p className="text-cyan-400 font-mono text-sm">9JH7XWqE221B5VjKshp3Gn8Y7TCqP6ZMoJFkxuAWhqKv</p>
@@ -133,7 +133,7 @@ export default function PayoutInterface({ walletName }: PayoutInterfaceProps) {
 
           {/* Authorization 1 */}
           <div className=" relative rounded-lg p-6 mb-4">
-            <div className=" absolute left-0 h-full top-0 w-[15px] rounded-3xl bg-secondary"></div>
+            <div className=" absolute left-0 h-full top-0 w-[8px] md:w-[15px] rounded-3xl bg-secondary"></div>
             <h4 className="text-lg font-semibold mb-2">Authorization #1</h4>
             <p className="text-gray-400 text-sm mb-6">Complete the fields below with an administrator&apos;s details to proceed</p>
             
@@ -185,7 +185,7 @@ export default function PayoutInterface({ walletName }: PayoutInterfaceProps) {
 
           {/* Authorization 2 */}
           <div className=" relative rounded-lg p-6 mb-4">
-            <div className=" absolute left-0 h-full top-0 w-[15px] rounded-3xl bg-secondary"></div>
+            <div className=" absolute left-0 h-full top-0 w-[8px] md:w-[15px] rounded-3xl bg-secondary"></div>
             <h4 className="text-lg font-semibold mb-2">Authorization #2</h4>
             <p className="text-gray-400 text-sm mb-6">Complete the fields below with an administrator&apos;s details to proceed</p>
             
@@ -237,7 +237,7 @@ export default function PayoutInterface({ walletName }: PayoutInterfaceProps) {
 
           {/* Authorization 3 */}
           <div className=" relative rounded-lg p-6 mb-8">
-            <div className=" absolute left-0 h-full top-0 w-[15px] rounded-3xl bg-secondary"></div>
+            <div className=" absolute left-0 h-full top-0 w-[8px] md:w-[15px] rounded-3xl bg-secondary"></div>
             <h4 className="text-lg font-semibold mb-2">Authorization #3</h4>
             <p className="text-gray-400 text-sm mb-6">Complete the fields below with an administrator&apos;s details to proceed</p>
             

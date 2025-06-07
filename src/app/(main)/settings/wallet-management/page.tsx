@@ -42,35 +42,42 @@ export default function EcosystemWallets() {
   return (
     <div className="flex flex-col gap-4">
       <HeaderWrapper
-        title={"Dapp Global Settings - Wallets Management"}
+        title={
+          <h1 className="text-lg md:text-xl lg:text-2xl">
+            Dapp Global Settings - Wallets Management
+          </h1>
+        }
         description={
-          "Manage settings related to important wallets in the ecosystem, you will require 3 administrator level access signatures to perform any update or action"
+          <p className="text-sm md:text-base">
+            Manage settings related to important wallets in the ecosystem, you will require 3 administrator level access signatures to perform any update or action
+          </p>
         }
         actions={
-          <Button>
+          <Button className="text-xs md:text-sm">
             Save Settings
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2" />
           </Button>
         }
       />
-      <div className="min-h-screen bg-background rounded-xl text-white p-4">
+      <div className="min-h-screen bg-background rounded-xl text-white p-2 md:p-4 lg:p-6">
 
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-xl font-bold mb-1">Global Ecosystem Wallets</h1>
-          <p className="text-sm text-gray-400 mb-20 border-b border-[#323138] pb-5">
+          <h1 className="text-lg md:text-xl font-bold mb-1">Global Ecosystem Wallets</h1>
+          <p className="text-xs md:text-sm text-gray-400 mb-10 md:mb-20 border-b border-[#323138] pb-5">
             Manage the main logic setup for the operational wallets (based on the 1% collection)
           </p>
 
           <div className="border-t-4 border-primary my-8"></div>
 
-          <section className="mb-5 border-b-4 border-primary pb-24">
+          {/* Update section paddings */}
+          <section className="mb-5 relative px-4 md:px-10">
 
 
-            <div className="mb-12  relative px-10">
+            <div className="mb-12  relative px-4 md:px-10">
 
-            <div className="w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
+            <div className="w-[8px] md:w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
 
-              <div className="mb-5 ml-4 border-b border-[#323138] pb-5">
+              <div className="mb-5 md:ml-4 border-b border-[#323138] pb-5">
                 <h2 className="text-lg font-bold">Buyback, deflationary system & marketing (10%)</h2>
                 <p className="text-sm text-gray-400">Based on the 1% global collection</p>
               </div>
@@ -100,25 +107,25 @@ export default function EcosystemWallets() {
             </div>
           </section>
 
-          <section className="mb-12  relative px-10">
-            <div className="w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
+          <section className="mb-12  relative px-4 md:px-10">
+            <div className="w-[8px] md:w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
 
             <div className="mb-4">
               <h2 className="text-lg font-bold">Charity Donation & Rewards Ecosystem (75%)</h2>
               <p className="text-sm text-gray-400">Based on the 1% global collection</p>
             </div>
 
-            <div className="mb-12  relative px-10">
-            <div className="w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
+            <div className="mb-12  relative px-4 md:px-10">
+            <div className="w-[8px] md:w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
               <div className="mb-6">
                 <h3 className="text-md font-semibold mb-2">Rewards System (20%)</h3>
                 <p className="text-xs text-gray-400">Based on the 75% of the Charity Donation & Rewards Ecosystem</p>
               </div>
 
-              <div className="mb-12  relative px-10">
-              <div className="w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold">Monthly Rewards Classification (50%)</h4>
+              <div className="mb-12 w-full relative px-4 md:px-10">
+              <div className="w-[8px] md:w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
+                <div className="mb-4 w-full">
+                  <h4 className="text-sm font-semibold w-full">Monthly Rewards Classification (50%)</h4>
                   <p className="text-xs text-gray-400">Of the 20% of the Rewards System</p>
                 </div>
 
@@ -140,7 +147,7 @@ export default function EcosystemWallets() {
                   />
                 </div>
 
-                <div className="mb-4 px-4">
+                <div className="mb-4 md:px-4">
                   <h4 className="text-sm font-semibold">Annual Rewards Classification (50%)</h4>
                   <p className="text-xs text-gray-400">Of the 20% of the Rewards System</p>
                 </div>
@@ -166,15 +173,15 @@ export default function EcosystemWallets() {
             </div>
 
 
-            <div className="mb-12  relative px-10">
-            <div className="w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
+            <div className="mb-12  relative px-4 md:px-10">
+            <div className="w-[8px] md:w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
               <div className="mb-6 border-b border-[#323138] pb-5">
                 <h3 className="text-md font-semibold mb-2">Donation System (80%)</h3>
                 <p className="text-xs text-gray-400">Based on the 75% of the Charity Donation & Rewards Ecosystem</p>
               </div>
 
-              <div className="mb-12  relative px-10">
-              <div className="w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
+              <div className="mb-12  relative px-4 md:px-10">
+              <div className="w-[8px] md:w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
                 <div className="mb-6 border-b border-[#323138] pb-5">
                   <h4 className="text-sm font-semibold">Monthly Donation Fund (80%)</h4>
                   <p className="text-xs text-gray-400">Of the 80% of the Donation System</p>
@@ -223,8 +230,8 @@ export default function EcosystemWallets() {
               </div>
 
 
-              <div className="mb-12  relative px-10">
-              <div className="w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
+              <div className="mb-12  relative px-4 md:px-10">
+              <div className="w-[8px] md:w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold">Crisis Classification (10%)</h4>
                   <p className="text-xs text-gray-400">Of the 80% of the Donation System</p>
@@ -249,8 +256,8 @@ export default function EcosystemWallets() {
 
           <div className="border-t-4 border-primary my-8"></div>
 
-          <section className="mb-12  relative px-10">
-          <div className="w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
+          <section className="mb-12  relative px-4 md:px-10">
+          <div className="w-[8px] md:w-[20px] h-full bg-secondary rounded-3xl absolute top-0 left-0"></div>
             <div className="mb-4 border-b border-[#323138] pb-5">
               <h2 className="text-lg font-bold">Staking Rewards (15%)</h2>
               <p className="text-sm text-gray-400">Based on the 1% global collection</p>
@@ -306,6 +313,7 @@ interface WalletItemProps {
   showPayoutButton?: boolean
 }
 
+// Update the WalletItem component's responsive styling
 function WalletItem({
   title,
   address,
@@ -315,30 +323,37 @@ function WalletItem({
   showPayoutButton = true,
 }: WalletItemProps) {
   return (
-    <div className=" rounded-md p-4">
-      <h3 className="font-medium mb-1">{title}</h3>
-      {description && <p className="text-xs text-gray-400 mb-2">{description}</p>}
-      <div className=" rounded py-2 mb-3">
-        <Input value={address} readOnly className="bg-[#3d3c44] border-none text-gray-400  text-xs" />
+    <div className="rounded-md w-full md:p-4">
+      <h3 className="font-medium mb-1 text-sm md:text-base">{title}</h3>
+      {description && (
+        <p className="text-xs text-gray-400 mb-2 md:text-sm">{description}</p>
+      )}
+      <div className="rounded py-2 mb-3">
+        <Input 
+          value={address} 
+          readOnly 
+          className="bg-[#3d3c44] border-none text-gray-400 text-xs md:text-sm" 
+        />
       </div>
-      <div className="flex gap-2">
+      <div className="flex flex-col sm:flex-row gap-2">
         {showPayoutButton && onMakePayout && (
           <Button
             onClick={onMakePayout}
+            className="text-xs md:text-sm w-full sm:w-auto"
           >
             Make a new payout
-            <CircleArrowRight className="-rotate-45 h-4 w-4 mr-1" />
+            <CircleArrowRight className="-rotate-45 h-4 w-4 ml-2" />
           </Button>
         )}
         <Button
           onClick={onViewHistory}
           variant="outline"
-          className="border-primary text-black bg-primary hover:bg-[#00ffcc20] text-xs rounded-md"
+          className="border-primary text-black bg-primary hover:bg-[#00ffcc20] text-xs md:text-sm w-full sm:w-auto"
         >
           View History
-          <File className="h-4 w-4 mr-1" />
+          <File className="h-4 w-4 ml-2" />
         </Button>
       </div>
     </div>
-  )
+  );
 }

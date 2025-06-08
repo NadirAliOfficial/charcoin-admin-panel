@@ -766,6 +766,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$e
 ;
 const useDialogStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["create"])((set)=>({
         openDialog: null,
+        selectedNft: null,
         // Open functions
         openDetail: ()=>set({
                 openDialog: "causes_detail"
@@ -803,6 +804,9 @@ const useDialogStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_
             }),
         setNftsDetail: (isOpen)=>set({
                 openDialog: isOpen ? "nfts_detail" : null
+            }),
+        setSelectedNft: (nft)=>set({
+                selectedNft: nft
             }),
         // Adminstrator
         setAddAdministrator: (isOpen)=>set({

@@ -1,4 +1,6 @@
 import { create } from "zustand";
+import { NFTSRecord } from "@/types/rewards";
+import { NewsArticle } from "@/types/news";
 
 interface DialogState {
   openDialog:
@@ -20,6 +22,8 @@ interface DialogState {
   | "wallet_setting_add_new"
   | "news_detail"
   | null;
+  selectedNft: NFTSRecord | null;
+  selectedNews: NewsArticle | null;
 
   openDetail: () => void;
   openEdit: () => void;
@@ -34,6 +38,8 @@ interface DialogState {
   setCommunityAdministrationAdd: (isOpen: boolean) => void;
   setNftsAdd: (isOpen: boolean) => void;
   setNftsDetail: (isOpen: boolean) => void;
+  setSelectedNft: (nft: NFTSRecord | null) => void;
+  setSelectedNews: (news: NewsArticle | null) => void;
   // Adminstrator
   setAddAdministrator: (isOpen: boolean) => void;
   setEditAdministrator: (isOpen: boolean) => void;
@@ -50,6 +56,8 @@ interface DialogState {
 
 const useDialogStore = create<DialogState>((set) => ({
   openDialog: null,
+  selectedNft: null,
+  selectedNews: null,
 
   // Open functions
   openDetail: () => set({ openDialog: "causes_detail" }),
@@ -72,6 +80,8 @@ const useDialogStore = create<DialogState>((set) => ({
     set({ openDialog: isOpen ? "community_administration_add" : null }),
   setNftsAdd: (isOpen) => set({ openDialog: isOpen ? "nfts_add" : null }),
   setNftsDetail: (isOpen) => set({ openDialog: isOpen ? "nfts_detail" : null }),
+  setSelectedNft: (nft) => set({ selectedNft: nft }),
+  setSelectedNews: (news) => set({ selectedNews: news }),
   // Adminstrator
   setAddAdministrator: (isOpen) =>
     set({ openDialog: isOpen ? "add_administrator" : null }),

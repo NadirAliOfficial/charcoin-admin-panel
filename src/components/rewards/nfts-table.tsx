@@ -37,8 +37,7 @@ interface NftsTableProps {
 }
 
 export function NftsTable({ data, columns, fetching }: NftsTableProps) {
-  const { openDialog, setNftsDetail } = useDialogStore();
-  const [selectedNft, setSelectedNft] = React.useState<NFTSRecord | null>(null);
+  const { openDialog, setNftsDetail, setSelectedNft, selectedNft } = useDialogStore();
 
   const [rowSelection, setRowSelection] = React.useState({});
   const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({});
@@ -145,7 +144,7 @@ export function NftsTable({ data, columns, fetching }: NftsTableProps) {
         <CustomSheet
           isOpen={openDialog === "nfts_detail"}
           setIsOpen={setNftsDetail}
-          title="NFT Details"
+          title={selectedNft.name || "NFT Details"}
           className="pt-2 px-4"
         >
           <NftDetail nft={selectedNft} />

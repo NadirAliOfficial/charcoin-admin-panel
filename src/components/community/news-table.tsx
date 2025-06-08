@@ -41,8 +41,7 @@ export function NewsTable<TData, TValue>({
   data,
   fetching,
 }: DataTableProps<TData, TValue>) {
-  const { openDialog, setNewsDetail } = useDialogStore();
-  const [selectedNews, setSelectedNews] = React.useState<NewsArticle | null>(null);
+  const { openDialog, setNewsDetail, selectedNews, setSelectedNews } = useDialogStore();
   const [rowSelection, setRowSelection] = React.useState({});
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({});
@@ -147,14 +146,16 @@ export function NewsTable<TData, TValue>({
       <div className="px-5">
         <DataTablePagination table={table} />
       </div>
-      <CustomSheet
-        isOpen={openDialog === "news_detail"}
-        setIsOpen={setNewsDetail}
-        title="News Details"
-        className="!p-0"
-      >
-        {selectedNews && <NewsDetail news={selectedNews} />}
-      </CustomSheet>
+      {selectedNews && (
+        <CustomSheet
+          isOpen={openDialog === "news_detail"}
+          setIsOpen={setNewsDetail}
+          title={selectedNews.title || "News Details"}
+          className="!p-0"
+        >
+          <NewsDetail news={selectedNews} />
+        </CustomSheet>
+      )}
     </div>
   );
 }

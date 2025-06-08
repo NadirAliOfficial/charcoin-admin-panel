@@ -141,7 +141,7 @@ const News = () => {
         <Button
           size={"lg"}
           className="max-md:px-4 max-md:h-10 ml-4"
-          onClick={() => setCommunityNewsAdd(true)}
+          onClick={() => {}}
         >
           Add new →
         </Button>

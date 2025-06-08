@@ -2,7 +2,7 @@
 const nextConfig = {
   optimizeFonts: false,
   images: {
-    domains: ['picsum.photos'],
+    domains: ['picsum.photos', 'images.unsplash.com', 'fastly.picsum.photos'],
   },
 };
 

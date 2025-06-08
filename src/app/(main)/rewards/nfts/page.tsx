@@ -99,10 +99,10 @@ const fetchTransactions = async (
   return new Promise((resolve) => {
     setTimeout(() => {
       const filtered = transactionRecords.filter(
-        (record) => record.username.toLowerCase().includes(query.toLowerCase())
-        // ||
-        // record.wallet.toLowerCase().includes(query.toLowerCase()) ||
-        // record.hash.toLowerCase().includes(query.toLowerCase())
+        (record) =>
+          record.username.toLowerCase().includes(query.toLowerCase()) ||
+          record.wallet.toLowerCase().includes(query.toLowerCase()) ||
+          record.hash.toLowerCase().includes(query.toLowerCase())
       );
       resolve(filtered);
     }, 500);
@@ -113,8 +113,6 @@ const TopTiers = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [date, setDate] = useState<Date>(new Date());
   const { openDialog, setNftsAdd } = useDialogStore();
-  // Import TypeOption from the correct location if not already imported
-  // import type { TypeOption } from "@/components/ui/TypeSelector";
   const [selectedType, setSelectedType] = useState<TypeOption | undefined>(undefined);
 
   const { data = [], isLoading } = useQuery<NFTSRecord[]>({

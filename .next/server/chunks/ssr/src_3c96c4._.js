@@ -236,6 +236,65 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navi
 ;
 ;
 ;
+const UsernameCell = ({ row })=>{
+    const { username, wallet, hash } = row.original;
+    const path = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["usePathname"])();
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+        className: "flex flex-col text-sm font-WFVisualSansRegular",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "font-WFVisualSansRegular",
+                children: username
+            }, void 0, false, {
+                fileName: "[project]/src/components/columns/top-tier-column.tsx",
+                lineNumber: 13,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "text-primary whitespace-nowrap font-WFVisualSansRegular",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("b", {
+                        className: "text-muted-foreground text-[#8c8c8c] font-WFVisualSansRegular",
+                        children: "Wallet:"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/columns/top-tier-column.tsx",
+                        lineNumber: 15,
+                        columnNumber: 9
+                    }, this),
+                    " ",
+                    wallet
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/columns/top-tier-column.tsx",
+                lineNumber: 14,
+                columnNumber: 7
+            }, this),
+            path !== "/rewards/top-tiers" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "text-primary font-WFVisualSansRegular",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("b", {
+                        className: "text-muted-foreground text-[#8c8c8c] font-WFVisualSansRegular",
+                        children: "Hash:"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/columns/top-tier-column.tsx",
+                        lineNumber: 22,
+                        columnNumber: 11
+                    }, this),
+                    " ",
+                    hash
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/columns/top-tier-column.tsx",
+                lineNumber: 21,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/components/columns/top-tier-column.tsx",
+        lineNumber: 12,
+        columnNumber: 5
+    }, this);
+};
 const columns = [
     {
         accessorKey: "position",
@@ -245,7 +304,7 @@ const columns = [
                 className: "font-WFVisualSansRegular"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 12,
+                lineNumber: 36,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -256,7 +315,7 @@ const columns = [
                         children: row.getValue("position")
                     }, void 0, false, {
                         fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                        lineNumber: 20,
+                        lineNumber: 44,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -264,13 +323,13 @@ const columns = [
                         children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$helper$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getOrdinalSuffix"])(row.getValue("position"))
                     }, void 0, false, {
                         fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                        lineNumber: 23,
+                        lineNumber: 47,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 19,
+                lineNumber: 43,
                 columnNumber: 7
             }, this)
     },
@@ -282,68 +341,16 @@ const columns = [
                 className: "font-WFVisualSansRegular"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 32,
+                lineNumber: 56,
                 columnNumber: 7
             }, this),
-        cell: ({ row })=>{
-            const { username, wallet, hash } = row.original; // Fetch from original data
-            const path = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["usePathname"])();
-            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                className: "flex flex-col text-sm font-WFVisualSansRegular",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "font-WFVisualSansRegular",
-                        children: username
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                        lineNumber: 43,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "text-primary whitespace-nowrap font-WFVisualSansRegular",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("b", {
-                                className: "text-muted-foreground text-[#8c8c8c] font-WFVisualSansRegular",
-                                children: "Wallet:"
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                                lineNumber: 45,
-                                columnNumber: 13
-                            }, this),
-                            " ",
-                            wallet
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                        lineNumber: 44,
-                        columnNumber: 11
-                    }, this),
-                    path !== "/rewards/top-tiers" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "text-primary font-WFVisualSansRegular",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("b", {
-                                className: "text-muted-foreground text-[#8c8c8c] font-WFVisualSansRegular",
-                                children: "Hash:"
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                                lineNumber: 51,
-                                columnNumber: 13
-                            }, this),
-                            " ",
-                            hash
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                        lineNumber: 50,
-                        columnNumber: 44
-                    }, this)
-                ]
-            }, void 0, true, {
+        cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(UsernameCell, {
+                row: row
+            }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 42,
-                columnNumber: 9
-            }, this);
-        }
+                lineNumber: 62,
+                columnNumber: 24
+            }, this)
     },
     {
         accessorKey: "transactions",
@@ -353,7 +360,7 @@ const columns = [
                 className: "font-WFVisualSansRegular"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 63,
+                lineNumber: 67,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -361,7 +368,7 @@ const columns = [
                 children: row.getValue("transactions")
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 70,
+                lineNumber: 74,
                 columnNumber: 7
             }, this)
     },
@@ -373,7 +380,7 @@ const columns = [
                 className: "font-WFVisualSansRegular"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 78,
+                lineNumber: 82,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -384,7 +391,7 @@ const columns = [
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 85,
+                lineNumber: 89,
                 columnNumber: 7
             }, this)
     },
@@ -396,7 +403,7 @@ const columns = [
                 className: "font-WFVisualSansRegular"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 93,
+                lineNumber: 97,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -404,7 +411,7 @@ const columns = [
                 children: row.getValue("registration").toLocaleDateString()
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 100,
+                lineNumber: 104,
                 columnNumber: 7
             }, this)
     },
@@ -416,7 +423,7 @@ const columns = [
                 className: "font-WFVisualSansRegular"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 108,
+                lineNumber: 112,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -424,7 +431,7 @@ const columns = [
                 children: row.getValue("lastTransaction").toLocaleDateString()
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 115,
+                lineNumber: 119,
                 columnNumber: 7
             }, this)
     },
@@ -436,7 +443,7 @@ const columns = [
                 className: "font-WFVisualSansRegular"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 123,
+                lineNumber: 127,
                 columnNumber: 7
             }, this),
         cell: ({ row })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -447,7 +454,7 @@ const columns = [
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/columns/top-tier-column.tsx",
-                lineNumber: 130,
+                lineNumber: 134,
                 columnNumber: 7
             }, this)
     }

@@ -12,24 +12,24 @@ const columns: ColumnDef<NewsArticle>[] = [
     ),
     cell: ({ row }) => <span>{row.getValue("id")}</span>,
   },
-  // {
-  //   accessorKey: "video_thumbnail",
-  //   header: ({ column }) => (
-  //     <DataTableColumnHeader column={column} title="Video" />
-  //   ),
-  //   cell: ({ row }) => (
-  //     <div className="relative flex justify-center items-center">
-  //       <Image
-  //         width={128}
-  //         height={80}
-  //         src={row.getValue("video_thumbnail")}
-  //         alt="Video Thumbnail"
-  //         className="h-24 w-20 rounded-md object-cover"
-  //       />
-  //       <PlayCircleSolid className="absolute " />
-  //     </div>
-  //   ),
-  // },
+  {
+    accessorKey: "video_thumbnail",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Video" />
+    ),
+    cell: ({ row }) => (
+      <div className="relative flex justify-center items-center">
+        <Image
+          width={128}
+          height={80}
+          src={row.getValue("video_thumbnail")}
+          alt="Video Thumbnail"
+          className="h-24 w-20 rounded-md object-cover"
+        />
+        <PlayCircleSolid className="absolute " />
+      </div>
+    ),
+  },
   {
     accessorKey: "title",
     header: ({ column }) => (

@@ -10,8 +10,8 @@
     "static/chunks/node_modules_media-chrome_dist_9f9283._.js",
     "static/chunks/node_modules_zod_lib_index_mjs_ee760a._.js",
     "static/chunks/node_modules_@tanstack_table-core_build_lib_index_mjs_dc7bc5._.js",
-    "static/chunks/node_modules_e4850b._.js",
-    "static/chunks/node_modules_30b042._.js"
+    "static/chunks/node_modules_4a5670._.js",
+    "static/chunks/node_modules_9227ed._.js"
   ],
   "source": "dynamic"
 });

@@ -852,7 +852,7 @@ function VotingCalculator({ config }) {
     const [multiplier, setMultiplier] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(1553);
     const [factor, setFactor] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(26);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "flex items-center gap-4 max-sm:flex-col rounded-lg",
+        className: "grid grid-cols-1  lg:grid-cols-7 items-center gap-4 rounded-lg",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$Menu$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                 className: "!w-5 !h-5 shrink-0"
@@ -865,53 +865,50 @@ function VotingCalculator({ config }) {
                 type: "number",
                 value: days,
                 onChange: (e)=>setDays(Number(e.target.value)),
-                placeholder: "Days"
+                placeholder: "Days",
+                className: ""
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
                 lineNumber: 280,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "px-4 py-2 whitespace-nowrap rounded-md text-white",
+                children: "Votes per token"
+            }, void 0, false, {
+                fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
+                lineNumber: 287,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
                 type: "number",
                 value: votesPerToken,
                 onChange: (e)=>setVotesPerToken(Number(e.target.value)),
-                placeholder: "Votes per Token"
+                placeholder: "Votes per Token",
+                className: ""
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                lineNumber: 286,
+                lineNumber: 288,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "px-4 py-2 whitespace-nowrap rounded-md text-white",
-                children: [
-                    multiplier,
-                    " × ",
-                    factor
-                ]
-            }, void 0, true, {
+                children: "Maximum monthly return"
+            }, void 0, false, {
                 fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                lineNumber: 292,
+                lineNumber: 295,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2d$with$2d$text$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 label: "Max Return",
                 placeholder: "Max Return",
                 type: "number",
-                className: "md:w-28 lg:w-40",
                 rootClassName: "flex-row-reverse",
                 value: maxReturn,
                 onChange: (e)=>setMaxReturn(Number(e.target.value))
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                lineNumber: 295,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                className: "tw-text-gray-400",
-                children: "Percentage"
-            }, void 0, false, {
-                fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                lineNumber: 304,
+                lineNumber: 298,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -926,12 +923,12 @@ function VotingCalculator({ config }) {
                             className: "w-5 h-5"
                         }, void 0, false, {
                             fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                            lineNumber: 312,
+                            lineNumber: 314,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                        lineNumber: 306,
+                        lineNumber: 308,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -943,18 +940,18 @@ function VotingCalculator({ config }) {
                             className: "w-5 h-5"
                         }, void 0, false, {
                             fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                            lineNumber: 320,
+                            lineNumber: 322,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                        lineNumber: 314,
+                        lineNumber: 316,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                lineNumber: 305,
+                lineNumber: 307,
                 columnNumber: 7
             }, this)
         ]

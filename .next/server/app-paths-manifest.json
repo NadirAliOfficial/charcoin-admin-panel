@@ -3,5 +3,6 @@
   "/_not-found/page": "app/_not-found/page.js",
   "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
   "/(main)/community/user-and-wallets/page": "app/(main)/community/user-and-wallets/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/(main)/settings/governance/page": "app/(main)/settings/governance/page.js"
 }

@@ -4,5 +4,6 @@
   "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
   "/(main)/community/user-and-wallets/page": "app/(main)/community/user-and-wallets/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/(main)/settings/governance/page": "app/(main)/settings/governance/page.js"
+  "/(main)/settings/governance/page": "app/(main)/settings/governance/page.js",
+  "/(main)/rewards/nfts/page": "app/(main)/rewards/nfts/page.js"
 }

@@ -97,7 +97,7 @@ const SettingsGovernance = () => {
     }
   };
 
-  const onSubmit = (data: any) => {};
+  const onSubmit = (data: any) => { };
 
   return (
     <FormProvider {...form}>
@@ -129,21 +129,20 @@ const SettingsGovernance = () => {
               <p className="font-bold text-lg">
                 Causes / Projects compensation distribution factor
               </p>
-              <p className="text-muted-foreground mb-4 text-sm">
-                The distribution factor dynamically allocates donations based on
-                the number of active causes within a campaign.
-                <b>
+              <p className="text-muted-foreground mb-4 text-xs">
+              The distribution factor will dynamically allocate donations based on the number of active causes within a campaign. As the number of causes increases, the percentage distribution adjusts accordingly. For example, if a campaign has two active causes, donations will be split 60% for the first place and 40% for the second place. If there are three causes, the distribution shifts to 50% for the first, 30% for the second, and 20% for the third. This factor ensures a fair and proportional allocation of funds as more causes participate in the campaign. 
+                <b className="text-white">
                   {" "}
-                  Currently, the ecosystem supports a maximum of 10
-                  causes/projects running on each campaign.
+                  Currently the ecosystem supports a maximum of 10 causes/projects running on each campaign.
                 </b>
               </p>
 
-              <div className="flex flex-wrap gap-4 mt-4 mb-12">
+              <div className="flex flex-wrap w-full justify-between gap-4 mt-4 mb-12">
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
                   <InputWithText
                     key={num}
                     label={`${num} participants`}
+                    className="w-full md:w-[49%]"
                     placeholder="Enter distribution values"
                   />
                 ))}
@@ -193,7 +192,7 @@ const SettingsGovernance = () => {
                     id="tokens"
                     label="Tokens"
                     rootClassName="flex-row-reverse"
-                    className="bg-gray-800 border-gray-700 text-white"
+                    className="bg-gray-800  border-gray-700 w-full text-white"
                     {...register("tokens")}
                   />
                 </FormField>
@@ -318,7 +317,7 @@ function VotingCalculator({
   return (
     <div className="flex items-center w-full justify-between gap-1 sm:gap-2 rounded-lg flex-nowrap overflow-x-auto">
       <Menu className="!w-3 !h-3 sm:!w-4 sm:!h-4 shrink-0" />
-      
+
       <span className="whitespace-nowrap text-white text-xs flex-shrink-0">Days</span>
       <Input
         type="number"
@@ -328,7 +327,7 @@ function VotingCalculator({
         className="w-[50px] min-w-12 sm:w-16 md:w-full"
         inputSize="sm"
       />
-      
+
       <span className="whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 hidden sm:inline">Votes per token</span>
       <span className="whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 sm:hidden">Votes</span>
       <Input
@@ -340,26 +339,26 @@ function VotingCalculator({
         className="w-12 sm:w-16 md:w-full min-w-12"
         inputSize="sm"
       />
-      
+
       <span className="whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 hidden sm:inline">Max monthly return</span>
       <span className="whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 sm:hidden">Max</span>
-      
+
       <div className="flex items-center gap-1">
         <div className="bg-[#3d3c44] flex rounded-md items-center px-2 ">
-        <Input
-          placeholder="Max"
-          type="number"
-          value={config.maxReturn}
-          onChange={handleMaxReturnChange}
-          className="w-12 min-w-12 sm:w-14 md:w-[10vw] border-0"
-          inputSize="sm"
-        />
-        
-        <span className="whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 hidden sm:inline">percentage</span>
-      <span className="whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 sm:hidden">%</span>
+          <Input
+            placeholder="Max"
+            type="number"
+            value={config.maxReturn}
+            onChange={handleMaxReturnChange}
+            className="w-12 min-w-12 sm:w-14 md:w-[10vw] border-0"
+            inputSize="sm"
+          />
+
+          <span className="whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 hidden sm:inline">percentage</span>
+          <span className="whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 sm:hidden">%</span>
         </div>
-        
-        
+
+
         <div className="flex gap-1 flex-shrink-0">
           <Button
             type="button"

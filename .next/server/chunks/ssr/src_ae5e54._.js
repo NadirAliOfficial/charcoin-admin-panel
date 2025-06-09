@@ -559,9 +559,14 @@ const selectVariants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_
     }
 });
 const SelectField = ({ className, variant, selectSize, rounded, options, placeholder = "Select an option", value, onValueChange, triggerIcon })=>{
+    console.log(`SelectField: value=${value}, placeholder=${placeholder}`);
+    const handleValueChange = (newValue)=>{
+        console.log(`SelectField: onValueChange called with ${newValue}`);
+        onValueChange(newValue);
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Select"], {
         value: value,
-        onValueChange: onValueChange,
+        onValueChange: handleValueChange,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectTrigger"], {
                 className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])(selectVariants({
@@ -575,12 +580,12 @@ const SelectField = ({ className, variant, selectSize, rounded, options, placeho
                     placeholder: placeholder
                 }, void 0, false, {
                     fileName: "[project]/src/components/causes/edit/form-select.tsx",
-                    lineNumber: 75,
+                    lineNumber: 81,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/causes/edit/form-select.tsx",
-                lineNumber: 69,
+                lineNumber: 75,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -589,18 +594,18 @@ const SelectField = ({ className, variant, selectSize, rounded, options, placeho
                         children: option.label
                     }, option.value, false, {
                         fileName: "[project]/src/components/causes/edit/form-select.tsx",
-                        lineNumber: 79,
+                        lineNumber: 85,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/components/causes/edit/form-select.tsx",
-                lineNumber: 77,
+                lineNumber: 83,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/causes/edit/form-select.tsx",
-        lineNumber: 68,
+        lineNumber: 74,
         columnNumber: 5
     }, this);
 };
@@ -2328,6 +2333,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$e
 const useDialogStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$react$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["create"])((set)=>({
         openDialog: null,
         selectedNft: null,
+        selectedNews: null,
         // Open functions
         openDetail: ()=>set({
                 openDialog: "causes_detail"
@@ -2368,6 +2374,9 @@ const useDialogStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_
             }),
         setSelectedNft: (nft)=>set({
                 selectedNft: nft
+            }),
+        setSelectedNews: (news)=>set({
+                selectedNews: news
             }),
         // Adminstrator
         setAddAdministrator: (isOpen)=>set({
@@ -2615,11 +2624,11 @@ const SettingsCauses = ()=>{
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$scroll$2d$area$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ScrollArea"], {
                                         className: "h-[540px]",
                                         children: categories.map((category, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "flex justify-between space-x-4  p-3 border-b ",
+                                                className: "flex justify-between space-x-4 p-3 border-b cursor-pointer hover:bg-accent/50 transition-colors",
                                                 onClick: ()=>setEditCategory(true),
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("min-w-[3px]   rounded-xl "),
+                                                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("min-w-[3px] rounded-xl"),
                                                         style: {
                                                             backgroundColor: category.color
                                                         }
@@ -2745,20 +2754,19 @@ const SettingsCauses = ()=>{
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$scroll$2d$area$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ScrollArea"], {
                                         className: "h-[540px]",
                                         children: campaigns.map((campaign, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "flex   space-x-4  p-3 border-b ",
+                                                className: "flex space-x-4 p-3 border-b cursor-pointer hover:bg-accent/50 transition-colors",
                                                 onClick: ()=>setEditCampaign(true),
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("min-w-[3px] w-min h-12   rounded-xl "),
+                                                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("min-w-[3px] w-min h-12 rounded-xl"),
                                                         style: {
                                                             backgroundColor: campaign?.color
                                                         }
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(main)/settings/causes/page.tsx",
-                                                        lineNumber: 196,
+                                                        lineNumber: 195,
                                                         columnNumber: 19
                                                     }, this),
-                                                    "                  ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "w-full flex flex-col",
                                                         children: [
@@ -2773,16 +2781,14 @@ const SettingsCauses = ()=>{
                                                                 className: "text-sm flex gap-2 text-muted-foreground",
                                                                 children: [
                                                                     (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$helper$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["formatDateRange"])(campaign.start_date, campaign.end_date),
-                                                                    " ",
                                                                     campaign?.status == "Current" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                         className: "text-primary tracking-wider",
                                                                         children: "(Current)"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/(main)/settings/causes/page.tsx",
-                                                                        lineNumber: 200,
-                                                                        columnNumber: 192
-                                                                    }, this),
-                                                                    " "
+                                                                        lineNumber: 202,
+                                                                        columnNumber: 57
+                                                                    }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/(main)/settings/causes/page.tsx",
@@ -2793,7 +2799,7 @@ const SettingsCauses = ()=>{
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/(main)/settings/causes/page.tsx",
                                                         lineNumber: 198,
-                                                        columnNumber: 42
+                                                        columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, index, true, {
@@ -2831,12 +2837,12 @@ const SettingsCauses = ()=>{
                 className: "pt-2 px-4",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$settings$2f$add$2d$category$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AddCategory"], {}, void 0, false, {
                     fileName: "[project]/src/app/(main)/settings/causes/page.tsx",
-                    lineNumber: 215,
+                    lineNumber: 217,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/settings/causes/page.tsx",
-                lineNumber: 209,
+                lineNumber: 211,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$reuseable$2f$add$2d$causes$2d$sheet$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CustomSheet"], {
@@ -2846,12 +2852,12 @@ const SettingsCauses = ()=>{
                 className: "pt-2 px-4",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$settings$2f$edit$2d$category$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["EditCategory"], {}, void 0, false, {
                     fileName: "[project]/src/app/(main)/settings/causes/page.tsx",
-                    lineNumber: 223,
+                    lineNumber: 225,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/settings/causes/page.tsx",
-                lineNumber: 217,
+                lineNumber: 219,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$reuseable$2f$add$2d$causes$2d$sheet$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CustomSheet"], {
@@ -2861,12 +2867,12 @@ const SettingsCauses = ()=>{
                 className: "pt-2 px-4",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$settings$2f$add$2d$campaign$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AddCampaign"], {}, void 0, false, {
                     fileName: "[project]/src/app/(main)/settings/causes/page.tsx",
-                    lineNumber: 232,
+                    lineNumber: 234,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/settings/causes/page.tsx",
-                lineNumber: 226,
+                lineNumber: 228,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$reuseable$2f$add$2d$causes$2d$sheet$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CustomSheet"], {
@@ -2876,12 +2882,12 @@ const SettingsCauses = ()=>{
                 className: "pt-2 px-4",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$settings$2f$edit$2d$campaign$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["EditCampaign"], {}, void 0, false, {
                     fileName: "[project]/src/app/(main)/settings/causes/page.tsx",
-                    lineNumber: 240,
+                    lineNumber: 242,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/settings/causes/page.tsx",
-                lineNumber: 234,
+                lineNumber: 236,
                 columnNumber: 7
             }, this)
         ]

@@ -3357,6 +3357,10 @@ body {
   background-color: rgb(13 148 136 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-accent\/50:hover {
+  background-color: hsl(var(--accent) / .5);
+}
+
 .hover\:text-accent-foreground:hover {
   color: hsl(var(--accent-foreground));
 }
@@ -4067,6 +4071,26 @@ body {
 
   .md\:w-\[10vw\] {
     width: 10vw;
+  }
+
+  .md\:w-\[50\%\] {
+    width: 50%;
+  }
+
+  .md\:w-\[40\%\] {
+    width: 40%;
+  }
+
+  .md\:w-\[45\%\] {
+    width: 45%;
+  }
+
+  .md\:w-\[48\%\] {
+    width: 48%;
+  }
+
+  .md\:w-\[49\%\] {
+    width: 49%;
   }
 
   .md\:grid-cols-2 {

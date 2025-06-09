@@ -287,7 +287,9 @@ export default function EcosystemWallets() {
           isOpen={openDialog == "wallet_setting_add_new"}
           setIsOpen={setWalletSettingAddNew}
           title="Add New Wallet"
-          className="pt-2 px-4"
+          rootClassName="!max-w-[960px] !w-full"
+          
+          className="pt-2 px-4  "
         >
           <NewPayoutDialog walletName={selectedWallet as string} />
         </CustomSheet>

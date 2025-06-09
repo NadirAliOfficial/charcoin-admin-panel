@@ -84,7 +84,7 @@ export default function WalletHistoryDialog({  walletName }: WalletHistoryDialog
           <p className="text-sm text-gray-400 break-all">{walletData.address}</p>
 
           <div className="grid grid-cols-2 gap-4 mt-6">
-            <div className="text-right">
+            <div className="text-start">
               <p className="text-3xl font-bold">{formatCurrency(walletData.balance)}</p>
               <p className="text-sm text-gray-400">Current Balance</p>
             </div>

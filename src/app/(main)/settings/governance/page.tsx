@@ -127,8 +127,8 @@ const SettingsGovernance = () => {
                 </b>
               </p>
 
-              <div className="flex flex-wrap gap-4 mt-4 mb-12">
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
+              <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 mt-4 mb-12">
+                {[2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
                   <InputWithText
                     key={num}
                     label={`${num} participants`}
@@ -166,7 +166,7 @@ const SettingsGovernance = () => {
                 </SortableContext>
               </DndContext>
 
-              <div className="flex flex-wrap md:flex-nowrap h-full justify-between gap-4 mb-4 mt-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 mt-12">
                 <FormField
                   id="tokens"
                   label="Minimum Staking Requirement for Governance Participation"
@@ -197,7 +197,7 @@ const SettingsGovernance = () => {
                 </FormField>
               </div>
 
-              <div className="flex flex-wrap md:flex-nowrap justify-between gap-4 mb-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <FormField
                   id="percentageOfToken"
                   label="Penalty for Early Staking Withdrawal"
@@ -275,35 +275,33 @@ function VotingCalculator({ config }: VotingCalculatorProps) {
   const [factor, setFactor] = useState(26);
 
   return (
-    <div className="grid grid-cols-1  lg:grid-cols-7 items-center gap-4 rounded-lg">
+    <div className="flex items-center gap-4 max-sm:flex-col rounded-lg">
       <Menu className="!w-5 !h-5 shrink-0" />
       <Input
         type="number"
         value={days}
         onChange={(e) => setDays(Number(e.target.value))}
         placeholder="Days"
-        className=""
       />
-      <span className="px-4 py-2 whitespace-nowrap rounded-md text-white">Votes per token</span>
       <Input
         type="number"
         value={votesPerToken}
         onChange={(e) => setVotesPerToken(Number(e.target.value))}
         placeholder="Votes per Token"
-        className=""
       />
       <div className="px-4 py-2 whitespace-nowrap rounded-md text-white">
-      Maximum monthly return
+        {multiplier} × {factor}
       </div>
       <InputWithText
         label="Max Return"
         placeholder="Max Return"
         type="number"
+        className="md:w-28 lg:w-40"
         rootClassName="flex-row-reverse"
         value={maxReturn}
         onChange={(e) => setMaxReturn(Number(e.target.value))}
       />
-      
+      <span className="tw-text-gray-400">Percentage</span>
       <div className="flex gap-2">
         <Button
           size={"icon"}

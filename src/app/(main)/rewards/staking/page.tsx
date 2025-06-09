@@ -136,11 +136,11 @@ const TopTiers = () => {
 
   return (
     <HeaderWrapper
-      mainClassName="!justify-start items-start gap-4 max-md:flex-col"
+      mainClassName="!justify-between items-center  mb-6 gap-4 max-md:flex-col"
       title="Staking"
       description="List of users staking the CharCoin Token"
       actions={
-        <div className="grid grid-cols-[1fr,_2px,_1fr] gap-4 mb-6  p-4 rounded-xl text-sm bg-background">
+        <div className="grid grid-cols-[1fr,_2px,_1fr] gap-4   p-4 rounded-xl text-sm bg-background">
           <Card className=" text-white bg-transparent border-none shadow-none">
             <p className="text-lg font-semibold">2,245,587</p>
             <p className="text-gray-400">Tokens in Staking</p>{" "}
@@ -172,7 +172,7 @@ const TopTiers = () => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <div className="text-gray-400">7,457 records</div>
+          <div className="text-gray-400 ml-auto">7,457 records</div>
         </div>
 
         <StakingTable

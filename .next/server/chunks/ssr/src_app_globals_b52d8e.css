@@ -1581,6 +1581,10 @@ body {
   justify-content: space-between;
 }
 
+.\!justify-between {
+  justify-content: space-between !important;
+}
+
 .gap-1 {
   gap: .25rem;
 }
@@ -1611,6 +1615,10 @@ body {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-0 {
+  gap: 0;
 }
 
 .gap-x-10 {
@@ -3968,6 +3976,10 @@ body {
     width: 10px !important;
   }
 
+  .md\:w-28 {
+    width: 7rem;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -4078,6 +4090,10 @@ body {
 
   .lg\:w-\[250px\] {
     width: 250px;
+  }
+
+  .lg\:w-40 {
+    width: 10rem;
   }
 
   .lg\:translate-x-0 {

@@ -19,10 +19,17 @@ export const dummyData: CauseFormData = {
   contractFile: "Final Formal Agreement - Nicaragua.pdf",
 };
 
+// Create a dummy video file
+const dummyVideoFile = new File(
+  [new ArrayBuffer(1024)], // 1KB dummy content
+  "dummy-video.mp4",
+  { type: "video/mp4" }
+);
+
 export const newsDummyData: NewsSchemaType = {
   title: "We are making a difference in water cleaning",
   short_description: "We are making a difference in water purification, bringing clean and safe water to communities in need. Every drop counts, and every effort changes lives. Join us in creating a cleaner future!",
-  video: null, // This should ideally be a File object for actual upload, but null for dummy
+  video: dummyVideoFile,
   category: "clean_water",
   status: "published",
 };

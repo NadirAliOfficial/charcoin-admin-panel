@@ -48,6 +48,7 @@ type VotingConfig = {
   days: number;
   votesPerToken: number;
   maxReturn: number;
+  factor: number;
 };
 
 const SettingsGovernance = () => {
@@ -59,11 +60,22 @@ const SettingsGovernance = () => {
     formState: { errors },
   } = form;
   const [votingConfigs, setVotingConfigs] = useState<VotingConfig[]>([
-    { id: "1", days: 30, votesPerToken: 0.5, maxReturn: 5 },
-    { id: "2", days: 60, votesPerToken: 1, maxReturn: 7 },
-    { id: "3", days: 120, votesPerToken: 3, maxReturn: 10 },
-    { id: "4", days: 180, votesPerToken: 5, maxReturn: 15 },
+    { id: "1", days: 30, votesPerToken: 0.5, maxReturn: 5, factor: 26 },
+    { id: "2", days: 60, votesPerToken: 1, maxReturn: 7, factor: 26 },
+    { id: "3", days: 120, votesPerToken: 3, maxReturn: 10, factor: 26 },
+    { id: "4", days: 180, votesPerToken: 5, maxReturn: 15, factor: 26 },
   ]);
+
+  const handleVotingConfigChange = (updatedConfig: VotingConfig) => {
+    setVotingConfigs((prevConfigs) => {
+      return prevConfigs.map((config) => {
+        if (config.id === updatedConfig.id) {
+          return { ...config, ...updatedConfig };
+        }
+        return config;
+      });
+    });
+  };
 
   const sensors = useSensors(
     useSensor(PointerSensor),
@@ -85,7 +97,7 @@ const SettingsGovernance = () => {
     }
   };
 
-  const onSubmit = (data: any) => {};
+  const onSubmit = (data: any) => { };
 
   return (
     <FormProvider {...form}>
@@ -117,21 +129,20 @@ const SettingsGovernance = () => {
               <p className="font-bold text-lg">
                 Causes / Projects compensation distribution factor
               </p>
-              <p className="text-muted-foreground mb-4 text-sm">
-                The distribution factor dynamically allocates donations based on
-                the number of active causes within a campaign.
-                <b>
+              <p className="text-muted-foreground mb-4 text-xs">
+              The distribution factor will dynamically allocate donations based on the number of active causes within a campaign. As the number of causes increases, the percentage distribution adjusts accordingly. For example, if a campaign has two active causes, donations will be split 60% for the first place and 40% for the second place. If there are three causes, the distribution shifts to 50% for the first, 30% for the second, and 20% for the third. This factor ensures a fair and proportional allocation of funds as more causes participate in the campaign. 
+                <b className="text-white">
                   {" "}
-                  Currently, the ecosystem supports a maximum of 10
-                  causes/projects running on each campaign.
+                  Currently the ecosystem supports a maximum of 10 causes/projects running on each campaign.
                 </b>
               </p>
 
-              <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 mt-4 mb-12">
-                {[2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
+              <div className="flex flex-wrap w-full justify-between gap-4 mt-4 mb-12">
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
                   <InputWithText
                     key={num}
                     label={`${num} participants`}
+                    className="w-full md:w-[49%]"
                     placeholder="Enter distribution values"
                   />
                 ))}
@@ -161,12 +172,16 @@ const SettingsGovernance = () => {
                   strategy={verticalListSortingStrategy}
                 >
                   {votingConfigs.map((config) => (
-                    <SortableVotingCalculator key={config.id} config={config} />
+                    <SortableVotingCalculator
+                      key={config.id}
+                      config={config}
+                      onConfigChange={handleVotingConfigChange}
+                    />
                   ))}
                 </SortableContext>
               </DndContext>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 mt-12">
+              <div className="flex flex-wrap md:flex-nowrap h-full justify-between gap-4 mb-4 mt-12">
                 <FormField
                   id="tokens"
                   label="Minimum Staking Requirement for Governance Participation"
@@ -177,7 +192,7 @@ const SettingsGovernance = () => {
                     id="tokens"
                     label="Tokens"
                     rootClassName="flex-row-reverse"
-                    className="bg-gray-800 border-gray-700 text-white"
+                    className="bg-gray-800  border-gray-700 w-full text-white"
                     {...register("tokens")}
                   />
                 </FormField>
@@ -197,7 +212,7 @@ const SettingsGovernance = () => {
                 </FormField>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div className="flex flex-wrap md:flex-nowrap justify-between gap-4 mb-4">
                 <FormField
                   id="percentageOfToken"
                   label="Penalty for Early Staking Withdrawal"
@@ -238,9 +253,13 @@ const SettingsGovernance = () => {
 // Sortable Voting Calculator Component
 type SortableVotingCalculatorProps = {
   config: VotingConfig;
+  onConfigChange: (updatedConfig: VotingConfig) => void;
 };
 
-function SortableVotingCalculator({ config }: SortableVotingCalculatorProps) {
+function SortableVotingCalculator({
+  config,
+  onConfigChange,
+}: SortableVotingCalculatorProps) {
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({ id: config.id });
 
@@ -257,7 +276,7 @@ function SortableVotingCalculator({ config }: SortableVotingCalculatorProps) {
       {...listeners}
       className="mb-2 cursor-grab active:cursor-grabbing"
     >
-      <VotingCalculator config={config} />
+      <VotingCalculator config={config} onConfigChange={onConfigChange} />
     </div>
   );
 }
@@ -265,60 +284,101 @@ function SortableVotingCalculator({ config }: SortableVotingCalculatorProps) {
 // Voting Calculator Component
 type VotingCalculatorProps = {
   config: VotingConfig;
+  onConfigChange: (updatedConfig: VotingConfig) => void;
 };
 
-function VotingCalculator({ config }: VotingCalculatorProps) {
-  const [days, setDays] = useState(config.days);
-  const [votesPerToken, setVotesPerToken] = useState(config.votesPerToken);
-  const [maxReturn, setMaxReturn] = useState(config.maxReturn);
-  const [multiplier, setMultiplier] = useState(1553);
-  const [factor, setFactor] = useState(26);
+function VotingCalculator({
+  config,
+  onConfigChange,
+}: VotingCalculatorProps) {
+  const handleDaysChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newDays = Number(e.target.value);
+    onConfigChange({ ...config, days: newDays });
+  };
+
+  const handleVotesPerTokenChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const newVotesPerToken = Number(e.target.value);
+    onConfigChange({ ...config, votesPerToken: newVotesPerToken });
+  };
+
+  const handleMaxReturnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newMaxReturn = Number(e.target.value);
+    onConfigChange({ ...config, maxReturn: newMaxReturn });
+  };
+
+  const handleMaxReturnIncrement = (increment: number) => {
+    const currentValue = config.maxReturn || 0;
+    const newMaxReturn = Math.max(0, currentValue + increment);
+    onConfigChange({ ...config, maxReturn: newMaxReturn });
+  };
 
   return (
-    <div className="flex items-center gap-4 max-sm:flex-col rounded-lg">
-      <Menu className="!w-5 !h-5 shrink-0" />
+    <div className="flex items-center w-full justify-between gap-1 sm:gap-2 rounded-lg flex-nowrap overflow-x-auto">
+      <Menu className="!w-3 !h-3 sm:!w-4 sm:!h-4 shrink-0" />
+
+      <span className="whitespace-nowrap text-white text-xs flex-shrink-0">Days</span>
       <Input
         type="number"
-        value={days}
-        onChange={(e) => setDays(Number(e.target.value))}
+        value={config.days}
+        onChange={handleDaysChange}
         placeholder="Days"
+        className="w-[50px] min-w-12 sm:w-16 md:w-full"
+        inputSize="sm"
       />
+
+      <span className="whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 hidden sm:inline">Votes per token</span>
+      <span className="whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 sm:hidden">Votes</span>
       <Input
         type="number"
-        value={votesPerToken}
-        onChange={(e) => setVotesPerToken(Number(e.target.value))}
-        placeholder="Votes per Token"
+        step="0.1"
+        value={config.votesPerToken}
+        onChange={handleVotesPerTokenChange}
+        placeholder="Votes"
+        className="w-12 sm:w-16 md:w-full min-w-12"
+        inputSize="sm"
       />
-      <div className="px-4 py-2 whitespace-nowrap rounded-md text-white">
-        {multiplier} × {factor}
-      </div>
-      <InputWithText
-        label="Max Return"
-        placeholder="Max Return"
-        type="number"
-        className="md:w-28 lg:w-40"
-        rootClassName="flex-row-reverse"
-        value={maxReturn}
-        onChange={(e) => setMaxReturn(Number(e.target.value))}
-      />
-      <span className="tw-text-gray-400">Percentage</span>
-      <div className="flex gap-2">
-        <Button
-          size={"icon"}
-          variant={"outline"}
-          className="size-7 rounded-full p-0"
-          onClick={() => setFactor(factor + 1)}
-        >
-          <PlusIcon className="w-5 h-5" />
-        </Button>
-        <Button
-          size={"icon"}
-          variant={"outline"}
-          className="size-7 rounded-full p-0"
-          onClick={() => setFactor(factor - 1)}
-        >
-          <Minus className="w-5 h-5" />
-        </Button>
+
+      <span className="whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 hidden sm:inline">Max monthly return</span>
+      <span className="whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 sm:hidden">Max</span>
+
+      <div className="flex items-center gap-1">
+        <div className="bg-[#3d3c44] flex rounded-md items-center px-2 ">
+          <Input
+            placeholder="Max"
+            type="number"
+            value={config.maxReturn}
+            onChange={handleMaxReturnChange}
+            className="w-12 min-w-12 sm:w-14 md:w-[10vw] border-0"
+            inputSize="sm"
+          />
+
+          <span className="whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 hidden sm:inline">percentage</span>
+          <span className="whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 sm:hidden">%</span>
+        </div>
+
+
+        <div className="flex gap-1 flex-shrink-0">
+          <Button
+            type="button"
+            size={"icon"}
+            variant={"outline"}
+            className="size-5 sm:size-6 rounded-full p-0"
+            onClick={() => handleMaxReturnIncrement(1)}
+          >
+            <PlusIcon className="w-3 h-3 sm:w-4 sm:h-4" />
+          </Button>
+          <Button
+            type="button"
+            size={"icon"}
+            variant={"outline"}
+            className="size-5 sm:size-6 rounded-full p-0"
+            onClick={() => handleMaxReturnIncrement(-1)}
+          >
+            <Minus className="w-3 h-3 sm:w-4 sm:h-4" />
+          </Button>
+        </div>
       </div>
     </div>
   );

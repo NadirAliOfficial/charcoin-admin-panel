@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 import { cn } from "@/lib/utils";
 import { useSidebarStore } from "@/stores/sidebar-store";
-import { BrandTelegram, BrandTwitter } from "@mynaui/icons-react";
+import { BrandTelegram, BrandTwitter, BrandX } from "@mynaui/icons-react";
 import LogoImage from "../custom/logo-image";
 import { SidebarToggle } from "./sidebar-toggle";
 
@@ -50,7 +50,7 @@ export function Sidebar() {
               </span>
               <span className="flex gap-4">
                 <BrandTelegram className="w-6 h-6 hover:text-primary" />
-                <BrandTwitter className="w-6 h-6 hover:text-primary" />
+                <BrandX className="w-6 h-6 hover:text-primary" />
               </span>
             </div>
           </div>

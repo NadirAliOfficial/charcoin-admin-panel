@@ -172,7 +172,7 @@ const News = () => {
       <CustomSheet
         isOpen={openDialog == "community_news_add"}
         setIsOpen={setCommunityNewsAdd}
-        title="Edit Cause form"
+        title="Publish a new entry"
         className="pt-2 px-4"
       >
         <AddNewNews />

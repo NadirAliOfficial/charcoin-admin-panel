@@ -437,7 +437,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$icons$2f$dist$2f$react$2d$icons$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/@radix-ui/react-icons/dist/react-icons.esm.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$Minus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Minus$3e$__ = __turbopack_import__("[project]/node_modules/@mynaui/icons-react/dist/esm/icons/Minus.js [app-client] (ecmascript) <export default as Minus>");
 ;
-var _s = __turbopack_refresh__.signature(), _s1 = __turbopack_refresh__.signature(), _s2 = __turbopack_refresh__.signature();
+var _s = __turbopack_refresh__.signature(), _s1 = __turbopack_refresh__.signature();
 "use client";
 ;
 ;
@@ -468,27 +468,44 @@ const SettingsGovernance = ()=>{
             id: "1",
             days: 30,
             votesPerToken: 0.5,
-            maxReturn: 5
+            maxReturn: 5,
+            factor: 26
         },
         {
             id: "2",
             days: 60,
             votesPerToken: 1,
-            maxReturn: 7
+            maxReturn: 7,
+            factor: 26
         },
         {
             id: "3",
             days: 120,
             votesPerToken: 3,
-            maxReturn: 10
+            maxReturn: 10,
+            factor: 26
         },
         {
             id: "4",
             days: 180,
             votesPerToken: 5,
-            maxReturn: 15
+            maxReturn: 15,
+            factor: 26
         }
     ]);
+    const handleVotingConfigChange = (updatedConfig)=>{
+        setVotingConfigs((prevConfigs)=>{
+            return prevConfigs.map((config)=>{
+                if (config.id === updatedConfig.id) {
+                    return {
+                        ...config,
+                        ...updatedConfig
+                    };
+                }
+                return config;
+            });
+        });
+    };
     const sensors = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$dnd$2d$kit$2f$core$2f$dist$2f$core$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSensors"])((0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$dnd$2d$kit$2f$core$2f$dist$2f$core$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSensor"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$dnd$2d$kit$2f$core$2f$dist$2f$core$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PointerSensor"]), (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$dnd$2d$kit$2f$core$2f$dist$2f$core$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSensor"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$dnd$2d$kit$2f$core$2f$dist$2f$core$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["KeyboardSensor"], {
         coordinateGetter: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$dnd$2d$kit$2f$sortable$2f$dist$2f$sortable$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["sortableKeyboardCoordinates"]
     }));
@@ -518,18 +535,18 @@ const SettingsGovernance = ()=>{
                                 className: "w-5 h-5"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                lineNumber: 101,
+                                lineNumber: 113,
                                 columnNumber: 15
                             }, void 0)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                        lineNumber: 99,
+                        lineNumber: 111,
                         columnNumber: 13
                     }, void 0)
                 }, void 0, false, {
                     fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                    lineNumber: 93,
+                    lineNumber: 105,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -544,7 +561,7 @@ const SettingsGovernance = ()=>{
                                         children: "Main Setup"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                        lineNumber: 109,
+                                        lineNumber: 121,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -552,13 +569,13 @@ const SettingsGovernance = ()=>{
                                         children: "Voting and Staking Configuration"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                        lineNumber: 110,
+                                        lineNumber: 122,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                lineNumber: 108,
+                                lineNumber: 120,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -567,7 +584,7 @@ const SettingsGovernance = ()=>{
                                         className: "h-[2px] rounded-xl bg-muted-foreground mb-5"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                        lineNumber: 115,
+                                        lineNumber: 127,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -575,7 +592,7 @@ const SettingsGovernance = ()=>{
                                         children: "Causes / Projects compensation distribution factor"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                        lineNumber: 117,
+                                        lineNumber: 129,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -589,13 +606,13 @@ const SettingsGovernance = ()=>{
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                                lineNumber: 123,
+                                                lineNumber: 135,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                        lineNumber: 120,
+                                        lineNumber: 132,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -616,12 +633,12 @@ const SettingsGovernance = ()=>{
                                                 placeholder: "Enter distribution values"
                                             }, num, false, {
                                                 fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                                lineNumber: 132,
+                                                lineNumber: 144,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                        lineNumber: 130,
+                                        lineNumber: 142,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$custom$2f$header$2d$wrapper$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["HeaderWrapper"], {
@@ -629,14 +646,14 @@ const SettingsGovernance = ()=>{
                                         description: "Manage the main logic setup for the governance system"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                        lineNumber: 140,
+                                        lineNumber: 152,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("hr", {
                                         className: "h-[2px] rounded-xl bg-muted-foreground mb-5"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                        lineNumber: 146,
+                                        lineNumber: 158,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$custom$2f$header$2d$wrapper$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["HeaderWrapper"], {
@@ -645,7 +662,7 @@ const SettingsGovernance = ()=>{
                                         size: "sm"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                        lineNumber: 147,
+                                        lineNumber: 159,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$dnd$2d$kit$2f$core$2f$dist$2f$core$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DndContext"], {
@@ -656,20 +673,21 @@ const SettingsGovernance = ()=>{
                                             items: votingConfigs.map((config)=>config.id),
                                             strategy: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$dnd$2d$kit$2f$sortable$2f$dist$2f$sortable$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["verticalListSortingStrategy"],
                                             children: votingConfigs.map((config)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(SortableVotingCalculator, {
-                                                    config: config
+                                                    config: config,
+                                                    onConfigChange: handleVotingConfigChange
                                                 }, config.id, false, {
                                                     fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                                    lineNumber: 164,
+                                                    lineNumber: 176,
                                                     columnNumber: 21
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                            lineNumber: 159,
+                                            lineNumber: 171,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                        lineNumber: 154,
+                                        lineNumber: 166,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -688,12 +706,12 @@ const SettingsGovernance = ()=>{
                                                     ...register("tokens")
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                                    lineNumber: 176,
+                                                    lineNumber: 192,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                                lineNumber: 170,
+                                                lineNumber: 186,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$causes$2f$edit$2f$form$2d$field$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -709,18 +727,18 @@ const SettingsGovernance = ()=>{
                                                     ...register("days")
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                                    lineNumber: 190,
+                                                    lineNumber: 206,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                                lineNumber: 184,
+                                                lineNumber: 200,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                        lineNumber: 169,
+                                        lineNumber: 185,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -739,12 +757,12 @@ const SettingsGovernance = ()=>{
                                                     ...register("percentageOfToken")
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                                    lineNumber: 207,
+                                                    lineNumber: 223,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                                lineNumber: 201,
+                                                lineNumber: 217,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$causes$2f$edit$2f$form$2d$field$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -760,57 +778,57 @@ const SettingsGovernance = ()=>{
                                                     ...register("percentage")
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                                    lineNumber: 221,
+                                                    lineNumber: 237,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                                lineNumber: 215,
+                                                lineNumber: 231,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                        lineNumber: 200,
+                                        lineNumber: 216,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                                lineNumber: 114,
+                                lineNumber: 126,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                        lineNumber: 107,
+                        lineNumber: 119,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                    lineNumber: 106,
+                    lineNumber: 118,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-            lineNumber: 92,
+            lineNumber: 104,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-        lineNumber: 91,
+        lineNumber: 103,
         columnNumber: 5
     }, this);
 };
-_s(SettingsGovernance, "4gEE31M9mgstIlE5QPi6MU5jywY=", false, function() {
+_s(SettingsGovernance, "pztRu6C+vpUkos+r/FiMOiL7+fA=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useForm"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$dnd$2d$kit$2f$core$2f$dist$2f$core$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSensors"]
     ];
 });
 _c = SettingsGovernance;
-function SortableVotingCalculator({ config }) {
+function SortableVotingCalculator({ config, onConfigChange }) {
     _s1();
     const { attributes, listeners, setNodeRef, transform, transition } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$dnd$2d$kit$2f$sortable$2f$dist$2f$sortable$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSortable"])({
         id: config.id
@@ -826,15 +844,16 @@ function SortableVotingCalculator({ config }) {
         ...listeners,
         className: "mb-2 cursor-grab active:cursor-grabbing",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(VotingCalculator, {
-            config: config
+            config: config,
+            onConfigChange: onConfigChange
         }, void 0, false, {
             fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-            lineNumber: 260,
+            lineNumber: 280,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-        lineNumber: 253,
+        lineNumber: 273,
         columnNumber: 5
     }, this);
 }
@@ -844,124 +863,209 @@ _s1(SortableVotingCalculator, "FTUh0JV0KNM2MI3tYtLrQh0rr1U=", false, function() 
     ];
 });
 _c1 = SortableVotingCalculator;
-function VotingCalculator({ config }) {
-    _s2();
-    const [days, setDays] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(config.days);
-    const [votesPerToken, setVotesPerToken] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(config.votesPerToken);
-    const [maxReturn, setMaxReturn] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(config.maxReturn);
-    const [multiplier, setMultiplier] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(1553);
-    const [factor, setFactor] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(26);
+function VotingCalculator({ config, onConfigChange }) {
+    const handleDaysChange = (e)=>{
+        const newDays = Number(e.target.value);
+        onConfigChange({
+            ...config,
+            days: newDays
+        });
+    };
+    const handleVotesPerTokenChange = (e)=>{
+        const newVotesPerToken = Number(e.target.value);
+        onConfigChange({
+            ...config,
+            votesPerToken: newVotesPerToken
+        });
+    };
+    const handleMaxReturnChange = (e)=>{
+        const newMaxReturn = Number(e.target.value);
+        onConfigChange({
+            ...config,
+            maxReturn: newMaxReturn
+        });
+    };
+    const handleMaxReturnIncrement = (increment)=>{
+        const currentValue = config.maxReturn || 0;
+        const newMaxReturn = Math.max(0, currentValue + increment);
+        onConfigChange({
+            ...config,
+            maxReturn: newMaxReturn
+        });
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "grid grid-cols-1  lg:grid-cols-7 items-center gap-4 rounded-lg",
+        className: "flex items-center w-full justify-between gap-1 sm:gap-2 rounded-lg flex-nowrap overflow-x-auto",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$Menu$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
-                className: "!w-5 !h-5 shrink-0"
+                className: "!w-3 !h-3 sm:!w-4 sm:!h-4 shrink-0"
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                lineNumber: 279,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
-                type: "number",
-                value: days,
-                onChange: (e)=>setDays(Number(e.target.value)),
-                placeholder: "Days",
-                className: ""
-            }, void 0, false, {
-                fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                lineNumber: 280,
+                lineNumber: 320,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                className: "px-4 py-2 whitespace-nowrap rounded-md text-white",
-                children: "Votes per token"
+                className: "whitespace-nowrap text-white text-xs flex-shrink-0",
+                children: "Days"
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                lineNumber: 287,
+                lineNumber: 322,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
                 type: "number",
-                value: votesPerToken,
-                onChange: (e)=>setVotesPerToken(Number(e.target.value)),
-                placeholder: "Votes per Token",
-                className: ""
+                value: config.days,
+                onChange: handleDaysChange,
+                placeholder: "Days",
+                className: "w-[50px] min-w-12 sm:w-16 md:w-full",
+                inputSize: "sm"
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                lineNumber: 288,
+                lineNumber: 323,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "px-4 py-2 whitespace-nowrap rounded-md text-white",
-                children: "Maximum monthly return"
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 hidden sm:inline",
+                children: "Votes per token"
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                lineNumber: 295,
+                lineNumber: 332,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2d$with$2d$text$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                label: "Max Return",
-                placeholder: "Max Return",
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 sm:hidden",
+                children: "Votes"
+            }, void 0, false, {
+                fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
+                lineNumber: 333,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
                 type: "number",
-                rootClassName: "flex-row-reverse",
-                value: maxReturn,
-                onChange: (e)=>setMaxReturn(Number(e.target.value))
+                step: "0.1",
+                value: config.votesPerToken,
+                onChange: handleVotesPerTokenChange,
+                placeholder: "Votes",
+                className: "w-12 sm:w-16 md:w-full min-w-12",
+                inputSize: "sm"
             }, void 0, false, {
                 fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                lineNumber: 298,
+                lineNumber: 334,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 hidden sm:inline",
+                children: "Max monthly return"
+            }, void 0, false, {
+                fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
+                lineNumber: 344,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 sm:hidden",
+                children: "Max"
+            }, void 0, false, {
+                fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
+                lineNumber: 345,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex gap-2",
+                className: "flex items-center gap-1",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                        size: "icon",
-                        variant: "outline",
-                        className: "size-7 rounded-full p-0",
-                        onClick: ()=>setFactor(factor + 1),
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$icons$2f$dist$2f$react$2d$icons$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PlusIcon"], {
-                            className: "w-5 h-5"
-                        }, void 0, false, {
-                            fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                            lineNumber: 314,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "bg-[#3d3c44] flex rounded-md items-center px-2 ",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
+                                placeholder: "Max",
+                                type: "number",
+                                value: config.maxReturn,
+                                onChange: handleMaxReturnChange,
+                                className: "w-12 min-w-12 sm:w-14 md:w-[10vw] border-0",
+                                inputSize: "sm"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
+                                lineNumber: 349,
+                                columnNumber: 9
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 hidden sm:inline",
+                                children: "percentage"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
+                                lineNumber: 358,
+                                columnNumber: 9
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 sm:hidden",
+                                children: "%"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
+                                lineNumber: 359,
+                                columnNumber: 7
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                        lineNumber: 308,
+                        lineNumber: 348,
                         columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                        size: "icon",
-                        variant: "outline",
-                        className: "size-7 rounded-full p-0",
-                        onClick: ()=>setFactor(factor - 1),
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$Minus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Minus$3e$__["Minus"], {
-                            className: "w-5 h-5"
-                        }, void 0, false, {
-                            fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                            lineNumber: 322,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex gap-1 flex-shrink-0",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                                type: "button",
+                                size: "icon",
+                                variant: "outline",
+                                className: "size-5 sm:size-6 rounded-full p-0",
+                                onClick: ()=>handleMaxReturnIncrement(1),
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$icons$2f$dist$2f$react$2d$icons$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PlusIcon"], {
+                                    className: "w-3 h-3 sm:w-4 sm:h-4"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
+                                    lineNumber: 371,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
+                                lineNumber: 364,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                                type: "button",
+                                size: "icon",
+                                variant: "outline",
+                                className: "size-5 sm:size-6 rounded-full p-0",
+                                onClick: ()=>handleMaxReturnIncrement(-1),
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mynaui$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$Minus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Minus$3e$__["Minus"], {
+                                    className: "w-3 h-3 sm:w-4 sm:h-4"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
+                                    lineNumber: 380,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
+                                lineNumber: 373,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                        lineNumber: 316,
+                        lineNumber: 363,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-                lineNumber: 307,
+                lineNumber: 347,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(main)/settings/governance/page.tsx",
-        lineNumber: 278,
+        lineNumber: 319,
         columnNumber: 5
     }, this);
 }
-_s2(VotingCalculator, "QjbpwI3FsDzVTo+C7OriMEsqoBo=");
 _c2 = VotingCalculator;
 const __TURBOPACK__default__export__ = SettingsGovernance;
 var _c, _c1, _c2;

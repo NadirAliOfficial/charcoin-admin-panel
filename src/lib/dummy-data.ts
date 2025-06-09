@@ -1,4 +1,5 @@
 import type { CauseFormData } from "@/schemas/causes-schema";
+import type { NewsSchemaType } from "@/schemas/news-schema";
 
 export const dummyData: CauseFormData = {
   causeTitle: "Building 3 schools in the west side of Nicaragua",
@@ -16,6 +17,14 @@ export const dummyData: CauseFormData = {
   phone: "+505-9856-98745",
   status: "Published",
   contractFile: "Final Formal Agreement - Nicaragua.pdf",
+};
+
+export const newsDummyData: NewsSchemaType = {
+  title: "We are making a difference in water cleaning",
+  short_description: "We are making a difference in water purification, bringing clean and safe water to communities in need. Every drop counts, and every effort changes lives. Join us in creating a cleaner future!",
+  video: null, // This should ideally be a File object for actual upload, but null for dummy
+  category: "clean_water",
+  status: "published",
 };
 
 export const contractFile = "Final Formal Agreement - Nicaragua.pdf";

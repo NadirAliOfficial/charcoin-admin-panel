@@ -48,6 +48,7 @@ type VotingConfig = {
   days: number;
   votesPerToken: number;
   maxReturn: number;
+  factor: number;
 };
 
 const SettingsGovernance = () => {
@@ -59,11 +60,22 @@ const SettingsGovernance = () => {
     formState: { errors },
   } = form;
   const [votingConfigs, setVotingConfigs] = useState<VotingConfig[]>([
-    { id: "1", days: 30, votesPerToken: 0.5, maxReturn: 5 },
-    { id: "2", days: 60, votesPerToken: 1, maxReturn: 7 },
-    { id: "3", days: 120, votesPerToken: 3, maxReturn: 10 },
-    { id: "4", days: 180, votesPerToken: 5, maxReturn: 15 },
+    { id: "1", days: 30, votesPerToken: 0.5, maxReturn: 5, factor: 26 },
+    { id: "2", days: 60, votesPerToken: 1, maxReturn: 7, factor: 26 },
+    { id: "3", days: 120, votesPerToken: 3, maxReturn: 10, factor: 26 },
+    { id: "4", days: 180, votesPerToken: 5, maxReturn: 15, factor: 26 },
   ]);
+
+  const handleVotingConfigChange = (updatedConfig: VotingConfig) => {
+    setVotingConfigs((prevConfigs) => {
+      return prevConfigs.map((config) => {
+        if (config.id === updatedConfig.id) {
+          return { ...config, ...updatedConfig };
+        }
+        return config;
+      });
+    });
+  };
 
   const sensors = useSensors(
     useSensor(PointerSensor),
@@ -161,7 +173,11 @@ const SettingsGovernance = () => {
                   strategy={verticalListSortingStrategy}
                 >
                   {votingConfigs.map((config) => (
-                    <SortableVotingCalculator key={config.id} config={config} />
+                    <SortableVotingCalculator
+                      key={config.id}
+                      config={config}
+                      onConfigChange={handleVotingConfigChange}
+                    />
                   ))}
                 </SortableContext>
               </DndContext>
@@ -238,9 +254,13 @@ const SettingsGovernance = () => {
 // Sortable Voting Calculator Component
 type SortableVotingCalculatorProps = {
   config: VotingConfig;
+  onConfigChange: (updatedConfig: VotingConfig) => void;
 };
 
-function SortableVotingCalculator({ config }: SortableVotingCalculatorProps) {
+function SortableVotingCalculator({
+  config,
+  onConfigChange,
+}: SortableVotingCalculatorProps) {
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({ id: config.id });
 
@@ -257,7 +277,7 @@ function SortableVotingCalculator({ config }: SortableVotingCalculatorProps) {
       {...listeners}
       className="mb-2 cursor-grab active:cursor-grabbing"
     >
-      <VotingCalculator config={config} />
+      <VotingCalculator config={config} onConfigChange={onConfigChange} />
     </div>
   );
 }
@@ -265,62 +285,101 @@ function SortableVotingCalculator({ config }: SortableVotingCalculatorProps) {
 // Voting Calculator Component
 type VotingCalculatorProps = {
   config: VotingConfig;
+  onConfigChange: (updatedConfig: VotingConfig) => void;
 };
 
-function VotingCalculator({ config }: VotingCalculatorProps) {
-  const [days, setDays] = useState(config.days);
-  const [votesPerToken, setVotesPerToken] = useState(config.votesPerToken);
-  const [maxReturn, setMaxReturn] = useState(config.maxReturn);
-  const [multiplier, setMultiplier] = useState(1553);
-  const [factor, setFactor] = useState(26);
+function VotingCalculator({
+  config,
+  onConfigChange,
+}: VotingCalculatorProps) {
+  const handleDaysChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newDays = Number(e.target.value);
+    onConfigChange({ ...config, days: newDays });
+  };
+
+  const handleVotesPerTokenChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const newVotesPerToken = Number(e.target.value);
+    onConfigChange({ ...config, votesPerToken: newVotesPerToken });
+  };
+
+  const handleMaxReturnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newMaxReturn = Number(e.target.value);
+    onConfigChange({ ...config, maxReturn: newMaxReturn });
+  };
+
+  const handleMaxReturnIncrement = (increment: number) => {
+    const currentValue = config.maxReturn || 0;
+    const newMaxReturn = Math.max(0, currentValue + increment);
+    onConfigChange({ ...config, maxReturn: newMaxReturn });
+  };
 
   return (
-    <div className="grid grid-cols-1  lg:grid-cols-7 items-center gap-4 rounded-lg">
-      <Menu className="!w-5 !h-5 shrink-0" />
+    <div className="flex items-center w-full justify-between gap-1 sm:gap-2 rounded-lg flex-nowrap overflow-x-auto">
+      <Menu className="!w-3 !h-3 sm:!w-4 sm:!h-4 shrink-0" />
+      
+      <span className="whitespace-nowrap text-white text-xs flex-shrink-0">Days</span>
       <Input
         type="number"
-        value={days}
-        onChange={(e) => setDays(Number(e.target.value))}
+        value={config.days}
+        onChange={handleDaysChange}
         placeholder="Days"
-        className=""
-      />
-      <span className="px-4 py-2 whitespace-nowrap rounded-md text-white">Votes per token</span>
-      <Input
-        type="number"
-        value={votesPerToken}
-        onChange={(e) => setVotesPerToken(Number(e.target.value))}
-        placeholder="Votes per Token"
-        className=""
-      />
-      <div className="px-4 py-2 whitespace-nowrap rounded-md text-white">
-      Maximum monthly return
-      </div>
-      <InputWithText
-        label="Max Return"
-        placeholder="Max Return"
-        type="number"
-        rootClassName="flex-row-reverse"
-        value={maxReturn}
-        onChange={(e) => setMaxReturn(Number(e.target.value))}
+        className="w-[50px] min-w-12 sm:w-16 md:w-full"
+        inputSize="sm"
       />
       
-      <div className="flex gap-2">
-        <Button
-          size={"icon"}
-          variant={"outline"}
-          className="size-7 rounded-full p-0"
-          onClick={() => setFactor(factor + 1)}
-        >
-          <PlusIcon className="w-5 h-5" />
-        </Button>
-        <Button
-          size={"icon"}
-          variant={"outline"}
-          className="size-7 rounded-full p-0"
-          onClick={() => setFactor(factor - 1)}
-        >
-          <Minus className="w-5 h-5" />
-        </Button>
+      <span className="whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 hidden sm:inline">Votes per token</span>
+      <span className="whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 sm:hidden">Votes</span>
+      <Input
+        type="number"
+        step="0.1"
+        value={config.votesPerToken}
+        onChange={handleVotesPerTokenChange}
+        placeholder="Votes"
+        className="w-12 sm:w-16 md:w-full min-w-12"
+        inputSize="sm"
+      />
+      
+      <span className="whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 hidden sm:inline">Max monthly return</span>
+      <span className="whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 sm:hidden">Max</span>
+      
+      <div className="flex items-center gap-1">
+        <div className="bg-[#3d3c44] flex rounded-md items-center px-2 ">
+        <Input
+          placeholder="Max"
+          type="number"
+          value={config.maxReturn}
+          onChange={handleMaxReturnChange}
+          className="w-12 min-w-12 sm:w-14 md:w-[10vw] border-0"
+          inputSize="sm"
+        />
+        
+        <span className="whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 hidden sm:inline">percentage</span>
+      <span className="whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 sm:hidden">%</span>
+        </div>
+        
+        
+        <div className="flex gap-1 flex-shrink-0">
+          <Button
+            type="button"
+            size={"icon"}
+            variant={"outline"}
+            className="size-5 sm:size-6 rounded-full p-0"
+            onClick={() => handleMaxReturnIncrement(1)}
+          >
+            <PlusIcon className="w-3 h-3 sm:w-4 sm:h-4" />
+          </Button>
+          <Button
+            type="button"
+            size={"icon"}
+            variant={"outline"}
+            className="size-5 sm:size-6 rounded-full p-0"
+            onClick={() => handleMaxReturnIncrement(-1)}
+          >
+            <Minus className="w-3 h-3 sm:w-4 sm:h-4" />
+          </Button>
+        </div>
       </div>
     </div>
   );

@@ -1198,6 +1198,10 @@ body {
   z-index: 50;
 }
 
+.-z-10 {
+  z-index: -10;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -1479,6 +1483,11 @@ body {
   height: 1.75rem;
 }
 
+.size-6 {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .\!h-4 {
   height: 1rem !important;
 }
@@ -1629,6 +1638,10 @@ body {
 
 .h-\[50px\] {
   height: 50px;
+}
+
+.\!h-3 {
+  height: .75rem !important;
 }
 
 .max-h-\[--radix-select-content-available-height\] {
@@ -1855,6 +1868,22 @@ body {
   width: 100vw;
 }
 
+.w-\[50\%\] {
+  width: 50%;
+}
+
+.w-\[20px\] {
+  width: 20px;
+}
+
+.w-\[50px\] {
+  width: 50px;
+}
+
+.\!w-3 {
+  width: .75rem !important;
+}
+
 .min-w-64 {
   min-width: 16rem;
 }
@@ -1885,6 +1914,14 @@ body {
 
 .min-w-\[var\(--radix-select-trigger-width\)\] {
   min-width: var(--radix-select-trigger-width);
+}
+
+.min-w-0 {
+  min-width: 0;
+}
+
+.min-w-12 {
+  min-width: 3rem;
 }
 
 .\!max-w-3xl {
@@ -1957,6 +1994,10 @@ body {
 
 .shrink-0 {
   flex-shrink: 0;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
 
 .caption-bottom {
@@ -2160,6 +2201,10 @@ body {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
 }
 
 .items-start {
@@ -2416,6 +2461,10 @@ body {
 
 .border-2 {
   border-width: 2px;
+}
+
+.border-0 {
+  border-width: 0;
 }
 
 .border-y {
@@ -3088,6 +3137,10 @@ body {
 
 .pt-6 {
   padding-top: 1.5rem;
+}
+
+.pr-6 {
+  padding-right: 1.5rem;
 }
 
 .text-left {
@@ -4434,6 +4487,10 @@ body {
     display: block;
   }
 
+  .sm\:inline {
+    display: inline;
+  }
+
   .sm\:flex {
     display: flex;
   }
@@ -4442,8 +4499,21 @@ body {
     display: none;
   }
 
+  .sm\:size-6 {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
   .sm\:h-\[300px\] {
     height: 300px;
+  }
+
+  .sm\:\!h-4 {
+    height: 1rem !important;
+  }
+
+  .sm\:h-4 {
+    height: 1rem;
   }
 
   .sm\:w-72 {
@@ -4456,6 +4526,22 @@ body {
 
   .sm\:w-full {
     width: 100%;
+  }
+
+  .sm\:\!w-4 {
+    width: 1rem !important;
+  }
+
+  .sm\:w-14 {
+    width: 3.5rem;
+  }
+
+  .sm\:w-16 {
+    width: 4rem;
+  }
+
+  .sm\:w-4 {
+    width: 1rem;
   }
 
   .sm\:max-w-md {
@@ -4476,6 +4562,10 @@ body {
 
   .sm\:justify-end {
     justify-content: flex-end;
+  }
+
+  .sm\:gap-2 {
+    gap: .5rem;
   }
 
   .sm\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
@@ -4568,6 +4658,22 @@ body {
     width: auto;
   }
 
+  .md\:w-full {
+    width: 100%;
+  }
+
+  .md\:w-\[200px\] {
+    width: 200px;
+  }
+
+  .md\:w-\[30vw\] {
+    width: 30vw;
+  }
+
+  .md\:w-\[10vw\] {
+    width: 10vw;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -4648,6 +4754,11 @@ body {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
+
+  .md\:text-xs {
+    font-size: .75rem;
+    line-height: 1rem;
+  }
 }
 
 @media (width >= 1024px) {
@@ -4710,6 +4821,14 @@ body {
 
   .lg\:grid-cols-9 {
     grid-template-columns: repeat(9, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-\[auto_minmax\(80px\,1fr\)_auto_minmax\(80px\,1fr\)_auto_minmax\(80px\,1fr\)_auto_auto\] {
+    grid-template-columns: auto minmax(80px, 1fr) auto minmax(80px, 1fr) auto minmax(80px, 1fr) auto auto;
+  }
+
+  .lg\:flex-nowrap {
+    flex-wrap: nowrap;
   }
 
   .lg\:space-x-0 > :not([hidden]) ~ :not([hidden]) {

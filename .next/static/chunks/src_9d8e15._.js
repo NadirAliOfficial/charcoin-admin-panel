@@ -1,4 +1,4 @@
-(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/src_ad6b78._.js", {
+(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/src_9d8e15._.js", {
 
 "[project]/src/types/news.ts [app-client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
@@ -375,44 +375,6 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_refresh__.registerExports(module, globalThis.$RefreshHelpers$);
 }
 }}),
-"[project]/src/lib/dummy-data.ts [app-client] (ecmascript)": ((__turbopack_context__) => {
-"use strict";
-
-var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, k: __turbopack_refresh__, m: module, z: __turbopack_require_stub__ } = __turbopack_context__;
-{
-__turbopack_esm__({
-    "contractFile": (()=>contractFile),
-    "dummyData": (()=>dummyData),
-    "newsDummyData": (()=>newsDummyData)
-});
-const dummyData = {
-    causeTitle: "Building 3 schools in the west side of Nicaragua",
-    organization: "Schools for the Future",
-    website: "https://schoolsforthefuture.org",
-    country: "Nicaragua",
-    campaign: "February 2025 (Feb 1 to Feb 20)",
-    category: "Education",
-    type: "One Time Only",
-    wallet: "0xfd88987b67c265fe57fbdb3b57d97b717ef567e20bd18ba3c2a780040f15634dfe",
-    responsibleContact: "Mr. Josué Eliseo Méndez",
-    role: "Finance Director",
-    email: "josue.mendez@foundation.org",
-    phone: "+505-9856-98745",
-    status: "Published",
-    contractFile: "Final Formal Agreement - Nicaragua.pdf"
-};
-const newsDummyData = {
-    title: "We are making a difference in water cleaning",
-    short_description: "We are making a difference in water purification, bringing clean and safe water to communities in need. Every drop counts, and every effort changes lives. Join us in creating a cleaner future!",
-    video: null,
-    category: "clean_water",
-    status: "published"
-};
-const contractFile = "Final Formal Agreement - Nicaragua.pdf";
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_refresh__.registerExports(module, globalThis.$RefreshHelpers$);
-}
-}}),
 "[project]/src/components/ui/label.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
@@ -704,7 +666,7 @@ function VideoUploadSection({ fieldName, label, description, onUpload }) {
     const { setValue, getValues, formState: { errors } } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useFormContext"])();
     const fileInputRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const [videoFile, setVideoFile] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
-        "VideoUploadSection.useState": ()=>getValues(fieldName) || null
+        "VideoUploadSection.useState": ()=>getValues(fieldName)
     }["VideoUploadSection.useState"]);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "VideoUploadSection.useEffect": ()=>{
@@ -728,8 +690,8 @@ function VideoUploadSection({ fieldName, label, description, onUpload }) {
         }
     };
     const handleDeleteVideo = ()=>{
-        setVideoFile(null);
-        onUpload(null);
+        setVideoFile(undefined);
+        onUpload(undefined);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$causes$2f$edit$2f$form$2d$field$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
         id: fieldName,
@@ -844,7 +806,7 @@ function VideoUploadSection({ fieldName, label, description, onUpload }) {
         columnNumber: 5
     }, this);
 }
-_s(VideoUploadSection, "VhahA5z9/KYpeZefdp4nlrGpZhY=", false, function() {
+_s(VideoUploadSection, "Rsic1q+Oj26lZfJJSGMEd9ePzyc=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useFormContext"]
     ];
@@ -1183,9 +1145,14 @@ const selectVariants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_
     }
 });
 const SelectField = ({ className, variant, selectSize, rounded, options, placeholder = "Select an option", value, onValueChange, triggerIcon })=>{
+    console.log(`SelectField: value=${value}, placeholder=${placeholder}`);
+    const handleValueChange = (newValue)=>{
+        console.log(`SelectField: onValueChange called with ${newValue}`);
+        onValueChange(newValue);
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Select"], {
         value: value,
-        onValueChange: onValueChange,
+        onValueChange: handleValueChange,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectTrigger"], {
                 className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])(selectVariants({
@@ -1199,12 +1166,12 @@ const SelectField = ({ className, variant, selectSize, rounded, options, placeho
                     placeholder: placeholder
                 }, void 0, false, {
                     fileName: "[project]/src/components/causes/edit/form-select.tsx",
-                    lineNumber: 75,
+                    lineNumber: 81,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/causes/edit/form-select.tsx",
-                lineNumber: 69,
+                lineNumber: 75,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -1213,18 +1180,18 @@ const SelectField = ({ className, variant, selectSize, rounded, options, placeho
                         children: option.label
                     }, option.value, false, {
                         fileName: "[project]/src/components/causes/edit/form-select.tsx",
-                        lineNumber: 79,
+                        lineNumber: 85,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/components/causes/edit/form-select.tsx",
-                lineNumber: 77,
+                lineNumber: 83,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/causes/edit/form-select.tsx",
-        lineNumber: 68,
+        lineNumber: 74,
         columnNumber: 5
     }, this);
 };
@@ -1277,7 +1244,6 @@ __turbopack_esm__({
     "default": (()=>__TURBOPACK__default__export__)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$dummy$2d$data$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/lib/dummy-data.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$hookform$2f$resolvers$2f$yup$2f$dist$2f$yup$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/@hookform/resolvers/yup/dist/yup.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$causes$2f$edit$2f$form$2d$field$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/causes/edit/form-field.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/ui/input.tsx [app-client] (ecmascript)");
@@ -1304,12 +1270,17 @@ var _s = __turbopack_refresh__.signature();
 ;
 ;
 ;
-;
 const AddNewNews = ()=>{
     _s();
     const form = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useForm"])({
         resolver: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$hookform$2f$resolvers$2f$yup$2f$dist$2f$yup$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["yupResolver"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$schemas$2f$news$2d$schema$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["newsSchema"]),
-        defaultValues: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$dummy$2d$data$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["newsDummyData"]
+        defaultValues: {
+            title: "",
+            short_description: "",
+            video: undefined,
+            category: "",
+            status: ""
+        }
     });
     const { formState: { errors }, register, control, setValue, getValues } = form;
     const [videoFile, setVideoFile] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
@@ -1346,7 +1317,7 @@ const AddNewNews = ()=>{
                 className: ""
             }, void 0, false, {
                 fileName: "[project]/src/components/community/add-new-news.tsx",
-                lineNumber: 62,
+                lineNumber: 68,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormProvider"], {
@@ -1359,7 +1330,7 @@ const AddNewNews = ()=>{
                             title: "Main details"
                         }, void 0, false, {
                             fileName: "[project]/src/components/community/add-new-news.tsx",
-                            lineNumber: 71,
+                            lineNumber: 77,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$causes$2f$edit$2f$form$2d$field$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1375,12 +1346,12 @@ const AddNewNews = ()=>{
                                 ...register("title")
                             }, void 0, false, {
                                 fileName: "[project]/src/components/community/add-new-news.tsx",
-                                lineNumber: 79,
+                                lineNumber: 85,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/community/add-new-news.tsx",
-                            lineNumber: 73,
+                            lineNumber: 79,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$causes$2f$edit$2f$form$2d$field$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1396,12 +1367,12 @@ const AddNewNews = ()=>{
                                 ...register("short_description")
                             }, void 0, false, {
                                 fileName: "[project]/src/components/community/add-new-news.tsx",
-                                lineNumber: 94,
+                                lineNumber: 100,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/community/add-new-news.tsx",
-                            lineNumber: 88,
+                            lineNumber: 94,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2d$video$2d$upload$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1411,7 +1382,7 @@ const AddNewNews = ()=>{
                             onUpload: handleVideoUpload
                         }, void 0, false, {
                             fileName: "[project]/src/components/community/add-new-news.tsx",
-                            lineNumber: 103,
+                            lineNumber: 109,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1425,12 +1396,17 @@ const AddNewNews = ()=>{
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Controller"], {
                                         name: "category",
                                         control: control,
-                                        render: ({ field })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$causes$2f$edit$2f$form$2d$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectField"], {
+                                        render: ({ field })=>{
+                                            console.log(`Category Controller: field.value=${field.value}`);
+                                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$causes$2f$edit$2f$form$2d$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectField"], {
                                                 selectSize: "lg",
                                                 variant: "newly_secondary",
                                                 placeholder: "Select a category",
                                                 value: field.value,
-                                                onValueChange: field.onChange,
+                                                onValueChange: (val)=>{
+                                                    console.log(`Category SelectField: onValueChange received ${val}`);
+                                                    field.onChange(val);
+                                                },
                                                 className: "mt-auto relative text-white",
                                                 options: [
                                                     {
@@ -1464,17 +1440,18 @@ const AddNewNews = ()=>{
                                                 ]
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/community/add-new-news.tsx",
-                                                lineNumber: 121,
-                                                columnNumber: 19
-                                            }, void 0)
+                                                lineNumber: 129,
+                                                columnNumber: 21
+                                            }, void 0);
+                                        }
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/community/add-new-news.tsx",
-                                        lineNumber: 117,
+                                        lineNumber: 123,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/community/add-new-news.tsx",
-                                    lineNumber: 111,
+                                    lineNumber: 117,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$causes$2f$edit$2f$form$2d$field$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1485,13 +1462,18 @@ const AddNewNews = ()=>{
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Controller"], {
                                         name: "status",
                                         control: control,
-                                        render: ({ field })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$causes$2f$edit$2f$form$2d$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectField"], {
+                                        render: ({ field })=>{
+                                            console.log(`Status Controller: field.value=${field.value}`);
+                                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$causes$2f$edit$2f$form$2d$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectField"], {
                                                 className: "mt-auto text-white relative",
                                                 variant: "newly_secondary",
                                                 selectSize: "lg",
                                                 placeholder: "Published",
                                                 value: field.value,
-                                                onValueChange: field.onChange,
+                                                onValueChange: (val)=>{
+                                                    console.log(`Status SelectField: onValueChange received ${val}`);
+                                                    field.onChange(val);
+                                                },
                                                 options: [
                                                     {
                                                         value: "published",
@@ -1508,23 +1490,24 @@ const AddNewNews = ()=>{
                                                 ]
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/community/add-new-news.tsx",
-                                                lineNumber: 153,
-                                                columnNumber: 19
-                                            }, void 0)
+                                                lineNumber: 167,
+                                                columnNumber: 21
+                                            }, void 0);
+                                        }
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/community/add-new-news.tsx",
-                                        lineNumber: 149,
+                                        lineNumber: 161,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/community/add-new-news.tsx",
-                                    lineNumber: 143,
+                                    lineNumber: 155,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/community/add-new-news.tsx",
-                            lineNumber: 109,
+                            lineNumber: 115,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1537,30 +1520,30 @@ const AddNewNews = ()=>{
                                     className: "!w-5 !h-5"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/community/add-new-news.tsx",
-                                    lineNumber: 172,
+                                    lineNumber: 190,
                                     columnNumber: 26
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/community/add-new-news.tsx",
-                            lineNumber: 171,
+                            lineNumber: 189,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/community/add-new-news.tsx",
-                    lineNumber: 70,
+                    lineNumber: 76,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/community/add-new-news.tsx",
-                lineNumber: 69,
+                lineNumber: 75,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/community/add-new-news.tsx",
-        lineNumber: 61,
+        lineNumber: 67,
         columnNumber: 5
     }, this);
 };
@@ -3385,4 +3368,4 @@ var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_
 }}),
 }]);
 
-//# sourceMappingURL=src_ad6b78._.js.map
+//# sourceMappingURL=src_9d8e15._.js.map

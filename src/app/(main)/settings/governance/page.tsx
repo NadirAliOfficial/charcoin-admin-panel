@@ -137,12 +137,12 @@ const SettingsGovernance = () => {
                 </b>
               </p>
 
-              <div className="flex flex-wrap w-full justify-between gap-4 mt-4 mb-12">
+              <div className="grid grid-cols-2 max-md:grid-cols-1 w-full justify-between gap-4 mt-4 mb-12">
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
                   <InputWithText
                     key={num}
                     label={`${num} participants`}
-                    className="w-full md:w-[49%]"
+                    className="w-full "
                     placeholder="Enter distribution values"
                   />
                 ))}
@@ -181,7 +181,7 @@ const SettingsGovernance = () => {
                 </SortableContext>
               </DndContext>
 
-              <div className="flex flex-wrap md:flex-nowrap h-full justify-between gap-4 mb-4 mt-12">
+              <div className="grid grid-cols-2 items-end max-md:grid-cols-1 h-full  gap-4 ">
                 <FormField
                   id="tokens"
                   label="Minimum Staking Requirement for Governance Participation"
@@ -201,18 +201,19 @@ const SettingsGovernance = () => {
                   label="Staking Duration for Voting Eligibility"
                   description="Determine the minimum staking period required for a user to be eligible to vote"
                   error={errors.days?.message as string | undefined}
+                  
                 >
                   <InputWithText
                     id="days"
                     label="Days"
                     rootClassName="flex-row-reverse"
-                    className="bg-gray-800 border-gray-700 text-white"
+                    className="bg-gray-800   border-gray-700 !w-full text-white"
                     {...register("days")}
                   />
                 </FormField>
               </div>
 
-              <div className="flex flex-wrap md:flex-nowrap justify-between gap-4 mb-4">
+              <div className="grid grid-cols-2 items-end max-md:grid-cols-1 h-full  gap-4 ">
                 <FormField
                   id="percentageOfToken"
                   label="Penalty for Early Staking Withdrawal"
@@ -315,7 +316,7 @@ function VotingCalculator({
   };
 
   return (
-    <div className="flex items-center w-full justify-between gap-1 sm:gap-2 rounded-lg flex-nowrap overflow-x-auto">
+    <div className="flex items-center w-full justify-between gap-1 sm:gap-2 rounded-lg flex-nowrap ">
       <Menu className="!w-3 !h-3 sm:!w-4 sm:!h-4 shrink-0" />
 
       <span className="whitespace-nowrap text-white text-xs flex-shrink-0">Days</span>
@@ -344,13 +345,13 @@ function VotingCalculator({
       <span className="whitespace-nowrap text-white text-[10px] md:text-xs flex-shrink-0 sm:hidden">Max</span>
 
       <div className="flex items-center gap-1">
-        <div className="bg-[#3d3c44] flex rounded-md items-center px-2 ">
+        <div className="bg-[#3d3c44]  flex rounded-md items-center px-2 pl-0 focus-within:ring-2 ring-primary ring-offset-2 ring-offset-secondary ">
           <Input
             placeholder="Max"
             type="number"
             value={config.maxReturn}
             onChange={handleMaxReturnChange}
-            className="w-12 min-w-12 sm:w-14 md:w-[10vw] border-0"
+            className="w-12 min-w-12 sm:w-14 !ring-0 !ring-offset-0 md:w-[10vw] border-0"
             inputSize="sm"
           />
 

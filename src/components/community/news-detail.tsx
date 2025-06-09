@@ -20,12 +20,12 @@ interface NewsDetailProps {
 export function NewsDetail({ news }: NewsDetailProps) {
   const form = useForm<NewsSchemaType>({
     resolver: yupResolver(newsSchema),
-    defaultValues: { ...news, video_thumbnail: news.video_thumbnail || null },
+    defaultValues: { ...news, video_thumbnail: news.video_thumbnail || undefined },
   });
 
   const { formState: { errors }, register, setValue, getValues } = form;
 
-  const [selectedVideo, setSelectedVideo] = useState<string | null>(news.video_thumbnail);
+  const [selectedVideo, setSelectedVideo] = useState<string | undefined | null>(news.video_thumbnail);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleVideoUpload = (event: React.ChangeEvent<HTMLInputElement>) => {

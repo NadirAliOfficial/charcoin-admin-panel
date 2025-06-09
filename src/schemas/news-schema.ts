@@ -11,23 +11,28 @@ const newsSchema = yup.object().shape({
     .required("Short description is required")
     .max(500, "Short description must be at most 500 characters"),
 
-  video_thumbnail: yup
+    video_thumbnail: yup
     .string()
     .nullable()
+    .optional(),
+    video: yup
+    .mixed()
+    .required("Video is required")
     .test(
-      "is-valid-url",
-      "Video thumbnail must be a valid URL or a data URL",
+      "fileType",
+      "Only MP4 files are allowed",
       (value) => {
-        if (!value) return true; // Allow null or empty string
-        try {
-          new URL(value); // Check if it's a valid URL
-          return true;
-        } catch (_) {
-          // Also allow data URLs
-          return value.startsWith("data:image/");
-        }
+        if (!value) return false;
+        if (!(value instanceof File)) return false;
+        return ["video/mp4"].includes(value.type);
       }
-    ),
+    )
+    .test("fileSize", "Video must be less than 50MB", (value) => {
+      if (!value) return false;
+      if (!(value instanceof File)) return false;
+      return value.size <= 50 * 1024 * 1024; // 50MB limit
+    }),
+
 
   category: yup.string().required("Category is required"),
 

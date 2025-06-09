@@ -1,48 +1,59 @@
 import { NewsArticle } from "@/types/news";
 import { format } from "date-fns";
-import { ArrowRight, ImageIcon, Trash, VideoIcon } from "lucide-react";
+import { ArrowRight, ImageIcon, Trash } from "lucide-react";
 import { useState, useRef } from "react";
 import Image from "next/image";
+import { Input } from "../ui/input";
+import { Button } from "../ui/button";
+import FormField from "../causes/edit/form-field";
+import { HeaderWrapper } from "../custom/header-wrapper";
+import FormSectionTitle from "../causes/edit/form-section-title";
+import { SelectField } from "../causes/edit/form-select";
+import { newsSchema, NewsSchemaType } from "@/schemas/news-schema";
+import { useForm, FormProvider } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 interface NewsDetailProps {
   news: NewsArticle;
 }
 
 export function NewsDetail({ news }: NewsDetailProps) {
+  const form = useForm<NewsSchemaType>({
+    resolver: yupResolver(newsSchema),
+    defaultValues: { ...news, video_thumbnail: news.video_thumbnail || null },
+  });
+
+  const { formState: { errors }, register, setValue, getValues } = form;
+
   const [selectedVideo, setSelectedVideo] = useState<string | null>(news.video_thumbnail);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleVideoUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
-      // Check if file is a video
       if (!file.type.startsWith('video/')) {
         alert('Please upload a video file');
         return;
       }
 
-      // Create a video element to get thumbnail
       const video = document.createElement('video');
       video.preload = 'metadata';
       video.onloadedmetadata = () => {
-        // Set video time to 1 second to get thumbnail
         video.currentTime = 1;
       };
 
       video.onseeked = () => {
-        // Create canvas to capture thumbnail
         const canvas = document.createElement('canvas');
         canvas.width = video.videoWidth;
         canvas.height = video.videoHeight;
         const ctx = canvas.getContext('2d');
         ctx?.drawImage(video, 0, 0, canvas.width, canvas.height);
         
-        // Convert canvas to data URL
         const thumbnail = canvas.toDataURL('image/jpeg');
         setSelectedVideo(thumbnail);
+        setValue("video_thumbnail", thumbnail);
       };
 
-      // Create object URL for video
       const videoUrl = URL.createObjectURL(file);
       video.src = videoUrl;
     }
@@ -50,126 +61,174 @@ export function NewsDetail({ news }: NewsDetailProps) {
 
   const handleDeleteVideo = () => {
     setSelectedVideo(null);
+    setValue("video_thumbnail", null);
     if (fileInputRef.current) {
       fileInputRef.current.value = "";
     }
   };
 
+  const onSubmit = (data: NewsSchemaType) => {
+    console.log(data);
+  };
+
   return (
-    <div className="text-white p-6 rounded-2xl mx-auto">
-      <div className="flex justify-between items-center mb-6 mt-5">
-        <div>
-          <h2 className="text-2xl font-semibold">Publish a new entry</h2>
-          <p className="text-sm text-[#A1A1AA]">
-            Complete the following fields to create and publish news
-          </p>
-        </div>
-      </div>
+    <div className="px-4 max-md:px-0 flex flex-col gap-0 pb-4  ">
+      <HeaderWrapper
+        title="News Details"
+        description="View and manage news details"
+        size={"sm"}
+        className="px-10 py-1 max-md:px-10"
+      />
 
-      <div className="space-y-6 mt-10">
-        <div className="space-y-2 mt-4 border-b border-[#2A2931] pb-4">
-          <h3 className="text-lg font-semibold">Main details</h3>
-        </div>
+      <FormProvider {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)}>
+          <FormSectionTitle title="Main details" />
 
-        <div className="space-y-4">
-          <div>
-            <label className="block text-sm mb-1">News title</label>
-            <p className="text-xs text-[#A1A1AA] mb-4">Enter a short but powerful headline</p>
-            <input
-              type="text"
-              value={news.title}
-              readOnly
-              className="w-full bg-[#2A2931] text-white px-4 py-2 rounded-md"
-            />
-          </div>
+          <div className="space-y-4">
+            <FormField
+              id="title"
+              label="News title"
+              description="Enter a short but powerful headline"
+              error={errors.title?.message}
+            >
+              <Input
+                type="text"
+                id="title"
+                placeholder="News Title"
+                variant="newly_secondary"
+                inputSize="lg"
+                {...register("title")}
+                disabled
+              />
+            </FormField>
 
-          <div>
-            <label className="block text-sm mb-1">Short description</label>
-            <p className="text-xs text-[#A1A1AA] mb-4">The description of the news article</p>
-            <input
-              value={news.short_description}
-              readOnly
-              className="w-full bg-[#2A2931] text-white px-4 py-2 rounded-md"
-            />
-          </div>
+            <FormField
+              id="short_description"
+              label="Short description"
+              description="The description of the news article"
+              error={errors.short_description?.message}
+            >
+              <Input
+                id="short_description"
+                placeholder="Short Description"
+                variant="newly_secondary"
+                inputSize="lg"
+                {...register("short_description")}
+                disabled
+              />
+            </FormField>
 
-          <div className="border-b pb-10 border-[#2A2931] rounded-md">
-            <label className="block text-sm mb-1">Video</label>
-            <p className="text-xs text-[#A1A1AA] mb-4">Choose an MP4 Video, below you will see a preview thumbnail of the video</p>
-            <div className="flex items-center gap-4">
-              <div className="space-x-2 flex">
-                <input
-                  type="file"
-                  ref={fileInputRef}
-                  onChange={handleVideoUpload}
-                  accept="video/*"
-                  className="hidden"
-                  id="video-upload"
-                />
-                <button 
-                  onClick={() => fileInputRef.current?.click()}
-                  className="bg-[#3CFEC3] flex gap-2 items-center text-black px-4 py-2 rounded-md text-sm font-medium hover:opacity-90"
-                >
-                  Upload a video
-                  <ImageIcon className="w-4 h-4" />
-                </button>
-                {selectedVideo && (
-                  <button 
-                    onClick={handleDeleteVideo}
-                    className="bg-red-300 flex gap-2 items-center text-black px-4 py-2 rounded-md text-sm font-medium hover:opacity-90"
+            <FormField
+              id="video_thumbnail"
+              label="Video"
+              description="Choose an MP4 Video, below you will see a preview thumbnail of the video"
+            >
+              <div className="flex items-center w-full gap-4 max-sm:flex-col">
+                <div className="space-x-2 flex">
+                  <input
+                    type="file"
+                    ref={fileInputRef}
+                    onChange={handleVideoUpload}
+                    accept="video/*"
+                    className="hidden"
+                    id="video-upload"
+                  />
+                  <Button
+                    onClick={() => fileInputRef.current?.click()}
+                    className="flex gap-2 items-center"
+                    size="lg"
+                    endIcon={ImageIcon}
                   >
-                    Delete Video
-                    <VideoIcon className="w-4 h-4" />
-                  </button>
+                    Upload a video
+                  </Button>
+                  {selectedVideo && (
+                    <Button
+                      onClick={handleDeleteVideo}
+                      className="flex gap-2 items-center"
+                      size="lg"
+                      variant="destructive"
+                      endIcon={Trash}
+                    >
+                      Delete Video
+                    </Button>
+                  )}
+                </div>
+                {selectedVideo && (
+                  <div className="flex-shrink-0">
+                    <Image
+                      src={selectedVideo}
+                      alt="Video Thumbnail"
+                      width={128}
+                      height={128}
+                      className="w-32 h-32 rounded-lg object-cover bg-[#2A2931]"
+                    />
+                  </div>
                 )}
               </div>
-              {selectedVideo && (
-                <div className="flex-shrink-0">
-                  <Image 
-                    src={selectedVideo} 
-                    alt="Video Thumbnail" 
-                    width={128}
-                    height={128}
-                    className="w-32 h-32 rounded-lg object-cover bg-[#2A2931]"
-                  />
-                </div>
-              )}
-            </div>
-          </div>
+            </FormField>
 
-          <div className="grid grid-cols-2 gap-4 border-b border-[#2A2931] rounded-md pb-10">
-            <div className="h-full flex flex-col justify-between">
-              <label className="block text-sm mb-1 text-[#A1A1AA]">Category</label>
-              <p className="text-xs text-[#A1A1AA] mb-4">The category of the news article</p>
-              <div className="bg-[#2A2931] px-4 py-2 rounded-md text-white text-sm">
-                {news.category}
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 py-6 border-y">
+              <FormField
+                id="category"
+                label="Category"
+                description="The category of the news article"
+                error={errors.category?.message}
+              >
+                  <Input
+                id="category"
+                placeholder="Enter Categories"
+                variant="newly_secondary"
+                inputSize="lg"
+                {...register("category")}
+                disabled
+              />
+              </FormField>
+              <FormField
+                id="status"
+                label="Status"
+                description="The current status of the news article"
+                error={errors.status?.message}
+              >
+                <SelectField
+                  selectSize={"lg"}
+                  variant={"newly_secondary"}
+                  placeholder="Select Status"
+                  value={getValues().status}
+                  onValueChange={(value) => setValue("status", value)}
+                  options={[
+                    { value: "published", label: "Published" },
+                    { value: "unpublished", label: "UnPublished" },
+                    { value: "archived", label: "Archived" },
+                  ]}
+                  disabled
+                />
+              </FormField>
             </div>
-            <div className="h-full flex flex-col justify-between">
-              <label className="block text-sm mb-1 text-[#A1A1AA]">Status</label>
-              <p className="text-xs text-[#A1A1AA] mb-4">The current status of the news article</p>
-              <div className="bg-[#2A2931] px-4 py-2 rounded-md text-white text-sm">
-                {news.status}
-              </div>
-            </div>
-          </div>
 
-         
-
-          <div className="pt-4 flex justify-between">
-            <button 
-              className="flex w-fit gap-2 items-center bg-[#3CFEC3] text-black font-semibold px-6 py-3 rounded-lg text-sm hover:opacity-90"
-            >
-              Update
-              <ArrowRight className="w-4 h-4" />
-            </button>
-            <button className="flex w-fit gap-2 items-center bg-red-300 text-black font-semibold px-6 py-3 rounded-lg text-sm hover:opacity-90">
+            <div className="pt-4 flex justify-between">
+              <Button
+                type="submit"
+                size="lg"
+                endIcon={ArrowRight}
+                className="font-semibold flex gap-4"
+                disabled
+              >
+                Update
+              </Button>
+              <Button
+                type="button"
+                size="lg"
+                variant="destructive"
+                endIcon={Trash}
+                className="font-semibold flex gap-4"
+                disabled
+              >
                 Delete
-                <Trash className="w-4 h-4" />
-            </button>
+              </Button>
+            </div>
           </div>
-        </div>
-      </div>
+        </form>
+      </FormProvider>
     </div>
   );
 } 

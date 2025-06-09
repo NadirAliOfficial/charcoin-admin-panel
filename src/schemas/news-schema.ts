@@ -1,41 +1,33 @@
 import * as yup from "yup";
 
 const newsSchema = yup.object().shape({
-  nftName: yup
+  title: yup
     .string()
-    .required("NFT Name is required")
-    .max(100, "NFT Name must be at most 100 characters"),
+    .required("News title is required")
+    .max(100, "News title must be at most 100 characters"),
 
-  description: yup
+  short_description: yup
     .string()
-    .required("Description is required")
-    .max(500, "Description must be at most 500 characters"),
+    .required("Short description is required")
+    .max(500, "Short description must be at most 500 characters"),
 
-  nftImage: yup
-    .array()
-    .of(
-      yup
-        .mixed()
-        .required("Image is required")
-        .test(
-          "fileType",
-          "Only PNG, JPG, and JPEG files are allowed",
-          (value) => {
-            if (!value) return false;
-            if (!(value instanceof File)) return false;
-            return ["image/png", "image/jpeg", "image/jpg"].includes(
-              value.type
-            );
-          }
-        )
-        .test("fileSize", "Each image must be less than 3MB", (value) => {
-          if (!value) return false;
-          if (!(value instanceof File)) return false;
-          return value.size <= 3 * 1024 * 1024; // 3MB limit per image
-        })
-    )
-    .min(1, "At least one image is required") // Ensures at least one image is uploaded
-    .max(5, "You can upload up to 5 images"), // Limits the maximum number of images
+  video_thumbnail: yup
+    .string()
+    .nullable()
+    .test(
+      "is-valid-url",
+      "Video thumbnail must be a valid URL or a data URL",
+      (value) => {
+        if (!value) return true; // Allow null or empty string
+        try {
+          new URL(value); // Check if it's a valid URL
+          return true;
+        } catch (_) {
+          // Also allow data URLs
+          return value.startsWith("data:image/");
+        }
+      }
+    ),
 
   category: yup.string().required("Category is required"),
 

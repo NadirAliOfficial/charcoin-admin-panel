@@ -66,9 +66,15 @@ const SelectField: React.FC<SelectFieldProps> = ({
   triggerIcon,
   disabled = false
 }) => {
+  console.log(`SelectField: value=${value}, placeholder=${placeholder}`);
+
+  const handleValueChange = (newValue: string) => {
+    console.log(`SelectField: onValueChange called with ${newValue}`);
+    onValueChange(newValue);
+  };
 
   return (
-    <Select value={value} onValueChange={onValueChange} >
+    <Select value={value} onValueChange={handleValueChange}>
       <SelectTrigger
         className={cn(
           selectVariants({ variant, selectSize, rounded, className })

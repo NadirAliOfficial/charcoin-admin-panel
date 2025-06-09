@@ -10,7 +10,7 @@ interface VideoUploadSectionProps {
   fieldName: string;
   label: string;
   description: string;
-  onUpload: (file: File | null) => void;
+  onUpload: (file: File | undefined) => void;
 }
 
 const videoSchema = z
@@ -31,8 +31,8 @@ export default function VideoUploadSection({
     formState: { errors },
   } = useFormContext();
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const [videoFile, setVideoFile] = useState<File | null>(
-    () => getValues(fieldName) || null
+  const [videoFile, setVideoFile] = useState<File | undefined>(
+    () => getValues(fieldName) as File | undefined
   );
 
   useEffect(() => {
@@ -53,8 +53,8 @@ export default function VideoUploadSection({
   };
 
   const handleDeleteVideo = () => {
-    setVideoFile(null);
-    onUpload(null);
+    setVideoFile(undefined);
+    onUpload(undefined);
   };
 
   return (
@@ -64,28 +64,10 @@ export default function VideoUploadSection({
       description={description}
       error={errors[fieldName]?.message as string}
     >
-      {/* Video Preview or No Preview Fallback */}
-      <div className="relative mt-4 border rounded-lg w-full bg-gray-100">
-        {videoFile ? (
-          <>
-            <Video src={URL.createObjectURL(videoFile)} />
-            <button
-              type="button"
-              onClick={handleDeleteVideo}
-              className="absolute top-2 right-2 bg-destructive/50 hover:bg-destructive rounded-full p-1"
-            >
-              <X className="h-3 w-3 text-white" />
-            </button>
-          </>
-        ) : (
-          <div className="bg-accent flex justify-center items-center text-center py-4 h-32">
-            No Preview Available
-          </div>
-        )}
-      </div>
+     
 
       {/* Upload & Delete Buttons */}
-      <div className="flex gap-4 mt-4 max-sm:flex-col">
+      <div className="flex items-center gap-4 mt-4 max-sm:flex-col">
         <Button
           type="button"
           onClick={() => fileInputRef.current?.click()}
@@ -104,17 +86,38 @@ export default function VideoUploadSection({
           onChange={handleVideoUpload}
         />
 
-        <Button
-          type="button"
-          variant="destructive"
-          size="lg"
-          className="bg-red-500 text-foreground flex items-center gap-2"
-          onClick={handleDeleteVideo}
-          disabled={!videoFile}
-        >
-          <Trash2 className="h-4 w-4" />
-          Delete Video
-        </Button>
+        {videoFile && (
+          <Button
+            type="button"
+            variant="destructive"
+            size="lg"
+            className="bg-red-500 text-foreground flex items-center gap-2"
+            onClick={handleDeleteVideo}
+          >
+            <Trash2 className="h-4 w-4" />
+            Delete Video
+          </Button>
+        )}
+
+         {/* Video Preview or No Preview Fallback */}
+      <div className="relative mt-4 border rounded-lg w-full bg-gray-100">
+        {videoFile ? (
+          <>
+            <Video src={URL.createObjectURL(videoFile)} />
+            <button
+              type="button"
+              onClick={handleDeleteVideo}
+              className="absolute top-2 right-2 bg-destructive/50 hover:bg-destructive rounded-full p-1"
+            >
+              <X className="h-3 w-3 text-white" />
+            </button>
+          </>
+        ) : (
+          <div className="bg-accent flex justify-center items-center text-center py-4 h-32">
+            No Preview Available
+          </div>
+        )}
+      </div>
       </div>
     </FormField>
   );

@@ -27,8 +27,7 @@ const columns: ColumnDef<Cause>[] = [
         <div className="flex min-w-64 items-center gap-4">
           <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-md">
             <Image
-              // src={cause.image || "https://picsum.photos/200/200"}
-              src={"https://picsum.photos/200/200"}
+              src={cause.image}
               alt={cause.name}
               fill
               className="object-cover"

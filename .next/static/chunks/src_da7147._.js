@@ -767,6 +767,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$e
 const useDialogStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["create"])((set)=>({
         openDialog: null,
         selectedNft: null,
+        selectedNews: null,
         // Open functions
         openDetail: ()=>set({
                 openDialog: "causes_detail"
@@ -807,6 +808,9 @@ const useDialogStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_
             }),
         setSelectedNft: (nft)=>set({
                 selectedNft: nft
+            }),
+        setSelectedNews: (news)=>set({
+                selectedNews: news
             }),
         // Adminstrator
         setAddAdministrator: (isOpen)=>set({
@@ -1858,9 +1862,14 @@ const selectVariants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_
     }
 });
 const SelectField = ({ className, variant, selectSize, rounded, options, placeholder = "Select an option", value, onValueChange, triggerIcon })=>{
+    console.log(`SelectField: value=${value}, placeholder=${placeholder}`);
+    const handleValueChange = (newValue)=>{
+        console.log(`SelectField: onValueChange called with ${newValue}`);
+        onValueChange(newValue);
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Select"], {
         value: value,
-        onValueChange: onValueChange,
+        onValueChange: handleValueChange,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectTrigger"], {
                 className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])(selectVariants({
@@ -1874,12 +1883,12 @@ const SelectField = ({ className, variant, selectSize, rounded, options, placeho
                     placeholder: placeholder
                 }, void 0, false, {
                     fileName: "[project]/src/components/causes/edit/form-select.tsx",
-                    lineNumber: 75,
+                    lineNumber: 81,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/causes/edit/form-select.tsx",
-                lineNumber: 69,
+                lineNumber: 75,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -1888,18 +1897,18 @@ const SelectField = ({ className, variant, selectSize, rounded, options, placeho
                         children: option.label
                     }, option.value, false, {
                         fileName: "[project]/src/components/causes/edit/form-select.tsx",
-                        lineNumber: 79,
+                        lineNumber: 85,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/components/causes/edit/form-select.tsx",
-                lineNumber: 77,
+                lineNumber: 83,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/causes/edit/form-select.tsx",
-        lineNumber: 68,
+        lineNumber: 74,
         columnNumber: 5
     }, this);
 };
@@ -4461,8 +4470,7 @@ const columns = [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "relative h-16 w-16 shrink-0 overflow-hidden rounded-md",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                            // src={cause.image || "https://picsum.photos/200/200"}
-                            src: "https://picsum.photos/200/200",
+                            src: cause.image,
                             alt: cause.name,
                             fill: true,
                             className: "object-cover"
@@ -4484,7 +4492,7 @@ const columns = [
                                 children: cause.name
                             }, void 0, false, {
                                 fileName: "[project]/src/components/columns/running_cause_column.tsx",
-                                lineNumber: 64,
+                                lineNumber: 63,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4492,13 +4500,13 @@ const columns = [
                                 children: cause.category
                             }, void 0, false, {
                                 fileName: "[project]/src/components/columns/running_cause_column.tsx",
-                                lineNumber: 65,
+                                lineNumber: 64,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/columns/running_cause_column.tsx",
-                        lineNumber: 63,
+                        lineNumber: 62,
                         columnNumber: 11
                     }, this)
                 ]
@@ -4516,7 +4524,7 @@ const columns = [
                 title: "Organization"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/running_cause_column.tsx",
-                lineNumber: 76,
+                lineNumber: 75,
                 columnNumber: 7
             }, this),
         cell: (info)=>info.getValue()
@@ -4528,7 +4536,7 @@ const columns = [
                 title: "Currently Winning"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/running_cause_column.tsx",
-                lineNumber: 83,
+                lineNumber: 82,
                 columnNumber: 7
             }, this),
         cell: (info)=>{
@@ -4541,7 +4549,7 @@ const columns = [
                         children: amount
                     }, void 0, false, {
                         fileName: "[project]/src/components/columns/running_cause_column.tsx",
-                        lineNumber: 89,
+                        lineNumber: 88,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4552,13 +4560,13 @@ const columns = [
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/columns/running_cause_column.tsx",
-                        lineNumber: 90,
+                        lineNumber: 89,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/columns/running_cause_column.tsx",
-                lineNumber: 88,
+                lineNumber: 87,
                 columnNumber: 9
             }, this);
         }
@@ -4570,7 +4578,7 @@ const columns = [
                 title: "Started On"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/running_cause_column.tsx",
-                lineNumber: 100,
+                lineNumber: 99,
                 columnNumber: 7
             }, this),
         cell: (info)=>info.getValue()
@@ -4582,7 +4590,7 @@ const columns = [
                 title: "Ends On"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/running_cause_column.tsx",
-                lineNumber: 107,
+                lineNumber: 106,
                 columnNumber: 7
             }, this),
         cell: (info)=>info.getValue()
@@ -4594,7 +4602,7 @@ const columns = [
                 title: "Benefactors"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/running_cause_column.tsx",
-                lineNumber: 114,
+                lineNumber: 113,
                 columnNumber: 7
             }, this),
         cell: (info)=>info.row.original?.benefactors.toLocaleString()
@@ -4606,7 +4614,7 @@ const columns = [
                 title: "Points"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/running_cause_column.tsx",
-                lineNumber: 121,
+                lineNumber: 120,
                 columnNumber: 7
             }, this),
         cell: (info)=>{
@@ -4619,7 +4627,7 @@ const columns = [
                         children: count.toLocaleString()
                     }, void 0, false, {
                         fileName: "[project]/src/components/columns/running_cause_column.tsx",
-                        lineNumber: 127,
+                        lineNumber: 126,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4627,13 +4635,13 @@ const columns = [
                         children: label
                     }, void 0, false, {
                         fileName: "[project]/src/components/columns/running_cause_column.tsx",
-                        lineNumber: 128,
+                        lineNumber: 127,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/columns/running_cause_column.tsx",
-                lineNumber: 126,
+                lineNumber: 125,
                 columnNumber: 9
             }, this);
         }
@@ -4645,7 +4653,7 @@ const columns = [
                 title: "Type"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/running_cause_column.tsx",
-                lineNumber: 136,
+                lineNumber: 135,
                 columnNumber: 7
             }, this),
         cell: (info)=>{
@@ -4656,7 +4664,7 @@ const columns = [
                 children: type
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/running_cause_column.tsx",
-                lineNumber: 142,
+                lineNumber: 141,
                 columnNumber: 9
             }, this);
         }
@@ -4723,8 +4731,7 @@ const columns = [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "relative h-16 w-16 shrink-0 overflow-hidden rounded-md",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                            // src={cause.image || "https://picsum.photos/200/200"}
-                            src: "https://picsum.photos/200/200",
+                            src: cause.image,
                             alt: cause.name,
                             fill: true,
                             className: "object-cover"
@@ -4746,7 +4753,7 @@ const columns = [
                                 children: cause.name
                             }, void 0, false, {
                                 fileName: "[project]/src/components/columns/draft_cause_column.tsx",
-                                lineNumber: 38,
+                                lineNumber: 37,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4754,13 +4761,13 @@ const columns = [
                                 children: cause.category
                             }, void 0, false, {
                                 fileName: "[project]/src/components/columns/draft_cause_column.tsx",
-                                lineNumber: 39,
+                                lineNumber: 38,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/columns/draft_cause_column.tsx",
-                        lineNumber: 37,
+                        lineNumber: 36,
                         columnNumber: 11
                     }, this)
                 ]
@@ -4778,7 +4785,7 @@ const columns = [
                 title: "Organization"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/draft_cause_column.tsx",
-                lineNumber: 50,
+                lineNumber: 49,
                 columnNumber: 7
             }, this),
         cell: (info)=>info.getValue()
@@ -4790,7 +4797,7 @@ const columns = [
                 title: "Campaign"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/draft_cause_column.tsx",
-                lineNumber: 57,
+                lineNumber: 56,
                 columnNumber: 7
             }, this),
         cell: (info)=>{
@@ -4815,7 +4822,7 @@ const columns = [
                         children: monthYear
                     }, void 0, false, {
                         fileName: "[project]/src/components/columns/draft_cause_column.tsx",
-                        lineNumber: 73,
+                        lineNumber: 72,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4823,13 +4830,13 @@ const columns = [
                         children: startedOn === "Not Started" && endsOn === "Not Set" ? "Not Set" : `${monthYear.split(" ")[0]} ${startDay} to ${monthYear.split(" ")[0]} ${endDay}`
                     }, void 0, false, {
                         fileName: "[project]/src/components/columns/draft_cause_column.tsx",
-                        lineNumber: 74,
+                        lineNumber: 73,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/columns/draft_cause_column.tsx",
-                lineNumber: 72,
+                lineNumber: 71,
                 columnNumber: 9
             }, this);
         }
@@ -4841,7 +4848,7 @@ const columns = [
                 title: "Status"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/draft_cause_column.tsx",
-                lineNumber: 84,
+                lineNumber: 83,
                 columnNumber: 7
             }, this),
         cell: (info)=>{
@@ -4863,7 +4870,7 @@ const columns = [
                 children: status
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/draft_cause_column.tsx",
-                lineNumber: 103,
+                lineNumber: 102,
                 columnNumber: 9
             }, this);
         }
@@ -4875,7 +4882,7 @@ const columns = [
                 title: "Type"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/draft_cause_column.tsx",
-                lineNumber: 115,
+                lineNumber: 114,
                 columnNumber: 7
             }, this),
         cell: (info)=>{
@@ -4886,7 +4893,7 @@ const columns = [
                 children: type
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/draft_cause_column.tsx",
-                lineNumber: 121,
+                lineNumber: 120,
                 columnNumber: 9
             }, this);
         }
@@ -4953,8 +4960,7 @@ const columns = [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "relative h-16 w-16 shrink-0 overflow-hidden rounded-md",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                            // src={cause.image || "https://picsum.photos/200/200"}
-                            src: "https://picsum.photos/200/200",
+                            src: cause.image,
                             alt: cause.name,
                             fill: true,
                             className: "object-cover"
@@ -4976,7 +4982,7 @@ const columns = [
                                 children: cause.name
                             }, void 0, false, {
                                 fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                                lineNumber: 38,
+                                lineNumber: 37,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4984,13 +4990,13 @@ const columns = [
                                 children: cause.category
                             }, void 0, false, {
                                 fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                                lineNumber: 39,
+                                lineNumber: 38,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                        lineNumber: 37,
+                        lineNumber: 36,
                         columnNumber: 11
                     }, this)
                 ]
@@ -5008,7 +5014,7 @@ const columns = [
                 title: "Organization"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                lineNumber: 50,
+                lineNumber: 49,
                 columnNumber: 7
             }, this),
         cell: (info)=>info.getValue()
@@ -5020,7 +5026,7 @@ const columns = [
                 title: "Position"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                lineNumber: 57,
+                lineNumber: 56,
                 columnNumber: 7
             }, this),
         cell: (info)=>{
@@ -5033,7 +5039,7 @@ const columns = [
                         children: amount
                     }, void 0, false, {
                         fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                        lineNumber: 63,
+                        lineNumber: 62,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5044,13 +5050,13 @@ const columns = [
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                        lineNumber: 64,
+                        lineNumber: 63,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                lineNumber: 62,
+                lineNumber: 61,
                 columnNumber: 9
             }, this);
         }
@@ -5062,7 +5068,7 @@ const columns = [
                 title: "Campaign"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                lineNumber: 74,
+                lineNumber: 73,
                 columnNumber: 7
             }, this),
         cell: (info)=>{
@@ -5080,12 +5086,12 @@ const columns = [
                     children: monthYear
                 }, void 0, false, {
                     fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                    lineNumber: 85,
+                    lineNumber: 84,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                lineNumber: 84,
+                lineNumber: 83,
                 columnNumber: 9
             }, this);
         }
@@ -5097,7 +5103,7 @@ const columns = [
                 title: "Updates"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                lineNumber: 93,
+                lineNumber: 92,
                 columnNumber: 7
             }, this),
         cell: (info)=>info.getValue()
@@ -5109,7 +5115,7 @@ const columns = [
                 title: "Benefactors"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                lineNumber: 100,
+                lineNumber: 99,
                 columnNumber: 7
             }, this),
         cell: (info)=>info.row.original?.benefactors.toLocaleString()
@@ -5121,7 +5127,7 @@ const columns = [
                 title: "Points"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                lineNumber: 107,
+                lineNumber: 106,
                 columnNumber: 7
             }, this),
         cell: (info)=>{
@@ -5134,7 +5140,7 @@ const columns = [
                         children: count.toLocaleString()
                     }, void 0, false, {
                         fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                        lineNumber: 113,
+                        lineNumber: 112,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5142,13 +5148,13 @@ const columns = [
                         children: "Points"
                     }, void 0, false, {
                         fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                        lineNumber: 114,
+                        lineNumber: 113,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                lineNumber: 112,
+                lineNumber: 111,
                 columnNumber: 9
             }, this);
         }
@@ -5160,7 +5166,7 @@ const columns = [
                 title: "Impact"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                lineNumber: 122,
+                lineNumber: 121,
                 columnNumber: 7
             }, this),
         cell: (info)=>{
@@ -5173,7 +5179,7 @@ const columns = [
                         children: amount
                     }, void 0, false, {
                         fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                        lineNumber: 128,
+                        lineNumber: 127,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5184,7 +5190,7 @@ const columns = [
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                        lineNumber: 129,
+                        lineNumber: 128,
                         columnNumber: 11
                     }, this),
                     status && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5192,13 +5198,13 @@ const columns = [
                         children: status
                     }, void 0, false, {
                         fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                        lineNumber: 133,
+                        lineNumber: 132,
                         columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                lineNumber: 127,
+                lineNumber: 126,
                 columnNumber: 9
             }, this);
         }
@@ -5210,7 +5216,7 @@ const columns = [
                 title: "Type"
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                lineNumber: 144,
+                lineNumber: 143,
                 columnNumber: 7
             }, this),
         cell: (info)=>{
@@ -5221,7 +5227,7 @@ const columns = [
                 children: type
             }, void 0, false, {
                 fileName: "[project]/src/components/columns/completed_cause_column.tsx",
-                lineNumber: 149,
+                lineNumber: 148,
                 columnNumber: 9
             }, this);
         }
@@ -5734,7 +5740,7 @@ const runningCauses = [
             payouts: 0
         },
         type: "Infinite Impact",
-        image: "/placeholder.svg?height=80&width=80",
+        image: "/images/a1.png",
         status: "Published"
     },
     {
@@ -5759,7 +5765,7 @@ const runningCauses = [
             payouts: 0
         },
         type: "Cause",
-        image: "/placeholder.svg?height=80&width=80",
+        image: "/images/a2.png",
         status: "Unpublished"
     }
 ];
@@ -5786,7 +5792,7 @@ const completedCauses = [
             payouts: 3
         },
         type: "Infinite Impact",
-        image: "/placeholder.svg?height=80&width=80",
+        image: "/images/a3.png",
         status: "Published"
     },
     {
@@ -5812,7 +5818,7 @@ const completedCauses = [
             status: "Closed"
         },
         type: "One time",
-        image: "/placeholder.svg?height=80&width=80",
+        image: "/images/a4.png",
         status: "Completed"
     },
     {
@@ -5837,7 +5843,7 @@ const completedCauses = [
             payouts: 3
         },
         type: "Infinite Impact",
-        image: "/placeholder.svg?height=80&width=80",
+        image: "/images/a5.png",
         status: "Published"
     },
     {
@@ -5862,7 +5868,7 @@ const completedCauses = [
             payouts: 3
         },
         type: "Infinite Impact",
-        image: "/placeholder.svg?height=80&width=80",
+        image: "/images/a6.png",
         status: "Published"
     }
 ];
@@ -5889,7 +5895,7 @@ const draftCauses = [
             payouts: 0
         },
         type: "Draft",
-        image: "/placeholder.svg?height=80&width=80",
+        image: "/images/a7.png",
         status: "Unpublished"
     },
     {
@@ -5914,7 +5920,7 @@ const draftCauses = [
             payouts: 0
         },
         type: "Draft",
-        image: "/placeholder.svg?height=80&width=80",
+        image: "/images/a8.png",
         status: "Unpublished"
     }
 ];

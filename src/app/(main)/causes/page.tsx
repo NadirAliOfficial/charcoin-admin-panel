@@ -43,7 +43,7 @@ const runningCauses: Cause[] = [
     updates: 0,
     impact: { amount: "$0.00", payouts: 0 },
     type: "Infinite Impact",
-    image: "/placeholder.svg?height=80&width=80",
+    image: "/images/a1.png",
     status: "Published",
   },
   {
@@ -65,7 +65,7 @@ const runningCauses: Cause[] = [
     updates: 0,
     impact: { amount: "$0.00", payouts: 0 },
     type: "Cause",
-    image: "/placeholder.svg?height=80&width=80",
+    image: "/images/a2.png",
     status: "Unpublished",
   }
 ];
@@ -93,7 +93,7 @@ const completedCauses: Cause[] = [
       payouts: 3,
     },
     type: "Infinite Impact",
-    image: "/placeholder.svg?height=80&width=80",
+    image: "/images/a3.png",
     status: "Published",
   },
   {
@@ -119,7 +119,7 @@ const completedCauses: Cause[] = [
       status: "Closed",
     },
     type: "One time",
-    image: "/placeholder.svg?height=80&width=80",
+    image: "/images/a4.png",
     status: "Completed",
   },
   {
@@ -144,7 +144,7 @@ const completedCauses: Cause[] = [
       payouts: 3,
     },
     type: "Infinite Impact",
-    image: "/placeholder.svg?height=80&width=80",
+    image: "/images/a5.png",
     status: "Published",
   },
   {
@@ -169,7 +169,7 @@ const completedCauses: Cause[] = [
       payouts: 3,
     },
     type: "Infinite Impact",
-    image: "/placeholder.svg?height=80&width=80",
+    image: "/images/a6.png",
     status: "Published",
   }
 ];
@@ -194,7 +194,7 @@ const draftCauses: Cause[] = [
     updates: 0,
     impact: { amount: "$0.00", payouts: 0 },
     type: "Draft",
-    image: "/placeholder.svg?height=80&width=80",
+    image: "/images/a7.png",
     status: "Unpublished",
   },
   {
@@ -216,7 +216,7 @@ const draftCauses: Cause[] = [
     updates: 0,
     impact: { amount: "$0.00", payouts: 0 },
     type: "Draft",
-    image: "/placeholder.svg?height=80&width=80",
+    image: "/images/a8.png",
     status: "Unpublished",
   }
 ];

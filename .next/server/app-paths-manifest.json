@@ -4,5 +4,7 @@
   "/(main)/dashboard/page": "app/(main)/dashboard/page.js",
   "/(main)/causes/page": "app/(main)/causes/page.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/(main)/settings/wallet-management/page": "app/(main)/settings/wallet-management/page.js"
+  "/(main)/settings/wallet-management/page": "app/(main)/settings/wallet-management/page.js",
+  "/(main)/settings/rewards/page": "app/(main)/settings/rewards/page.js",
+  "/(main)/settings/governance/page": "app/(main)/settings/governance/page.js"
 }

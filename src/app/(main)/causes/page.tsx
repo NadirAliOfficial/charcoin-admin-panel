@@ -1,7 +1,7 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import { Search } from "lucide-react";
+import { ArrowRight, Search } from "lucide-react";
 import { useState } from "react";
 
 import { AddCauseTable } from "@/components/causes/add-cause-table";
@@ -13,14 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Cause } from "@/types/causes";
 import useDialogStore from "@/stores/dialog-store";
-import { CustomSheet } from "@/components/reuseable/add-causes-sheet";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-} from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
 
 // Create dummy data for different tabs
 const runningCauses: Cause[] = [
@@ -256,6 +249,9 @@ export default function CausesPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [date, setDate] = useState<Date>(new Date());
   const [activeTab, setActiveTab] = useState("running");
+  const {
+    setCausesOpenAdd,
+  } = useDialogStore();
 
   // React Query for fetching causes
   const { data = [], isLoading } = useQuery({
@@ -265,7 +261,12 @@ export default function CausesPage() {
 
   return (
     <div className="container mx-auto py-8 ">
-      <h1 className="text-2xl  mb-6">Causes</h1>
+      <div className="flex items-center mb-6 justify-between">
+      <h1 className="text-2xl   ">Causes</h1>
+      {(activeTab || "")?.toLowerCase() == "drafts" && <Button onClick={() => setCausesOpenAdd(true)}>
+          Add New <ArrowRight />
+        </Button>}
+      </div>
 
       <div className="mb-6">
         <Tabs

@@ -31,6 +31,7 @@ import useDialogStore from "@/stores/dialog-store";
 import { EditCause } from "./edit-cause";
 import { CompletedCauseDrawer } from "./completed-cause-drawer";
 import { Cause } from "@/types/causes";
+import { AddCauseForm } from "./add-cause";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -174,7 +175,7 @@ export function AddCauseTable<TData, TValue>({
             title="Add Cause form"
             className="!p-0"
           >
-            Add Form
+            <AddCauseForm />
           </CustomSheet>
           <CustomSheet
             isOpen={openDialog === "causes_detail"}

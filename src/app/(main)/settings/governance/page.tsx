@@ -27,6 +27,7 @@ import { PlusIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import * as yup from "yup";
+import { toast } from "@/stores/use-toast";
 
 const settingsSchema = yup.object().shape({
   tokens: yup.number().min(1, "Must be at least 1 token").required("Required"),
@@ -97,7 +98,14 @@ const SettingsGovernance = () => {
     }
   };
 
-  const onSubmit = (data: any) => { };
+  const onSubmit = (data: any) => {
+    console.log(data);
+    toast({
+      title: "The action has been completed successfully",
+      description: "This notification will close automatically in 5 seconds",
+      variant: "success",
+    });
+  };
 
   return (
     <FormProvider {...form}>

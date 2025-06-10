@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 import { cn } from "@/lib/utils";
 import { useSidebarStore } from "@/stores/sidebar-store";
-import { BrandTelegram, BrandTwitter } from "@mynaui/icons-react";
+import { BrandTelegram, BrandTwitter, BrandX } from "@mynaui/icons-react";
 import LogoImage from "../custom/logo-image";
 import { SidebarToggle } from "./sidebar-toggle";
 import Link from "next/link";

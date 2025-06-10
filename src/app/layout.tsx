@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import { Suspense } from "react";
-import { Toaster } from "sonner";
+import { Toaster } from "@/components/toaster";
 import "./globals.css";
 import Head from "next/head";
 const geistSans = Geist({

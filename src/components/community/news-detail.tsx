@@ -138,6 +138,7 @@ export function NewsDetail({ news }: NewsDetailProps) {
                     className="flex gap-2 items-center"
                     size="lg"
                     endIcon={ImageIcon}
+                    disabled
                   >
                     Upload a video
                   </Button>
@@ -148,6 +149,7 @@ export function NewsDetail({ news }: NewsDetailProps) {
                       size="lg"
                       variant="destructive"
                       endIcon={Trash}
+                      disabled
                     >
                       Delete Video
                     </Button>

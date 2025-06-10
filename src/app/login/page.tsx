@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 const LoginPage = () => {
   return (
-    <div className="flex  bg-background relative max-h-screen overflow-auto">
+    <div className="flex  bg-background relative min-h-screen overflow-auto">
       <div className="w-5/12 max-lg:w-full  p-5">
         <Button variant={"newly_secondary"} className="font-bold">
           <ArrowLeft />

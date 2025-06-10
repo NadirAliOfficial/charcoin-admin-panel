@@ -11,7 +11,11 @@ const newsSchema = yup.object().shape({
     .required("Short description is required")
     .max(500, "Short description must be at most 500 characters"),
 
-  video: yup
+    video_thumbnail: yup
+    .string()
+    .nullable()
+    .optional(),
+    video: yup
     .mixed()
     .required("Video is required")
     .test(
@@ -28,6 +32,7 @@ const newsSchema = yup.object().shape({
       if (!(value instanceof File)) return false;
       return value.size <= 50 * 1024 * 1024; // 50MB limit
     }),
+
 
   category: yup.string().required("Category is required"),
 

@@ -8,6 +8,7 @@ import { useSidebarStore } from "@/stores/sidebar-store";
 import { BrandTelegram, BrandTwitter, BrandX } from "@mynaui/icons-react";
 import LogoImage from "../custom/logo-image";
 import { SidebarToggle } from "./sidebar-toggle";
+import Link from "next/link";
 
 export function Sidebar() {
   const sidebar = useSidebarStore();
@@ -21,7 +22,7 @@ export function Sidebar() {
         settings.disabled && "hidden"
       )}
     >
-      
+
       <SidebarToggle isOpen={getOpenState()} setIsOpen={toggleOpen} />
       <div
         onMouseEnter={() => setIsHover(true)}
@@ -38,8 +39,8 @@ export function Sidebar() {
         >
           <LogoImage className="" width={120} />
         </Button>
-       
-        <Menu isOpen={getOpenState()}/>
+
+        <Menu isOpen={getOpenState()} />
         {isOpen && (
           <div className="flex gap-4 mx-
           4 py-2 mb-4  flex-col">
@@ -49,8 +50,12 @@ export function Sidebar() {
                 Follow only the official channels
               </span>
               <span className="flex gap-4">
-                <BrandTelegram className="w-6 h-6 hover:text-primary" />
-                <BrandX className="w-6 h-6 hover:text-primary" />
+                <Link href="https://t.me/charcoinx" target="_blank" rel="noopener noreferrer">
+                  <BrandTelegram className="w-6 h-6 hover:text-primary" />
+                </Link>
+                <Link href={"https://x.com/char_coin_x"}>
+                  <BrandTwitter className="w-6 h-6 hover:text-primary" />
+                </Link>
               </span>
             </div>
           </div>

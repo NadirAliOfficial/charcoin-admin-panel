@@ -50,7 +50,9 @@ export interface SelectFieldProps extends VariantProps<typeof selectVariants> {
   onValueChange: (value: string ) => void;
   className?: string;
   triggerIcon?: React.ReactNode
+  disabled?: boolean
 }
+
 
 const SelectField: React.FC<SelectFieldProps> = ({
   className,
@@ -62,6 +64,7 @@ const SelectField: React.FC<SelectFieldProps> = ({
   value,
   onValueChange,
   triggerIcon,
+  disabled = false
 }) => {
   console.log(`SelectField: value=${value}, placeholder=${placeholder}`);
 
@@ -77,7 +80,9 @@ const SelectField: React.FC<SelectFieldProps> = ({
           selectVariants({ variant, selectSize, rounded, className })
         )}
         customIcon={triggerIcon}
+        disabled={disabled}
       >
+        
         <SelectValue placeholder={placeholder} />
       </SelectTrigger>
       <SelectContent>

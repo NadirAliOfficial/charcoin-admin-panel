@@ -149,7 +149,7 @@ export default function PayoutInterface({ walletName }: PayoutInterfaceProps) {
                   <div className="absolute left-0 h-full top-0 !w-[6px] md:!w-[10px] rounded-3xl bg-secondary"></div>
                   <h4 className="text-lg font-semibold">Authorization #{authIndex}</h4>
                   <p className="text-gray-400 text-sm">
-                    Complete the fields below with an administrator's details to proceed
+                    Complete the fields below with an administrator&apos;s details to proceed
                   </p>
 
                   <div className="grid grid-cols-2 items-start lg:grid-cols-4 gap-4">

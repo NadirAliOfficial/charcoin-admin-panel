@@ -41,7 +41,7 @@ const HeaderWrapper = ({
         <div>
           <h1
             className={cn(
-              "font-semibold",
+              " font-WFVisualSansRegular ",
               size === "xs"
                 ? "text-sm"
                 : size === "sm"
@@ -54,7 +54,7 @@ const HeaderWrapper = ({
             {title}
           </h1>
           {description && (
-            <p className="text-muted-foreground">{description}</p>
+            <p className="text-muted-foreground text-xs">{description}</p>
           )}
         </div>
         {actions}

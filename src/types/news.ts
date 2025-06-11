@@ -1,7 +1,13 @@
 export enum NewsStatus {
-  Published = "Published",
-  Unpublished = "Unpublished",
+  All = "all",
+  Published = "published",
+  Unpublished = "unpublished"
 }
+
+export type NewsStatusOption = {
+  label: string;
+  value: NewsStatus;
+};
 
 export interface NewsArticle {
   id: number;

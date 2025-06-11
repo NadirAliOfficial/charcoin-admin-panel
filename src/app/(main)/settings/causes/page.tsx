@@ -146,10 +146,10 @@ const SettingsCauses = () => {
               {categories.map((category, index) => (
                 <div
                   key={index}
-                  className="flex justify-between space-x-4  p-3 border-b "
+                  className="flex justify-between space-x-4 p-3 border-b cursor-pointer hover:bg-accent/50 transition-colors"
                   onClick={() => setEditCategory(true)}
                 >
-                  <div className={cn("min-w-[3px]   rounded-xl ",)} style={{
+                  <div className={cn("min-w-[3px] rounded-xl")} style={{
                     backgroundColor: category.color
                   }} />
                   <div className="flex items-center gap-3">
@@ -189,16 +189,18 @@ const SettingsCauses = () => {
               {campaigns.map((campaign, index) => (
                 <div
                   key={index}
-                  className="flex   space-x-4  p-3 border-b "
+                  className="flex space-x-4 p-3 border-b cursor-pointer hover:bg-accent/50 transition-colors"
                   onClick={() => setEditCampaign(true)}
                 >
-
-                  <div className={cn("min-w-[3px] w-min h-12   rounded-xl ",)} style={{
+                  <div className={cn("min-w-[3px] w-min h-12 rounded-xl")} style={{
                     backgroundColor: campaign?.color
-                  }} />                  <div className="w-full flex flex-col">
+                  }} />
+                  <div className="w-full flex flex-col">
                     <span>{formatDate(campaign.title, "MMMM, yyyy")}</span>
-                    <span className="text-sm flex gap-2 text-muted-foreground">{formatDateRange(campaign.start_date as string, campaign.end_date as string)} {campaign?.status == "Current" && <p className="text-primary tracking-wider">(Current)</p>} </span>
-
+                    <span className="text-sm flex gap-2 text-muted-foreground">
+                      {formatDateRange(campaign.start_date as string, campaign.end_date as string)} 
+                      {campaign?.status == "Current" && <p className="text-primary tracking-wider">(Current)</p>}
+                    </span>
                   </div>
                 </div>
               ))}

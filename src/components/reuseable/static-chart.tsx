@@ -55,7 +55,7 @@ const StatisticsChart: React.FC<StatisticsChartProps> = ({
   return (
     <Card className="bg-background p-0 border-none">
       <div className="flex justify-between items-center mb-6 px-5 mt-4">
-        <h2 className="text-zinc-100 text-sm font-medium">{title}</h2>
+        <h2 className="text-zinc-100 text-[16px] font-medium font-WFVisualSansRegular">{title}</h2>
         <div className="flex gap-2">
           {tabs.map((tab) => (
             <Button
@@ -69,7 +69,7 @@ const StatisticsChart: React.FC<StatisticsChartProps> = ({
               }`}
               onClick={() => setActiveTab(tab)}
             >
-              {tab}
+              {/* {tab} */}
             </Button>
           ))}
         </div>
@@ -79,13 +79,13 @@ const StatisticsChart: React.FC<StatisticsChartProps> = ({
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
             data={data}
-            margin={{ top: 5, right: 20, left: 20, bottom: 5 }}
+            margin={{ top: 5, right: 20,  bottom: 5 }}
           >
-            <CartesianGrid
+            {/* <CartesianGrid
               stroke="#333"
               strokeDasharray="none"
               vertical={false}
-            />
+            /> */}
             <XAxis
               dataKey="month"
               axisLine={false}

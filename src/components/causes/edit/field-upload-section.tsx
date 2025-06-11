@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Trash2, Upload, X } from "lucide-react";
+import {  ImageIcon, Trash2, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import FormField from "./form-field";
@@ -44,7 +44,43 @@ export default function ImageUploadSection({
 
   return (
     <FormField id={fieldName} label={label} description={description}>
-      {/* Image Previews */}
+    
+
+      {/* Upload & Delete Buttons */}
+      <div className="flex items-center gap-4 mt-10 max-sm:flex-col">
+        <Button
+          type="button"
+          onClick={() => fileInputRef.current?.click()}
+          size={"lg"}
+          endIcon={ImageIcon}
+          className="bg-primary hover:bg-primary/80 text-background flex items-center gap-2"
+        >
+          Upload Images
+        </Button>
+
+        <input
+          type="file"
+          ref={fileInputRef}
+          accept="image/png, image/jpeg, image/jpg"
+          multiple
+          className="hidden"
+          onChange={handleImageUpload}
+        />
+
+
+        <Button
+          type="button"
+          variant="destructive"
+          size={"lg"}
+          onClick={() => setImageFiles([])}
+          disabled={imageFiles.length === 0}
+          endIcon={Trash2}
+          className="bg-red-300 text-black"
+        >
+          Delete All
+        </Button>
+
+          {/* Image Previews */}
       <div className="flex flex-wrap gap-2 mt-4">
         {imageFiles.map((image, index) => {
           const previewUrl = URL.createObjectURL(image);
@@ -70,40 +106,6 @@ export default function ImageUploadSection({
           );
         })}
       </div>
-
-      {/* Upload & Delete Buttons */}
-      <div className="flex gap-4 mt-4 max-sm:flex-col">
-        <Button
-          type="button"
-          onClick={() => fileInputRef.current?.click()}
-          size={"lg"}
-          startIcon={Upload}
-          className="bg-primary hover:bg-primary/80 text-background flex items-center gap-2"
-        >
-          Upload Images
-        </Button>
-
-        <input
-          type="file"
-          ref={fileInputRef}
-          accept="image/png, image/jpeg, image/jpg"
-          multiple
-          className="hidden"
-          onChange={handleImageUpload}
-        />
-
-
-        <Button
-          type="button"
-          variant="destructive"
-          size={"lg"}
-          onClick={() => setImageFiles([])}
-          disabled={imageFiles.length === 0}
-          startIcon={Trash2}
-          className="!ring-destructive"
-        >
-          Delete All
-        </Button>
       </div>
     </FormField>
   );

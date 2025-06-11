@@ -11,7 +11,12 @@ body {
 /* * {
   @apply tracking-wider
 } */
-
+@font-face {
+  font-family: 'WFVisualSans-Regular';
+  src: url('/WFVisualSans-Regular.woff2') format('woff2'),
+       
+ 
+}
 
 @layer base {
   :root {

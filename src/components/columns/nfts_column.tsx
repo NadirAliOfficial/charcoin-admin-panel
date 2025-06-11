@@ -37,10 +37,10 @@ const columns: ColumnDef<TransactionRecord>[] = [
           <span className="flex flex-col text-sm">
             <span>{username}</span>
             <span className="text-primary whitespace-nowrap">
-              <b className="text-muted-foreground">Wallet:</b> {wallet}
+              <b className="text-muted-foreground text-[#999999]">Wallet:</b> {wallet}
             </span>
             <span className="text-primary">
-              <b className="text-muted-foreground">Hash:</b> {hash}
+              <b className="text-muted-foreground text-[#999999]">Hash:</b> {hash}
             </span>
           </span>{" "}
         </div>
@@ -57,7 +57,7 @@ const columns: ColumnDef<TransactionRecord>[] = [
       const status = row.getValue("status");
       return (
         <span
-          className={cn("whitespace-nowrap text-xs", status == "Awarded" ? "text-custom-green": "text-muted-foreground")}
+          className={cn("whitespace-nowrap text-xs", status == "Awarded" ? "text-custom-green": "text-muted-foreground text-[#999999]")}
         >
           {status as string}
         </span>
@@ -75,12 +75,12 @@ const columns: ColumnDef<TransactionRecord>[] = [
       
       return (
         <Badge
-        className="whitespace-nowrap"
-        variant={typeOfAward === "Campaign Winner" ? "pink" : "purple"}
-        size={"lg"}
-      >
-        {typeOfAward as string}
-      </Badge>    )
+          className="whitespace-nowrap"
+          style={typeOfAward === "Campaign Winner" ? { backgroundColor: "#a665db", color: "#fff" } : {backgroundColor: "#db65b9", color: "#fff"}}
+          size={"lg"}
+        >
+          {typeOfAward as string}
+        </Badge>)
     },
   },
   {

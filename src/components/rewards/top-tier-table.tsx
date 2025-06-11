@@ -30,12 +30,14 @@ interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
   fetching: boolean;
+  hideHash?: boolean;
 }
 
 export function TopTierTable<TData, TValue>({
   columns,
   data,
   fetching,
+  hideHash = false,
 }: DataTableProps<TData, TValue>) {
   const [rowSelection, setRowSelection] = React.useState({});
   const [columnVisibility, setColumnVisibility] =

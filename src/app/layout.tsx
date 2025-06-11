@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import { Suspense } from "react";
-import { Toaster } from "sonner";
+import { Toaster } from "@/components/toaster";
 import "./globals.css";
 import Head from "next/head";
 const geistSans = Geist({
@@ -106,11 +106,15 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
+  preload: true,
+  fallback: ["system-ui", "arial"],
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  preload: true,
+  fallback: ["system-ui", "arial"],
 });
 
 

@@ -1,41 +1,38 @@
 import * as yup from "yup";
 
 const newsSchema = yup.object().shape({
-  nftName: yup
+  title: yup
     .string()
-    .required("NFT Name is required")
-    .max(100, "NFT Name must be at most 100 characters"),
+    .required("News title is required")
+    .max(100, "News title must be at most 100 characters"),
 
-  description: yup
+  short_description: yup
     .string()
-    .required("Description is required")
-    .max(500, "Description must be at most 500 characters"),
+    .required("Short description is required")
+    .max(500, "Short description must be at most 500 characters"),
 
-  nftImage: yup
-    .array()
-    .of(
-      yup
-        .mixed()
-        .required("Image is required")
-        .test(
-          "fileType",
-          "Only PNG, JPG, and JPEG files are allowed",
-          (value) => {
-            if (!value) return false;
-            if (!(value instanceof File)) return false;
-            return ["image/png", "image/jpeg", "image/jpg"].includes(
-              value.type
-            );
-          }
-        )
-        .test("fileSize", "Each image must be less than 3MB", (value) => {
-          if (!value) return false;
-          if (!(value instanceof File)) return false;
-          return value.size <= 3 * 1024 * 1024; // 3MB limit per image
-        })
+    video_thumbnail: yup
+    .string()
+    .nullable()
+    .optional(),
+    video: yup
+    .mixed()
+    .required("Video is required")
+    .test(
+      "fileType",
+      "Only MP4 files are allowed",
+      (value) => {
+        if (!value) return false;
+        if (!(value instanceof File)) return false;
+        return ["video/mp4"].includes(value.type);
+      }
     )
-    .min(1, "At least one image is required") // Ensures at least one image is uploaded
-    .max(5, "You can upload up to 5 images"), // Limits the maximum number of images
+    .test("fileSize", "Video must be less than 50MB", (value) => {
+      if (!value) return false;
+      if (!(value instanceof File)) return false;
+      return value.size <= 50 * 1024 * 1024; // 50MB limit
+    }),
+
 
   category: yup.string().required("Category is required"),
 

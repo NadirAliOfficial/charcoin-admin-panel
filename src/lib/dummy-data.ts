@@ -1,4 +1,5 @@
 import type { CauseFormData } from "@/schemas/causes-schema";
+import type { NewsSchemaType } from "@/schemas/news-schema";
 
 export const dummyData: CauseFormData = {
   causeTitle: "Building 3 schools in the west side of Nicaragua",
@@ -16,6 +17,21 @@ export const dummyData: CauseFormData = {
   phone: "+505-9856-98745",
   status: "Published",
   contractFile: "Final Formal Agreement - Nicaragua.pdf",
+};
+
+// Create a dummy video file
+const dummyVideoFile = new File(
+  [new ArrayBuffer(1024)], // 1KB dummy content
+  "dummy-video.mp4",
+  { type: "video/mp4" }
+);
+
+export const newsDummyData: NewsSchemaType = {
+  title: "We are making a difference in water cleaning",
+  short_description: "We are making a difference in water purification, bringing clean and safe water to communities in need. Every drop counts, and every effort changes lives. Join us in creating a cleaner future!",
+  video: dummyVideoFile,
+  category: "clean_water",
+  status: "published",
 };
 
 export const contractFile = "Final Formal Agreement - Nicaragua.pdf";

@@ -89,17 +89,7 @@ const News = () => {
     <HeaderWrapper
       title="Users & Wallets"
       description="Listing all the users/wallets in the CharCoin ecosystem"
-      actions={
-        <Button
-          size={"lg"}
-          className="max-md:px-4 max-md:h-10 ml-4"
-          onClick={() => {
-            setCommunityUserWalletAdd(true);
-          }}
-        >
-          Add new →
-        </Button>
-      }
+      
     >
       <div className="mb-6 ">
         <div className="flex items-center gap-4 mb-4 max-md:flex-col">

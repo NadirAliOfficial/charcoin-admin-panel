@@ -14,8 +14,11 @@ export type NFTSRecord = {
   username: string;
   wallet: string;
   hash: string;
-  status: "Waiting campaign completion" | "Awarded";
-  typeOfAward: "Campaign Winner" | "Direct Transfer";
+  status: string;
+  typeOfAward: string;
   date: Date;
   preview: string;
+  name: string;
+  description: string;
+  image: string;
 };

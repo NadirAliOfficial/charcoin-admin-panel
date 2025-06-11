@@ -27,12 +27,13 @@ export function Menu({ isOpen }: MenuProps) {
 
   return (
     <ScrollArea className="[&>div>div[style]]:!block ">
-      <nav className="mt-2 px-2  h-full w-full ">
+      <div className="border-t w-[85%] m-auto"/>
+      <nav className=" px-2  h-full w-full">
         <ul className="flex flex-col min-h-[calc(100vh-48px-36px-16px-40px)] lg:min-h-[calc(100vh-32px-40px-60px)] items-start space-y-1 px-2">
           {menuList.map(({ groupLabel, menus }, index) => (
             <li className={cn("w-full", groupLabel ? "pt-5" : "")} key={index}>
               {(isOpen && groupLabel) || isOpen === undefined ? (
-                <p className="text-sm font-medium text-muted-foreground px-4 pb-2 max-w-[248px] truncate">
+                <p className="text-[16px] font-medium text-muted-foreground px-4 pb-2 max-w-[248px] truncate">
                   {groupLabel}
                 </p>
               ) : !isOpen && isOpen !== undefined && groupLabel ? (
@@ -44,7 +45,7 @@ export function Menu({ isOpen }: MenuProps) {
                       </div>
                     </TooltipTrigger>
                     <TooltipContent side="right">
-                      <p>{groupLabel}</p>
+                      <p className="text-[16px]">{groupLabel}</p>
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
@@ -61,11 +62,11 @@ export function Menu({ isOpen }: MenuProps) {
                             <Button
                               variant={"ghost"}
                               className={cn(
-                                "w-full  font-normal border-transparent h-auto group mb-1  hover:border-primary  hover:bg-slate-500 hover:text-primary    justify-start  ",
+                                "w-full  font-normal  border-transparent h-auto group mb-1  hover:border-primary  hover:bg-slate-500 hover:text-primary    justify-start  text-[16px] font-WFVisualSansRegular",
                                 (active === undefined &&
                                   pathname.startsWith(href)) ||
                                   active
-                                  ? "border-primary     bg-primary/10 !fill-primary   !text-primary"
+                                  ? "border-primary     bg-[#28272d] !fill-primary   !text-primary"
                                   : ""
                               )}
                               asChild
@@ -79,7 +80,7 @@ export function Menu({ isOpen }: MenuProps) {
                                 </span>
                                 <p
                                   className={cn(
-                                    "max-w-[200px] truncate",
+                                    "max-w-[200px] truncate text-[16px] font-WFVisualSansRegular",
                                     isOpen === false
                                       ? "-translate-x-96 opacity-0"
                                       : "translate-x-0 opacity-100"
@@ -123,7 +124,7 @@ export function Menu({ isOpen }: MenuProps) {
                 <Button
                   variant={"ghost"}
                   className={cn(
-                    "w-full  font-normal border-transparent group mb-1  hover:border-primary   hover:bg-slate-500 hover:text-primary    justify-start  "
+                    "text-[16px] font-WFVisualSansRegular w-full  font-normal border-transparent group mb-1  hover:border-primary   hover:bg-slate-500 hover:text-primary    justify-start  "
                   )}
                 >
                   <span className={cn(isOpen === false ? "" : "mr-4")}>
@@ -132,7 +133,7 @@ export function Menu({ isOpen }: MenuProps) {
                   </span>
                   <p
                     className={cn(
-                      "max-w-[200px] truncate",
+                      "max-w-[200px] truncate text-[16px] font-WFVisualSansRegular",
                       isOpen === false
                         ? "-translate-x-96 opacity-0"
                         : "translate-x-0 opacity-100"

@@ -24,10 +24,10 @@ export default function ContactDetailsSection() {
   } = useFormContext<CauseFormData>();
 
   return (
-    <div className="mb-8">
-      <FormSectionTitle title="Contact details" />
+    <div className="mb-8 mt-20">
+      <FormSectionTitle title="Contact details" className="border-b-2 border-[#3d3c44]" />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <FormField
           id="responsibleContact"
           label="Responsible Contact"
@@ -38,7 +38,7 @@ export default function ContactDetailsSection() {
             variant="newly_secondary"
             inputSize="lg"
             id="responsibleContact"
-            className="bg-gray-800 border-gray-700 text-white"
+            className="bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]"
             {...register("responsibleContact")}
           />
         </FormField>
@@ -53,7 +53,7 @@ export default function ContactDetailsSection() {
             variant="newly_secondary"
             inputSize="lg"
             id="role"
-            className="bg-gray-800 border-gray-700 text-white"
+            className="bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]"
             {...register("role")}
           />
         </FormField>
@@ -70,7 +70,7 @@ export default function ContactDetailsSection() {
             variant="newly_secondary"
             inputSize="lg"
             id="email"
-            className="bg-gray-800 border-gray-700 text-white"
+            className="bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]"
             {...register("email")}
           />
         </FormField>
@@ -85,19 +85,22 @@ export default function ContactDetailsSection() {
             variant="newly_secondary"
             inputSize="lg"
             id="phone"
-            className="bg-gray-800 border-gray-700 text-white"
+            className="bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]"
             {...register("phone")}
           />
         </FormField>
       </div>
 
-      <FileUploadSection
-        description="Choose the PDF file containing the agreement between the parties"
-        fieldName="contractFile"
-        label="Contract"
-      />
+      <div className="border-b-2 border-secondary pb-2">
+        <FileUploadSection
+          description="Choose the PDF file containing the agreement between the parties"
+          fieldName="contractFile"
+          label="Contract"
+        />
+      </div>
 
-      <FormField
+<div className="border-b-2 border-secondary pb-2 mt-4">
+ <FormField
         id="status"
         label="Status"
         description="The publish status of the cause / project"
@@ -107,6 +110,7 @@ export default function ContactDetailsSection() {
           variant="newly_secondary"
           selectSize="lg"
           placeholder="Select status"
+          className="bg-gray-800 border-gray-700 text-gray-400 font-WFVisualSansRegular text-[14px]"
           value={getValues().status}
           onValueChange={(value) => setValue("status", value)}
           options={[
@@ -116,6 +120,8 @@ export default function ContactDetailsSection() {
           ]}
         />
       </FormField>
+</div>
+     
     </div>
   );
 }

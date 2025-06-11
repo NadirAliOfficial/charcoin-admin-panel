@@ -1,12 +1,13 @@
 "use client"
 
 import { formatCurrency } from "@/lib/utils"
+import { HeaderWrapper } from "../custom/header-wrapper"
 
 interface WalletHistoryDialogProps {
   walletName: string
 }
 
-export default function WalletHistoryDialog({  walletName }: WalletHistoryDialogProps) {
+export default function WalletHistoryDialog({ walletName }: WalletHistoryDialogProps) {
   // Mock data for the wallet history
   const walletData = {
     balance: 847214.0,
@@ -77,77 +78,80 @@ export default function WalletHistoryDialog({  walletName }: WalletHistoryDialog
   }
 
   return (
-   
 
-        <div className="mt-12">
-          <h2 className="text-xl font-bold text-[#00ffcc]">{walletName}</h2>
-          <p className="text-sm text-gray-400 break-all">{walletData.address}</p>
 
-          <div className="grid grid-cols-2 gap-4 mt-6">
-            <div className="text-right">
-              <p className="text-3xl font-bold">{formatCurrency(walletData.balance)}</p>
-              <p className="text-sm text-gray-400">Current Balance</p>
-            </div>
-            <div className="text-right">
-              <p className="text-3xl font-bold">{formatCurrency(walletData.totalSent)}</p>
-              <p className="text-sm text-gray-400">Total sent in 5 transactions</p>
-            </div>
-          </div>
-
-          <div className="mt-8">
-            <h3 className="text-lg font-bold">Transfers & Payouts History</h3>
-            <p className="text-sm text-gray-400">
-              Below you can find all the transactions in favor of the Organization (3 payouts)
-            </p>
-          </div>
-
-          <div className="space-y-6 mt-6">
-            {walletData.transactions.map((tx, index) => (
-              <div key={index} className="border-l-4 border-[#00ffcc] pl-4 py-2">
-                <div
-                  className="inline-block px-2 py-1 rounded text-xs font-medium mb-2"
-                  style={{
-                    backgroundColor: tx.type === "in" ? "rgba(0, 255, 204, 0.2)" : "rgba(255, 99, 99, 0.2)",
-                    color: tx.type === "in" ? "#00ffcc" : "#ff6363",
-                  }}
-                >
-                  {tx.type === "in" ? "Transfer-In" : "Transfer-Out"}
-                </div>
-
-                <p className="text-lg font-bold">
-                  ${tx.amount.toLocaleString()} {tx.currency} ({tx.tokenType})
-                </p>
-
-                <div className="mt-2">
-                  <p className="text-sm text-gray-400">
-                    HASH: <span className="text-gray-300">{tx.hash}</span>
-                  </p>
-                  {tx.type === "in" ? (
-                    <p className="text-sm text-gray-400">
-                      Sender Wallet: <span className="text-gray-300">{tx.sender}</span>
-                    </p>
-                  ) : (
-                    <p className="text-sm text-gray-400">
-                      Receiver Wallet: <span className="text-gray-300">{tx.receiver}</span>
-                    </p>
-                  )}
-                  <p className="text-sm text-gray-400">
-                    Sent on:{" "}
-                    <span className="text-gray-300">
-                      {tx.date} at {tx.time}
-                    </span>
-                  </p>
-                  <p className="text-sm text-gray-400">
-                    Authorized by administrators: <span className="text-gray-300">{tx.authorizedBy.join(", ")}</span>
-                  </p>
-                  <p className="text-sm text-gray-400">
-                    Note: <span className="text-gray-300">{tx.note}</span>
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+    <div className="">
+      <HeaderWrapper
+        title={walletName}
+        description={walletData.address}
+        size={"sm"}
+        mainClassName="ml-10 [&_h1]:font-bold [&_h1]:!text-primary"
+      />
+      <div className="grid grid-cols-2 gap-4 mt-6">
+        <div className="text-center">
+          <p className="text-3xl font-bold">{formatCurrency(walletData.balance)}</p>
+          <p className="text-sm text-gray-400">Current Balance</p>
         </div>
-     
+        <div className="text-right">
+          <p className="text-3xl font-bold">{formatCurrency(walletData.totalSent)}</p>
+          <p className="text-sm text-gray-400">Total sent in 5 transactions</p>
+        </div>
+      </div>
+
+      <div className="mt-8">
+        <h3 className="text-lg font-bold">Transfers & Payouts History</h3>
+        <p className="text-sm text-gray-400">
+          Below you can find all the transactions in favor of the Organization (3 payouts)
+        </p>
+      </div>
+
+      <div className="space-y-6 mt-6">
+        {walletData.transactions.map((tx, index) => (
+          <div key={index} className="border-l-4 border-[#00ffcc] pl-4 py-2">
+            <div
+              className="inline-block px-2 py-1 rounded text-xs font-medium mb-2"
+              style={{
+                backgroundColor: tx.type === "in" ? "rgba(0, 255, 204, 0.2)" : "rgba(255, 99, 99, 0.2)",
+                color: tx.type === "in" ? "#00ffcc" : "#ff6363",
+              }}
+            >
+              {tx.type === "in" ? "Transfer-In" : "Transfer-Out"}
+            </div>
+
+            <p className="text-lg font-bold">
+              ${tx.amount.toLocaleString()} {tx.currency} ({tx.tokenType})
+            </p>
+
+            <div className="mt-2">
+              <p className="text-sm text-gray-400">
+                HASH: <span className="text-gray-300">{tx.hash}</span>
+              </p>
+              {tx.type === "in" ? (
+                <p className="text-sm text-gray-400">
+                  Sender Wallet: <span className="text-gray-300">{tx.sender}</span>
+                </p>
+              ) : (
+                <p className="text-sm text-gray-400">
+                  Receiver Wallet: <span className="text-gray-300">{tx.receiver}</span>
+                </p>
+              )}
+              <p className="text-sm text-gray-400">
+                Sent on:{" "}
+                <span className="text-gray-300">
+                  {tx.date} at {tx.time}
+                </span>
+              </p>
+              <p className="text-sm text-gray-400">
+                Authorized by administrators: <span className="text-gray-300">{tx.authorizedBy.join(", ")}</span>
+              </p>
+              <p className="text-sm text-gray-400">
+                Note: <span className="text-gray-300">{tx.note}</span>
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
   )
 }

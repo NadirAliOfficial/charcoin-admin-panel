@@ -15,6 +15,7 @@ export default function FormActions() {
         type="button"
         size={"lg"}
         variant="destructive"
+        className="bg-red-300 text-black"
         endIcon={Trash2}
       >
         Delete

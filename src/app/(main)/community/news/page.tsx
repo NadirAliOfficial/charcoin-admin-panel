@@ -13,7 +13,9 @@ import { Button } from "@/components/ui/button";
 import { DateTimePicker } from "@/components/ui/date-time-picker";
 import { Input } from "@/components/ui/input";
 import useDialogStore from "@/stores/dialog-store";
-import { NewsArticle, NewsData, NewsStatus } from "@/types/news";
+import { NewsArticle, NewsData, NewsStatus, NewsStatusOption } from "@/types/news";
+import { StatusOption, StatusSelector } from "@/components/ui/StatusSelector";
+import { NewsStatusSelector } from "@/components/ui/newsStatusSelector";
 
 const newsExample: NewsData = {
   news_summary: {
@@ -86,16 +88,28 @@ const newsExample: NewsData = {
 // ✅ Explicitly define the return type as `Promise<TransactionRecord[]>`
 const fetchTransactions = async (
   query = "",
-  month = new Date()
+  month = new Date(),
+  status?: NewsStatusOption
 ): Promise<NewsArticle[]> => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      const filtered = newsExample.news_data.filter(
-        (record) => record.title.toLowerCase().includes(query.toLowerCase())
-        // record.username.toLowerCase().includes(query.toLowerCase()) ||
-        // record.wallet.toLowerCase().includes(query.toLowerCase()) ||
-        // record.hash.toLowerCase().includes(query.toLowerCase())
-      );
+      let filtered = newsExample.news_data;
+
+      // Filter by search query
+      if (query) {
+        filtered = filtered.filter(
+          (record) =>
+            record.title.toLowerCase().includes(query.toLowerCase()) ||
+            record.category.toLowerCase().includes(query.toLowerCase()) ||
+            record.short_description.toLowerCase().includes(query.toLowerCase())
+        );
+      }
+
+      // Filter by status
+      if (status && status.value !== NewsStatus.All) {
+        filtered = filtered.filter((record) => record.status === status.value);
+      }
+
       resolve(filtered);
     }, 500);
   });
@@ -103,39 +117,49 @@ const fetchTransactions = async (
 
 const News = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [date, setDate] = useState<Date>(new Date()); 
+  const [date, setDate] = useState<Date>(new Date());
   const { openDialog, setCommunityNewsAdd } = useDialogStore();
+  // Set initial state to "All"
+  const [selectedStatus, setSelectedStatus] = useState<NewsStatusOption>({
+    label: "All",
+    value: NewsStatus.All,
+  });
 
   const { data = [], isLoading } = useQuery<NewsArticle[]>({
-    queryKey: ["news", searchQuery, date],
-    queryFn: () => fetchTransactions(searchQuery, date),
+    queryKey: ["news", searchQuery, date, selectedStatus.value],
+    queryFn: () => fetchTransactions(searchQuery, date, selectedStatus),
+    // Add staleTime to prevent unnecessary refetches
+    staleTime: 5000,
   });
 
   return (
     <HeaderWrapper
       title="News"
+      className=""
       description="Public news about the progress of each donation and the CharCoin impact"
       actions={
         <Button
           size={"lg"}
           className="max-md:px-4 max-md:h-10 ml-4"
-          onClick={() => {
-            setCommunityNewsAdd(true);
-          }}
+          onClick={() => setCommunityNewsAdd(true)}
         >
           Add new →
         </Button>
       }
     >
-      <div className="mb-6 ">
-        <div className="flex items-center gap-4 mb-4 max-md:flex-col">
-          <DateTimePicker date={date  } setDate={setDate} />
-         
-          <div className="relative  w-80 ">
+      <div className="mb-6">
+        <div className="flex md:items-center gap-4 mb-4 max-md:flex-col">
+          <NewsStatusSelector
+            selectedStatus={selectedStatus}
+            onStatusChange={setSelectedStatus}
+            className="min-w-[140px]"
+          />
+
+          <div className="relative md:w-80">
             <Input
-              className="!w-full !bg-[#3D3C44] "
+              className="!w-full !bg-[#3D3C44]"
               variant={"newly_secondary"}
-              placeholder="Search by username, wallet, or hash"
+              placeholder="Search by title, category or description"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -143,16 +167,12 @@ const News = () => {
           </div>
         </div>
 
-        <NewsTable
-          data={data} // ✅ Now `data` is always a TransactionRecord[]
-          columns={NewsColumn}
-          fetching={isLoading}
-        />
+        <NewsTable data={data} columns={NewsColumn} fetching={isLoading} />
       </div>
       <CustomSheet
         isOpen={openDialog == "community_news_add"}
         setIsOpen={setCommunityNewsAdd}
-        title="Edit Cause form"
+        title="Publish a new entry"
         className="pt-2 px-4"
       >
         <AddNewNews />

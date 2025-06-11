@@ -39,12 +39,11 @@ export const causeFormSchema = yup.object({
     .of(
       yup
         .mixed()
-        .required("Image is required")
         .test(
           "fileType",
           "Only PNG, JPG, and JPEG files are allowed",
           (value) => {
-            if (!value) return false;
+            if (!value) return true;
             if (!(value instanceof File)) return false;
             return ["image/png", "image/jpeg", "image/jpg"].includes(
               value.type
@@ -52,28 +51,27 @@ export const causeFormSchema = yup.object({
           }
         )
         .test("fileSize", "Each image must be less than 3MB", (value) => {
-          if (!value) return false;
+          if (!value) return true;
           if (!(value instanceof File)) return false;
           return value.size <= 3 * 1024 * 1024; // 3MB limit per image
         })
     )
-    .min(1, "At least one image is required") // Ensures at least one image is uploaded
-    .max(5, "You can upload up to 5 images"), // Limits the maximum number of images
+    .optional(),
 
   // ✅ Contract File (Single PDF Upload)
   contractFile: yup
     .mixed()
-    .required("Contract file is required")
     .test("fileType", "Only PDF files are allowed", (value) => {
-      if (!value) return false;
+      if (!value) return true;
       if (!(value instanceof File)) return false;
       return value.type === "application/pdf";
     })
     .test("fileSize", "File size should be less than 5MB", (value) => {
-      if (!value) return false;
+      if (!value) return true;
       if (!(value instanceof File)) return false;
       return value.size <= 5 * 1024 * 1024; // 5MB
-    }),
+    })
+    .optional(),
 });
 
 export type CauseFormData = yup.InferType<typeof causeFormSchema>;

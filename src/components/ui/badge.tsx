@@ -20,6 +20,10 @@ const badgeVariants = cva(
         purple: "bg-custom-purple text-white",
         pink: "bg-[#db65b9] text-white",
         green: "bg-custom-green text-white",
+        published: "bg-green-700 text-white",
+        unpublished: "bg-gray-700 text-white",
+        completed: "bg-blue-600 text-white",
+        draft: "bg-gray-700 text-white",
       },
       size: {
         default: "h-5 text-xs",

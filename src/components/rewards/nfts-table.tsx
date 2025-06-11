@@ -25,24 +25,23 @@ import {
 // import { DataTableToolbar } from "../table/tasks-table-toolbar";
 import { Fetching } from "../reuseable/fetching";
 import { DataTablePagination } from "../table/tasks-table-pagination";
+import useDialogStore from "@/stores/dialog-store";
+import { NFTSRecord } from "@/types/rewards";
+import { CustomSheet } from "@/components/reuseable/add-causes-sheet";
+import { NftDetail } from "@/components/nfts/nft-detail";
 
-interface DataTableProps<TData, TValue> {
-  columns: ColumnDef<TData, TValue>[];
-  data: TData[];
+interface NftsTableProps {
+  data: NFTSRecord[];
+  columns: any;
   fetching: boolean;
 }
 
-export function NftsTable<TData, TValue>({
-  columns,
-  data,
-  fetching,
-}: DataTableProps<TData, TValue>) {
+export function NftsTable({ data, columns, fetching }: NftsTableProps) {
+  const { openDialog, setNftsDetail, setSelectedNft, selectedNft } = useDialogStore();
+
   const [rowSelection, setRowSelection] = React.useState({});
-  const [columnVisibility, setColumnVisibility] =
-    React.useState<VisibilityState>({});
-  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
-    []
-  );
+  const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({});
+  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
   const [sorting, setSorting] = React.useState<SortingState>([]);
 
   const table = useReactTable({
@@ -67,10 +66,15 @@ export function NftsTable<TData, TValue>({
     getFacetedUniqueValues: getFacetedUniqueValues(),
   });
 
+  const handleRowClick = (nft: NFTSRecord) => {
+    setSelectedNft(nft);
+    setNftsDetail(true);
+  };
+
   return (
     <div className="space-y-4 bg-background pb-5 rounded-xl">
       {/* <DataTableToolbar table={table} /> */}
-      <div className="rounded-md border bg-background ">
+      <div className="rounded-md border bg-background">
         {/* <ScrollArea> */}
         <Table>
           <TableHeader>
@@ -95,12 +99,10 @@ export function NftsTable<TData, TValue>({
             {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
                 <TableRow
-                  onClick={() => {
-                    console.log("Clicked");
-                  }}
-                  // row.original?._id! ??
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
+                  onClick={() => handleRowClick(row.original)}
+                  className="cursor-pointer hover:bg-[#2A2931]"
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell className="py-4 px-4" key={cell.id}>
@@ -138,6 +140,16 @@ export function NftsTable<TData, TValue>({
       <div className="px-5">
         <DataTablePagination table={table} />
       </div>
+      {selectedNft && (
+        <CustomSheet
+          isOpen={openDialog === "nfts_detail"}
+          setIsOpen={setNftsDetail}
+          title={selectedNft.name || "NFT Details"}
+          className="pt-2 px-4"
+        >
+          <NftDetail nft={selectedNft} />
+        </CustomSheet>
+      )}
     </div>
   );
 }

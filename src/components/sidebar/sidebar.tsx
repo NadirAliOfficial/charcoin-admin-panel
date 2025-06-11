@@ -5,9 +5,10 @@ import { Button } from "@/components/ui/button";
 
 import { cn } from "@/lib/utils";
 import { useSidebarStore } from "@/stores/sidebar-store";
-import { BrandTelegram, BrandTwitter } from "@mynaui/icons-react";
+import { BrandTelegram, BrandTwitter, BrandX } from "@mynaui/icons-react";
 import LogoImage from "../custom/logo-image";
 import { SidebarToggle } from "./sidebar-toggle";
+import Link from "next/link";
 
 export function Sidebar() {
   const sidebar = useSidebarStore();
@@ -21,7 +22,7 @@ export function Sidebar() {
         settings.disabled && "hidden"
       )}
     >
-      
+
       <SidebarToggle isOpen={getOpenState()} setIsOpen={toggleOpen} />
       <div
         onMouseEnter={() => setIsHover(true)}
@@ -30,15 +31,15 @@ export function Sidebar() {
       >
         <Button
           className={cn(
-            "transition-transform ease-in-out duration-300 mb-1",
+            "transition-transform ease-in-out duration-300 justify-start my-5 ml-2",
             !getOpenState() ? "translate-x-1" : "translate-x-0"
           )}
           variant="link"
           asChild
         >
-          <LogoImage className="mt-4" width={120} />
+          <LogoImage className="" width={120} />
         </Button>
-        <hr className="mx-4" />
+
         <Menu isOpen={getOpenState()} />
         {isOpen && (
           <div className="flex gap-4 mx-
@@ -49,8 +50,12 @@ export function Sidebar() {
                 Follow only the official channels
               </span>
               <span className="flex gap-4">
-                <BrandTelegram className="w-6 h-6 hover:text-primary" />
-                <BrandTwitter className="w-6 h-6 hover:text-primary" />
+                <Link href="https://t.me/charcoinx" target="_blank" rel="noopener noreferrer">
+                  <BrandTelegram className="w-6 h-6 hover:text-primary" />
+                </Link>
+                <Link href={"https://x.com/char_coin_x"}>
+                  <BrandTwitter className="w-6 h-6 hover:text-primary" />
+                </Link>
               </span>
             </div>
           </div>

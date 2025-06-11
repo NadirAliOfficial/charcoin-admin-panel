@@ -55,7 +55,7 @@ const DateSelector: React.FC<DateSelectorProps> = ({
           <Button
             variant="newly_secondary"
             className={cn(
-              "w-[240px] justify-start text-left font-normal",
+              "w-[240px] justify-start text-left font-normal font-WFVisualSansRegular",
               !date && "text-muted-foreground"
             )}
           >

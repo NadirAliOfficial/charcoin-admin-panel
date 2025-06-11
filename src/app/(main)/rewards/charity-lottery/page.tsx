@@ -8,6 +8,7 @@ import { HeaderWrapper } from "@/components/custom/header-wrapper";
 import { SearchInput } from "@/components/reuseable/search-input";
 import { TopTierTable } from "@/components/rewards/top-tier-table";
 import { DateTimePicker } from "@/components/ui/date-time-picker";
+import { DisplayDatePicker } from "@/components/ui/DisplayDatePicker";
 
 // Define a type for transactions
 type TransactionRecord = {
@@ -69,6 +70,7 @@ const fetchTransactions = async (
 const TopTiers = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [date, setDate] = useState<Date>(new Date());
+  const [displayDate, setDisplayDate] = useState<Date | undefined>(new Date());
 
   const { data = [], isLoading } = useQuery<TransactionRecord[]>({
     queryKey: ["transactions", searchQuery, date],
@@ -77,15 +79,20 @@ const TopTiers = () => {
 
   return (
     <HeaderWrapper
-      title="Rewards - Top Tiers"
-      description="Showing the top 10 users with the most volume in the selected period"
+      title="Rewards - Charity Lottery"
+      description="Showing the randomly selected wallets which won the Charity Lottery on the selected period"
     >
       <div className="mb-6 ">
         <div className="flex items-center gap-4 mb-4 max-md:flex-col">
-          <DateTimePicker date={date} setDate={setDate} />
+          <DisplayDatePicker
+            date={displayDate}
+            setDate={setDisplayDate}
+            displayLabel="Display data:"
+            className="your-custom-styles"
+          />
 
           <SearchInput
-            placeholder="Search by username, wallet, or hash"
+            placeholder="Search by Wallet / Username"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />

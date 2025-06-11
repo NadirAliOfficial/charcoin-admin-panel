@@ -10,12 +10,11 @@ import { CustomSheet } from "@/components/reuseable/add-causes-sheet";
 import { SearchInput } from "@/components/reuseable/search-input";
 import { NftsTable } from "@/components/rewards/nfts-table";
 import { Button } from "@/components/ui/button";
-import { DateTimePicker } from "@/components/ui/date-time-picker";
 import useDialogStore from "@/stores/dialog-store";
 import { NFTSRecord } from "@/types/rewards";
-import { Arrow } from "@radix-ui/react-dropdown-menu";
-import { ArrowRight, ArrowRightCircleSolid } from "@mynaui/icons-react";
 import { ArrowRightIcon } from "lucide-react";
+import { TypeSelector, TypeOption } from "@/components/ui/TypeSelector";
+import { NftDetail } from "@/components/nfts/nft-detail";
 
 const transactionRecords: NFTSRecord[] = [
   {
@@ -26,6 +25,9 @@ const transactionRecords: NFTSRecord[] = [
     typeOfAward: "Campaign Winner",
     date: new Date("2025-03-25T00:00:00Z"),
     preview: "Preview in Solanart",
+    name: "March 2025 Campaign Winner NFT",
+    description: "NFT for campaign winner",
+    image: "https://images.unsplash.com/photo-1639762681057-408e52192e55?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
   },
   {
     username: "SmartCircus",
@@ -35,6 +37,9 @@ const transactionRecords: NFTSRecord[] = [
     typeOfAward: "Campaign Winner",
     date: new Date("2025-02-25T00:00:00Z"),
     preview: "Preview in Solanart",
+    name: "February 2025 Winner NFT",
+    description: "NFT awarded to SmartCircus",
+    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
   },
   {
     username: "DeepWaters87",
@@ -44,6 +49,9 @@ const transactionRecords: NFTSRecord[] = [
     typeOfAward: "Direct Transfer",
     date: new Date("2025-02-25T00:00:00Z"),
     preview: "Preview in Solanart",
+    name: "DeepWaters Special NFT",
+    description: "Direct transfer NFT",
+    image: "https://images.unsplash.com/photo-1639762681057-408e52192e55?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
   },
   {
     username: "GreatLakes_23",
@@ -53,6 +61,9 @@ const transactionRecords: NFTSRecord[] = [
     typeOfAward: "Campaign Winner",
     date: new Date("2025-01-25T00:00:00Z"),
     preview: "Preview in Solanart",
+    name: "January 2025 Winner NFT",
+    description: "Campaign winner NFT",
+    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
   },
   {
     username: "Marcus_lkl",
@@ -62,6 +73,9 @@ const transactionRecords: NFTSRecord[] = [
     typeOfAward: "Campaign Winner",
     date: new Date("2024-12-25T00:00:00Z"),
     preview: "Preview in Solanart",
+    name: "December 2024 Winner NFT",
+    description: "Campaign winner NFT",
+    image: "https://images.unsplash.com/photo-1639762681057-408e52192e55?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
   },
   {
     username: "FroSand82",
@@ -71,7 +85,10 @@ const transactionRecords: NFTSRecord[] = [
     typeOfAward: "Campaign Winner",
     date: new Date("2024-12-25T00:00:00Z"),
     preview: "Preview in Solanart",
-  },
+    name: "December 2024 Special NFT",
+    description: "Campaign winner NFT",
+    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+  }
 ];
 
 // ✅ Explicitly define the return type as `Promise<TransactionRecord[]>`
@@ -82,10 +99,10 @@ const fetchTransactions = async (
   return new Promise((resolve) => {
     setTimeout(() => {
       const filtered = transactionRecords.filter(
-        (record) => record.username.toLowerCase().includes(query.toLowerCase())
-        // ||
-        // record.wallet.toLowerCase().includes(query.toLowerCase()) ||
-        // record.hash.toLowerCase().includes(query.toLowerCase())
+        (record) =>
+          record.username.toLowerCase().includes(query.toLowerCase()) ||
+          record.wallet.toLowerCase().includes(query.toLowerCase()) ||
+          record.hash.toLowerCase().includes(query.toLowerCase())
       );
       resolve(filtered);
     }, 500);
@@ -95,10 +112,11 @@ const fetchTransactions = async (
 const TopTiers = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [date, setDate] = useState<Date>(new Date());
-  const { openDialog, setNtfsAdd } = useDialogStore();
+  const { openDialog, setNftsAdd } = useDialogStore();
+  const [selectedType, setSelectedType] = useState<TypeOption | undefined>(undefined);
 
   const { data = [], isLoading } = useQuery<NFTSRecord[]>({
-    queryKey: ["ntfs", searchQuery, date],
+    queryKey: ["nfts", searchQuery, date],
     queryFn: () => fetchTransactions(searchQuery, date),
   });
 
@@ -107,14 +125,18 @@ const TopTiers = () => {
       title="Rewards - NFTs"
       description="NFT collections and distribution control"
       actions={
-        <Button size={"lg"} onClick={() => setNtfsAdd(true)} endIcon={ArrowRightIcon}>
-          Add new 
+        <Button size={"lg"} onClick={() => setNftsAdd(true)} endIcon={ArrowRightIcon}>
+          Add new
         </Button>
       }
     >
       <div className="mb-6 ">
         <div className="flex items-center gap-4 mb-4 max-md:flex-col">
-          <DateTimePicker date={date} setDate={setDate} />
+          <TypeSelector
+            selectedType={selectedType}
+            onTypeChange={setSelectedType}
+            className="your-custom-styles"
+          />
           <SearchInput
             placeholder="Search by username, wallet, or hash"
             value={searchQuery}
@@ -123,14 +145,14 @@ const TopTiers = () => {
         </div>
 
         <NftsTable
-          data={data} // ✅ Now `data` is always a TransactionRecord[]
+          data={data}
           columns={nftsColumns}
           fetching={isLoading}
         />
         <CustomSheet
           isOpen={openDialog == "nfts_add"}
-          setIsOpen={setNtfsAdd}
-          title="Edit Cause form"
+          setIsOpen={setNftsAdd}
+          title="Add NFT"
           className="pt-2 px-4"
         >
           <CreateNftsTwo />

@@ -7,14 +7,12 @@ import { Button } from "@/components/ui/button";
 
 const LoginPage = () => {
   return (
-    <div className="flex min-h-screen bg-background relative  ">
+    <div className="flex  bg-background relative min-h-screen overflow-auto">
       <div className="w-5/12 max-lg:w-full  p-5">
         <Button variant={"newly_secondary"} className="font-bold">
           <ArrowLeft />
           Back
-          
         </Button>
-        <Video src={"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"} />
         <div className="flex flex-col  max-w-sm gap-4 mx-auto justify-center  h-5/6 mt-4 ">
           <Image
             src={"/logo.svg"}
@@ -31,7 +29,7 @@ const LoginPage = () => {
           <hr />
         </div>
       </div>
-      <div className="max-lg:hidden  w-full">
+      <div className="max-lg:hidden sticky top-0 w-full">
         {" "}
         <Image
           src={"/feature-image.png"}

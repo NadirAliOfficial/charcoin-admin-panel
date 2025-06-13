@@ -263,9 +263,9 @@ export default function CausesPage() {
     <div className="container mx-auto py-8 ">
       <div className="flex items-center mb-6 justify-between">
       <h1 className="text-2xl   ">Causes</h1>
-      {(activeTab || "")?.toLowerCase() == "drafts" && <Button onClick={() => setCausesOpenAdd(true)}>
+      <Button onClick={() => setCausesOpenAdd(true)}>
           Add New <ArrowRight />
-        </Button>}
+        </Button>
       </div>
 
       <div className="mb-6">

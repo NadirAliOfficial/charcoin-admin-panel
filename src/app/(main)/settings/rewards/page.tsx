@@ -16,18 +16,18 @@ const Rewards = () => {
           size={"sm"}
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-          <div className=" p-4 rounded-lg">
+          <div className=" p-4 rounded-lg h-full flex flex-col justify-between">
             <h3 className="text-md ">
               Number of Wallets to Reward in the “Top Tier” Program{" "}
             </h3>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground mb-auto ">
               Define how many top-performing wallets will be rewarded based on
               the highest transaction volume within a given period (monthly or
               yearly). Rewards are distributed based on ranking (e.g., 1st
               place, 2nd place, 3rd place, etc.). The higher the rank, the
               greater the reward.
             </p>
-            <div className="relative mt-2">
+            <div className="relative mt-auto">
               <div className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground">
                 Wallet
               </div>

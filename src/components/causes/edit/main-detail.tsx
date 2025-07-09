@@ -6,6 +6,7 @@ import ImageUploadSection from "./field-upload-section";
 import FormField from "./form-field";
 import FormSectionTitle from "./form-section-title";
 import { SelectField } from "./form-select";
+import {  useEffect } from "react";
 
 export default function MainDetailsSection() {
   const {
@@ -14,7 +15,9 @@ export default function MainDetailsSection() {
     setValue,
     getValues,
   } = useFormContext();
-
+useEffect(() => {
+console.log("getValues().country",getValues())
+},[])
   return (
     <div className="mb-8">
       <FormSectionTitle title="Main details" />

@@ -9,6 +9,8 @@ import { Suspense } from "react";
 import { Toaster } from "@/components/toaster";
 import "./globals.css";
 import Head from "next/head";
+import WalletContextProvider from "@/providers/WalletProvider";
+import { UmiProvider } from "@/providers/umiProvider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -137,7 +139,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-        <Head>
+      <Head>
         <meta name="theme-color" content="#00f0b5" />
         <meta property="og:title" content="Charcoin – Invest with Impact" />
         <meta property="og:description" content="Join the global movement of crypto-driven generosity. Track donations, support causes, and make your tokens count." />
@@ -146,21 +148,28 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${wfVisualSans.className} antialiased`}
       >
         {/* <ScrollArea className="max-h-screen  h-screen min-w-screen w-screen overflow-auto  whitespace-nowrap"> */}
-        <Suspense fallback={<SplashScreen />}>
-          <ProgressProvider>
-            <QueryProvider>
-              <ThemeProvider
-                attribute="class"
-                defaultTheme="dark"
-                enableSystem
-                disableTransitionOnChange
-              >
-                {children}
-              </ThemeProvider>
-            </QueryProvider>
-            <Toaster />
-          </ProgressProvider>
-        </Suspense>
+        <WalletContextProvider>
+          <UmiProvider>
+
+            <Suspense fallback={<SplashScreen />}>
+              <ProgressProvider>
+                <QueryProvider>
+                  <ThemeProvider
+                    attribute="class"
+                    defaultTheme="dark"
+                    enableSystem
+                    disableTransitionOnChange
+                  >
+                    {children}
+                  </ThemeProvider>
+                </QueryProvider>
+                <Toaster />
+              </ProgressProvider>
+            </Suspense>
+          </UmiProvider>
+
+        </WalletContextProvider>
+
         {/* </ScrollArea> */}
       </body>
     </html>

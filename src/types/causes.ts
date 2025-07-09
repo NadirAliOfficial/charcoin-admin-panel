@@ -20,7 +20,7 @@ export type Cause = {
     payouts: number;
     status?: string;
   };
-  type: "Infinite Impact" | "Cause" | "Draft" | "One time";
+  type: "Infinite Impact" | "Cause" | "Draft" | "One time Only";
   image: string;
   status: string;
 };

@@ -33,8 +33,8 @@ export default function ImageUploadSection({
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files?.length) {
-      const newFiles = Array.from(event.target.files);
-      setImageFiles((prev) => [...prev, ...newFiles]);
+      const newFiles = event.target.files
+      setImageFiles((prev) => [...newFiles]);
     }
   };
 
@@ -77,7 +77,7 @@ export default function ImageUploadSection({
           endIcon={Trash2}
           className="bg-red-300 text-black"
         >
-          Delete All
+          Delete 
         </Button>
 
           {/* Image Previews */}

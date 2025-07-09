@@ -41,6 +41,11 @@ const categories = [
 
 ];
 
+
+async function fetchCategories() {
+  await fetch("http://localhost:3000/api/categories")
+}
+
 const campaigns = [
   {
     "title": "2025-05-01T00:00:00.000Z",

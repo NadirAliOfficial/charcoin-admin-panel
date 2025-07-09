@@ -15,7 +15,8 @@ import {
 } from "@/components/ui/tooltip";
 import { getMenuList } from "@/lib/menu-list";
 import { cn } from "@/lib/utils";
-import { Logout } from "@mynaui/icons-react";
+import { Login } from "@mynaui/icons-react";
+import { useRouter } from "next/navigation";
 
 interface MenuProps {
   isOpen: boolean | undefined;
@@ -24,6 +25,7 @@ interface MenuProps {
 export function Menu({ isOpen }: MenuProps) {
   const pathname = usePathname();
   const menuList = getMenuList();
+  const router = useRouter();
 
   return (
     <ScrollArea className="[&>div>div[style]]:!block ">
@@ -123,12 +125,13 @@ export function Menu({ isOpen }: MenuProps) {
               <TooltipTrigger asChild>
                 <Button
                   variant={"ghost"}
+                  onClick={()=>router.push("/login")}
                   className={cn(
                     "text-[16px] font-WFVisualSansRegular w-full  font-normal border-transparent group mb-1  hover:border-primary   hover:bg-slate-500 hover:text-primary    justify-start  "
                   )}
                 >
                   <span className={cn(isOpen === false ? "" : "mr-4")}>
-                    <Logout className="!w-5 !h-5" />
+                    <Login className="!w-5 !h-5" />
                     {/* <LazySvg name={Icon} width={20} height={20} /> */}
                   </span>
                   <p
@@ -139,12 +142,12 @@ export function Menu({ isOpen }: MenuProps) {
                         : "translate-x-0 opacity-100"
                     )}
                   >
-                    Logout
+                    Login
                   </p>
                 </Button>
               </TooltipTrigger>
               {isOpen === false && (
-                <TooltipContent side="right">Logout</TooltipContent>
+                <TooltipContent side="right">Login</TooltipContent>
               )}
             </Tooltip>
           </TooltipProvider>

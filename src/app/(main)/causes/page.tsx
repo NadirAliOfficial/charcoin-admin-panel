@@ -177,8 +177,8 @@ const draftCauses: Cause[] = [
       amount: "$0.00",
       position: 0,
     },
-    startedOn: "Not Started",
-    endsOn: "Not Set",
+    startedOn: "February 2025 (Feb 1 to Feb 20)",
+    endsOn: "February 2025 (Feb 1 to Feb 20)",
     benefactors: 0,
     points: {
       count: 0,
@@ -199,8 +199,8 @@ const draftCauses: Cause[] = [
       amount: "$0.00",
       position: 0,
     },
-    startedOn: "Not Started",
-    endsOn: "Not Set",
+    startedOn: "February 2025 (Feb 1 to Feb 20)",
+    endsOn: "February 2025 (Feb 1 to Feb 20)",
     benefactors: 0,
     points: {
       count: 0,
@@ -208,7 +208,7 @@ const draftCauses: Cause[] = [
     },
     updates: 0,
     impact: { amount: "$0.00", payouts: 0 },
-    type: "Draft",
+    type: "One time Only",
     image: "/images/a8.png",
     status: "Unpublished",
   }

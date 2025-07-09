@@ -120,3 +120,33 @@ body {
                      var(--sb-track-color);
   }
 }
+
+
+
+button.wallet-adapter-button-trigger {
+  @apply bg-primary text-background  h-auto;
+  padding-left: 70px;
+  background-image: url(/images/wallet.png);
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: 15px 10px;
+}
+
+button.wallet-adapter-button-trigger i {
+  display: none;
+}
+
+
+button.wallet-adapter-button-trigger:hover {
+  @apply !bg-primary text-background;
+}
+
+.wallet-adapter-modal-wrapper
+{
+  border:solid 3px hsl(var(--primary));
+  max-width: 600px!important;
+}
+
+.show {
+  outline:solid 1px greenyellow;
+}

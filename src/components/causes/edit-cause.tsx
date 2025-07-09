@@ -7,12 +7,22 @@ import ContactDetailsSection from "./edit/contract-detail";
 import FormActions from "./edit/edit-action";
 import { Cause } from "@/types/causes";
 import { useEffect } from "react";
+import { Program, } from '@coral-xyz/anchor';
 
+import idl from '@/components/idl.json';
+import { getConfig,configAccount,stakingPool, PROGRAM_ID } from '@/components/const';
+import * as anchor from '@coral-xyz/anchor';
+import { useConnection, useWallet } from '@solana/wallet-adapter-react';
+    import { PublicKey, Transaction,
+  } from "@solana/web3.js";
+import { toast } from "@/stores/use-toast";
 interface EditCauseProps {
   initialData: Cause | null;
 }
 
 export const EditCause = ({ initialData }: EditCauseProps) => {
+    const {sendTransaction,wallet,publicKey} = useWallet();
+  const { connection } = useConnection();
   const form = useForm<CauseFormData>({
     resolver: yupResolver(causeFormSchema),
     // defaultValues will be overwritten by reset if initialData exists
@@ -34,10 +44,56 @@ export const EditCause = ({ initialData }: EditCauseProps) => {
       contractFile: undefined, // Assuming it can be optional or null initially
     }
   });
-
-  const onSubmit = (data: CauseFormData) => {
-    console.log(data);
-    // Handle form submission (e.g., update API)
+ const onSubmit = async (data: CauseFormData) => {
+ }
+  const onSubmitBut = async () => {
+    const data = form.getValues();
+    console.log("Form Data:", data);
+    try{
+    const { provider } = getConfig(wallet?.adapter);
+    const program = new Program(idl, provider);
+      let transaction = new Transaction();
+      const charityId = 0;
+    const [charityAccount] = anchor.web3.PublicKey.findProgramAddressSync(
+      [Buffer.from('charity'), new anchor.BN(charityId).toArrayLike(Buffer, "le", 8)],
+      program.programId
+    );
+const startDate  = new Date();
+const endDate = new Date(startDate.getTime() + 30 * 24 * 60 * 60 * 1000); // 30 days later
+ 
+    const updateSettingsIx = await program.methods
+      .registerCharityHandler(
+        data.causeTitle,
+        new PublicKey(data.wallet),
+        new anchor.BN(startDate.getTime() / 1000), // Convert to seconds
+        new anchor.BN(endDate.getTime() / 1000), // Convert to seconds
+      )
+      .accounts({
+        config: configAccount,
+        admin:publicKey,
+        charity: charityAccount,
+        registrar: data.wallet, // Assuming this is the registrar's wallet
+        systemProgram: anchor.web3.SystemProgram.programId,
+      })
+      .instruction();
+        transaction.add(updateSettingsIx);
+        transaction.feePayer = publicKey;
+        transaction.recentBlockhash = (await program.provider.connection.getLatestBlockhash()).blockhash;
+        const txSignature = transaction && (await sendTransaction(transaction, connection));
+        console.log("Transaction Signature:", txSignature);
+        toast({
+          title: "Charity registered",
+          description: "Charity registered successfully.",
+          variant: "success",
+        });
+    }catch(err){
+      console.error("Error :", err);
+      toast({
+          title: "Error",
+          description: "Error registering charity.",
+          variant: "destructive",
+        });
+    }
   };
 
   // Update form values when initialData changes
@@ -50,15 +106,15 @@ export const EditCause = ({ initialData }: EditCauseProps) => {
         category: initialData.category || '',
         type: initialData.type || '',
         // Provide default or mapped values for other CauseFormData fields
-        website: '', // Cause type doesn't have website
-        country: '', // Cause type doesn't have country
+        website: 'https://google.com', // Cause type doesn't have website
+        country: 'Nicaragua', // Cause type doesn't have country
         campaign: initialData.endsOn || '', // Using endsOn as placeholder for campaign
-        wallet: '', // Cause type doesn't have wallet
+        wallet: 'CrepGjpjjaHiXEPhEw2rLywEtjgR9sRvL3LfUrPQq9im', // Cause type doesn't have wallet
         responsibleContact: '', // Cause type doesn't have responsibleContact
-        role: '', // Cause type doesn't have role
-        email: '', // Cause type doesn't have email
-        phone: '', // Cause type doesn't have phone
-        status: '', // Cause type doesn't have a simple status string
+        role: 'admin', // Cause type doesn't have role
+        email: 'admin@charcoin.com', // Cause type doesn't have email
+        phone: '+15446546456', // Cause type doesn't have phone
+        status: 'published', // Cause type doesn't have a simple status string
         featuredImages: initialData.image ? [initialData.image as any] : [], // Assuming image can be mapped to featuredImages, needs type adjustment
         contractFile: undefined, // Cause type doesn't have contractFile
       } as CauseFormData); // Type assertion for now, refine mapping as needed
@@ -103,6 +159,7 @@ export const EditCause = ({ initialData }: EditCauseProps) => {
           <ContactDetailsSection />
           <FormActions />
         </form>
+        <button onClick={()=>onSubmitBut()}>test</button>
       </FormProvider>
     </div>
   );

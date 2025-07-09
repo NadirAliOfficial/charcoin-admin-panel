@@ -1,0 +1,2288 @@
+{
+  "address": "aUW7zdmxR1BTNa59QeBY5s7TsGxe6cYqmhu8HFW2oS7",
+  "metadata": {
+    "name": "charcoin",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "buyback_burn_handler",
+      "discriminator": [
+        193,
+        222,
+        244,
+        224,
+        82,
+        48,
+        97,
+        231
+      ],
+      "accounts": [
+        {
+          "name": "config_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint",
+          "writable": true
+        },
+        {
+          "name": "burn_wallet_ata",
+          "writable": true
+        },
+        {
+          "name": "burn_authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "token_program",
+          "address": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "cast_vote_handler",
+      "docs": [
+        "Casts or updates a vote for a charity."
+      ],
+      "discriminator": [
+        169,
+        168,
+        169,
+        43,
+        110,
+        254,
+        43,
+        167
+      ],
+      "accounts": [
+        {
+          "name": "config_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "charity",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  104,
+                  97,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "charity_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vote_record",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  118,
+                  111,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "charity"
+              },
+              {
+                "kind": "account",
+                "path": "voter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  117,
+                  115,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "voter"
+              }
+            ]
+          }
+        },
+        {
+          "name": "voter",
+          "writable": true,
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "charity_id",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "change_emergency_state_handler",
+      "discriminator": [
+        50,
+        206,
+        251,
+        241,
+        158,
+        251,
+        41,
+        215
+      ],
+      "accounts": [
+        {
+          "name": "config_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "state",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "claim_reward_handler",
+      "discriminator": [
+        47,
+        72,
+        65,
+        199,
+        163,
+        3,
+        252,
+        187
+      ],
+      "accounts": [
+        {
+          "name": "config_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "staking_pool",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  116,
+                  97,
+                  107,
+                  105,
+                  110,
+                  103,
+                  95,
+                  112,
+                  111,
+                  111,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "staking_pool.token_mint",
+                "account": "StakingPool"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  117,
+                  115,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user_authority"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user_stake",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  117,
+                  115,
+                  101,
+                  114,
+                  95,
+                  115,
+                  116,
+                  97,
+                  107,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user_authority"
+              },
+              {
+                "kind": "arg",
+                "path": "stake_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user_authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "user_token_account",
+          "writable": true
+        },
+        {
+          "name": "staking_reward_ata",
+          "writable": true
+        },
+        {
+          "name": "staking_reward",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  116,
+                  97,
+                  107,
+                  105,
+                  110,
+                  103,
+                  95,
+                  114,
+                  101,
+                  119,
+                  97,
+                  114,
+                  100
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "staking_pool.token_mint",
+                "account": "StakingPool"
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint",
+          "writable": true
+        },
+        {
+          "name": "token_program",
+          "address": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+        }
+      ],
+      "args": [
+        {
+          "name": "index",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "distribute_marketing_funds_handler",
+      "discriminator": [
+        71,
+        229,
+        231,
+        237,
+        60,
+        29,
+        21,
+        67
+      ],
+      "accounts": [
+        {
+          "name": "config_account",
+          "docs": [
+            "The marketing wallet that tracks allocated funds."
+          ],
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "signer1",
+          "docs": [
+            "will use https://squads.xyz/ for multi sig"
+          ],
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "source_ata",
+          "docs": [
+            "This is the source token account from which funds are withdrawn. Its validity is managed by the token program."
+          ],
+          "writable": true
+        },
+        {
+          "name": "dest_wallet1_ata",
+          "docs": [
+            "Destination token account for Marketing Wallet 1 funds."
+          ],
+          "writable": true
+        },
+        {
+          "name": "dest_wallet2_ata",
+          "docs": [
+            "Destination token  account for Marketing Wallet 2 funds."
+          ],
+          "writable": true
+        },
+        {
+          "name": "death_wallet_ata",
+          "writable": true
+        },
+        {
+          "name": "mint",
+          "writable": true
+        },
+        {
+          "name": "token_program",
+          "address": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+        }
+      ],
+      "args": [
+        {
+          "name": "total_amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "finalize_charity_vote_handler",
+      "docs": [
+        "Finalizes charity voting after the voting period ends."
+      ],
+      "discriminator": [
+        160,
+        166,
+        60,
+        119,
+        127,
+        186,
+        14,
+        175
+      ],
+      "accounts": [
+        {
+          "name": "config_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "charity",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  104,
+                  97,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "charity_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "charity_id",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "initialize",
+      "docs": [
+        "Initializes the global configuration."
+      ],
+      "discriminator": [
+        175,
+        175,
+        109,
+        31,
+        13,
+        152,
+        155,
+        237
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "config",
+          "type": {
+            "defined": {
+              "name": "Config"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "register_charity_handler",
+      "docs": [
+        "Registers a new charity for the donation ecosystem."
+      ],
+      "discriminator": [
+        217,
+        1,
+        139,
+        58,
+        239,
+        50,
+        57,
+        94
+      ],
+      "accounts": [
+        {
+          "name": "config_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "charity",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  104,
+                  97,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "config_account.config.next_charity_id",
+                "account": "ConfigAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "registrar"
+        },
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "wallet",
+          "type": "pubkey"
+        },
+        {
+          "name": "start_time",
+          "type": "u64"
+        },
+        {
+          "name": "end_time",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "release_donations_handler",
+      "discriminator": [
+        168,
+        81,
+        21,
+        159,
+        108,
+        91,
+        36,
+        237
+      ],
+      "accounts": [
+        {
+          "name": "config_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "treasury_ata",
+          "docs": [
+            "Treasury token account holding funds to be distributed."
+          ],
+          "writable": true
+        },
+        {
+          "name": "monthly_one_time_causes_ata",
+          "writable": true
+        },
+        {
+          "name": "monthly_infinite_impact_causes_ata",
+          "writable": true
+        },
+        {
+          "name": "annual_one_time_causes_ata",
+          "writable": true
+        },
+        {
+          "name": "annual_infinite_impact_causes_ata",
+          "writable": true
+        },
+        {
+          "name": "char_funds_ata",
+          "writable": true
+        },
+        {
+          "name": "treasury_authority",
+          "docs": [
+            "will use https://squads.xyz/ for multi sig",
+            "Authority for treasury withdrawals."
+          ],
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+        }
+      ],
+      "args": [
+        {
+          "name": "total_amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "release_rewards_handler",
+      "docs": [
+        "Releases funds from the treasury to staking rewards and charity fund."
+      ],
+      "discriminator": [
+        219,
+        173,
+        69,
+        47,
+        137,
+        157,
+        38,
+        53
+      ],
+      "accounts": [
+        {
+          "name": "config_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "treasury_ata",
+          "docs": [
+            "Treasury token account holding funds to be distributed."
+          ],
+          "writable": true
+        },
+        {
+          "name": "monthly_top_tier_ata",
+          "writable": true
+        },
+        {
+          "name": "monthly_charity_lottery_ata",
+          "writable": true
+        },
+        {
+          "name": "annual_top_tier_ata",
+          "writable": true
+        },
+        {
+          "name": "annual_charity_lottery_ata",
+          "writable": true
+        },
+        {
+          "name": "treasury_authority",
+          "docs": [
+            "will use https://squads.xyz/ for multi sig",
+            "Authority for treasury withdrawals."
+          ],
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+        }
+      ],
+      "args": [
+        {
+          "name": "total_amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "release_staking_funds_handler",
+      "discriminator": [
+        253,
+        154,
+        26,
+        13,
+        96,
+        44,
+        33,
+        50
+      ],
+      "accounts": [
+        {
+          "name": "config_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "staking_pool",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  116,
+                  97,
+                  107,
+                  105,
+                  110,
+                  103,
+                  95,
+                  112,
+                  111,
+                  111,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ]
+          }
+        },
+        {
+          "name": "treasury_ata",
+          "docs": [
+            "Treasury token account holding funds to be distributed."
+          ],
+          "writable": true
+        },
+        {
+          "name": "staking_reward_ata",
+          "writable": true
+        },
+        {
+          "name": "treasury_authority",
+          "docs": [
+            "will use https://squads.xyz/ for multi sig",
+            "Authority for treasury withdrawals."
+          ],
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "mint",
+          "writable": true
+        },
+        {
+          "name": "token_program",
+          "address": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+        }
+      ],
+      "args": [
+        {
+          "name": "total_amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "request_unstake_handler",
+      "docs": [
+        "request Unstake tokens."
+      ],
+      "discriminator": [
+        247,
+        45,
+        28,
+        39,
+        83,
+        14,
+        199,
+        48
+      ],
+      "accounts": [
+        {
+          "name": "config_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "user_stake",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  117,
+                  115,
+                  101,
+                  114,
+                  95,
+                  115,
+                  116,
+                  97,
+                  107,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user_authority"
+              },
+              {
+                "kind": "arg",
+                "path": "stake_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user_authority",
+          "writable": true,
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "index",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "set_reward_percentage_handler",
+      "discriminator": [
+        137,
+        245,
+        236,
+        237,
+        248,
+        196,
+        160,
+        60
+      ],
+      "accounts": [
+        {
+          "name": "config_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "staking_pool",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  116,
+                  97,
+                  107,
+                  105,
+                  110,
+                  103,
+                  95,
+                  112,
+                  111,
+                  111,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "staking_pool.token_mint",
+                "account": "StakingPool"
+              }
+            ]
+          }
+        },
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "reward1",
+          "type": "u16"
+        },
+        {
+          "name": "lockup1",
+          "type": "u16"
+        },
+        {
+          "name": "vote_power1",
+          "type": "u16"
+        },
+        {
+          "name": "penalty1",
+          "type": "u16"
+        },
+        {
+          "name": "reward2",
+          "type": "u16"
+        },
+        {
+          "name": "lockup2",
+          "type": "u16"
+        },
+        {
+          "name": "vote_power2",
+          "type": "u16"
+        },
+        {
+          "name": "penalty2",
+          "type": "u16"
+        },
+        {
+          "name": "reward3",
+          "type": "u16"
+        },
+        {
+          "name": "lockup3",
+          "type": "u16"
+        },
+        {
+          "name": "vote_power3",
+          "type": "u16"
+        },
+        {
+          "name": "penalty3",
+          "type": "u16"
+        },
+        {
+          "name": "reward4",
+          "type": "u16"
+        },
+        {
+          "name": "lockup4",
+          "type": "u16"
+        },
+        {
+          "name": "vote_power4",
+          "type": "u16"
+        },
+        {
+          "name": "penalty4",
+          "type": "u16"
+        }
+      ]
+    },
+    {
+      "name": "stake_tokens_handler",
+      "docs": [
+        "Stake tokens with a specified lockup duration."
+      ],
+      "discriminator": [
+        62,
+        239,
+        204,
+        34,
+        34,
+        195,
+        160,
+        24
+      ],
+      "accounts": [
+        {
+          "name": "config_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "staking_pool",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  116,
+                  97,
+                  107,
+                  105,
+                  110,
+                  103,
+                  95,
+                  112,
+                  111,
+                  111,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "staking_pool.token_mint",
+                "account": "StakingPool"
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint",
+          "writable": true
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  117,
+                  115,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user_authority"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user_stake",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  117,
+                  115,
+                  101,
+                  114,
+                  95,
+                  115,
+                  116,
+                  97,
+                  107,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user_authority"
+              },
+              {
+                "kind": "account",
+                "path": "user.stake_count",
+                "account": "UserStakeInfo"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user_authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "user_token_account",
+          "writable": true
+        },
+        {
+          "name": "pool_token_account",
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        },
+        {
+          "name": "lockup",
+          "type": "u16"
+        }
+      ]
+    },
+    {
+      "name": "staking_initialize",
+      "discriminator": [
+        9,
+        50,
+        2,
+        174,
+        241,
+        12,
+        58,
+        189
+      ],
+      "accounts": [
+        {
+          "name": "staking_pool",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  116,
+                  97,
+                  107,
+                  105,
+                  110,
+                  103,
+                  95,
+                  112,
+                  111,
+                  111,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "token_mint"
+              }
+            ]
+          }
+        },
+        {
+          "name": "staking_reward",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  116,
+                  97,
+                  107,
+                  105,
+                  110,
+                  103,
+                  95,
+                  114,
+                  101,
+                  119,
+                  97,
+                  114,
+                  100
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "token_mint"
+              }
+            ]
+          }
+        },
+        {
+          "name": "authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "token_mint",
+          "writable": true
+        },
+        {
+          "name": "pool_token_account",
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "unstake_tokens_handler",
+      "docs": [
+        "Unstake tokens after 48h delay and lockup period has expired. unstake before lockup period will result in penalty"
+      ],
+      "discriminator": [
+        81,
+        102,
+        250,
+        207,
+        42,
+        121,
+        178,
+        205
+      ],
+      "accounts": [
+        {
+          "name": "config_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "staking_pool",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  115,
+                  116,
+                  97,
+                  107,
+                  105,
+                  110,
+                  103,
+                  95,
+                  112,
+                  111,
+                  111,
+                  108
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "staking_pool.token_mint",
+                "account": "StakingPool"
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint",
+          "writable": true
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  117,
+                  115,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user_authority"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user_stake",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  117,
+                  115,
+                  101,
+                  114,
+                  95,
+                  115,
+                  116,
+                  97,
+                  107,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user_authority"
+              },
+              {
+                "kind": "arg",
+                "path": "stake_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user_authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "staking_reward_ata",
+          "writable": true
+        },
+        {
+          "name": "user_token_account",
+          "writable": true
+        },
+        {
+          "name": "pool_token_account",
+          "writable": true
+        },
+        {
+          "name": "token_program",
+          "address": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+        }
+      ],
+      "args": [
+        {
+          "name": "index",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "update_settings",
+      "discriminator": [
+        81,
+        166,
+        51,
+        213,
+        158,
+        84,
+        157,
+        108
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "min_governance_stake",
+          "type": "u64"
+        },
+        {
+          "name": "min_stake_duration_voting",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Charity",
+      "discriminator": [
+        229,
+        164,
+        231,
+        12,
+        25,
+        172,
+        91,
+        111
+      ]
+    },
+    {
+      "name": "ConfigAccount",
+      "discriminator": [
+        189,
+        255,
+        97,
+        70,
+        186,
+        189,
+        24,
+        102
+      ]
+    },
+    {
+      "name": "StakingPool",
+      "discriminator": [
+        203,
+        19,
+        214,
+        220,
+        220,
+        154,
+        24,
+        102
+      ]
+    },
+    {
+      "name": "StakingRewards",
+      "discriminator": [
+        119,
+        25,
+        203,
+        244,
+        250,
+        176,
+        10,
+        113
+      ]
+    },
+    {
+      "name": "UserStakeInfo",
+      "discriminator": [
+        219,
+        233,
+        236,
+        123,
+        28,
+        113,
+        89,
+        56
+      ]
+    },
+    {
+      "name": "UserStakesEntry",
+      "discriminator": [
+        22,
+        233,
+        10,
+        13,
+        102,
+        241,
+        112,
+        206
+      ]
+    },
+    {
+      "name": "VoteRecord",
+      "discriminator": [
+        112,
+        9,
+        123,
+        165,
+        234,
+        9,
+        157,
+        167
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "BuybackBurnEvent",
+      "discriminator": [
+        153,
+        49,
+        206,
+        33,
+        130,
+        79,
+        9,
+        245
+      ]
+    },
+    {
+      "name": "MarketingFundDistributionEvent",
+      "discriminator": [
+        160,
+        120,
+        106,
+        129,
+        97,
+        137,
+        108,
+        1
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "NoTokensToBuyback",
+      "msg": "No tokens available for buyback."
+    },
+    {
+      "code": 6001,
+      "name": "VotingNotActive",
+      "msg": "Voting period is not active."
+    },
+    {
+      "code": 6002,
+      "name": "VotingNotEnded",
+      "msg": "Voting period has not ended."
+    },
+    {
+      "code": 6003,
+      "name": "VotingNotEligible",
+      "msg": "User not Eligible for voting"
+    },
+    {
+      "code": 6004,
+      "name": "NoStakedTokens",
+      "msg": "User has not staked any tokens."
+    },
+    {
+      "code": 6005,
+      "name": "AlreadyVoted",
+      "msg": "User Already Voted"
+    },
+    {
+      "code": 6006,
+      "name": "CharityAlreadyFinalized",
+      "msg": "Charity Already Finalized"
+    },
+    {
+      "code": 6007,
+      "name": "InvalidArg",
+      "msg": "Invalid Argument Provided"
+    },
+    {
+      "code": 6008,
+      "name": "ProgramIsHalted",
+      "msg": "program is halted"
+    },
+    {
+      "code": 6009,
+      "name": "StakingPeriodNotMet",
+      "msg": "Staking period has not been met yet"
+    },
+    {
+      "code": 6010,
+      "name": "WrongStakingPackage",
+      "msg": "Wrong Staking Package"
+    },
+    {
+      "code": 6011,
+      "name": "RewardAlreadyClaimed",
+      "msg": "Reward has already been claimed"
+    },
+    {
+      "code": 6012,
+      "name": "AlreadyStaked",
+      "msg": "Already Staked"
+    },
+    {
+      "code": 6013,
+      "name": "AlreadyUnStaked",
+      "msg": "Already un Staked"
+    },
+    {
+      "code": 6014,
+      "name": "WaitPeriodNotOverYet",
+      "msg": "Wait period not over yet"
+    },
+    {
+      "code": 6015,
+      "name": "RequestUnstakeFirst",
+      "msg": "Request Unstake First"
+    },
+    {
+      "code": 6016,
+      "name": "UnstakeAlreadyRequested",
+      "msg": "Unstake Already Requested"
+    },
+    {
+      "code": 6017,
+      "name": "InvalidStakeId",
+      "msg": "Invalid Stake Id"
+    },
+    {
+      "code": 6018,
+      "name": "NothingToClaim",
+      "msg": "Nothing To Claim"
+    },
+    {
+      "code": 6019,
+      "name": "StakingRewardInsufficientBalance",
+      "msg": "Staking Reward Insufficient Balance"
+    },
+    {
+      "code": 6020,
+      "name": "MathError",
+      "msg": "Math error occurred."
+    },
+    {
+      "code": 6021,
+      "name": "YouDontHaveEnoughVotingPower",
+      "msg": "You Dont Have Enough Voting Power"
+    }
+  ],
+  "types": [
+    {
+      "name": "BuybackBurnEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "tokens_bought",
+            "type": "u64"
+          },
+          {
+            "name": "new_total_burned",
+            "type": "u64"
+          },
+          {
+            "name": "timestamp",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Charity",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "id",
+            "type": "u64"
+          },
+          {
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "total_votes",
+            "type": "u64"
+          },
+          {
+            "name": "start_time",
+            "type": "u64"
+          },
+          {
+            "name": "end_time",
+            "type": "u64"
+          },
+          {
+            "name": "status",
+            "type": {
+              "defined": {
+                "name": "CharityStatus"
+              }
+            }
+          },
+          {
+            "name": "admin",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CharityStatus",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Active"
+          },
+          {
+            "name": "Finalized"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Config",
+      "docs": [
+        "Stores global configuration for CHAR Coin."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "char_token_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "monthly_top_tier_wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "monthly_charity_lottery_wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "annual_top_tier_wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "annual_charity_lottery_wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "monthly_one_time_causes_wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "monthly_infinite_impact_causes_wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "annual_one_time_causes_wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "annual_infinite_impact_causes_wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "char_funds",
+            "type": "pubkey"
+          },
+          {
+            "name": "marketing_wallet_1",
+            "type": "pubkey"
+          },
+          {
+            "name": "marketing_wallet_2",
+            "type": "pubkey"
+          },
+          {
+            "name": "death_wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "treasury_authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "halted",
+            "type": "bool"
+          },
+          {
+            "name": "next_proposal_id",
+            "type": "u64"
+          },
+          {
+            "name": "next_charity_id",
+            "type": "u64"
+          },
+          {
+            "name": "total_burned",
+            "type": "u64"
+          },
+          {
+            "name": "min_governance_stake",
+            "type": "u64"
+          },
+          {
+            "name": "min_stake_duration_voting",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ConfigAccount",
+      "docs": [
+        "Account that holds the global configuration."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "config",
+            "type": {
+              "defined": {
+                "name": "Config"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "LockupReward",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "lockup_days",
+            "type": "u16"
+          },
+          {
+            "name": "reward_bps",
+            "type": "u16"
+          },
+          {
+            "name": "vote_power",
+            "type": "u16"
+          },
+          {
+            "name": "penalty",
+            "type": "u16"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MarketingFundDistributionEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "marketing_wallet_1_amount",
+            "type": "u64"
+          },
+          {
+            "name": "marketing_wallet_2_amount",
+            "type": "u64"
+          },
+          {
+            "name": "death_wallet_amount",
+            "type": "u64"
+          },
+          {
+            "name": "timestamp",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "StakingPool",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "token_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "pool_token_account",
+            "type": "pubkey"
+          },
+          {
+            "name": "staking_reward_account",
+            "type": "pubkey"
+          },
+          {
+            "name": "total_staked",
+            "type": "u64"
+          },
+          {
+            "name": "reward_issued",
+            "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "stake_lockup_reward_array",
+            "type": {
+              "array": [
+                {
+                  "defined": {
+                    "name": "LockupReward"
+                  }
+                },
+                4
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "StakingRewards",
+      "type": {
+        "kind": "struct",
+        "fields": []
+      }
+    },
+    {
+      "name": "UserStakeInfo",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "staking_pool",
+            "type": "pubkey"
+          },
+          {
+            "name": "eligible_at",
+            "type": "u64"
+          },
+          {
+            "name": "voting_power",
+            "type": "u64"
+          },
+          {
+            "name": "total_amount",
+            "type": "u64"
+          },
+          {
+            "name": "reward_issued",
+            "type": "u64"
+          },
+          {
+            "name": "stake_count",
+            "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "last_vote_time",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UserStakesEntry",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "stake_id",
+            "type": "u64"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "staked_at",
+            "type": "u64"
+          },
+          {
+            "name": "lockup",
+            "type": "u16"
+          },
+          {
+            "name": "unstake_requested_at",
+            "type": "u64"
+          },
+          {
+            "name": "current_period",
+            "type": "u64"
+          },
+          {
+            "name": "unstaked_at",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VoteRecord",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "charity",
+            "type": "pubkey"
+          },
+          {
+            "name": "voter",
+            "type": "pubkey"
+          },
+          {
+            "name": "vote_weight",
+            "type": "u64"
+          },
+          {
+            "name": "voted",
+            "type": "bool"
+          }
+        ]
+      }
+    }
+  ]
+}

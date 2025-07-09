@@ -15,11 +15,27 @@ import { SelectField } from "../causes/edit/form-select";
 import { HeaderWrapper } from "../custom/header-wrapper";
 import FormSectionTitle from "../causes/edit/form-section-title";
 import { ArrowRight } from "lucide-react";
+import { 
+    create,
+  createCollection,
+  fetchCollection,
+  mplCore,
+} from '@metaplex-foundation/mpl-core'
+import useUmiStore from "@/stores/useUmiStore";
+import {
+  generateSigner,
+  signerIdentity,
+  createGenericFile
+} from '@metaplex-foundation/umi'
+import { Connection, PublicKey, } from '@solana/web3.js';
+import { NFT_COLLECTION_ID } from "../const";
+import { AXIOS_INSTANCE } from "@/lib/utils";
+import { toast } from "@/stores/use-toast";
 
 export const CreateNftsTwo = () => {
   const form = useForm<NftsSchemaWithWalletType>({
     resolver: yupResolver(nftSchemaWithWallet),
-    defaultValues: dummyData,
+    defaultValues: {},
   });
 
   const {
@@ -28,9 +44,76 @@ export const CreateNftsTwo = () => {
     setValue,
     getValues,
   } = form;
+  const { umi, signer } = useUmiStore();
 
-  const onSubmit = (data: NftsSchemaWithWalletType) => {
+  const onSubmit = async(data: NftsSchemaWithWalletType) => {
     console.log(data);
+if(!data?.nftImage){
+ toast({
+          title: "Error",
+          description: "image is required",
+          variant: "destructive",
+        });
+          return
+}
+    // fetch the collection
+    const collectionDetail = await fetchCollection(umi, NFT_COLLECTION_ID)
+    umi.use(signerIdentity(signer));
+    
+  try {
+    const formData = new FormData()
+    formData.append("image",data.nftImage)
+
+      const response = await AXIOS_INSTANCE.post("/rewards-nft/nft/uploadImage", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      console.log(response?.data);
+      return
+    } catch (error) {
+      console.log(error);
+    }
+
+
+      const metadata = {
+    name: data.nftName,
+    description: data.description,
+    image: data.nftImage,
+    external_url: 'https://example.com',
+    attributes: [
+      {
+        trait_type: 'trait1',
+        value: 'value1',
+      },
+      {
+        trait_type: 'trait2',
+        value: 'value2',
+      },
+    ],
+    properties: {
+      files: [
+        {
+          uri: data.nftImage,
+          type: 'image/jpeg',
+        },
+      ],
+      category: 'image',
+    },
+  }
+
+
+    // generate assetSigner and then create the asset.
+    const assetSigner = generateSigner(umi)
+    
+    // create nft asset
+    await create(umi, {
+      asset: assetSigner,
+      collection: collectionDetail,
+      name: data.nftName,
+      uri: "https://gateway.irys.xyz/4Gd6i8MSaRGUZnirL24YMKTymxxd3ucTXXLqM3TgZFEw",
+      owner: new PublicKey(data.wallet.toString()), // wallet that will receive the NFT
+    }).sendAndConfirm(umi)
   };
 
   return (

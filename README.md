@@ -1,13 +1,24 @@
-# 🛠️ CharCoin Admin Panel
+# CharCoin Admin Panel
 
-This is the Admin Area for managing the CharCoin ecosystem, including:
+Admin dashboard for the CharCoin ecosystem — manage staking pools, reward distribution, private sale allocations, and token analytics.
 
-- Staking reward settings
-- DAO proposal management
-- Fund distribution controls (Marketing, Buyback, Charity, Rewards)
-- Wallet configurations and security options
-- Dynamic APY and penalty settings
+## Features
+- Staking pool management
+- Reward distribution controls
+- Private sale participant overview
+- Transaction and wallet analytics
+- Role-based access control
 
-Built using modern frontend tech and fully integrated with the CHAR Coin smart contracts and backend.
+## Tech Stack
+- React + TypeScript
+- Tailwind CSS
+- Ethers.js / Web3 integration
 
-Visit: [charcoin.org](https://charcoin.org)
+## Setup
+```bash
+npm install
+npm run dev
+```
+
+## License
+MIT
